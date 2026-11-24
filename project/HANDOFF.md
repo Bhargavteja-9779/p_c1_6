@@ -1,10 +1,14 @@
 # HANDOFF — read this first (updated 2026-11-24, session 2)
 
 ## Where we are
-- **PIVOT #1 declared** (2026-11-24, D26). Topic 1 (cross-network NetFlow NIDS) failed over cycles 1–3: H1 (ESF/PEN) no gain, H2 partial (CIC only), H3 ensemble −0.056. Post-mortem: archive/topic1_nids_crossnet/POSTMORTEM.md. Novelty 9/25.
-- Next cycle = **cycle 4**, phase PIVOT_TOPIC_SELECTION. Pivots used 1/3, cycles used 3/12.
-- **NEXT ACTION:** Phase 3 again (MASTER_PROMPT Section 5 TOPIC): ≥10 candidates in JKSU-CIS scope, CPU-only (4 cores, no GPU), public data. For the top 3, run the prior-art check (≥8 query phrasings each, and read the closest work's code/paper if any) BEFORE writing code — lesson from topic 1. Then topic/selected_topic.md (new version; keep the old one as topic/selected_topic_v1_nids.md), plan_v4, quick run, full run. Reuse run_all.py / queue / budget / final_report.py / audit_numbers.py / autosave.sh.
-- Keep the session awake during long runs (25-min check-ins); restart autosave: `rm -f state/STOP_AUTOSAVE; setsid nohup bash scripts/autosave.sh >/dev/null 2>&1 &`.
+- **PIVOT #1** (D26): topic 1 (cross-network NetFlow NIDS) archived after cycles 1–3 (archive/topic1_nids_crossnet/POSTMORTEM.md). Next cycle = **cycle 4**, phase PIVOT_TOPIC_SELECTION. Pivots 1/3, cycles 3/12, compute ≈7.0/120 CPU-h.
+- **User amendments (end of MASTER_PROMPT.md, D27–D32):** ≈80-day acceptance OK (JKSU-CIS 83.5 d → G1 pass by override); novelty must exceed **25/30** (6th dimension = prior-art clearance); new **G0 journal-fit gate** (topic must match what JKSU-CIS publishes, ≥4/5) and **beat-the-journal gate** (beat comparable JKSU-CIS papers, literature/journal_benchmark.md); follow JKSU-CIS writing style; never stop until top-notch.
+- Finding so far (journal_selection/jksu_profile.md): JKSU-CIS mostly publishes NAMED-METHOD papers on public benchmarks; audit/negative-result topics fit poorly.
+- **NEXT ACTION:**
+  1. Finish journal_selection/jksu_profile.md from ≥40 JKSU-CIS papers (abstracts + ≥6 full texts: structure, datasets, baselines, exact numbers, weaknesses). (A sub-agent was running this in session 2; if its result is not in the file, redo it.)
+  2. Choose a CPU-feasible named-method topic in a frequent JKSU area with directly comparable JKSU papers (e.g. tabular / time-series anomaly detection, graph learning). Prior-art check (≥8 phrasings, read closest code/paper) BEFORE code. Write topic/selected_topic.md (old one kept as selected_topic_v1_nids.md), literature/journal_benchmark.md, plan_v4.
+  3. Build, quick run, full run (keep session awake; autosave), report, novelty /30, iterate.
+- Prior-art checks of earlier candidates: literature/prior_art_v2/*.md (Elliptic = crowded; phishing-dataset audit, NIDS underspecification, Android drift results added when available).
 
 ## One-liners
 - Journal: JKSU-CIS (Springer Nature), JIF 6.4 (2025), verified median Received→Accepted 83.5 d (n=596) — **fails 72-day rule**; Q1 only partially verified. Frontiers checked this session (user allowed it): none ≤ 72 d (Frontiers in AI 83.5 d, n=300) → D17 keep JKSU-CIS.
