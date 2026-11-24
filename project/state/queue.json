@@ -438,9 +438,10 @@
     "eval_split": "val",
     "job_id": "tune_lodo_coral_TON"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T21:22:30"
   },
   "tune_lodo_coral_CIC": {
    "spec": {
@@ -455,10 +456,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_coral_CIC"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T21:16:05"
+   "started": "2026-11-24T21:16:05",
+   "finished": "2026-11-24T21:22:30"
   },
   "tune_lodo_coral_BOT": {
    "spec": {
