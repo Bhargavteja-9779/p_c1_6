@@ -5,7 +5,7 @@
  "status": "RUNNING",
  "pivots": 0,
  "topic": "cross-network NIDS generalization (NetFlow V3)",
- "journal": "JKSU-CIS",
+ "journal": "Frontiers in Artificial Intelligence (2624-8212); fallback JKSU-CIS",
  "last_action": "data rebuilt (row counts verified); final_report.py + audit_numbers.py written",
  "updated": "2026-11-24",
  "user_notes": [

@@ -35,3 +35,18 @@ JIF column = value displayed on official Springer journal page (fetched 2026-11-
 | Data Mining and Knowledge Discovery | 1573-756X | 209 | 279 | 158.0–413.5 | 1–1090 | 0.072 | - |
 | International Journal of Computer Vision | 1573-1405 | 578 | 289.5 | 223.0–399.5 | 0–1057 | 0.003 | - |
 | Financial Innovation | 2199-4730 | 306 | 517.5 | 386.0–662.25 | 19–1178 | 0.007 | - |
+
+## Session 2 addendum (2026-11-24): Frontiers journals (allowed by the user, D13)
+Frontiers does not deposit Received/Accepted in Crossref, so dates were read from article pages on frontiersin.org
+(scripts/frontiers_times.py; DOIs listed from Crossref, up to 1000 per journal, fixed-seed random sample). JIF = value on the
+publisher's journal home page rendered with a headless browser on 2026-11-24.
+
+| Journal | ISSN | n articles | median days | IQR | min–max | share ≤72 d | JIF (publisher page) |
+|---|---|---|---|---|---|---|---|
+| Frontiers in Artificial Intelligence | 2624-8212 | 150 | 81 | 62.75–119.75 | 0–284 | 0.387 | 6.7 |
+| Frontiers in Communications and Networks | 2673-530X | 60 | 80 | 52.5–106.75 | 2–247 | 0.45 | 2.7 |
+| Frontiers in Big Data | 2624-909X | 60 | 93 | 58.25–140 | 2–344 | 0.35 | UNVERIFIED (not fetched) |
+| Frontiers in Computer Science | 2624-9898 | 60 | 94 | 59.5–128.75 | 5–527 | 0.367 | 3.4 |
+
+Note: a first n=60 sample of Frontiers in AI gave median 71.5 d (kept as times_2624-8212_n60.json); enlarging the same
+fixed-seed sample to n=150 gave 81 d. The n=60 "pass" was sampling noise, and we do not claim it.
