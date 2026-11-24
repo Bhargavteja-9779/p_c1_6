@@ -2,13 +2,15 @@
  "cycles": {
   "quick": 887.9049596786499,
   "1": 15049.879431247711,
-  "2": 8784.0
+  "2": 8784.0,
+  "3": 526.6
  },
- "global_s": 24721.78439092636,
+ "global_s": 25248.38439092636,
  "ceil_cycle_h": 15,
  "ceil_global_h": 120,
  "unit": "CPU wall-clock seconds while jobs run (4 cores)",
  "notes": [
-  "cycle 2 scripts (diagnose_v2, h2_tests x2) run outside run_all: wall-clock added by hand from file timestamps (12:33-13:15 killed run, 13:15-14:53 rerun, ~7 min diagnose)"
+  "cycle 2 scripts (diagnose_v2, h2_tests x2) run outside run_all: wall-clock added by hand from file timestamps (12:33-13:15 killed run, 13:15-14:53 rerun, ~7 min diagnose)",
+  "cycle 3 (h3_ensemble.py) wall_s summed from results/h3/*.json"
  ]
 }

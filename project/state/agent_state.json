@@ -1,12 +1,12 @@
 {
- "cycle": 2,
- "phase": "PLAN_V2",
- "step": "implement scripts/h2_tests.py (E7 knn, E8 attribution, E9 transplant) and run on val",
+ "cycle": 4,
+ "phase": "PIVOT_TOPIC_SELECTION",
+ "step": "Phase 3 again: generate >=10 topic candidates for JKSU-CIS, prior-art check each BEFORE code",
  "status": "ACTIVE",
- "pivots": 0,
- "topic": "cross-network NIDS generalization (NetFlow V3)",
+ "pivots": 1,
+ "topic": "(pivot #1 pending \u2014 topic 1 archived)",
  "journal": "JKSU-CIS",
- "last_action": "cycle1 closed (H1 failed, novelty 9/25); diagnose_v2 done; H2 + plan_v2 written",
+ "last_action": "cycle3 H3 failed; pivot #1 declared; topic 1 archived",
  "updated": "2026-11-24",
  "user_notes": [
   "2026-11-24: user allows Frontiers journals"

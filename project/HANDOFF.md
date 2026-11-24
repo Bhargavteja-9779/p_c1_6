@@ -1,14 +1,14 @@
 # HANDOFF — read this first (updated 2026-11-24, session 2)
 
 ## Where we are
-- **Cycle 2**, phase PLAN_V2 (cycle 1 closed 2026-11-24 12:22 UTC: 376/376 jobs, 4.18 CPU-h; H1 NOT supported — journal 09–10; results/RESULTS_SUMMARY.md).
-- Diagnosis (journal 11, results/diag_v2/): LODO failure = inverted ranking of a few large attack families (CIC DDoS-HOIC = 40 % of CIC attacks, AUROC 0.12, recall 0) although they sit next to SOURCE attacks in 5-NN space.
-- **NEXT ACTION:** implement `scripts/h2_tests.py` for plan_v2 (experiments/plan_v2.yaml): E7 source-kNN detector (k=5,25), E8 LightGBM pred_contrib attribution on inverted families, E9 feature transplant. Validation only. Then apply plan_v2's decision rule, write RESULT/FAILURE entries, update novelty score.
-- If the container is fresh: `bash scripts/get_data.sh` first (row counts in journal 00/HANDOFF history: UNSW 2,365,424 / BOT 16,933,808 / TON 27,520,260 / CIC 20,115,529).
+- **PIVOT #1 declared** (2026-11-24, D26). Topic 1 (cross-network NetFlow NIDS) failed over cycles 1–3: H1 (ESF/PEN) no gain, H2 partial (CIC only), H3 ensemble −0.056. Post-mortem: archive/topic1_nids_crossnet/POSTMORTEM.md. Novelty 9/25.
+- Next cycle = **cycle 4**, phase PIVOT_TOPIC_SELECTION. Pivots used 1/3, cycles used 3/12.
+- **NEXT ACTION:** Phase 3 again (MASTER_PROMPT Section 5 TOPIC): ≥10 candidates in JKSU-CIS scope, CPU-only (4 cores, no GPU), public data. For the top 3, run the prior-art check (≥8 query phrasings each, and read the closest work's code/paper if any) BEFORE writing code — lesson from topic 1. Then topic/selected_topic.md (new version; keep the old one as topic/selected_topic_v1_nids.md), plan_v4, quick run, full run. Reuse run_all.py / queue / budget / final_report.py / audit_numbers.py / autosave.sh.
+- Keep the session awake during long runs (25-min check-ins); restart autosave: `rm -f state/STOP_AUTOSAVE; setsid nohup bash scripts/autosave.sh >/dev/null 2>&1 &`.
 
 ## One-liners
 - Journal: JKSU-CIS (Springer Nature), JIF 6.4 (2025), verified median Received→Accepted 83.5 d (n=596) — **fails 72-day rule**; Q1 only partially verified. Frontiers checked this session (user allowed it): none ≤ 72 d (Frontiers in AI 83.5 d, n=300) → D17 keep JKSU-CIS.
-- Topic: cross-network (leave-one-dataset-out) generalization of flow-based NIDS on the four UQ NetFlow-V3 datasets.
+- Topic: NONE yet (topic 1, cross-network NetFlow NIDS, archived after cycles 1–3).
 - Hypothesis H1 (FAILED, journal 10): LODO collapse is driven by benign "environment-signature" features; ESF / PEN help. **Prior art now confirmed from code:** Gazi et al. (Zenodo 10.5281/zenodo.24172401) have BRN (== our PEN), feature-group drop ablation, failure decomposition and benign-divergence audit (journal 06, D15). Cycle 1 is therefore an independent replication (D16).
 
 ## Running now
@@ -18,7 +18,7 @@ _Previous:_
 - tmux session `nids`: `python3 run_all.py --mode full --resume` (lock in state/, heartbeat state/heartbeat).
 - `scripts/autosave.sh` (setsid background): every 20 min commits results/ state/ journal/ and pushes to branch `claude/awesome-fermi-gqc7vh`. Stop: `touch state/STOP_AUTOSAVE`.
 
-## Compute
+## Compute (see state/budget.json; cycles 1–3 ≈ 7.0 CPU-h of 120 global)
 Cycle 1 ≈ 0.4 CPU-h used so far of 15 h; global ≈ 0.6 of 120 h (state/budget.json, live). Machine: 4 CPU cores, 15 GB RAM, no GPU.
 
 ## Gates
@@ -26,7 +26,7 @@ Cycle 1 ≈ 0.4 CPU-h used so far of 15 h; global ≈ 0.6 of 120 h (state/budget
 |---|---|
 | G1 journal | FAIL on 72-day rule (stated): no legitimate in-scope journal verified ≤72 d among 30 Springer + 5 Frontiers |
 | G2 prior art | FAIL: 54 papers opened (≥30 OK), but close prior work (Gazi code) covers our claims; P02 full text blocked (403) |
-| G3 novelty | FAIL: cycle-1 score 9/25 (state/novelty_ledger.json) |
+| G3 novelty | FAIL: topic 1 scored 9/25 in cycles 1 and 2 (state/novelty_ledger.json) |
 | G4 baselines | partial: 7 baselines, equal 8-config tuning; published NF-v3 LODO numbers not directly comparable (different pools/protocol) |
 | G5 main result | FAIL (no arm beats XGB on val; confirmation not run) |
 | G6 ablation | done for H1 groups (E2) — components do not help |
