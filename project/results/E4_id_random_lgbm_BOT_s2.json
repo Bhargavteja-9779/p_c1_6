@@ -1,0 +1,42 @@
+{
+ "macro_f1": 0.8515123190142959,
+ "f1_attack": 0.999114023503452,
+ "bal_acc": 0.8615842264405857,
+ "tpr": 0.9990305218466887,
+ "fpr": 0.27586206896551724,
+ "auroc": 0.9985682617521848,
+ "prauc": 0.9999957790419622,
+ "n_eval": 30000,
+ "attack_rate_eval": 0.9971,
+ "threshold": 0.5,
+ "src_val_macro_f1": 0.8466242589297126,
+ "fit_s": 1.5641593933105469,
+ "pred_ms_per_1k": 3.167867660522461,
+ "n_features": 47,
+ "n_train": 100000,
+ "model_bytes": 2048692,
+ "recall_by_family": {
+  "DDoS": 1.0,
+  "DoS": 1.0,
+  "Reconnaissance": 0.9901125127855438,
+  "Theft": 1.0
+ },
+ "src_val_auroc": 0.9978572294842113,
+ "cfg": {},
+ "spec": {
+  "kind": "run",
+  "exp": "E4",
+  "priority": 3,
+  "cfg": {},
+  "protocol": "id_random",
+  "method": "lgbm",
+  "target": "BOT",
+  "seed": 2,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E4_id_random_lgbm_BOT_s2"
+ },
+ "wall_s": 3.1426990032196045,
+ "finished": "2026-11-24T12:02:19"
+}
