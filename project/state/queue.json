@@ -387,9 +387,10 @@
     "eval_split": "val",
     "job_id": "tune_lodo_dann_CIC"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 2,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T08:41:50"
   },
   "tune_lodo_dann_BOT": {
    "spec": {
@@ -404,10 +405,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_dann_BOT"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T04:16:33"
+   "started": "2026-11-24T04:16:33",
+   "finished": "2026-11-24T04:21:56"
   },
   "tune_lodo_coral_UNSW": {
    "spec": {
