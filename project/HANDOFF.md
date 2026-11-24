@@ -1,13 +1,13 @@
 # HANDOFF — read this first (updated 2026-11-24, end of session 1)
 
-## Where we are
-- **Cycle 1**, phase: BUILD done → full run NOT yet started. Quick run passed (32/32 jobs, results/quick/).
-- **NEXT ACTION (do in this order):**
-  1. `cd project && bash scripts/get_data.sh` (data/ is NOT in git: re-downloads ~1.4 GB and rebuilds the 24 pools; row counts must match: UNSW 2,365,424 / BOT 16,933,808 / TON 27,520,260 / CIC 20,115,529).
-  2. `python3 scripts/status.py`, then `bash scripts/launch_full.sh` (runs plan_v1, 376 jobs, est. ~7 CPU-h, resumable).
-  3. While it runs: the user said **Frontiers journals are now allowed** (message 2026-11-24, overrides the Section 4 exclusion). Run `python3 scripts/journal_times.py <Frontiers ISSNs>` (e.g. Frontiers in Computer Science 2624-9898, Frontiers in AI 2624-8212, Frontiers in Big Data 2624-909X, and any Frontiers journal with a JIF that fits) — first check Frontiers deposits Received/Accepted in Crossref `assertion`; if not, scrape article pages with Playwright. Update journal_selection/*.md and decisions.md.
-  4. Prior art: get FULL TEXTS of Gazi et al. 2026 (zenodo 10.5281/zenodo.24172400), Rayamajhi 2026 (10.20944/preprints202610.1041.v1), Valencia Vélez 2026 (Zenodo), Layeghy & Portmann 2023 (10.1016/j.compeleceng.2023.108692). Decide whether contribution narrows to (a) attribution of LODO loss to benign-shift feature groups or (b) pre-registered remedy test (see literature/prior_art.md "Blunt verdict").
-  5. When the run ends: write scripts/final_report.py (not yet written! run_all.py calls it at queue end — it will just fail harmlessly) + scripts/audit_numbers.py; update gates, novelty score, journal entries, variants_tried.csv; then plan_v2.
+## Where we are (session 2, 2026-11-24)
+- **Cycle 1**, phase: FULL RUN of plan_v1 in progress (tmux session `nids`, 376 jobs, resumable). Data rebuilt; row counts verified identical.
+- Done this session: scripts/final_report.py (tested on quick CSV); scripts/frontiers_times.py; literature/prior_art_fulltext.md (Gazi E7/E6/E4 already does group ablation + all-feature benign divergence + removal → our angle narrows); H2 pre-registered (journal 07); src/shift_diagnostics.py → results/diagnostics/shift_by_group.json (journal 08).
+- **NEXT ACTION:**
+  1. If container is fresh: `bash scripts/get_data.sh` then `bash scripts/launch_full.sh` (resumes; done jobs are kept only if results/ and state/queue.json were committed — commit them periodically!).
+  2. Watch `python3 scripts/status.py`. When E1+E2 done: `python3 scripts/final_report.py`, then test H2 (Spearman of E2 Δ vs shift_by_group benign/attack Gini; write scripts/h2_test.py).
+  3. Frontiers timing scrape (logs/frontiers_times.out): FCS 2624-9898 median 92 d (n=80) → fails 72 d. Remaining: Front. AI 2624-8212 (IF 6.7 per journal homepage), Big Data 2624-909X (IF 3.8), Comms & Networks (IF 2.7), IoT. Then update journal_selection/*.md + decisions.
+  4. Write scripts/audit_numbers.py; update gates, novelty, variants_tried.csv; plan_v2 (E6 confirmation on seeds 100–104 + test) once method frozen.
 
 ## One-liners
 - Journal: JKSU-CIS (Springer), JIF 6.4 (2025), verified median Received→Accepted 83.5 d (n=596) — **fails 72-day rule**; Q1 only partially verified.
@@ -15,7 +15,7 @@
 - Hypothesis H1: LODO collapse is largely caused by "environment-signature" features (benign-traffic differences between networks); ESF (drop env-discriminative features) and PEN (per-network quantile normalization) may help. **Prior-art warning:** LODO on all four NF-v3 sets already done (Gazi 2026, Rayamajhi 2026).
 
 ## Running now
-Nothing (container is ephemeral; session ending).
+tmux session `nids` running `run_all.py --mode full --resume` (plan_v1).
 
 ## Compute
 Cycle 1: 0.25 CPU-h (quick runs) of 15 h; global 0.25 of 120 h. Ledger: state/budget.json. Machine: 4 CPU cores, no GPU.
