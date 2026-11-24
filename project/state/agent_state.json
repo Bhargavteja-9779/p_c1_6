@@ -1,12 +1,12 @@
 {
  "cycle": 1,
- "phase": "BUILD_DONE",
- "step": "next: get_data.sh then launch_full.sh",
- "status": "PAUSED_HANDOFF",
+ "phase": "RUN_FULL",
+ "step": "plan_v1 full run launched; meanwhile Frontiers + prior-art full texts",
+ "status": "RUNNING",
  "pivots": 0,
  "topic": "cross-network NIDS generalization (NetFlow V3)",
  "journal": "JKSU-CIS",
- "last_action": "quick run 32/32 ok; handoff written",
+ "last_action": "data rebuilt (row counts verified); final_report.py + audit_numbers.py written",
  "updated": "2026-11-24",
  "user_notes": [
   "2026-11-24: user allows Frontiers journals"
