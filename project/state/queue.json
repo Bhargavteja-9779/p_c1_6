@@ -1,0 +1,7333 @@
+{
+ "jobs": {
+  "tune_lodo_lgbm_UNSW": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "lgbm",
+    "target": "UNSW",
+    "eval_split": "val",
+    "job_id": "tune_lodo_lgbm_UNSW"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_lgbm_TON": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "lgbm",
+    "target": "TON",
+    "eval_split": "val",
+    "job_id": "tune_lodo_lgbm_TON"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_lgbm_CIC": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "lgbm",
+    "target": "CIC",
+    "eval_split": "val",
+    "job_id": "tune_lodo_lgbm_CIC"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_lgbm_BOT": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "lgbm",
+    "target": "BOT",
+    "eval_split": "val",
+    "job_id": "tune_lodo_lgbm_BOT"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_xgb_UNSW": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "xgb",
+    "target": "UNSW",
+    "eval_split": "val",
+    "job_id": "tune_lodo_xgb_UNSW"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_xgb_TON": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "xgb",
+    "target": "TON",
+    "eval_split": "val",
+    "job_id": "tune_lodo_xgb_TON"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_xgb_CIC": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "xgb",
+    "target": "CIC",
+    "eval_split": "val",
+    "job_id": "tune_lodo_xgb_CIC"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_xgb_BOT": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "xgb",
+    "target": "BOT",
+    "eval_split": "val",
+    "job_id": "tune_lodo_xgb_BOT"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_rf_UNSW": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "rf",
+    "target": "UNSW",
+    "eval_split": "val",
+    "job_id": "tune_lodo_rf_UNSW"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_rf_TON": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "rf",
+    "target": "TON",
+    "eval_split": "val",
+    "job_id": "tune_lodo_rf_TON"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_rf_CIC": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "rf",
+    "target": "CIC",
+    "eval_split": "val",
+    "job_id": "tune_lodo_rf_CIC"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_rf_BOT": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "rf",
+    "target": "BOT",
+    "eval_split": "val",
+    "job_id": "tune_lodo_rf_BOT"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_lr_UNSW": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "lr",
+    "target": "UNSW",
+    "eval_split": "val",
+    "job_id": "tune_lodo_lr_UNSW"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_lr_TON": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "lr",
+    "target": "TON",
+    "eval_split": "val",
+    "job_id": "tune_lodo_lr_TON"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_lr_CIC": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "lr",
+    "target": "CIC",
+    "eval_split": "val",
+    "job_id": "tune_lodo_lr_CIC"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_lr_BOT": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "lr",
+    "target": "BOT",
+    "eval_split": "val",
+    "job_id": "tune_lodo_lr_BOT"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_mlp_UNSW": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "mlp",
+    "target": "UNSW",
+    "eval_split": "val",
+    "job_id": "tune_lodo_mlp_UNSW"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_mlp_TON": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "mlp",
+    "target": "TON",
+    "eval_split": "val",
+    "job_id": "tune_lodo_mlp_TON"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_mlp_CIC": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "mlp",
+    "target": "CIC",
+    "eval_split": "val",
+    "job_id": "tune_lodo_mlp_CIC"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_mlp_BOT": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "mlp",
+    "target": "BOT",
+    "eval_split": "val",
+    "job_id": "tune_lodo_mlp_BOT"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_dann_UNSW": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "dann",
+    "target": "UNSW",
+    "eval_split": "val",
+    "job_id": "tune_lodo_dann_UNSW"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_dann_TON": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "dann",
+    "target": "TON",
+    "eval_split": "val",
+    "job_id": "tune_lodo_dann_TON"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_dann_CIC": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "dann",
+    "target": "CIC",
+    "eval_split": "val",
+    "job_id": "tune_lodo_dann_CIC"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_dann_BOT": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "dann",
+    "target": "BOT",
+    "eval_split": "val",
+    "job_id": "tune_lodo_dann_BOT"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_coral_UNSW": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "coral",
+    "target": "UNSW",
+    "eval_split": "val",
+    "job_id": "tune_lodo_coral_UNSW"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_coral_TON": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "coral",
+    "target": "TON",
+    "eval_split": "val",
+    "job_id": "tune_lodo_coral_TON"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_coral_CIC": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "coral",
+    "target": "CIC",
+    "eval_split": "val",
+    "job_id": "tune_lodo_coral_CIC"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "tune_lodo_coral_BOT": {
+   "spec": {
+    "kind": "tune",
+    "exp": "E1a",
+    "protocol": "lodo",
+    "priority": 1,
+    "n_per_source": 50000,
+    "n_val_per_source": 20000,
+    "method": "coral",
+    "target": "BOT",
+    "eval_split": "val",
+    "job_id": "tune_lodo_coral_BOT"
+   },
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T03:52:04"
+  },
+  "E1_lodo_lgbm_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lgbm_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lgbm_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lgbm_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lgbm_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lgbm_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lgbm_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lgbm_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lgbm_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lgbm_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lgbm_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lgbm_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "lgbm",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lgbm_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_UNSW",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_UNSW",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_UNSW",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_TON",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_TON",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_TON",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_CIC",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_CIC",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_CIC",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_BOT",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_BOT",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_xgb_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_xgb_BOT",
+    "save_scores": true,
+    "method": "xgb",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_xgb_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_UNSW",
+    "save_scores": true,
+    "method": "rf",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_UNSW",
+    "save_scores": true,
+    "method": "rf",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_UNSW",
+    "save_scores": true,
+    "method": "rf",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_TON",
+    "save_scores": true,
+    "method": "rf",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_TON",
+    "save_scores": true,
+    "method": "rf",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_TON",
+    "save_scores": true,
+    "method": "rf",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_CIC",
+    "save_scores": true,
+    "method": "rf",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_CIC",
+    "save_scores": true,
+    "method": "rf",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_CIC",
+    "save_scores": true,
+    "method": "rf",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_BOT",
+    "save_scores": true,
+    "method": "rf",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_BOT",
+    "save_scores": true,
+    "method": "rf",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_rf_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_rf_BOT",
+    "save_scores": true,
+    "method": "rf",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_rf_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_UNSW",
+    "save_scores": true,
+    "method": "lr",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_UNSW",
+    "save_scores": true,
+    "method": "lr",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_UNSW",
+    "save_scores": true,
+    "method": "lr",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_TON",
+    "save_scores": true,
+    "method": "lr",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_TON",
+    "save_scores": true,
+    "method": "lr",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_TON",
+    "save_scores": true,
+    "method": "lr",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_CIC",
+    "save_scores": true,
+    "method": "lr",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_CIC",
+    "save_scores": true,
+    "method": "lr",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_CIC",
+    "save_scores": true,
+    "method": "lr",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_BOT",
+    "save_scores": true,
+    "method": "lr",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_BOT",
+    "save_scores": true,
+    "method": "lr",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_lr_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lr_BOT",
+    "save_scores": true,
+    "method": "lr",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_lr_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_UNSW",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_UNSW",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_UNSW",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_TON",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_TON",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_TON",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_CIC",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_CIC",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_CIC",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_BOT",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_BOT",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_mlp_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_mlp_BOT",
+    "save_scores": true,
+    "method": "mlp",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_mlp_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_UNSW",
+    "save_scores": true,
+    "method": "dann",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_UNSW",
+    "save_scores": true,
+    "method": "dann",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_UNSW",
+    "save_scores": true,
+    "method": "dann",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_TON",
+    "save_scores": true,
+    "method": "dann",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_TON",
+    "save_scores": true,
+    "method": "dann",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_TON",
+    "save_scores": true,
+    "method": "dann",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_CIC",
+    "save_scores": true,
+    "method": "dann",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_CIC",
+    "save_scores": true,
+    "method": "dann",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_CIC",
+    "save_scores": true,
+    "method": "dann",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_BOT",
+    "save_scores": true,
+    "method": "dann",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_BOT",
+    "save_scores": true,
+    "method": "dann",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_dann_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_dann_BOT",
+    "save_scores": true,
+    "method": "dann",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_dann_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_UNSW",
+    "save_scores": true,
+    "method": "coral",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_UNSW",
+    "save_scores": true,
+    "method": "coral",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_UNSW",
+    "save_scores": true,
+    "method": "coral",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_TON",
+    "save_scores": true,
+    "method": "coral",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_TON",
+    "save_scores": true,
+    "method": "coral",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_TON",
+    "save_scores": true,
+    "method": "coral",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_CIC",
+    "save_scores": true,
+    "method": "coral",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_CIC",
+    "save_scores": true,
+    "method": "coral",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_CIC",
+    "save_scores": true,
+    "method": "coral",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_BOT",
+    "save_scores": true,
+    "method": "coral",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_BOT",
+    "save_scores": true,
+    "method": "coral",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_coral_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_coral_BOT",
+    "save_scores": true,
+    "method": "coral",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_coral_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.3_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.3,
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.3_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.4_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.4,
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.4_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-lgbm_t0.5_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+lgbm",
+    "tau": 0.5,
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-lgbm_t0.5_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.3_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.3,
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.3_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.4_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.4,
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.4_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_esf-pen-lgbm_t0.5_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "esf+pen+lgbm",
+    "tau": 0.5,
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_esf-pen-lgbm_t0.5_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E1_lodo_pen-lgbm_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E1",
+    "protocol": "lodo",
+    "priority": 2,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "save_scores": true,
+    "method": "pen+lgbm",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E1_lodo_pen-lgbm_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_ttl+lgbm",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_ttl+lgbm",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_ttl+lgbm",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_ttl+lgbm",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_ttl+lgbm",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_ttl+lgbm",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_ttl+lgbm",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_ttl+lgbm",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_ttl+lgbm",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_ttl+lgbm",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_ttl+lgbm",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_ttl-lgbm_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_ttl+lgbm",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_ttl-lgbm_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_tcpwin+lgbm",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_tcpwin+lgbm",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_tcpwin+lgbm",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_tcpwin+lgbm",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_tcpwin+lgbm",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_tcpwin+lgbm",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_tcpwin+lgbm",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_tcpwin+lgbm",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_tcpwin+lgbm",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_tcpwin+lgbm",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_tcpwin+lgbm",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_tcpwin-lgbm_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_tcpwin+lgbm",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_tcpwin-lgbm_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_port_proto+lgbm",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_port_proto+lgbm",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_port_proto+lgbm",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_port_proto+lgbm",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_port_proto+lgbm",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_port_proto+lgbm",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_port_proto+lgbm",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_port_proto+lgbm",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_port_proto+lgbm",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_port_proto+lgbm",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_port_proto+lgbm",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_port_proto-lgbm_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_port_proto+lgbm",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_port_proto-lgbm_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_app_fields+lgbm",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_app_fields+lgbm",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_app_fields+lgbm",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_app_fields+lgbm",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_app_fields+lgbm",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_app_fields+lgbm",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_app_fields+lgbm",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_app_fields+lgbm",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_app_fields+lgbm",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_app_fields+lgbm",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_app_fields+lgbm",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_app_fields-lgbm_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_app_fields+lgbm",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_app_fields-lgbm_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_flags+lgbm",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_flags+lgbm",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "drop_flags+lgbm",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_flags+lgbm",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_flags+lgbm",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "drop_flags+lgbm",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_flags+lgbm",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_flags+lgbm",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "drop_flags+lgbm",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_flags+lgbm",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_flags+lgbm",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E2_lodo_drop_flags-lgbm_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E2",
+    "protocol": "lodo",
+    "priority": 3,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "drop_flags+lgbm",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E2_lodo_drop_flags-lgbm_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_lgbm_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "lgbm",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_lgbm_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_rf_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "rf",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_rf_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_random_mlp_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_random",
+    "method": "mlp",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_random_mlp_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_lgbm_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "lgbm",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_lgbm_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_rf_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "rf",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_rf_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "UNSW",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "UNSW",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "UNSW",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "TON",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "TON",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "TON",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "CIC",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "CIC",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "CIC",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "BOT",
+    "seed": 0,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "BOT",
+    "seed": 1,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E4_id_chrono_mlp_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E4",
+    "priority": 3,
+    "cfg": {},
+    "protocol": "id_chrono",
+    "method": "mlp",
+    "target": "BOT",
+    "seed": 2,
+    "n_per_source": 100000,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E4_id_chrono_mlp_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "UNSW",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "UNSW",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "UNSW",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "TON",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "TON",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "TON",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "CIC",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "CIC",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "CIC",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "BOT",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "BOT",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n10000_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "lgbm",
+    "n_per_source": 10000,
+    "target": "BOT",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n10000_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "UNSW",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "UNSW",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "UNSW",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "TON",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "TON",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "TON",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "CIC",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "CIC",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "CIC",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "BOT",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "BOT",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_lgbm_n30000_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "lgbm",
+    "n_per_source": 30000,
+    "target": "BOT",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_lgbm_n30000_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "UNSW",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "UNSW",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "UNSW",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "TON",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "TON",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "TON",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "CIC",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "CIC",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "CIC",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "BOT",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "BOT",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n10000_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "pen+lgbm",
+    "n_per_source": 10000,
+    "target": "BOT",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n10000_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_UNSW_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "UNSW",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_UNSW_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_UNSW_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "UNSW",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_UNSW_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_UNSW_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_UNSW",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "UNSW",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_UNSW_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_TON_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "TON",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_TON_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_TON_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "TON",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_TON_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_TON_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_TON",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "TON",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_TON_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_CIC_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "CIC",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_CIC_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_CIC_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "CIC",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_CIC_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_CIC_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_CIC",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "CIC",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_CIC_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_BOT_s0": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "BOT",
+    "seed": 0,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_BOT_s0"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_BOT_s1": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "BOT",
+    "seed": 1,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_BOT_s1"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  },
+  "E3_lodo_pen-lgbm_n30000_BOT_s2": {
+   "spec": {
+    "kind": "run",
+    "exp": "E3",
+    "protocol": "lodo",
+    "priority": 4,
+    "cfg_from": "tune_lodo_lgbm_BOT",
+    "method": "pen+lgbm",
+    "n_per_source": 30000,
+    "target": "BOT",
+    "seed": 2,
+    "n_val_per_source": 60000,
+    "eval_split": "val",
+    "job_id": "E3_lodo_pen-lgbm_n30000_BOT_s2"
+   },
+   "status": "pending",
+   "attempts": 0,
+   "plan": "plan_v1.yaml"
+  }
+ }
+}
