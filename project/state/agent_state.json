@@ -1,12 +1,12 @@
 {
  "cycle": 4,
- "phase": "PIVOT_TOPIC_SELECTION",
- "step": "Phase 3 again: generate >=10 topic candidates for JKSU-CIS, prior-art check each BEFORE code",
+ "phase": "T2_PRIOR_ART_AND_PROTOCOL",
+ "step": "await HF-DIF protocol extraction + tabular-AD SOTA survey (sub-agents); then design method + plan_v4",
  "status": "ACTIVE",
  "pivots": 1,
- "topic": "(pivot #1 pending \u2014 topic 1 archived)",
+ "topic": "T2: unsupervised/semi-supervised tabular anomaly detection on ADBench (named method; beat HF-DIF, JKSU-CIS)",
  "journal": "JKSU-CIS",
- "last_action": "cycle3 H3 failed; pivot #1 declared; topic 1 archived",
+ "last_action": "D33 topic chosen; ADBench 47 datasets downloaded (scripts/get_data_adbench.sh); pyod 3.6.9",
  "updated": "2026-11-24",
  "user_notes": [
   "2026-11-24: user allows Frontiers journals",

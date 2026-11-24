@@ -6,13 +6,13 @@
 - Finding so far (journal_selection/jksu_profile.md): JKSU-CIS mostly publishes NAMED-METHOD papers on public benchmarks; audit/negative-result topics fit poorly.
 - **NEXT ACTION:**
   1. Finish journal_selection/jksu_profile.md from ≥40 JKSU-CIS papers (abstracts + ≥6 full texts: structure, datasets, baselines, exact numbers, weaknesses). (A sub-agent was running this in session 2; if its result is not in the file, redo it.)
-  2. Choose a CPU-feasible named-method topic in a frequent JKSU area with directly comparable JKSU papers (e.g. tabular / time-series anomaly detection, graph learning). Prior-art check (≥8 phrasings, read closest code/paper) BEFORE code. Write topic/selected_topic.md (old one kept as selected_topic_v1_nids.md), literature/journal_benchmark.md, plan_v4.
+  2. DONE (D33: tabular AD on ADBench). Remaining from this step: HF-DIF exact protocol + per-dataset tables → literature/journal_benchmark.md; SOTA survey → literature/prior_art_v2/tabular_ad.md; then method design, H4 written BEFORE tests, plan_v4. (Original text:) Choose a CPU-feasible named-method topic in a frequent JKSU area with directly comparable JKSU papers (e.g. tabular / time-series anomaly detection, graph learning). Prior-art check (≥8 phrasings, read closest code/paper) BEFORE code. Write topic/selected_topic.md (old one kept as selected_topic_v1_nids.md), literature/journal_benchmark.md, plan_v4.
   3. Build, quick run, full run (keep session awake; autosave), report, novelty /30, iterate.
 - Prior-art checks of earlier candidates: literature/prior_art_v2/*.md (Elliptic = crowded; phishing-dataset audit, NIDS underspecification, Android drift results added when available).
 
 ## One-liners
 - Journal: JKSU-CIS (Springer Nature), JIF 6.4 (2025), verified median Received→Accepted 83.5 d (n=596) — **fails 72-day rule**; Q1 only partially verified. Frontiers checked this session (user allowed it): none ≤ 72 d (Frontiers in AI 83.5 d, n=300) → D17 keep JKSU-CIS.
-- Topic: NONE yet (topic 1, cross-network NetFlow NIDS, archived after cycles 1–3).
+- Topic 2 (D33): unsupervised/semi-supervised tabular anomaly detection on ADBench — named-method paper; beat HF-DIF (JKSU-CIS 10.1007/s44443-026-00706-6: avg AUC-ROC 82.6, AUC-PR 34.90 on 20 ADBench sets). Data: `bash scripts/get_data_adbench.sh` (47 .npz). Baselines via PyOD 3.6.9.
 - Hypothesis H1 (FAILED, journal 10): LODO collapse is driven by benign "environment-signature" features; ESF / PEN help. **Prior art now confirmed from code:** Gazi et al. (Zenodo 10.5281/zenodo.24172401) have BRN (== our PEN), feature-group drop ablation, failure decomposition and benign-divergence audit (journal 06, D15). Cycle 1 is therefore an independent replication (D16).
 
 ## Running now
