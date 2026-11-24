@@ -1,0 +1,28 @@
+# plan_v2 — cycle 1 — written 2026-11-24 while plan_v1 runs, BEFORE any plan_v1 LODO result was seen
+# (only the 32 smoke-test jobs of results/quick existed). Reason: decision D15 (P01 already pre-registers the remedy test).
+# E7 interventional attribution (src/transplant.py). Pre-registered hypotheses:
+#  H2a (benign vs attack): for LightGBM, the full benign swap (group "all", class benign) recovers more macro-F1 than
+#       the full attack swap (group "all", class attack), averaged over targets UNSW, TON, CIC.
+#  H2b (concentration): among the 6 groups {ttl, tcpwin, port_proto, app_fields, flags, rest}, at most 2 account for
+#       >= 50 % of the summed positive benign-side effects (LightGBM, mean over UNSW/TON/CIC).
+#  H2c (model-family breadth): the rank order of benign-side group effects is consistent across lgbm/xgb/rf/mlp
+#       (mean pairwise Kendall tau > 0.5).
+#  H2d (association vs intervention): the per-group drop-one ablation effect (plan_v1 E2) and the transplant effect
+#       are not the same quantity; we report their rank correlation and do not pre-commit to a direction.
+# Each is decided on target VAL with seeds 0-2; confirmation on fresh seeds 100-104 is a later plan if a claim survives.
+# Compute estimate: 48 jobs x ~4 CPU-min ~ 3.2 CPU-h.
+globals:
+  n_per_source: 100000
+  n_val_per_source: 60000
+  eval_split: val
+blocks:
+  - id: "E7_lodo_transplant_{method}_{target}_s{seed}"
+    kind: transplant
+    exp: E7
+    protocol: lodo
+    priority: 2
+    reps: 3
+    cfg_from: "tune_lodo_{method}_{target}"
+    method: [lgbm, xgb, rf, mlp]
+    target: [UNSW, TON, CIC, BOT]
+    seed: [0, 1, 2]

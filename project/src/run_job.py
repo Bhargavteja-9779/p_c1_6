@@ -104,6 +104,10 @@ def fit_eval(spec, cfg, seed, ckpt=None):
     res["src_val_auroc"] = float(nids.roc_auc_score(yva, pva)) if len(np.unique(yva)) > 1 else float("nan")
     if "esf_dropped" in info:
         res["esf_dropped"] = info["esf_dropped"]; res["esf_scores"] = info["esf_scores"]; res["tau"] = info["tau"]
+    if spec.get("kind") == "transplant":   # plan_v2 E7 (src/transplant.py); diagnostic on target VAL only
+        assert spec.get("eval_split", "val") == "val" and order is None
+        import transplant
+        res["transplant"] = transplant.run(m, thr, Xva, yva, Xte, yte, use, reps=spec.get("reps", 3), seed=seed)
     if spec.get("save_scores"):
         d = os.path.join(ROOT, "results", "scores"); os.makedirs(d, exist_ok=True)
         np.savez_compressed(os.path.join(d, spec["job_id"] + ".npz"), p=pte.astype(np.float32), y=yte.astype(np.int8))
@@ -138,7 +142,7 @@ def main(spec):
         res["cfg"] = cfg
     res.update({"spec": spec, "wall_s": time.time() - t0, "finished": time.strftime("%Y-%m-%dT%H:%M:%S")})
     json.dump(res, open(out + ".tmp", "w"), indent=1, default=str); os.replace(out + ".tmp", out)
-    if spec["kind"] == "run":
+    if spec["kind"] in ("run", "transplant"):
         row = {k: spec.get(k) for k in ("job_id", "exp", "protocol", "target", "method", "seed", "eval_split")}
         row.update({k: res[k] for k in ("macro_f1", "f1_attack", "auroc", "prauc", "tpr", "fpr", "bal_acc", "threshold",
                                           "src_val_macro_f1", "n_eval", "attack_rate_eval", "fit_s", "pred_ms_per_1k", "n_features", "n_train")})

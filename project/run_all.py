@@ -25,6 +25,10 @@ def jsave(p, obj):
     json.dump(obj, open(p + ".tmp", "w"), indent=1); os.replace(p + ".tmp", p)
 
 
+def all_plans():
+    return sorted(glob.glob(os.path.join(ROOT, "experiments", "plan_v*.yaml")), key=lambda p: int(re.findall(r"v(\d+)", p)[-1]))
+
+
 def latest_plan():
     ps = sorted(glob.glob(os.path.join(ROOT, "experiments", "plan_v*.yaml")), key=lambda p: int(re.findall(r"v(\d+)", p)[-1]))
     return ps[-1]
@@ -95,13 +99,14 @@ def main():
     except BlockingIOError:
         print("another run_all is active; exiting"); return
     agent = jload(os.path.join(ST, "agent_state.json"), {"cycle": 1})
-    plan_p = a.plan or latest_plan(); plan = yaml.safe_load(open(plan_p))
     qpath = os.path.join(ST, "queue_quick.json" if quick else "queue.json")
     q = jload(qpath, {"jobs": {}})
-    for spec in expand(plan, quick):
-        j = q["jobs"].get(spec["job_id"])
-        if j is None:
-            q["jobs"][spec["job_id"]] = {"spec": spec, "status": "pending", "attempts": 0, "plan": os.path.basename(plan_p)}
+    # every plan version is expanded (plans are append-only; job ids are unique across versions)
+    for plan_p in ([a.plan] if a.plan else all_plans()):
+        plan = yaml.safe_load(open(plan_p))
+        for spec in expand(plan, quick):
+            if spec["job_id"] not in q["jobs"]:
+                q["jobs"][spec["job_id"]] = {"spec": spec, "status": "pending", "attempts": 0, "plan": os.path.basename(plan_p)}
     for j in q["jobs"].values():                       # resume: anything left 'running' by a crash goes back to pending
         if j["status"] == "running":
             j["status"] = "pending"
