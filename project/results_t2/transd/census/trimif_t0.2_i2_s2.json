@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "trimif_t0.2_i2", "seed": 2, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1241, "auc_roc": 0.5947422325653281, "auc_pr": 0.06910128607583602, "p_at_k": 0.043513295729250605, "fit_s": 1.6109943389892578, "pred_s": 7.152557373046875e-07, "max_n": 20000}

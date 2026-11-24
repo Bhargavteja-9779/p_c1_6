@@ -1,0 +1,1 @@
+{"dataset": "Hepatitis", "method": "ppif_Rlin_K0.25_Cskew", "seed": 2, "protocol": "transd", "n_train": 80, "n_test": 80, "anom_test": 13, "auc_roc": 0.7531572904707233, "auc_pr": 0.3646886716579811, "p_at_k": 0.38461538461538464, "fit_s": 0.1833510398864746, "pred_s": 2.384185791015625e-07, "max_n": 20000}

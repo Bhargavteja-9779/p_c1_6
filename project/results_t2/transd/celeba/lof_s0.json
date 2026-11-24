@@ -1,0 +1,1 @@
+{"dataset": "celeba", "method": "lof", "seed": 0, "protocol": "transd", "n_train": 202599, "n_test": 202599, "anom_test": 4547, "auc_roc": 0.4706674536264278, "auc_pr": 0.020682938317044628, "p_at_k": 0.019573345062678688, "fit_s": 93.72494792938232, "pred_s": 86.32963466644287, "max_n": 1000000}

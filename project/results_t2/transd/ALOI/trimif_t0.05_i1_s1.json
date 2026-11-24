@@ -1,0 +1,1 @@
+{"dataset": "ALOI", "method": "trimif_t0.05_i1", "seed": 1, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 609, "auc_roc": 0.5171089816268258, "auc_pr": 0.031119122979571406, "p_at_k": 0.0180623973727422, "fit_s": 0.7087905406951904, "pred_s": 2.1457672119140625e-06, "max_n": 20000}

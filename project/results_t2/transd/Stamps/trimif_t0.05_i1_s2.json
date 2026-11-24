@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "trimif_t0.05_i1", "seed": 2, "protocol": "transd", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.8952917841110762, "auc_pr": 0.3026464774211335, "p_at_k": 0.25806451612903225, "fit_s": 0.3315577507019043, "pred_s": 7.152557373046875e-07, "max_n": 20000}

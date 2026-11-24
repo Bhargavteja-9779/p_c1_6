@@ -1,0 +1,1 @@
+{"dataset": "PageBlocks", "method": "copod", "seed": 0, "protocol": "transd", "n_train": 5393, "n_test": 5393, "anom_test": 510, "auc_roc": 0.8753739464247711, "auc_pr": 0.3710465466617156, "p_at_k": 0.3352941176470588, "fit_s": 0.010248899459838867, "pred_s": 0.018960952758789062, "max_n": 1000000}

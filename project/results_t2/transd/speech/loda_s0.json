@@ -1,0 +1,1 @@
+{"dataset": "speech", "method": "loda", "seed": 0, "protocol": "transd", "n_train": 3686, "n_test": 3686, "anom_test": 61, "auc_roc": 0.47558620689655173, "auc_pr": 0.015757382287889216, "p_at_k": 0.0, "fit_s": 0.6268200874328613, "pred_s": 0.5399327278137207, "max_n": 1000000}

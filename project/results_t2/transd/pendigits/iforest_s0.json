@@ -1,0 +1,1 @@
+{"dataset": "pendigits", "method": "iforest", "seed": 0, "protocol": "transd", "n_train": 6870, "n_test": 6870, "anom_test": 156, "auc_roc": 0.9555654850561016, "auc_pr": 0.2671489422275153, "p_at_k": 0.36538461538461536, "fit_s": 0.2601287364959717, "pred_s": 0.03856635093688965, "max_n": 20000}

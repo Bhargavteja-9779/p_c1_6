@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "loda", "seed": 3, "protocol": "transd", "n_train": 3443, "n_test": 3443, "anom_test": 100, "auc_roc": 0.7043942566556984, "auc_pr": 0.06080211757241664, "p_at_k": 0.05, "fit_s": 0.020912647247314453, "pred_s": 0.011080503463745117, "max_n": 1000000}

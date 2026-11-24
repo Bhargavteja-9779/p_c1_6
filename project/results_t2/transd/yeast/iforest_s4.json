@@ -1,0 +1,1 @@
+{"dataset": "yeast", "method": "iforest", "seed": 4, "protocol": "transd", "n_train": 1484, "n_test": 1484, "anom_test": 507, "auc_roc": 0.3934376255453337, "auc_pr": 0.30491568541924985, "p_at_k": 0.27218934911242604, "fit_s": 0.09550142288208008, "pred_s": 0.010229825973510742, "max_n": 1000000}

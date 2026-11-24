@@ -1,0 +1,1 @@
+{"dataset": "annthyroid", "method": "iforest", "seed": 1, "protocol": "transd", "n_train": 7200, "n_test": 7200, "anom_test": 534, "auc_roc": 0.836075461478732, "auc_pr": 0.30800642746350154, "p_at_k": 0.32771535580524347, "fit_s": 0.14895367622375488, "pred_s": 0.028290748596191406, "max_n": 20000}

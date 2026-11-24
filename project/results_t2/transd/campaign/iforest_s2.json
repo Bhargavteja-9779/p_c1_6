@@ -1,0 +1,1 @@
+{"dataset": "campaign", "method": "iforest", "seed": 2, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 2253, "auc_roc": 0.6951548183371691, "auc_pr": 0.2561638387849675, "p_at_k": 0.30492676431424764, "fit_s": 0.3090231418609619, "pred_s": 0.09217286109924316, "max_n": 20000}

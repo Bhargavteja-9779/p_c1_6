@@ -1,0 +1,1 @@
+{"dataset": "PageBlocks", "method": "pca", "seed": 0, "protocol": "transd", "n_train": 5393, "n_test": 5393, "anom_test": 510, "auc_roc": 0.9049700240530372, "auc_pr": 0.511571217775433, "p_at_k": 0.4666666666666667, "fit_s": 0.0027358531951904297, "pred_s": 0.0050885677337646484, "max_n": 1000000}

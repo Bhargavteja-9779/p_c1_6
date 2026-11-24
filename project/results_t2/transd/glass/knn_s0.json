@@ -1,0 +1,1 @@
+{"dataset": "glass", "method": "knn", "seed": 0, "protocol": "transd", "n_train": 214, "n_test": 214, "anom_test": 9, "auc_roc": 0.8639566395663957, "auc_pr": 0.16679428512761846, "p_at_k": 0.1111111111111111, "fit_s": 0.0015931129455566406, "pred_s": 0.0008003711700439453, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "musk", "method": "ppif_Rlin_K1.0", "seed": 0, "protocol": "transd", "n_train": 3062, "n_test": 3062, "anom_test": 97, "auc_roc": 0.99998261504494, "auc_pr": 0.9994651808091657, "p_at_k": 0.9896907216494846, "fit_s": 0.37085986137390137, "pred_s": 2.384185791015625e-06, "max_n": 20000}

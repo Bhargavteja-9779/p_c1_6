@@ -1,0 +1,1 @@
+{"dataset": "Pima", "method": "trimif_t0.05_i1", "seed": 1, "protocol": "transd", "n_train": 768, "n_test": 768, "anom_test": 268, "auc_roc": 0.6782537313432836, "auc_pr": 0.5205362533830009, "p_at_k": 0.5410447761194029, "fit_s": 0.3828885555267334, "pred_s": 1.430511474609375e-06, "max_n": 20000}

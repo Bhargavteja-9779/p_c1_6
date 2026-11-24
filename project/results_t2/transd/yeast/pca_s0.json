@@ -1,0 +1,1 @@
+{"dataset": "yeast", "method": "pca", "seed": 0, "protocol": "transd", "n_train": 1484, "n_test": 1484, "anom_test": 507, "auc_roc": 0.3956098752571471, "auc_pr": 0.29477259471939155, "p_at_k": 0.2682445759368836, "fit_s": 0.0016503334045410156, "pred_s": 0.00044727325439453125, "max_n": 1000000}

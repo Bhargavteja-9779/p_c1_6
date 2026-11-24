@@ -1,0 +1,1 @@
+{"dataset": "magic.gamma", "method": "iforest", "seed": 3, "protocol": "transd", "n_train": 19020, "n_test": 19020, "anom_test": 6688, "auc_roc": 0.7235607085545521, "auc_pr": 0.6325616248382654, "p_at_k": 0.5484449760765551, "fit_s": 0.40215611457824707, "pred_s": 0.10087871551513672, "max_n": 1000000}

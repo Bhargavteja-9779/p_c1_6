@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "ppif_Rmlp_K0.25", "seed": 1, "protocol": "transd", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.871176531997077, "auc_pr": 0.28176908239638654, "p_at_k": 0.1935483870967742, "fit_s": 0.18719863891601562, "pred_s": 2.384185791015625e-07, "max_n": 20000}

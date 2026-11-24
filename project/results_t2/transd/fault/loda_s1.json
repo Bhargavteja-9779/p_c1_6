@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "loda", "seed": 1, "protocol": "transd", "n_train": 1941, "n_test": 1941, "anom_test": 673, "auc_roc": 0.5082614218551521, "auc_pr": 0.3696969809225474, "p_at_k": 0.3803863298662704, "fit_s": 0.030833959579467773, "pred_s": 0.00963282585144043, "max_n": 1000000}

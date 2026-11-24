@@ -1,0 +1,1 @@
+{"dataset": "cardio", "method": "ppif_Rmlp_K0.25", "seed": 1, "protocol": "transd", "n_train": 1831, "n_test": 1831, "anom_test": 176, "auc_roc": 0.8933260093380939, "auc_pr": 0.5194705342038834, "p_at_k": 0.5284090909090909, "fit_s": 0.24722075462341309, "pred_s": 1.6689300537109375e-06, "max_n": 20000}

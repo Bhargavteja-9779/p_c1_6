@@ -1,0 +1,1 @@
+{"dataset": "http", "method": "ens_k10_Eik", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 78, "auc_roc": 0.5438710972793896, "auc_pr": 0.02267897900394108, "p_at_k": 0.02564102564102564, "fit_s": 0.5644371509552002, "pred_s": 4.76837158203125e-07, "max_n": 20000}

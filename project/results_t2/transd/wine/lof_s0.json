@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "lof", "seed": 0, "protocol": "transd", "n_train": 129, "n_test": 129, "anom_test": 10, "auc_roc": 0.8789915966386554, "auc_pr": 0.25782143481707964, "p_at_k": 0.1, "fit_s": 0.001642465591430664, "pred_s": 0.0010576248168945312, "max_n": 20000}

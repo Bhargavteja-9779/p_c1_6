@@ -1,0 +1,1 @@
+{"dataset": "musk", "method": "ecod", "seed": 0, "protocol": "transd", "n_train": 3062, "n_test": 3062, "anom_test": 97, "auc_roc": 0.9559430468872239, "auc_pr": 0.49175583613194596, "p_at_k": 0.4948453608247423, "fit_s": 0.06916213035583496, "pred_s": 0.15878582000732422, "max_n": 20000}

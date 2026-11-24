@@ -1,0 +1,1 @@
+{"dataset": "satimage-2", "method": "ens_k10_Eik", "seed": 0, "protocol": "transd", "n_train": 5803, "n_test": 5803, "anom_test": 71, "auc_roc": 0.9843207886537649, "auc_pr": 0.5981487206489516, "p_at_k": 0.49295774647887325, "fit_s": 0.5181114673614502, "pred_s": 1.430511474609375e-06, "max_n": 20000}

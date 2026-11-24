@@ -1,0 +1,1 @@
+{"dataset": "magic.gamma", "method": "loda", "seed": 2, "protocol": "transd", "n_train": 19020, "n_test": 19020, "anom_test": 6688, "auc_roc": 0.6831986128010218, "auc_pr": 0.6085715956481496, "p_at_k": 0.5023923444976076, "fit_s": 0.07946920394897461, "pred_s": 0.061264753341674805, "max_n": 1000000}

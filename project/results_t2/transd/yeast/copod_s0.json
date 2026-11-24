@@ -1,0 +1,1 @@
+{"dataset": "yeast", "method": "copod", "seed": 0, "protocol": "transd", "n_train": 1484, "n_test": 1484, "anom_test": 507, "auc_roc": 0.3813004831034908, "auc_pr": 0.30884827270422444, "p_at_k": 0.2583826429980276, "fit_s": 0.00299072265625, "pred_s": 0.004600048065185547, "max_n": 1000000}

@@ -1,0 +1,1 @@
+{"dataset": "thyroid", "method": "trimif_t0.05_i1", "seed": 1, "protocol": "transd", "n_train": 3772, "n_test": 3772, "anom_test": 93, "auc_roc": 0.9877128836435801, "auc_pr": 0.7075544453759313, "p_at_k": 0.6989247311827957, "fit_s": 0.42777156829833984, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

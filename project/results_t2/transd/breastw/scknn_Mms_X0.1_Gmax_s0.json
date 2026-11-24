@@ -1,0 +1,1 @@
+{"dataset": "breastw", "method": "scknn_Mms_X0.1_Gmax", "seed": 0, "protocol": "transd", "n_train": 683, "n_test": 683, "anom_test": 239, "auc_roc": 0.979640205058615, "auc_pr": 0.9380766413622689, "p_at_k": 0.9079497907949791, "fit_s": 0.017233848571777344, "pred_s": 7.152557373046875e-07, "max_n": 20000}

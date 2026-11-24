@@ -1,0 +1,1 @@
+{"dataset": "ALOI", "method": "subknn_m1024_k5_B20", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 609, "auc_roc": 0.5779718199130689, "auc_pr": 0.04169293818173945, "p_at_k": 0.05090311986863711, "fit_s": 3.112267017364502, "pred_s": 3.337860107421875e-06, "max_n": 20000}

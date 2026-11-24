@@ -1,0 +1,1 @@
+{"dataset": "yeast", "method": "ecod", "seed": 0, "protocol": "transd", "n_train": 1484, "n_test": 1484, "anom_test": 507, "auc_roc": 0.4439282996089547, "auc_pr": 0.33276905526762257, "p_at_k": 0.3175542406311637, "fit_s": 0.003186941146850586, "pred_s": 0.004642486572265625, "max_n": 1000000}

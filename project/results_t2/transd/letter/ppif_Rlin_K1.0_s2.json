@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "ppif_Rlin_K1.0", "seed": 2, "protocol": "transd", "n_train": 1600, "n_test": 1600, "anom_test": 100, "auc_roc": 0.6044, "auc_pr": 0.102944869124092, "p_at_k": 0.14, "fit_s": 0.26870107650756836, "pred_s": 9.5367431640625e-07, "max_n": 20000}

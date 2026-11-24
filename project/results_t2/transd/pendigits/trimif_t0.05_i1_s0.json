@@ -1,0 +1,1 @@
+{"dataset": "pendigits", "method": "trimif_t0.05_i1", "seed": 0, "protocol": "transd", "n_train": 6870, "n_test": 6870, "anom_test": 156, "auc_roc": 0.9604719949894213, "auc_pr": 0.37506566688287435, "p_at_k": 0.3974358974358974, "fit_s": 0.43872666358947754, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

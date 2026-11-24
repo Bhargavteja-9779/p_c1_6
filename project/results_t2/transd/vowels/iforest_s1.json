@@ -1,0 +1,1 @@
+{"dataset": "vowels", "method": "iforest", "seed": 1, "protocol": "transd", "n_train": 1456, "n_test": 1456, "anom_test": 50, "auc_roc": 0.7799857752489332, "auc_pr": 0.1775853847732793, "p_at_k": 0.22, "fit_s": 0.09958577156066895, "pred_s": 0.009917974472045898, "max_n": 1000000}

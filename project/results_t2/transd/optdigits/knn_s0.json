@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "knn", "seed": 0, "protocol": "transd", "n_train": 5216, "n_test": 5216, "anom_test": 150, "auc_roc": 0.39481905513883403, "auc_pr": 0.02202581826288257, "p_at_k": 0.0, "fit_s": 0.13772106170654297, "pred_s": 0.17934441566467285, "max_n": 1000000}

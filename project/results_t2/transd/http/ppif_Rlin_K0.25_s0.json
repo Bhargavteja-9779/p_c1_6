@@ -1,0 +1,1 @@
+{"dataset": "http", "method": "ppif_Rlin_K0.25", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 78, "auc_roc": 0.9957867735450308, "auc_pr": 0.46861184509597287, "p_at_k": 0.01282051282051282, "fit_s": 1.299109697341919, "pred_s": 1.430511474609375e-06, "max_n": 20000}

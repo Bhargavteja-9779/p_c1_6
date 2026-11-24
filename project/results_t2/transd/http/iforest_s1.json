@@ -1,0 +1,1 @@
+{"dataset": "http", "method": "iforest", "seed": 1, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 78, "auc_roc": 1.0, "auc_pr": 0.9999999999999999, "p_at_k": 1.0, "fit_s": 0.42551541328430176, "pred_s": 0.11612319946289062, "max_n": 20000}

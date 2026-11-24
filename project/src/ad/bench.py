@@ -5,6 +5,10 @@ Protocols (fixed before any result is seen; the one matching HF-DIF is chosen in
           samples (per seed) form the training set; test = remaining normals + ALL anomalies.
   unsup : unsupervised (ADBench style): stratified 70/30 split per seed; detector fitted on the 70 % (labels unused,
           anomalies included), evaluated on the 30 %.
+  transd: transductive unsupervised, the setting HF-DIF (JKSU-CIS 10.1007/s44443-026-00706-6, Sec. 6.1) states:
+          z-score standardisation on the whole dataset, detector fitted on ALL samples (labels unused), every sample
+          scored. Seeds change only the detector's randomness (and the subsample for sets capped by max_n).
+          Added 2026-11-24 (D34) after HF-DIF's deterministic baselines (ECOD/COPOD) matched this setting.
 Preprocessing: min-max scaling fitted on the training part only (no test statistics).
 Metrics: AUC-ROC, AUC-PR (average precision), P@K (K = #anomalies in test), fit/predict seconds.
 Results: results_t2/<protocol>/<dataset>/<method>_s<seed>.json (atomic write; skipped if present).
@@ -20,6 +24,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 DATA = os.path.join(ROOT, "data", "adbench", "repo", "adbench", "datasets", "Classical")
 OUT = os.path.join(ROOT, "results_t2")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+
+# The 20 ADBench sets used by HF-DIF (Table 1), mapped to ADBench file names.
+HFDIF20 = ["SpamBase", "Waveform", "satellite", "Cardiotocography", "InternetAds", "optdigits", "speech", "Wilt", "magic.gamma",
+           "mammography", "landsat", "fault", "smtp", "yeast", "celeba", "donors", "vowels", "backdoor", "PageBlocks", "fraud"]
 
 
 def datasets():
@@ -40,6 +49,10 @@ def split(X, y, protocol, seed, max_n=None):
         for c in (0, 1):
             i = np.flatnonzero(y == c); rng.shuffle(i); k = int(round(0.7 * len(i))); tr.append(i[:k]); te.append(i[k:])
         tr, te = np.concatenate(tr), np.concatenate(te)
+    elif protocol == "transd":
+        X = X.astype(np.float64); mu, sd = X.mean(0), X.std(0); sd = np.where(sd > 0, sd, 1.0)
+        Z = (X - mu) / sd
+        return Z, y, Z, y
     else:
         raise ValueError(protocol)
     Xtr, Xte = X[tr].astype(np.float64), X[te].astype(np.float64)
@@ -59,7 +72,8 @@ def make(method, seed, n_train):
     k = min(5, max(1, n_train - 1))
     M = {"knn": lambda: KNN(n_neighbors=k, method="largest"), "iforest": lambda: IForest(random_state=seed, n_jobs=1),
          "ecod": lambda: ECOD(), "copod": lambda: COPOD(), "lof": lambda: LOF(n_neighbors=min(20, max(2, n_train - 1))),
-         "ocsvm": lambda: OCSVM(), "pca": lambda: PCA(random_state=seed), "hbos": lambda: HBOS()}
+         "ocsvm": lambda: OCSVM(), "pca": lambda: PCA(random_state=seed), "hbos": lambda: HBOS(),
+         "loda": lambda: __import__("pyod.models.loda", fromlist=["LODA"]).LODA()}
     if method in M:
         return M[method]()
     if method == "dif":
@@ -94,7 +108,7 @@ def main():
     ap.add_argument("--seeds", default="0-9"); ap.add_argument("--datasets", default="all"); ap.add_argument("--max_n", type=int, default=50000)
     a = ap.parse_args()
     lo, hi = (a.seeds.split("-") + [None])[:2]; seeds = range(int(lo), int(hi or lo) + 1)
-    D = datasets(); names = list(D) if a.datasets == "all" else a.datasets.split(",")
+    D = datasets(); names = list(D) if a.datasets == "all" else HFDIF20 if a.datasets == "hfdif20" else a.datasets.split(",")
     for name in names:
         for method in a.methods.split(","):
             for s in seeds:

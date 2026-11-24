@@ -1,0 +1,1 @@
+{"dataset": "glass", "method": "lofk_k100", "seed": 0, "protocol": "transd", "n_train": 214, "n_test": 214, "anom_test": 9, "auc_roc": 0.7582655826558266, "auc_pr": 0.10056257004639907, "p_at_k": 0.1111111111111111, "fit_s": 0.0024862289428710938, "pred_s": 4.76837158203125e-07, "max_n": 20000}

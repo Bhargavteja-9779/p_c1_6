@@ -1,0 +1,1 @@
+{"dataset": "skin", "method": "ppif_Rlin_K0.25", "seed": 2, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 4151, "auc_roc": 0.8046500231747767, "auc_pr": 0.36024872978633193, "p_at_k": 0.3379908455793785, "fit_s": 1.1320407390594482, "pred_s": 1.430511474609375e-06, "max_n": 20000}

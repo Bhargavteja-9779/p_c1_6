@@ -1,0 +1,1 @@
+{"dataset": "mammography", "method": "iforest", "seed": 3, "protocol": "transd", "n_train": 11183, "n_test": 11183, "anom_test": 260, "auc_roc": 0.8580178381537898, "auc_pr": 0.17176817466405536, "p_at_k": 0.18461538461538463, "fit_s": 0.4023005962371826, "pred_s": 0.04531598091125488, "max_n": 1000000}

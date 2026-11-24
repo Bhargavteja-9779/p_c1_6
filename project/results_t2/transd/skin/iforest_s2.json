@@ -1,0 +1,1 @@
+{"dataset": "skin", "method": "iforest", "seed": 2, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 4151, "auc_roc": 0.6485550386469973, "auc_pr": 0.24223596704280942, "p_at_k": 0.09106239460370995, "fit_s": 0.30382680892944336, "pred_s": 0.08702564239501953, "max_n": 20000}

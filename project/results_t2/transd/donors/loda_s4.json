@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "loda", "seed": 4, "protocol": "transd", "n_train": 619326, "n_test": 619326, "anom_test": 36710, "auc_roc": 0.7828999010398123, "auc_pr": 0.12847574798414585, "p_at_k": 0.10615636066466903, "fit_s": 5.029925346374512, "pred_s": 2.99223256111145, "max_n": 1000000}

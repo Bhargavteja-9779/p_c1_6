@@ -1,0 +1,1 @@
+{"dataset": "mnist", "method": "ppif_Rlin_K1.0", "seed": 1, "protocol": "transd", "n_train": 7603, "n_test": 7603, "anom_test": 700, "auc_roc": 0.8152902464766871, "auc_pr": 0.3446662429681676, "p_at_k": 0.3457142857142857, "fit_s": 0.589292049407959, "pred_s": 1.9073486328125e-06, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "magic.gamma", "method": "pca", "seed": 0, "protocol": "transd", "n_train": 19020, "n_test": 19020, "anom_test": 6688, "auc_roc": 0.6665994191600177, "auc_pr": 0.5916393021237513, "p_at_k": 0.4889354066985646, "fit_s": 0.006036281585693359, "pred_s": 0.0031557083129882812, "max_n": 1000000}

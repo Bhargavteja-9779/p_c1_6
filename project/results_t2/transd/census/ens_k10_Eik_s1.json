@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "ens_k10_Eik", "seed": 1, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1241, "auc_roc": 0.6442185645061738, "auc_pr": 0.08126570552902634, "p_at_k": 0.06768734891216761, "fit_s": 3.9712910652160645, "pred_s": 1.430511474609375e-06, "max_n": 20000}

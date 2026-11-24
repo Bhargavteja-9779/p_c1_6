@@ -1,0 +1,1 @@
+{"dataset": "vertebral", "method": "ppif_Rlin_K1.0", "seed": 1, "protocol": "transd", "n_train": 240, "n_test": 240, "anom_test": 30, "auc_roc": 0.3631746031746032, "auc_pr": 0.09453839685685016, "p_at_k": 0.03333333333333333, "fit_s": 0.16187167167663574, "pred_s": 7.152557373046875e-07, "max_n": 20000}

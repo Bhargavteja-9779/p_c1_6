@@ -1,0 +1,1 @@
+{"dataset": "InternetAds", "method": "iforest", "seed": 1, "protocol": "transd", "n_train": 1966, "n_test": 1966, "anom_test": 368, "auc_roc": 0.720565278609131, "auc_pr": 0.5418722260839108, "p_at_k": 0.4701086956521739, "fit_s": 0.24645304679870605, "pred_s": 0.025119781494140625, "max_n": 1000000}

@@ -1,0 +1,1 @@
+{"dataset": "glass", "method": "ppif_Rlin_K0.25_Cskew", "seed": 2, "protocol": "transd", "n_train": 214, "n_test": 214, "anom_test": 9, "auc_roc": 0.7474254742547426, "auc_pr": 0.10205663384939996, "p_at_k": 0.1111111111111111, "fit_s": 0.20369243621826172, "pred_s": 2.384185791015625e-07, "max_n": 20000}

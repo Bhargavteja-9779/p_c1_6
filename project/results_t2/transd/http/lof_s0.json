@@ -1,0 +1,1 @@
+{"dataset": "http", "method": "lof", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 78, "auc_roc": 0.37717868919555503, "auc_pr": 0.03398235821591237, "p_at_k": 0.038461538461538464, "fit_s": 0.15025043487548828, "pred_s": 0.13946127891540527, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "Lymphography", "method": "ens_k10_Eike", "seed": 2, "protocol": "transd", "n_train": 148, "n_test": 148, "anom_test": 6, "auc_roc": 0.9982394366197183, "auc_pr": 0.9583333333333333, "p_at_k": 0.8333333333333334, "fit_s": 0.16903996467590332, "pred_s": 4.76837158203125e-07, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "lofk_k100", "seed": 0, "protocol": "transd", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.8936214636183317, "auc_pr": 0.34037804606465805, "p_at_k": 0.1935483870967742, "fit_s": 0.005532264709472656, "pred_s": 0.0, "max_n": 20000}

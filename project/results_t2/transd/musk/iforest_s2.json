@@ -1,0 +1,1 @@
+{"dataset": "musk", "method": "iforest", "seed": 2, "protocol": "transd", "n_train": 3062, "n_test": 3062, "anom_test": 97, "auc_roc": 0.9994054345369517, "auc_pr": 0.9833433887036371, "p_at_k": 0.9278350515463918, "fit_s": 0.12045454978942871, "pred_s": 0.018991708755493164, "max_n": 20000}

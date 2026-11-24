@@ -1,0 +1,1 @@
+{"dataset": "Cardiotocography", "method": "loda", "seed": 1, "protocol": "transd", "n_train": 2114, "n_test": 2114, "anom_test": 466, "auc_roc": 0.6048585357723238, "auc_pr": 0.394887169049425, "p_at_k": 0.33261802575107297, "fit_s": 0.024115324020385742, "pred_s": 0.008572578430175781, "max_n": 1000000}

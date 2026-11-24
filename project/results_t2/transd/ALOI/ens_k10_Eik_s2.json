@@ -1,0 +1,1 @@
+{"dataset": "ALOI", "method": "ens_k10_Eik", "seed": 2, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 609, "auc_roc": 0.5983372680044972, "auc_pr": 0.04047808110420392, "p_at_k": 0.04597701149425287, "fit_s": 1.0700836181640625, "pred_s": 2.1457672119140625e-06, "max_n": 20000}

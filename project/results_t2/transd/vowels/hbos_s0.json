@@ -1,0 +1,1 @@
+{"dataset": "vowels", "method": "hbos", "seed": 0, "protocol": "transd", "n_train": 1456, "n_test": 1456, "anom_test": 50, "auc_roc": 0.6765860597439545, "auc_pr": 0.0814001015375129, "p_at_k": 0.12, "fit_s": 0.0022504329681396484, "pred_s": 0.0005557537078857422, "max_n": 1000000}

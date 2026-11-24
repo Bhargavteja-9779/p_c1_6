@@ -1,0 +1,1 @@
+{"dataset": "http", "method": "scknn_F0.05", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 78, "auc_roc": 0.9959412220480386, "auc_pr": 0.4780324004708285, "p_at_k": 0.01282051282051282, "fit_s": 4.463720798492432, "pred_s": 1.6689300537109375e-06, "max_n": 20000}

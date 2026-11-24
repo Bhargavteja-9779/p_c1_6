@@ -1,0 +1,1 @@
+{"dataset": "PageBlocks", "method": "iforest", "seed": 1, "protocol": "transd", "n_train": 5393, "n_test": 5393, "anom_test": 510, "auc_roc": 0.901349620331442, "auc_pr": 0.4820471911864508, "p_at_k": 0.41568627450980394, "fit_s": 0.2487335205078125, "pred_s": 0.04863691329956055, "max_n": 1000000}

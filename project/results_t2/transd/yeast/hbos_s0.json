@@ -1,0 +1,1 @@
+{"dataset": "yeast", "method": "hbos", "seed": 0, "protocol": "transd", "n_train": 1484, "n_test": 1484, "anom_test": 507, "auc_roc": 0.39879153468634615, "auc_pr": 0.3275794120378849, "p_at_k": 0.27613412228796846, "fit_s": 0.0015811920166015625, "pred_s": 0.00041556358337402344, "max_n": 1000000}

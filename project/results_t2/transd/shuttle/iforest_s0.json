@@ -1,0 +1,1 @@
+{"dataset": "shuttle", "method": "iforest", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1430, "auc_roc": 0.9970934020207042, "auc_pr": 0.9835129874005647, "p_at_k": 0.9608391608391609, "fit_s": 0.275637149810791, "pred_s": 0.08148384094238281, "max_n": 20000}

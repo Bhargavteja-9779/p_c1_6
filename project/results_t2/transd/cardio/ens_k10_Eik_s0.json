@@ -1,0 +1,1 @@
+{"dataset": "cardio", "method": "ens_k10_Eik", "seed": 0, "protocol": "transd", "n_train": 1831, "n_test": 1831, "anom_test": 176, "auc_roc": 0.8428539549574293, "auc_pr": 0.41947280765311257, "p_at_k": 0.4034090909090909, "fit_s": 0.4911463260650635, "pred_s": 7.152557373046875e-07, "max_n": 20000}

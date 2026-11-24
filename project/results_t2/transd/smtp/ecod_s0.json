@@ -1,0 +1,1 @@
+{"dataset": "smtp", "method": "ecod", "seed": 0, "protocol": "transd", "n_train": 95156, "n_test": 95156, "anom_test": 30, "auc_roc": 0.880101129028867, "auc_pr": 0.5072922037867936, "p_at_k": 0.6666666666666666, "fit_s": 0.05489850044250488, "pred_s": 0.11526751518249512, "max_n": 1000000}

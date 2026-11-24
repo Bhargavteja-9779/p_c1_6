@@ -1,0 +1,1 @@
+{"dataset": "annthyroid", "method": "ppif_Rlin_K0.25", "seed": 1, "protocol": "transd", "n_train": 7200, "n_test": 7200, "anom_test": 534, "auc_roc": 0.7457405852944845, "auc_pr": 0.2905698585128993, "p_at_k": 0.31086142322097376, "fit_s": 0.5186810493469238, "pred_s": 1.430511474609375e-06, "max_n": 20000}

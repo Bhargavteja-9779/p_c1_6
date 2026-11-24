@@ -1,0 +1,1 @@
+{"dataset": "glass", "method": "iforest", "seed": 2, "protocol": "transd", "n_train": 214, "n_test": 214, "anom_test": 9, "auc_roc": 0.7766937669376694, "auc_pr": 0.2040967980579395, "p_at_k": 0.1111111111111111, "fit_s": 0.08333086967468262, "pred_s": 0.005802154541015625, "max_n": 20000}

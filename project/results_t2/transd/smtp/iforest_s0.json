@@ -1,0 +1,1 @@
+{"dataset": "smtp", "method": "iforest", "seed": 0, "protocol": "transd", "n_train": 95156, "n_test": 95156, "anom_test": 30, "auc_roc": 0.9000166445906832, "auc_pr": 0.003980326872894987, "p_at_k": 0.0, "fit_s": 1.2174556255340576, "pred_s": 0.4609553813934326, "max_n": 1000000}

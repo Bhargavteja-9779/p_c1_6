@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "loda", "seed": 1, "protocol": "transd", "n_train": 6435, "n_test": 6435, "anom_test": 2036, "auc_roc": 0.668609717068221, "auc_pr": 0.6671232966357088, "p_at_k": 0.5643418467583498, "fit_s": 0.05354762077331543, "pred_s": 0.03323817253112793, "max_n": 1000000}

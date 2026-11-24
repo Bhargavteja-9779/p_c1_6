@@ -1,0 +1,1 @@
+{"dataset": "mnist", "method": "ecod", "seed": 0, "protocol": "transd", "n_train": 7603, "n_test": 7603, "anom_test": 700, "auc_roc": 0.7463432048177812, "auc_pr": 0.17795422475443862, "p_at_k": 0.18, "fit_s": 0.12685108184814453, "pred_s": 0.2854940891265869, "max_n": 20000}

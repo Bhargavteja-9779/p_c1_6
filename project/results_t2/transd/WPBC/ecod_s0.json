@@ -1,0 +1,1 @@
+{"dataset": "WPBC", "method": "ecod", "seed": 0, "protocol": "transd", "n_train": 198, "n_test": 198, "anom_test": 47, "auc_roc": 0.4813301394955615, "auc_pr": 0.21782972821206625, "p_at_k": 0.1276595744680851, "fit_s": 0.0020127296447753906, "pred_s": 0.0027663707733154297, "max_n": 20000}

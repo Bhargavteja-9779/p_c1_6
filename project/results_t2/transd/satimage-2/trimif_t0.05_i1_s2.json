@@ -1,0 +1,1 @@
+{"dataset": "satimage-2", "method": "trimif_t0.05_i1", "seed": 2, "protocol": "transd", "n_train": 5803, "n_test": 5803, "anom_test": 71, "auc_roc": 0.9925424844952478, "auc_pr": 0.9123901498649765, "p_at_k": 0.8450704225352113, "fit_s": 0.4547395706176758, "pred_s": 1.6689300537109375e-06, "max_n": 20000}

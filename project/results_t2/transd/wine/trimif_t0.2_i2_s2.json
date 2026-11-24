@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "trimif_t0.2_i2", "seed": 2, "protocol": "transd", "n_train": 129, "n_test": 129, "anom_test": 10, "auc_roc": 0.9386554621848741, "auc_pr": 0.551090367965368, "p_at_k": 0.7, "fit_s": 0.5156271457672119, "pred_s": 0.0, "max_n": 20000}

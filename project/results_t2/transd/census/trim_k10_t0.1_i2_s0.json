@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "trim_k10_t0.1_i2", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1241, "auc_roc": 0.6727229806942198, "auc_pr": 0.09051172267925284, "p_at_k": 0.072522159548751, "fit_s": 13.129189729690552, "pred_s": 1.6689300537109375e-06, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "subknn_m256_k1_B20", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 192, "auc_roc": 0.920285785204631, "auc_pr": 0.07298404766658552, "p_at_k": 0.078125, "fit_s": 1.1944818496704102, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

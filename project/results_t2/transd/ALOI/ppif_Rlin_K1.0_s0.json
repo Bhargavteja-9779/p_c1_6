@@ -1,0 +1,1 @@
+{"dataset": "ALOI", "method": "ppif_Rlin_K1.0", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 609, "auc_roc": 0.5624967451001213, "auc_pr": 0.03920493520137999, "p_at_k": 0.041050903119868636, "fit_s": 1.33292818069458, "pred_s": 3.0994415283203125e-06, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "cardio", "method": "iforest", "seed": 1, "protocol": "transd", "n_train": 1831, "n_test": 1831, "anom_test": 176, "auc_roc": 0.936397967591321, "auc_pr": 0.5827847797389032, "p_at_k": 0.5397727272727273, "fit_s": 0.10570383071899414, "pred_s": 0.013764381408691406, "max_n": 20000}

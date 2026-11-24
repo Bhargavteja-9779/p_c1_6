@@ -1,0 +1,1 @@
+{"dataset": "Pima", "method": "lofk_k50", "seed": 0, "protocol": "transd", "n_train": 768, "n_test": 768, "anom_test": 268, "auc_roc": 0.6522537313432836, "auc_pr": 0.45140852331422415, "p_at_k": 0.47761194029850745, "fit_s": 0.011408329010009766, "pred_s": 4.76837158203125e-07, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "campaign", "method": "ecod", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 2253, "auc_roc": 0.777887530036709, "auc_pr": 0.3628686605076513, "p_at_k": 0.4079005770084332, "fit_s": 0.277874231338501, "pred_s": 0.630732536315918, "max_n": 20000}

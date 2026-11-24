@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "trimif_t0.05_i1", "seed": 1, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 192, "auc_roc": 0.8622026664310718, "auc_pr": 0.07454053996584582, "p_at_k": 0.13020833333333334, "fit_s": 0.9803764820098877, "pred_s": 7.152557373046875e-07, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "breastw", "method": "trimif_t0.2_i2", "seed": 0, "protocol": "transd", "n_train": 683, "n_test": 683, "anom_test": 239, "auc_roc": 0.9913208187266764, "auc_pr": 0.9827037896850387, "p_at_k": 0.9330543933054394, "fit_s": 0.5121526718139648, "pred_s": 1.6689300537109375e-06, "max_n": 20000}

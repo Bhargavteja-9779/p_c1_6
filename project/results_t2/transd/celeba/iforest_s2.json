@@ -1,0 +1,1 @@
+{"dataset": "celeba", "method": "iforest", "seed": 2, "protocol": "transd", "n_train": 202599, "n_test": 202599, "anom_test": 4547, "auc_roc": 0.6915833458483829, "auc_pr": 0.06707885517291065, "p_at_k": 0.11040246316252474, "fit_s": 2.2372937202453613, "pred_s": 1.1055340766906738, "max_n": 1000000}

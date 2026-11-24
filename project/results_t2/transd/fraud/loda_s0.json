@@ -1,0 +1,1 @@
+{"dataset": "fraud", "method": "loda", "seed": 0, "protocol": "transd", "n_train": 284807, "n_test": 284807, "anom_test": 492, "auc_roc": 0.9475174642404673, "auc_pr": 0.19454007573414347, "p_at_k": 0.2601626016260163, "fit_s": 3.46449613571167, "pred_s": 2.276559352874756, "max_n": 1000000}

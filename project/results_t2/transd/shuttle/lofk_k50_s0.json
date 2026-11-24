@@ -1,0 +1,1 @@
+{"dataset": "shuttle", "method": "lofk_k50", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1430, "auc_roc": 0.5046987207730342, "auc_pr": 0.12158833045762533, "p_at_k": 0.11818181818181818, "fit_s": 2.7124414443969727, "pred_s": 7.152557373046875e-07, "max_n": 20000}

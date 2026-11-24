@@ -1,0 +1,1 @@
+{"dataset": "thyroid", "method": "iforest", "seed": 0, "protocol": "transd", "n_train": 3772, "n_test": 3772, "anom_test": 93, "auc_roc": 0.974879218581487, "auc_pr": 0.46784102261422084, "p_at_k": 0.5161290322580645, "fit_s": 0.13759875297546387, "pred_s": 0.01745128631591797, "max_n": 20000}

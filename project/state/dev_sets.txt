@@ -1,0 +1,1 @@
+ALOI,annthyroid,breastw,campaign,cardio,census,cover,glass,Hepatitis,http,Ionosphere,letter,Lymphography,mnist,musk,pendigits,Pima,satimage-2,shuttle,skin,Stamps,thyroid,vertebral,WBC,WDBC,wine,WPBC

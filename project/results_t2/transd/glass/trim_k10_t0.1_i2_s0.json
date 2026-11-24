@@ -1,0 +1,1 @@
+{"dataset": "glass", "method": "trim_k10_t0.1_i2", "seed": 0, "protocol": "transd", "n_train": 214, "n_test": 214, "anom_test": 9, "auc_roc": 0.8644986449864498, "auc_pr": 0.15262279626620923, "p_at_k": 0.1111111111111111, "fit_s": 0.004790306091308594, "pred_s": 7.152557373046875e-07, "max_n": 20000}

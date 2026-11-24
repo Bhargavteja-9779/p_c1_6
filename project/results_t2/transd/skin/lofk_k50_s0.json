@@ -1,0 +1,1 @@
+{"dataset": "skin", "method": "lofk_k50", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 4151, "auc_roc": 0.4413508515280753, "auc_pr": 0.17612638675026082, "p_at_k": 0.12599373644904843, "fit_s": 0.19357562065124512, "pred_s": 7.152557373046875e-07, "max_n": 20000}

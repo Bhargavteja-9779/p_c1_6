@@ -1,0 +1,1 @@
+{"dataset": "pendigits", "method": "ens_k10_Eike", "seed": 0, "protocol": "transd", "n_train": 6870, "n_test": 6870, "anom_test": 156, "auc_roc": 0.9173197222795078, "auc_pr": 0.21826633325421332, "p_at_k": 0.2564102564102564, "fit_s": 0.4002115726470947, "pred_s": 4.76837158203125e-07, "max_n": 20000}

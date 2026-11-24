@@ -1,0 +1,1 @@
+{"dataset": "shuttle", "method": "ppif_Rmlp_K0.25", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1430, "auc_roc": 0.9964679101189602, "auc_pr": 0.9277137474771175, "p_at_k": 0.9517482517482517, "fit_s": 1.2708275318145752, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

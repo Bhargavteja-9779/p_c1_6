@@ -1,0 +1,1 @@
+{"dataset": "landsat", "method": "pca", "seed": 0, "protocol": "transd", "n_train": 6435, "n_test": 6435, "anom_test": 1333, "auc_roc": 0.3643800013115784, "auc_pr": 0.16296069521697398, "p_at_k": 0.19654913728432108, "fit_s": 0.00936126708984375, "pred_s": 0.005369424819946289, "max_n": 1000000}

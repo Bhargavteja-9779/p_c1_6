@@ -1,0 +1,1 @@
+{"dataset": "WDBC", "method": "trimif_t0.05_i1", "seed": 1, "protocol": "transd", "n_train": 367, "n_test": 367, "anom_test": 10, "auc_roc": 0.9899159663865547, "auc_pr": 0.6318360805860805, "p_at_k": 0.7, "fit_s": 0.23975467681884766, "pred_s": 4.76837158203125e-07, "max_n": 20000}

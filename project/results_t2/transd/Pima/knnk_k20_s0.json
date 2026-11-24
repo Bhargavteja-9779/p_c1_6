@@ -1,0 +1,1 @@
+{"dataset": "Pima", "method": "knnk_k20", "seed": 0, "protocol": "transd", "n_train": 768, "n_test": 768, "anom_test": 268, "auc_roc": 0.7157014925373134, "auc_pr": 0.5211868107434386, "p_at_k": 0.5597014925373134, "fit_s": 0.00895071029663086, "pred_s": 7.152557373046875e-07, "max_n": 20000}

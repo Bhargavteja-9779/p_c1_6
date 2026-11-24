@@ -1,0 +1,1 @@
+{"dataset": "InternetAds", "method": "loda", "seed": 0, "protocol": "transd", "n_train": 1966, "n_test": 1966, "anom_test": 368, "auc_roc": 0.6690385740327583, "auc_pr": 0.4234500023367005, "p_at_k": 0.41032608695652173, "fit_s": 1.2677361965179443, "pred_s": 1.1395020484924316, "max_n": 1000000}

@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "loda", "seed": 3, "protocol": "transd", "n_train": 4819, "n_test": 4819, "anom_test": 257, "auc_roc": 0.3483850690102812, "auc_pr": 0.03709506157192355, "p_at_k": 0.0, "fit_s": 0.05224132537841797, "pred_s": 0.02282857894897461, "max_n": 1000000}

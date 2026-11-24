@@ -1,0 +1,1 @@
+{"dataset": "WDBC", "method": "lofk_k50", "seed": 0, "protocol": "transd", "n_train": 367, "n_test": 367, "anom_test": 10, "auc_roc": 0.9862745098039216, "auc_pr": 0.612703081232493, "p_at_k": 0.5, "fit_s": 0.15586590766906738, "pred_s": 4.76837158203125e-07, "max_n": 20000}

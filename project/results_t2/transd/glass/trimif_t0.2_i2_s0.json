@@ -1,0 +1,1 @@
+{"dataset": "glass", "method": "trimif_t0.2_i2", "seed": 0, "protocol": "transd", "n_train": 214, "n_test": 214, "anom_test": 9, "auc_roc": 0.7978319783197831, "auc_pr": 0.11134311757364193, "p_at_k": 0.1111111111111111, "fit_s": 0.4480111598968506, "pred_s": 9.5367431640625e-07, "max_n": 20000}

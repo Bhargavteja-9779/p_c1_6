@@ -1,0 +1,1 @@
+{"dataset": "Pima", "method": "iforest", "seed": 0, "protocol": "transd", "n_train": 768, "n_test": 768, "anom_test": 268, "auc_roc": 0.660320895522388, "auc_pr": 0.4895787259800549, "p_at_k": 0.4925373134328358, "fit_s": 0.09879493713378906, "pred_s": 0.00807952880859375, "max_n": 20000}

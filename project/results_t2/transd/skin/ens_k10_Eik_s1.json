@@ -1,0 +1,1 @@
+{"dataset": "skin", "method": "ens_k10_Eik", "seed": 1, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 4151, "auc_roc": 0.7146583590415806, "auc_pr": 0.28316748218021626, "p_at_k": 0.2469284509756685, "fit_s": 0.5353779792785645, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

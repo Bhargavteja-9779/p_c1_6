@@ -1,0 +1,1 @@
+{"dataset": "Hepatitis", "method": "trimif_t0.1_i0", "seed": 1, "protocol": "transd", "n_train": 80, "n_test": 80, "anom_test": 13, "auc_roc": 0.6946039035591274, "auc_pr": 0.2483654652495785, "p_at_k": 0.15384615384615385, "fit_s": 0.14595770835876465, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

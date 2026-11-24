@@ -1,0 +1,1 @@
+{"dataset": "campaign", "method": "ppif_Rlin_K1.0", "seed": 1, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 2253, "auc_roc": 0.732801560504553, "auc_pr": 0.29030455005671457, "p_at_k": 0.36662228140257436, "fit_s": 1.4550135135650635, "pred_s": 1.9073486328125e-06, "max_n": 20000}

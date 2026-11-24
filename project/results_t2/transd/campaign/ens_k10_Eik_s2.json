@@ -1,0 +1,1 @@
+{"dataset": "campaign", "method": "ens_k10_Eik", "seed": 2, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 2253, "auc_roc": 0.732483045526896, "auc_pr": 0.29726969058898506, "p_at_k": 0.33510874389702616, "fit_s": 1.5558581352233887, "pred_s": 9.5367431640625e-07, "max_n": 20000}

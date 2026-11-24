@@ -1,0 +1,1 @@
+{"dataset": "mnist", "method": "trimif_t0.05_i1", "seed": 1, "protocol": "transd", "n_train": 7603, "n_test": 7603, "anom_test": 700, "auc_roc": 0.8031835019970613, "auc_pr": 0.26731706311035186, "p_at_k": 0.29714285714285715, "fit_s": 0.6618013381958008, "pred_s": 7.152557373046875e-07, "max_n": 20000}

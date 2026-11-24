@@ -1,0 +1,1 @@
+{"dataset": "Pima", "method": "ens_k10_Eik", "seed": 0, "protocol": "transd", "n_train": 768, "n_test": 768, "anom_test": 268, "auc_roc": 0.6962164179104479, "auc_pr": 0.516034569306487, "p_at_k": 0.5335820895522388, "fit_s": 0.18002939224243164, "pred_s": 7.152557373046875e-07, "max_n": 20000}

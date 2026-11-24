@@ -1,0 +1,1 @@
+{"dataset": "vertebral", "method": "trimif_t0.2_i2", "seed": 1, "protocol": "transd", "n_train": 240, "n_test": 240, "anom_test": 30, "auc_roc": 0.32126984126984126, "auc_pr": 0.08840161651074344, "p_at_k": 0.0, "fit_s": 0.43992137908935547, "pred_s": 2.384185791015625e-07, "max_n": 20000}

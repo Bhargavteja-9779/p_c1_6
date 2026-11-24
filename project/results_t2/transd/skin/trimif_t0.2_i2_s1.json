@@ -1,0 +1,1 @@
+{"dataset": "skin", "method": "trimif_t0.2_i2", "seed": 1, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 4151, "auc_roc": 0.6827350641554398, "auc_pr": 0.2620936808549777, "p_at_k": 0.08022163334136352, "fit_s": 1.2034804821014404, "pred_s": 1.430511474609375e-06, "max_n": 20000}

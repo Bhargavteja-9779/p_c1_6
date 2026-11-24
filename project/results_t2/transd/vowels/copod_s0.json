@@ -1,0 +1,1 @@
+{"dataset": "vowels", "method": "copod", "seed": 0, "protocol": "transd", "n_train": 1456, "n_test": 1456, "anom_test": 50, "auc_roc": 0.49578947368421056, "auc_pr": 0.034110798555548966, "p_at_k": 0.0, "fit_s": 0.0037088394165039062, "pred_s": 0.005669116973876953, "max_n": 1000000}

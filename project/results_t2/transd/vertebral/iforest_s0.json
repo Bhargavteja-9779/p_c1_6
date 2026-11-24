@@ -1,0 +1,1 @@
+{"dataset": "vertebral", "method": "iforest", "seed": 0, "protocol": "transd", "n_train": 240, "n_test": 240, "anom_test": 30, "auc_roc": 0.39142857142857146, "auc_pr": 0.09877056755757721, "p_at_k": 0.03333333333333333, "fit_s": 0.13318872451782227, "pred_s": 0.007431983947753906, "max_n": 20000}

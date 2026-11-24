@@ -1,0 +1,1 @@
+{"dataset": "vertebral", "method": "ppif_Rmlp_K0.25", "seed": 0, "protocol": "transd", "n_train": 240, "n_test": 240, "anom_test": 30, "auc_roc": 0.4477777777777778, "auc_pr": 0.1102876820484626, "p_at_k": 0.0, "fit_s": 0.18298697471618652, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "lofk_k100", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1241, "auc_roc": 0.5633261223975908, "auc_pr": 0.06463317589546747, "p_at_k": 0.011281224818694601, "fit_s": 5.60278582572937, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

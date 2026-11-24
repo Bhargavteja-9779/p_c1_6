@@ -1,0 +1,1 @@
+{"dataset": "thyroid", "method": "ppif_Rlin_K1.0", "seed": 1, "protocol": "transd", "n_train": 3772, "n_test": 3772, "anom_test": 93, "auc_roc": 0.9577257728403289, "auc_pr": 0.3733906598915986, "p_at_k": 0.3763440860215054, "fit_s": 0.3358464241027832, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

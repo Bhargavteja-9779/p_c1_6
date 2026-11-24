@@ -1,0 +1,1 @@
+{"dataset": "pendigits", "method": "ecod", "seed": 0, "protocol": "transd", "n_train": 6870, "n_test": 6870, "anom_test": 156, "auc_roc": 0.9274459033172169, "auc_pr": 0.26564018387312244, "p_at_k": 0.358974358974359, "fit_s": 0.017522573471069336, "pred_s": 0.03992962837219238, "max_n": 20000}

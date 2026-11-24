@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "iforest", "seed": 4, "protocol": "transd", "n_train": 1941, "n_test": 1941, "anom_test": 673, "auc_roc": 0.5659144280752411, "auc_pr": 0.40597530299583673, "p_at_k": 0.4279346210995542, "fit_s": 0.22316646575927734, "pred_s": 0.02498936653137207, "max_n": 1000000}

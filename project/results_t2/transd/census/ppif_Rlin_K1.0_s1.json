@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "ppif_Rlin_K1.0", "seed": 1, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1241, "auc_roc": 0.6605547467755364, "auc_pr": 0.08725630584891544, "p_at_k": 0.07413376309427881, "fit_s": 1.5485165119171143, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

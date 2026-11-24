@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "loda", "seed": 3, "protocol": "transd", "n_train": 5216, "n_test": 5216, "anom_test": 150, "auc_roc": 0.6936267929990788, "auc_pr": 0.04244188230659675, "p_at_k": 0.0, "fit_s": 0.09784698486328125, "pred_s": 0.0568234920501709, "max_n": 1000000}

@@ -1,0 +1,1 @@
+{"dataset": "shuttle", "method": "ecod", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1430, "auc_roc": 0.9930267255630745, "auc_pr": 0.9101743590727277, "p_at_k": 0.8671328671328671, "fit_s": 0.0466609001159668, "pred_s": 0.09421157836914062, "max_n": 20000}

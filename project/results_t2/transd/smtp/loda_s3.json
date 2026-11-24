@@ -1,0 +1,1 @@
+{"dataset": "smtp", "method": "loda", "seed": 3, "protocol": "transd", "n_train": 95156, "n_test": 95156, "anom_test": 30, "auc_roc": 0.8137210997343873, "auc_pr": 0.5184088083182383, "p_at_k": 0.6666666666666666, "fit_s": 0.27852630615234375, "pred_s": 0.19900178909301758, "max_n": 1000000}

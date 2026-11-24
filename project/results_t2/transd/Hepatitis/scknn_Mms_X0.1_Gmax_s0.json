@@ -1,0 +1,1 @@
+{"dataset": "Hepatitis", "method": "scknn_Mms_X0.1_Gmax", "seed": 0, "protocol": "transd", "n_train": 80, "n_test": 80, "anom_test": 13, "auc_roc": 0.6882893226176808, "auc_pr": 0.24210797274814091, "p_at_k": 0.23076923076923078, "fit_s": 0.06958937644958496, "pred_s": 7.152557373046875e-07, "max_n": 20000}

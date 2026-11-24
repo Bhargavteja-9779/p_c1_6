@@ -1,0 +1,1 @@
+{"dataset": "http", "method": "trimif_t0.2_i2", "seed": 1, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 78, "auc_roc": 0.9719991299400997, "auc_pr": 0.118915707947966, "p_at_k": 0.02564102564102564, "fit_s": 1.3259742259979248, "pred_s": 7.152557373046875e-07, "max_n": 20000}

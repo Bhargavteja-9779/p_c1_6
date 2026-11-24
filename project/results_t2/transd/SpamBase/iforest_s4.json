@@ -1,0 +1,1 @@
+{"dataset": "SpamBase", "method": "iforest", "seed": 4, "protocol": "transd", "n_train": 4207, "n_test": 4207, "anom_test": 1679, "auc_roc": 0.6679112934537587, "auc_pr": 0.5343111083891691, "p_at_k": 0.5419892793329363, "fit_s": 0.11096882820129395, "pred_s": 0.011710643768310547, "max_n": 1000000}

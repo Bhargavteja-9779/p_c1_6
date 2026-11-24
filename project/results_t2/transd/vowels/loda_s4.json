@@ -1,0 +1,1 @@
+{"dataset": "vowels", "method": "loda", "seed": 4, "protocol": "transd", "n_train": 1456, "n_test": 1456, "anom_test": 50, "auc_roc": 0.7467709815078236, "auc_pr": 0.1428343678436651, "p_at_k": 0.28, "fit_s": 0.011546611785888672, "pred_s": 0.00385284423828125, "max_n": 1000000}

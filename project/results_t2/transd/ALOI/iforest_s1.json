@@ -1,0 +1,1 @@
+{"dataset": "ALOI", "method": "iforest", "seed": 1, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 609, "auc_roc": 0.5206872756553643, "auc_pr": 0.031834456227115934, "p_at_k": 0.027914614121510674, "fit_s": 0.3361811637878418, "pred_s": 0.058841705322265625, "max_n": 20000}

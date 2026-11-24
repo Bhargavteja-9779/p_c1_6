@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "ens_k10_Eik", "seed": 2, "protocol": "transd", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.8790583568222152, "auc_pr": 0.29076516401579544, "p_at_k": 0.1935483870967742, "fit_s": 0.12218213081359863, "pred_s": 4.76837158203125e-07, "max_n": 20000}

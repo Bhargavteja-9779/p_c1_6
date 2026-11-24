@@ -1,0 +1,1 @@
+{"dataset": "campaign", "method": "scknn_Mms_X0.05", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 2253, "auc_roc": 0.7587002508078795, "auc_pr": 0.29311734697920355, "p_at_k": 0.35375055481580114, "fit_s": 16.699799299240112, "pred_s": 1.430511474609375e-06, "max_n": 20000}

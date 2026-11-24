@@ -1,0 +1,1 @@
+{"dataset": "musk", "method": "trimif_t0.05_i1", "seed": 1, "protocol": "transd", "n_train": 3062, "n_test": 3062, "anom_test": 97, "auc_roc": 0.9788772796022323, "auc_pr": 0.5443285130903611, "p_at_k": 0.5463917525773195, "fit_s": 0.4207465648651123, "pred_s": 1.430511474609375e-06, "max_n": 20000}

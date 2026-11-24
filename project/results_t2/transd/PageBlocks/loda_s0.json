@@ -1,0 +1,1 @@
+{"dataset": "PageBlocks", "method": "loda", "seed": 0, "protocol": "transd", "n_train": 5393, "n_test": 5393, "anom_test": 510, "auc_roc": 0.9169292824645731, "auc_pr": 0.5471244272293618, "p_at_k": 0.4843137254901961, "fit_s": 0.07390332221984863, "pred_s": 0.03590226173400879, "max_n": 1000000}

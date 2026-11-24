@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "iforest", "seed": 3, "protocol": "transd", "n_train": 6435, "n_test": 6435, "anom_test": 2036, "auc_roc": 0.6897758956648032, "auc_pr": 0.6538694862587416, "p_at_k": 0.5613948919449901, "fit_s": 0.36745166778564453, "pred_s": 0.06647276878356934, "max_n": 1000000}

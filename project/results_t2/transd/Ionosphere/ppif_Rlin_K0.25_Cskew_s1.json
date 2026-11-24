@@ -1,0 +1,1 @@
+{"dataset": "Ionosphere", "method": "ppif_Rlin_K0.25_Cskew", "seed": 1, "protocol": "transd", "n_train": 351, "n_test": 351, "anom_test": 126, "auc_roc": 0.9097001763668431, "auc_pr": 0.8770852570003808, "p_at_k": 0.7698412698412699, "fit_s": 0.16904187202453613, "pred_s": 2.384185791015625e-07, "max_n": 20000}

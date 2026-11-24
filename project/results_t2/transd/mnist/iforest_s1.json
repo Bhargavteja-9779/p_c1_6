@@ -1,0 +1,1 @@
+{"dataset": "mnist", "method": "iforest", "seed": 1, "protocol": "transd", "n_train": 7603, "n_test": 7603, "anom_test": 700, "auc_roc": 0.8105709732828378, "auc_pr": 0.2864163538809131, "p_at_k": 0.32857142857142857, "fit_s": 0.203810453414917, "pred_s": 0.046100616455078125, "max_n": 20000}

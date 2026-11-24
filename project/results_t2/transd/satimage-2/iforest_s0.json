@@ -1,0 +1,1 @@
+{"dataset": "satimage-2", "method": "iforest", "seed": 0, "protocol": "transd", "n_train": 5803, "n_test": 5803, "anom_test": 71, "auc_roc": 0.9916063021534651, "auc_pr": 0.9129447607180127, "p_at_k": 0.8591549295774648, "fit_s": 0.1610405445098877, "pred_s": 0.03603959083557129, "max_n": 20000}

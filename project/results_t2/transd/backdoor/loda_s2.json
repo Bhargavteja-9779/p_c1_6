@@ -1,0 +1,1 @@
+{"dataset": "backdoor", "method": "loda", "seed": 2, "protocol": "transd", "n_train": 95329, "n_test": 95329, "anom_test": 2329, "auc_roc": 0.8443533728537329, "auc_pr": 0.4235540590845239, "p_at_k": 0.41734650064405326, "fit_s": 1.5919630527496338, "pred_s": 1.3885552883148193, "max_n": 1000000}

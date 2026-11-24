@@ -1,0 +1,1 @@
+{"dataset": "breastw", "method": "iforest", "seed": 2, "protocol": "transd", "n_train": 683, "n_test": 683, "anom_test": 239, "auc_roc": 0.9892287685174714, "auc_pr": 0.9759946598304506, "p_at_k": 0.9372384937238494, "fit_s": 0.09319686889648438, "pred_s": 0.008190155029296875, "max_n": 20000}

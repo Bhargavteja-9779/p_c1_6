@@ -1,0 +1,1 @@
+{"dataset": "SpamBase", "method": "loda", "seed": 4, "protocol": "transd", "n_train": 4207, "n_test": 4207, "anom_test": 1679, "auc_roc": 0.6227335439268401, "auc_pr": 0.4626323996953555, "p_at_k": 0.4991066110780226, "fit_s": 0.03709888458251953, "pred_s": 0.014094114303588867, "max_n": 1000000}

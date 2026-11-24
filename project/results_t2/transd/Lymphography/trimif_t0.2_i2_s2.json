@@ -1,0 +1,1 @@
+{"dataset": "Lymphography", "method": "trimif_t0.2_i2", "seed": 2, "protocol": "transd", "n_train": 148, "n_test": 148, "anom_test": 6, "auc_roc": 0.9882629107981221, "auc_pr": 0.8134920634920635, "p_at_k": 0.6666666666666666, "fit_s": 0.6142876148223877, "pred_s": 1.6689300537109375e-06, "max_n": 20000}

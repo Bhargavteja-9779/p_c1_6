@@ -1,0 +1,1 @@
+{"dataset": "WDBC", "method": "ppif_Rlin_K1.0", "seed": 0, "protocol": "transd", "n_train": 367, "n_test": 367, "anom_test": 10, "auc_roc": 0.9831932773109243, "auc_pr": 0.5703962703962704, "p_at_k": 0.5, "fit_s": 0.18679332733154297, "pred_s": 2.6226043701171875e-06, "max_n": 20000}

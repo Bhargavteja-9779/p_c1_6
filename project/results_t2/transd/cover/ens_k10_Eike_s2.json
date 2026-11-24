@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "ens_k10_Eike", "seed": 2, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 192, "auc_roc": 0.9014890606068254, "auc_pr": 0.0620025331573634, "p_at_k": 0.07291666666666667, "fit_s": 1.321871280670166, "pred_s": 7.152557373046875e-07, "max_n": 20000}

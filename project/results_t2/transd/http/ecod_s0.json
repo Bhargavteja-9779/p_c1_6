@@ -1,0 +1,1 @@
+{"dataset": "http", "method": "ecod", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 78, "auc_roc": 0.9784705222161301, "auc_pr": 0.14795129813894506, "p_at_k": 0.01282051282051282, "fit_s": 0.011007070541381836, "pred_s": 0.02068948745727539, "max_n": 20000}

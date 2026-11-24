@@ -1,0 +1,1 @@
+{"dataset": "WDBC", "method": "iforest", "seed": 2, "protocol": "transd", "n_train": 367, "n_test": 367, "anom_test": 10, "auc_roc": 0.9882352941176471, "auc_pr": 0.6764069264069263, "p_at_k": 0.7, "fit_s": 0.08595585823059082, "pred_s": 0.006389141082763672, "max_n": 20000}

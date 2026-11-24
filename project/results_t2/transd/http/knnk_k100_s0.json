@@ -1,0 +1,1 @@
+{"dataset": "http", "method": "knnk_k100", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 78, "auc_roc": 0.9940704645553556, "auc_pr": 0.38081645093840216, "p_at_k": 0.01282051282051282, "fit_s": 0.4931762218475342, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

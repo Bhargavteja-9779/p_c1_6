@@ -1,0 +1,1 @@
+{"dataset": "glass", "method": "ens_k10_Eik", "seed": 0, "protocol": "transd", "n_train": 214, "n_test": 214, "anom_test": 9, "auc_roc": 0.8306233062330624, "auc_pr": 0.21953024797729845, "p_at_k": 0.1111111111111111, "fit_s": 0.16443777084350586, "pred_s": 4.76837158203125e-07, "max_n": 20000}

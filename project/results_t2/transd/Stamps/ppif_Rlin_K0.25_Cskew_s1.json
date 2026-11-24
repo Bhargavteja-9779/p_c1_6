@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "ppif_Rlin_K0.25_Cskew", "seed": 1, "protocol": "transd", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.86355569474893, "auc_pr": 0.2751845333132133, "p_at_k": 0.1935483870967742, "fit_s": 0.15648674964904785, "pred_s": 9.5367431640625e-07, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "lof", "seed": 0, "protocol": "transd", "n_train": 4819, "n_test": 4819, "anom_test": 257, "auc_roc": 0.7011294452395613, "auc_pr": 0.08711435374935804, "p_at_k": 0.07392996108949416, "fit_s": 0.11290717124938965, "pred_s": 0.09226822853088379, "max_n": 1000000}

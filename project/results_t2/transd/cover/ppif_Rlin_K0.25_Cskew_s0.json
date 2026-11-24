@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "ppif_Rlin_K0.25_Cskew", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 192, "auc_roc": 0.9034344288502962, "auc_pr": 0.04532222364877194, "p_at_k": 0.005208333333333333, "fit_s": 0.879103422164917, "pred_s": 9.5367431640625e-07, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "ens_k10_Eik", "seed": 0, "protocol": "transd", "n_train": 129, "n_test": 129, "anom_test": 10, "auc_roc": 0.7046218487394958, "auc_pr": 0.12604559663492207, "p_at_k": 0.0, "fit_s": 0.15012454986572266, "pred_s": 4.76837158203125e-07, "max_n": 20000}

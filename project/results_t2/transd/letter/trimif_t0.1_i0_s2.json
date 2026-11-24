@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "trimif_t0.1_i0", "seed": 2, "protocol": "transd", "n_train": 1600, "n_test": 1600, "anom_test": 100, "auc_roc": 0.6341, "auc_pr": 0.09181297028280026, "p_at_k": 0.09, "fit_s": 0.171630859375, "pred_s": 9.5367431640625e-07, "max_n": 20000}

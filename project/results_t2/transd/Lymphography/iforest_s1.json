@@ -1,0 +1,1 @@
+{"dataset": "Lymphography", "method": "iforest", "seed": 1, "protocol": "transd", "n_train": 148, "n_test": 148, "anom_test": 6, "auc_roc": 0.9988262910798122, "auc_pr": 0.976190476190476, "p_at_k": 0.8333333333333334, "fit_s": 0.08633160591125488, "pred_s": 0.005677700042724609, "max_n": 20000}

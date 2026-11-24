@@ -1,0 +1,1 @@
+{"dataset": "campaign", "method": "trimif_t0.05_i1", "seed": 1, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 2253, "auc_roc": 0.7139297450322055, "auc_pr": 0.3064151960305109, "p_at_k": 0.33510874389702616, "fit_s": 0.7388744354248047, "pred_s": 1.6689300537109375e-06, "max_n": 20000}

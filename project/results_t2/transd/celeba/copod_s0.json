@@ -1,0 +1,1 @@
+{"dataset": "celeba", "method": "copod", "seed": 0, "protocol": "transd", "n_train": 202599, "n_test": 202599, "anom_test": 4547, "auc_roc": 0.7507807433227434, "auc_pr": 0.09440910399419665, "p_at_k": 0.15350780734550254, "fit_s": 1.6327619552612305, "pred_s": 3.430349111557007, "max_n": 1000000}

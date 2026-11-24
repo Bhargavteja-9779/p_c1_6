@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "ens_k10_Eik", "seed": 1, "protocol": "transd", "n_train": 1600, "n_test": 1600, "anom_test": 100, "auc_roc": 0.7985666666666665, "auc_pr": 0.17166359792729827, "p_at_k": 0.2, "fit_s": 0.43881750106811523, "pred_s": 1.6689300537109375e-06, "max_n": 20000}

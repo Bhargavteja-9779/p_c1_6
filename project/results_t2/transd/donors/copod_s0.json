@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "copod", "seed": 0, "protocol": "transd", "n_train": 619326, "n_test": 619326, "anom_test": 36710, "auc_roc": 0.8150534229241817, "auc_pr": 0.20824114617696507, "p_at_k": 0.26815581585399073, "fit_s": 1.6449577808380127, "pred_s": 3.6848626136779785, "max_n": 1000000}

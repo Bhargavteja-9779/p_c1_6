@@ -1,0 +1,1 @@
+{"dataset": "skin", "method": "knn", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 4151, "auc_roc": 0.7078239241064478, "auc_pr": 0.2852277454201697, "p_at_k": 0.2748735244519393, "fit_s": 0.048761606216430664, "pred_s": 0.03682303428649902, "max_n": 20000}

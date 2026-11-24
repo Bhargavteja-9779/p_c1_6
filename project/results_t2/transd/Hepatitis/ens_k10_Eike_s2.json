@@ -1,0 +1,1 @@
+{"dataset": "Hepatitis", "method": "ens_k10_Eike", "seed": 2, "protocol": "transd", "n_train": 80, "n_test": 80, "anom_test": 13, "auc_roc": 0.735361653272101, "auc_pr": 0.28796105345442946, "p_at_k": 0.23076923076923078, "fit_s": 0.21268677711486816, "pred_s": 9.5367431640625e-07, "max_n": 20000}

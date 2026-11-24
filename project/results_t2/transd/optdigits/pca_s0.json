@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "pca", "seed": 0, "protocol": "transd", "n_train": 5216, "n_test": 5216, "anom_test": 150, "auc_roc": 0.5148914330833004, "auc_pr": 0.026849075994236884, "p_at_k": 0.0, "fit_s": 0.22234749794006348, "pred_s": 0.01966071128845215, "max_n": 1000000}

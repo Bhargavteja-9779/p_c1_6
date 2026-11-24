@@ -1,0 +1,1 @@
+{"dataset": "mammography", "method": "ecod", "seed": 0, "protocol": "transd", "n_train": 11183, "n_test": 11183, "anom_test": 260, "auc_roc": 0.9061567334981233, "auc_pr": 0.4359950234320086, "p_at_k": 0.4269230769230769, "fit_s": 0.012965679168701172, "pred_s": 0.02474236488342285, "max_n": 1000000}

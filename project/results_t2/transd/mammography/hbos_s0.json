@@ -1,0 +1,1 @@
+{"dataset": "mammography", "method": "hbos", "seed": 0, "protocol": "transd", "n_train": 11183, "n_test": 11183, "anom_test": 260, "auc_roc": 0.8299146472862485, "auc_pr": 0.127267739674137, "p_at_k": 0.12692307692307692, "fit_s": 0.003278493881225586, "pred_s": 0.0016574859619140625, "max_n": 1000000}

@@ -1,0 +1,1 @@
+{"dataset": "backdoor", "method": "iforest", "seed": 4, "protocol": "transd", "n_train": 95329, "n_test": 95329, "anom_test": 2329, "auc_roc": 0.7232281056524329, "auc_pr": 0.04154666967842448, "p_at_k": 0.016316015457277802, "fit_s": 0.9472787380218506, "pred_s": 0.35060691833496094, "max_n": 1000000}

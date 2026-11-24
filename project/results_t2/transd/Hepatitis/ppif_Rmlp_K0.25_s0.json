@@ -1,0 +1,1 @@
+{"dataset": "Hepatitis", "method": "ppif_Rmlp_K0.25", "seed": 0, "protocol": "transd", "n_train": 80, "n_test": 80, "anom_test": 13, "auc_roc": 0.6371986222732491, "auc_pr": 0.22357748324660087, "p_at_k": 0.15384615384615385, "fit_s": 0.2272653579711914, "pred_s": 1.430511474609375e-06, "max_n": 20000}

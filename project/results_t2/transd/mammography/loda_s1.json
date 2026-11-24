@@ -1,0 +1,1 @@
+{"dataset": "mammography", "method": "loda", "seed": 1, "protocol": "transd", "n_train": 11183, "n_test": 11183, "anom_test": 260, "auc_roc": 0.8696554201085922, "auc_pr": 0.1856303913693838, "p_at_k": 0.27307692307692305, "fit_s": 0.08160901069641113, "pred_s": 0.04023385047912598, "max_n": 1000000}

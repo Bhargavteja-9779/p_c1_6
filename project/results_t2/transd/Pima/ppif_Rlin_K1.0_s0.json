@@ -1,0 +1,1 @@
+{"dataset": "Pima", "method": "ppif_Rlin_K1.0", "seed": 0, "protocol": "transd", "n_train": 768, "n_test": 768, "anom_test": 268, "auc_roc": 0.6846119402985075, "auc_pr": 0.4964594034443583, "p_at_k": 0.5186567164179104, "fit_s": 0.21321558952331543, "pred_s": 2.1457672119140625e-06, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "Hepatitis", "method": "iforest", "seed": 2, "protocol": "transd", "n_train": 80, "n_test": 80, "anom_test": 13, "auc_roc": 0.7324913892078071, "auc_pr": 0.2892165317784542, "p_at_k": 0.23076923076923078, "fit_s": 0.09235620498657227, "pred_s": 0.004007816314697266, "max_n": 20000}

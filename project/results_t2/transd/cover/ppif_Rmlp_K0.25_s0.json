@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "ppif_Rmlp_K0.25", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 192, "auc_roc": 0.7595589534531502, "auc_pr": 0.02209290804470817, "p_at_k": 0.015625, "fit_s": 1.2634594440460205, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

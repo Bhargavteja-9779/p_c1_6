@@ -1,0 +1,1 @@
+{"dataset": "shuttle", "method": "trimif_t0.2_i2", "seed": 2, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1430, "auc_roc": 0.9783957130645338, "auc_pr": 0.6933963364700562, "p_at_k": 0.6762237762237763, "fit_s": 1.2154922485351562, "pred_s": 1.430511474609375e-06, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "breastw", "method": "ppif_Rlin_K1.0", "seed": 0, "protocol": "transd", "n_train": 683, "n_test": 683, "anom_test": 239, "auc_roc": 0.9776942214180707, "auc_pr": 0.9374991921770475, "p_at_k": 0.9079497907949791, "fit_s": 0.14893698692321777, "pred_s": 1.430511474609375e-06, "max_n": 20000}

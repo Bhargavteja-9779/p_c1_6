@@ -1,0 +1,1 @@
+{"dataset": "mnist", "method": "knnk_k1", "seed": 0, "protocol": "transd", "n_train": 7603, "n_test": 7603, "anom_test": 700, "auc_roc": 0.7826430537447486, "auc_pr": 0.3401279963828963, "p_at_k": 0.37714285714285717, "fit_s": 0.2581918239593506, "pred_s": 4.76837158203125e-07, "max_n": 20000}

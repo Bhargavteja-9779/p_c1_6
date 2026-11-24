@@ -1,0 +1,1 @@
+{"dataset": "ALOI", "method": "scknn_Mms_X0.1_Gmax", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 609, "auc_roc": 0.6569699229891747, "auc_pr": 0.059659272258340015, "p_at_k": 0.090311986863711, "fit_s": 23.73324489593506, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

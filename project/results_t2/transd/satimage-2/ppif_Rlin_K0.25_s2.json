@@ -1,0 +1,1 @@
+{"dataset": "satimage-2", "method": "ppif_Rlin_K0.25", "seed": 2, "protocol": "transd", "n_train": 5803, "n_test": 5803, "anom_test": 71, "auc_roc": 0.998085863400922, "auc_pr": 0.9618235720686499, "p_at_k": 0.9154929577464789, "fit_s": 0.44077038764953613, "pred_s": 2.1457672119140625e-06, "max_n": 20000}

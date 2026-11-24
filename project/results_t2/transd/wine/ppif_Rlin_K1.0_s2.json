@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "ppif_Rlin_K1.0", "seed": 2, "protocol": "transd", "n_train": 129, "n_test": 129, "anom_test": 10, "auc_roc": 0.7991596638655463, "auc_pr": 0.1852608860967112, "p_at_k": 0.1, "fit_s": 0.18942022323608398, "pred_s": 1.9073486328125e-06, "max_n": 20000}

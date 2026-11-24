@@ -1,0 +1,1 @@
+{"dataset": "yeast", "method": "loda", "seed": 0, "protocol": "transd", "n_train": 1484, "n_test": 1484, "anom_test": 507, "auc_roc": 0.39156416110986614, "auc_pr": 0.3020652866637825, "p_at_k": 0.2682445759368836, "fit_s": 0.011204004287719727, "pred_s": 0.0038907527923583984, "max_n": 1000000}

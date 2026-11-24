@@ -1,0 +1,1 @@
+{"dataset": "annthyroid", "method": "lofk_k50", "seed": 0, "protocol": "transd", "n_train": 7200, "n_test": 7200, "anom_test": 534, "auc_roc": 0.7394570917765935, "auc_pr": 0.18494865158269835, "p_at_k": 0.22846441947565543, "fit_s": 0.3593273162841797, "pred_s": 7.152557373046875e-07, "max_n": 20000}

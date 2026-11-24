@@ -1,0 +1,1 @@
+{"dataset": "WPBC", "method": "lofk_k100", "seed": 0, "protocol": "transd", "n_train": 198, "n_test": 198, "anom_test": 47, "auc_roc": 0.5003522615189517, "auc_pr": 0.23552099077566435, "p_at_k": 0.14893617021276595, "fit_s": 0.07238197326660156, "pred_s": 4.76837158203125e-07, "max_n": 20000}
