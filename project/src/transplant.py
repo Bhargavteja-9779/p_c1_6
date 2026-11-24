@@ -26,7 +26,13 @@ CLASSES = {"benign": 0, "attack": 1}
 def groups_for(cols):
     g = {k: [c for c in v if c in cols] for k, v in nids.GROUPS.items()}
     used = {c for v in g.values() for c in v}
-    g["rest"] = [c for c in cols if c not in used]       # volume / timing / rate features
+    g["rest"] = [c for c in cols if c not in used]       # volume / timing / rate / size features
+    # finer split of "rest" (added before any full E7 run; decision D17) -- reported descriptively, not in H2b
+    rest = g["rest"]
+    g["rest_volume"] = [c for c in rest if c in ("IN_BYTES", "IN_PKTS", "OUT_BYTES", "OUT_PKTS") or c.startswith("RETRANSMITTED_")]
+    g["rest_timing"] = [c for c in rest if "DURATION" in c or "_IAT_" in c]
+    g["rest_rates"] = [c for c in rest if c.endswith("_SECOND_BYTES") or c.endswith("_AVG_THROUGHPUT")]
+    g["rest_pktsize"] = [c for c in rest if c.endswith("FLOW_PKT") or "IP_PKT_LEN" in c or c.startswith("NUM_PKTS_")]
     g["all"] = list(cols)
     return {k: v for k, v in g.items() if v}
 

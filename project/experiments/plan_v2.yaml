@@ -10,6 +10,8 @@
 #  H2d (association vs intervention): the per-group drop-one ablation effect (plan_v1 E2) and the transplant effect
 #       are not the same quantity; we report their rank correlation and do not pre-commit to a direction.
 # Each is decided on target VAL with seeds 0-2; confirmation on fresh seeds 100-104 is a later plan if a claim survives.
+# D17 (2026-11-24, before any full E7 job; after ONE smoke job in results/quick, not for claims): "rest" (32 features)
+#   is additionally split into rest_volume / rest_timing / rest_rates / rest_pktsize, reported descriptively; H2a-H2c unchanged.
 # Compute estimate: 48 jobs x ~4 CPU-min ~ 3.2 CPU-h.
 globals:
   n_per_source: 100000
