@@ -1,0 +1,122 @@
+{
+ "best_cfg": {
+  "hidden": 512,
+  "depth": 3,
+  "dropout": 0.0,
+  "lr": 0.0003,
+  "epochs": 8,
+  "lam": 1.0
+ },
+ "trials": [
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 8,
+    "lam": 10.0
+   },
+   "src_val_macro_f1": 0.995059430096457,
+   "fit_s": 38.97597694396973
+  },
+  {
+   "cfg": {
+    "hidden": 256,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "epochs": 15,
+    "lam": 0.1
+   },
+   "src_val_macro_f1": 0.9956709370262276,
+   "fit_s": 46.09047484397888
+  },
+  {
+   "cfg": {
+    "hidden": 256,
+    "depth": 3,
+    "dropout": 0.0,
+    "lr": 0.0003,
+    "epochs": 8,
+    "lam": 10.0
+   },
+   "src_val_macro_f1": 0.9954959766240022,
+   "fit_s": 8.011094808578491
+  },
+  {
+   "cfg": {
+    "hidden": 256,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 15,
+    "lam": 10.0
+   },
+   "src_val_macro_f1": 0.9956186668908149,
+   "fit_s": 48.76953983306885
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 3,
+    "dropout": 0.0,
+    "lr": 0.0003,
+    "epochs": 8,
+    "lam": 1.0
+   },
+   "src_val_macro_f1": 0.9957756724207544,
+   "fit_s": 24.830559492111206
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 3,
+    "dropout": 0.1,
+    "lr": 0.003,
+    "epochs": 8,
+    "lam": 0.1
+   },
+   "src_val_macro_f1": 0.9954782166478346,
+   "fit_s": 9.813097476959229
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 15,
+    "lam": 0.1
+   },
+   "src_val_macro_f1": 0.9952338668100257,
+   "fit_s": 22.918925523757935
+  },
+  {
+   "cfg": {
+    "hidden": 256,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "epochs": 8,
+    "lam": 1.0
+   },
+   "src_val_macro_f1": 0.9954085869800997,
+   "fit_s": 17.0534348487854
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "coral",
+  "target": "TON",
+  "eval_split": "val",
+  "job_id": "tune_lodo_coral_TON"
+ },
+ "wall_s": 238.85821509361267,
+ "finished": "2026-11-24T19:58:16"
+}

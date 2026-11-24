@@ -19,3 +19,4 @@
 | D15 | 2026-11-24 | Session 2 works on branch `claude/determined-euler-r440ob` (environment-assigned); history from `claude/cool-ptolemy-6dtl6w` is contained in it | New session's mandated branch |
 | D16 | 2026-11-24 | Frontiers acceptance times scraped from article pages (Crossref has no `assertion` dates for Frontiers; checked 10.3389/fcomp.2026.1728300) — script scripts/frontiers_times.py, random 80 DOIs per journal (seed 0) | Only verifiable article-level source |
 | D17 | 2026-11-24 | Read P01/P04/Layeghy/Sarhan deposits/preprints (literature/prior_art_fulltext.md); keep plan_v1; pre-register H2 (per-group benign shift vs per-group ablation effect) | Angle (a) partly done by Gazi E7/E6; remaining delta is the per-group link |
+| D18 | 2026-11-24 | Keep JKSU-CIS; Frontiers in AI (IF 6.7, median 81.5 d n=80) runner-up; no Frontiers journal meets 72 d | See journal_selection/selected_journal.md re-check |

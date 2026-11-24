@@ -25,3 +25,6 @@ Of 30 journals whose acceptance times we computed from article-level dates (jour
 
 ## Candidates we could not verify
 Elsevier journals (Expert Systems with Applications, Knowledge-Based Systems, Results in Engineering, Egyptian Informatics Journal, Alexandria Eng. J., etc.): ScienceDirect returned HTTP 403 / bot block, and Elsevier does not deposit article history in Crossref → acceptance times UNVERIFIED → excluded. IEEE journals: not attempted in cycle 1 (Crossref has no history dates).
+
+## Re-check with Frontiers (session 2, 2026-11-24)
+Frontiers in Artificial Intelligence: IF 6.7 (homepage), median 81.5 d (n=80 sampled). It is 2 days faster than JKSU-CIS and has a slightly higher IF, and both publish NIDS work (Crossref title search 2024-11→: e.g. 10.3389/frai.2026.1895608; JKSU-CIS e.g. 10.1007/s44443-026-00688-5). Both FAIL the 72-day rule by about 10 days. **Decision D18: keep JKSU-CIS.** The speed and IF differences are within sampling noise (n=80 vs n=596). JKSU-CIS has already published a cross-domain IDS paper (QuCAD-IDS). The literature matrix is built from JKSU-CIS. Frontiers in AI stays the documented runner-up. A human should check both JCR quartiles before submission.
