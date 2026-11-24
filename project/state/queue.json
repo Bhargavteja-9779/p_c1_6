@@ -3680,10 +3680,11 @@
     "eval_split": "val",
     "job_id": "E1_lodo_esf-pen-lgbm_t0.5_UNSW_s1"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T10:48:08"
+   "started": "2026-11-24T10:48:08",
+   "finished": "2026-11-24T10:48:48"
   },
   "E1_lodo_esf-pen-lgbm_t0.5_UNSW_s2": {
    "spec": {
@@ -3702,9 +3703,10 @@
     "eval_split": "val",
     "job_id": "E1_lodo_esf-pen-lgbm_t0.5_UNSW_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T10:48:48"
   },
   "E1_lodo_esf-pen-lgbm_t0.5_TON_s0": {
    "spec": {

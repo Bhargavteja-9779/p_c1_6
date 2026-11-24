@@ -1,0 +1,12 @@
+## E1 LODO macro-F1 (target val, mean over seeds)
+
+| arm | BOT | CIC | TON | UNSW |
+|---|---|---|---|---|
+| E1_lodo_coral | 0.1219 | 0.3972 | 0.6761 | 0.4016 |
+| E1_lodo_dann | 0.0246 | 0.4256 | 0.6727 | 0.2489 |
+| E1_lodo_esf-lgbm_t0.3 | 0.0415 | 0.5047 | 0.7756 | 0.5015 |
+| E1_lodo_esf-lgbm_t0.4 | 0.0286 | 0.4257 | 0.7769 | 0.5391 |
+| E1_lodo_esf-lgbm_t0.5 | 0.2742 | 0.4577 | 0.7567 | 0.5790 |
+| E1_lodo_esf-pen-lgbm_t0.3 | 0.0936 | 0.2926 | 0.6198 | 0.3222 |
+| E1_lodo_esf-pen-lgbm_t0.4 | 0.0746 | 0.3890 | 0.6436 | 0.3071 |
+| E1_lodo_esf-pen-lgbm_t0.5 | 0.0118 | 0.3582 | 0.6352 | 0.3027 |
