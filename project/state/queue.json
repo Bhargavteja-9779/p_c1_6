@@ -7885,10 +7885,11 @@
     "eval_split": "val",
     "job_id": "E3_lodo_pen-lgbm_n30000_UNSW_s2"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T12:21:45"
+   "started": "2026-11-24T12:21:45",
+   "finished": "2026-11-24T12:22:15"
   },
   "E3_lodo_pen-lgbm_n30000_TON_s0": {
    "spec": {

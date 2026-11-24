@@ -2,146 +2,314 @@
  "definition": "Automatic results report (Section 12). Reads ONLY result files; no training, no LLM.\n\nUsage: python scripts/final_report.py [--results results] [--tag cycle1]\nWrites results/metrics.json, results/statistics.json, tables/*.csv|md, figures/*.png,\nresults/RESULTS_SUMMARY.md. Safe to run any number of times (outputs are regenerated).\n\nDefinitions (pre-registered in plan_v1 / decisions D10-D11):\n  arm      = job_id without the trailing _{TARGET}_s{SEED} (keeps tau / n variants apart)\n  primary  = macro-F1 at the source-val threshold, averaged over targets UNSW, TON, CIC (per seed)\n  tests    = paired over (target, seed) units of the PRIMARY targets: Wilcoxon signed-rank +\n             paired t; effect = mean paired difference, Cohen's d_z, bootstrap 95% CI (10k, seed 0).\n  Holm     = over every arm compared to the reference on the same evaluation data, plus the count\n             of earlier variants in state/variants_tried.csv evaluated on the same data (rule 8).\n",
  "comparisons": [
   {
-   "arm": "E1_lodo_esf-lgbm_t0.5",
-   "vs": "E1_lodo_lgbm",
+   "arm": "E2_lodo_drop_app_fields-lgbm",
+   "vs": "E1_lodo_xgb",
    "n_pairs": 9,
-   "mean_diff": -0.008165903604860074,
-   "cohen_dz": -0.19110690519084475,
+   "mean_diff": 0.0011094196088590686,
+   "cohen_dz": 0.021002868424314834,
    "boot_ci95": [
-    -0.03458931903326808,
-    0.01669687331630654
+    -0.02630628460595344,
+    0.0376823464794369
    ],
    "p_wilcoxon": 0.65234375,
-   "p_ttest": 0.5821807198689593,
+   "p_ttest": 0.9513055130867896,
    "p_holm": 1.0
   },
   {
-   "arm": "E1_lodo_esf-lgbm_t0.3",
-   "vs": "E1_lodo_lgbm",
+   "arm": "E2_lodo_drop_flags-lgbm",
+   "vs": "E1_lodo_xgb",
    "n_pairs": 9,
-   "mean_diff": -0.012008185351481706,
-   "cohen_dz": -0.1379708732890883,
+   "mean_diff": 0.00032175904186089915,
+   "cohen_dz": 0.006652082476696435,
    "boot_ci95": [
-    -0.06660515772135912,
-    0.039066577185812294
+    -0.02532568085494379,
+    0.03374908509199795
    ],
-   "p_wilcoxon": 1.0,
-   "p_ttest": 0.6898123530283633,
+   "p_wilcoxon": 0.5703125,
+   "p_ttest": 0.9845670297189061,
+   "p_holm": 1.0
+  },
+  {
+   "arm": "E1_lodo_lgbm",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.005481076919288323,
+   "cohen_dz": -0.1776005033472831,
+   "boot_ci95": [
+    -0.02447354318322846,
+    0.013315511596348487
+   ],
+   "p_wilcoxon": 0.5703125,
+   "p_ttest": 0.6086483553922105,
+   "p_holm": 1.0
+  },
+  {
+   "arm": "E1_lodo_rf",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.007647773354195463,
+   "cohen_dz": -0.17400114293035446,
+   "boot_ci95": [
+    -0.03591645616293651,
+    0.01709299652326619
+   ],
+   "p_wilcoxon": 0.42578125,
+   "p_ttest": 0.6158090070676028,
+   "p_holm": 1.0
+  },
+  {
+   "arm": "E2_lodo_drop_ttl-lgbm",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.01311854463028125,
+   "cohen_dz": -0.27538474769229465,
+   "boot_ci95": [
+    -0.03738289958936833,
+    0.020158974169578268
+   ],
+   "p_wilcoxon": 0.203125,
+   "p_ttest": 0.4326628718880155,
+   "p_holm": 1.0
+  },
+  {
+   "arm": "E1_lodo_esf-lgbm_t0.5",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.013646980524148398,
+   "cohen_dz": -0.3731996806870803,
+   "boot_ci95": [
+    -0.034314100435398426,
+    0.009807405851601649
+   ],
+   "p_wilcoxon": 0.203125,
+   "p_ttest": 0.29537004570171677,
+   "p_holm": 1.0
+  },
+  {
+   "arm": "E2_lodo_drop_port_proto-lgbm",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.017446490007633472,
+   "cohen_dz": -0.7822046240746915,
+   "boot_ci95": [
+    -0.03114870781522769,
+    -0.004032045257394574
+   ],
+   "p_wilcoxon": 0.0390625,
+   "p_ttest": 0.046928660484534014,
+   "p_holm": 0.4296875
+  },
+  {
+   "arm": "E1_lodo_esf-lgbm_t0.3",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.01748926227077003,
+   "cohen_dz": -0.2677386257645312,
+   "boot_ci95": [
+    -0.05959860203748185,
+    0.019779041391683523
+   ],
+   "p_wilcoxon": 0.734375,
+   "p_ttest": 0.4450565711316531,
+   "p_holm": 1.0
+  },
+  {
+   "arm": "E3_lodo_lgbm_n30000",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.024356077493490533,
+   "cohen_dz": -0.44931222326571774,
+   "boot_ci95": [
+    -0.05459055814299606,
+    0.011285888711268136
+   ],
+   "p_wilcoxon": 0.1640625,
+   "p_ttest": 0.2146011969203604,
    "p_holm": 1.0
   },
   {
    "arm": "E1_lodo_esf-lgbm_t0.4",
-   "vs": "E1_lodo_lgbm",
+   "vs": "E1_lodo_xgb",
    "n_pairs": 9,
-   "mean_diff": -0.02539443260270322,
-   "cohen_dz": -0.40502718170426244,
+   "mean_diff": -0.030875509521991543,
+   "cohen_dz": -0.5671159809270002,
    "boot_ci95": [
-    -0.06732481929693238,
-    0.006971830857715411
+    -0.0672110454666515,
+    -0.0006010361593537159
    ],
-   "p_wilcoxon": 0.359375,
-   "p_ttest": 0.2589764052754406,
-   "p_holm": 1.0
+   "p_wilcoxon": 0.0546875,
+   "p_ttest": 0.12729288799824495,
+   "p_holm": 0.546875
+  },
+  {
+   "arm": "E3_lodo_lgbm_n10000",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.050869634027228335,
+   "cohen_dz": -1.217682090536941,
+   "boot_ci95": [
+    -0.07604013934603938,
+    -0.02494725880799567
+   ],
+   "p_wilcoxon": 0.01171875,
+   "p_ttest": 0.006465836201221395,
+   "p_holm": 0.140625
   },
   {
    "arm": "E1_lodo_mlp",
-   "vs": "E1_lodo_lgbm",
-   "n_pairs": 8,
-   "mean_diff": -0.06414450179987005,
-   "cohen_dz": -1.2368306165404288,
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.0828879365807844,
+   "cohen_dz": -1.8557581376927967,
    "boot_ci95": [
-    -0.09736588900620513,
-    -0.03016818011236489
+    -0.11076283215428137,
+    -0.056851409450064255
    ],
-   "p_wilcoxon": 0.0078125,
-   "p_ttest": 0.010016155630354065,
-   "p_holm": 0.046875
+   "p_wilcoxon": 0.00390625,
+   "p_ttest": 0.0005301338172200376,
+   "p_holm": 0.0859375
+  },
+  {
+   "arm": "E2_lodo_drop_tcpwin-lgbm",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.08499634248974632,
+   "cohen_dz": -0.9564116575065792,
+   "boot_ci95": [
+    -0.14242932561361135,
+    -0.03435745555896301
+   ],
+   "p_wilcoxon": 0.00390625,
+   "p_ttest": 0.02085341831506154,
+   "p_holm": 0.0859375
   },
   {
    "arm": "E1_lodo_coral",
-   "vs": "E1_lodo_lgbm",
+   "vs": "E1_lodo_xgb",
    "n_pairs": 9,
-   "mean_diff": -0.1142873943075901,
-   "cohen_dz": -1.1953426539000978,
+   "mean_diff": -0.11976847122687843,
+   "cohen_dz": -1.6012237072056765,
    "boot_ci95": [
-    -0.17511668678878026,
-    -0.0596399812494695
+    -0.16864012282419624,
+    -0.07903173349830478
    ],
    "p_wilcoxon": 0.00390625,
-   "p_ttest": 0.0071255192873166005,
-   "p_holm": 0.0390625
+   "p_ttest": 0.0013491924907873697,
+   "p_holm": 0.0859375
   },
   {
    "arm": "E1_lodo_dann",
-   "vs": "E1_lodo_lgbm",
+   "vs": "E1_lodo_xgb",
    "n_pairs": 9,
-   "mean_diff": -0.1568824560162918,
-   "cohen_dz": -0.8899605658606815,
+   "mean_diff": -0.16236353293558015,
+   "cohen_dz": -1.0456243563973648,
    "boot_ci95": [
-    -0.27242375435794797,
-    -0.05496665581793079
+    -0.26290113902585516,
+    -0.07243440320974533
    ],
    "p_wilcoxon": 0.0078125,
-   "p_ttest": 0.02836745145224729,
-   "p_holm": 0.046875
+   "p_ttest": 0.01387055600297236,
+   "p_holm": 0.109375
   },
   {
    "arm": "E1_lodo_esf-pen-lgbm_t0.4",
-   "vs": "E1_lodo_lgbm",
+   "vs": "E1_lodo_xgb",
    "n_pairs": 9,
-   "mean_diff": -0.1593936966284819,
-   "cohen_dz": -1.272723175309355,
+   "mean_diff": -0.16487477354777025,
+   "cohen_dz": -1.5735424902114352,
    "boot_ci95": [
-    -0.23789100976863406,
-    -0.08389521498812932
+    -0.22959978038100443,
+    -0.10133085714953344
    ],
    "p_wilcoxon": 0.00390625,
-   "p_ttest": 0.005102986840100156,
-   "p_holm": 0.0390625
+   "p_ttest": 0.0015009497994055013,
+   "p_holm": 0.0859375
   },
   {
    "arm": "E1_lodo_lr",
-   "vs": "E1_lodo_lgbm",
+   "vs": "E1_lodo_xgb",
    "n_pairs": 9,
-   "mean_diff": -0.1596762986782721,
-   "cohen_dz": -1.159806392285739,
+   "mean_diff": -0.16515737559756044,
+   "cohen_dz": -1.437983762216412,
    "boot_ci95": [
-    -0.24344981650027114,
-    -0.07464138152551612
+    -0.23396873587068595,
+    -0.09543515249050527
    ],
-   "p_wilcoxon": 0.01171875,
-   "p_ttest": 0.008326728322517506,
-   "p_holm": 0.046875
+   "p_wilcoxon": 0.00390625,
+   "p_ttest": 0.002566930867902432,
+   "p_holm": 0.0859375
+  },
+  {
+   "arm": "E3_lodo_pen-lgbm_n30000",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.1664208399185952,
+   "cohen_dz": -1.4014397247208794,
+   "boot_ci95": [
+    -0.23898964522724267,
+    -0.09343919481261352
+   ],
+   "p_wilcoxon": 0.0078125,
+   "p_ttest": 0.0029788859933470497,
+   "p_holm": 0.109375
+  },
+  {
+   "arm": "E3_lodo_pen-lgbm_n10000",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.17644887999050685,
+   "cohen_dz": -0.9191799826970277,
+   "boot_ci95": [
+    -0.28979521750091525,
+    -0.05709653468210129
+   ],
+   "p_wilcoxon": 0.0546875,
+   "p_ttest": 0.024768710638487516,
+   "p_holm": 0.546875
+  },
+  {
+   "arm": "E1_lodo_pen-lgbm",
+   "vs": "E1_lodo_xgb",
+   "n_pairs": 9,
+   "mean_diff": -0.17775399278708243,
+   "cohen_dz": -1.7902355258249776,
+   "boot_ci95": [
+    -0.23843735514855094,
+    -0.11692815424170902
+   ],
+   "p_wilcoxon": 0.00390625,
+   "p_ttest": 0.0006690362986093296,
+   "p_holm": 0.0859375
   },
   {
    "arm": "E1_lodo_esf-pen-lgbm_t0.5",
-   "vs": "E1_lodo_lgbm",
+   "vs": "E1_lodo_xgb",
    "n_pairs": 9,
-   "mean_diff": -0.17389853974006197,
-   "cohen_dz": -1.4381263440351677,
+   "mean_diff": -0.17937961665935032,
+   "cohen_dz": -1.740449659539944,
    "boot_ci95": [
-    -0.24847694894471517,
-    -0.10033373820254449
+    -0.24149710835460306,
+    -0.11518819158645487
    ],
    "p_wilcoxon": 0.00390625,
-   "p_ttest": 0.0025654495677696187,
-   "p_holm": 0.0390625
+   "p_ttest": 0.0008012682992145536,
+   "p_holm": 0.0859375
   },
   {
    "arm": "E1_lodo_esf-pen-lgbm_t0.3",
-   "vs": "E1_lodo_lgbm",
+   "vs": "E1_lodo_xgb",
    "n_pairs": 9,
-   "mean_diff": -0.19442120945925978,
-   "cohen_dz": -2.1370521136814653,
+   "mean_diff": -0.19990228637854812,
+   "cohen_dz": -2.6361028309193757,
    "boot_ci95": [
-    -0.25143288587439355,
-    -0.1405973574292238
+    -0.24673319402195673,
+    -0.15292419697920473
    ],
    "p_wilcoxon": 0.00390625,
-   "p_ttest": 0.00020666269838193828,
-   "p_holm": 0.0390625
+   "p_ttest": 4.7441933791512114e-05,
+   "p_holm": 0.0859375
   }
  ],
- "reference_best_baseline": "E1_lodo_lgbm",
+ "reference_best_baseline": "E1_lodo_xgb",
  "n_prior_variants_counted": 0
 }
