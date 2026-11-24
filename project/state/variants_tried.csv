@@ -7,3 +7,4 @@ V4,2026-11-24,2,knn_src k5,"source-labelled kNN detector (20k/source), k=5",targ
 V5,2026-11-24,2,knn_src k25,"same, k=25",target val,primary 0.4753; CIC HOIC AUROC 0.68-0.89,results/h2/
 V6,2026-11-24,2,attribution+transplant,"LightGBM pred_contrib top-3 + transplant (+benign control D23), 6 inverted families",target val,"P2 fails (share 0.30-0.59, HOIC 0.34-0.38); P3 holds for CIC HOIC/Bot only",results/h2/
 V7,2026-11-24,3,ens xgb+knn5,CDF-average ensemble (plan_v3),target val,"FAILED: ens - xgb = -0.0563 (Wilcoxon p 0.0195, Holm p 0.1562); hurts TON",results/h3/
+V8,2026-11-24,4,smoke T2,bench.py smoke: knn/iforest/ecod seed 0 on 5 ADBench sets (semi protocol),test (smoke),pipeline check only - deleted,none
