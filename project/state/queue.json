@@ -5251,9 +5251,10 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_flags-lgbm_UNSW_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:39:25"
   },
   "E2_lodo_drop_flags-lgbm_UNSW_s1": {
    "spec": {
@@ -5350,10 +5351,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_flags-lgbm_TON_s2"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T11:39:08"
+   "started": "2026-11-24T11:39:08",
+   "finished": "2026-11-24T11:39:25"
   },
   "E2_lodo_drop_flags-lgbm_CIC_s0": {
    "spec": {
