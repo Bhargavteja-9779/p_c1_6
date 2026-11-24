@@ -1,0 +1,50 @@
+{
+ "target": "TON",
+ "seed": 0,
+ "auroc": 0.8281118974336836,
+ "auroc_cycle1": 0.8281118974336836,
+ "reproduces_cycle1": true,
+ "threshold": 0.5,
+ "families": {
+  "scanning": {
+   "n": 3009,
+   "auroc_vs_benign": 0.3959725740735652,
+   "recall": 0.17215021601861083,
+   "top3_diff": [
+    "SRC_TO_DST_IAT_MIN",
+    "MIN_TTL",
+    "DST_TO_SRC_SECOND_BYTES"
+   ],
+   "top3_diff_values": [
+    -5.2140876228191875,
+    -2.0178285648481444,
+    -1.6077537800092214
+   ],
+   "p2_share_top3_neg_diff": 0.5270515533206305,
+   "top3_abs_neg": [
+    "SRC_TO_DST_IAT_MIN",
+    "DST_TO_SRC_SECOND_BYTES",
+    "FLOW_DURATION_MILLISECONDS"
+   ],
+   "p2_share_top3_abs_neg": 0.5775722172339552,
+   "transplant_top3": {
+    "features": [
+     "SRC_TO_DST_IAT_MIN",
+     "MIN_TTL",
+     "DST_TO_SRC_SECOND_BYTES"
+    ],
+    "recall": 0.9810568295114656,
+    "auroc_vs_benign": 0.9118527775146156
+   },
+   "control_random3": {
+    "features": [
+     "NUM_PKTS_256_TO_512_BYTES",
+     "RETRANSMITTED_OUT_PKTS",
+     "FTP_COMMAND_RET_CODE"
+    ],
+    "recall": 0.17215021601861083,
+    "auroc_vs_benign": 0.3959693751142933
+   }
+  }
+ }
+}
