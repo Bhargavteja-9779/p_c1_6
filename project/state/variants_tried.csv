@@ -6,3 +6,4 @@ V3,2026-11-24,1,diagnostics,"diagnose_v2.py D1 per-family AUROC, D2 5-NN source 
 V4,2026-11-24,2,knn_src k5,"source-labelled kNN detector (20k/source), k=5",target val,primary 0.5107 vs XGB 0.6114; CIC HOIC AUROC 0.66-0.84,results/h2/
 V5,2026-11-24,2,knn_src k25,"same, k=25",target val,primary 0.4753; CIC HOIC AUROC 0.68-0.89,results/h2/
 V6,2026-11-24,2,attribution+transplant,"LightGBM pred_contrib top-3 + transplant (+benign control D23), 6 inverted families",target val,"P2 fails (share 0.30-0.59, HOIC 0.34-0.38); P3 holds for CIC HOIC/Bot only",results/h2/
+V7,2026-11-24,3,ens xgb+knn5,CDF-average ensemble (plan_v3),target val,pending,results/h3/
