@@ -1,0 +1,154 @@
+{
+ "target": "CIC",
+ "seed": 0,
+ "auroc": 0.4178477978697478,
+ "auroc_cycle1": 0.4178477978697478,
+ "reproduces_cycle1": true,
+ "threshold": 0.45197930327885955,
+ "families": {
+  "DDOS_attack-HOIC": {
+   "n": 3146,
+   "auroc_vs_benign": 0.13329515161975897,
+   "recall": 0.0,
+   "top3_diff": [
+    "TCP_WIN_MAX_IN",
+    "FLOW_DURATION_MILLISECONDS",
+    "DURATION_IN"
+   ],
+   "top3_diff_values": [
+    -1.7372031665522887,
+    -1.5946495550396786,
+    -0.9640423620721927
+   ],
+   "p2_share_top3_neg_diff": 0.35755115258636916,
+   "top3_abs_neg": [
+    "TCP_WIN_MAX_IN",
+    "TCP_FLAGS",
+    "FLOW_DURATION_MILLISECONDS"
+   ],
+   "p2_share_top3_abs_neg": 0.44322418953800696,
+   "transplant_top3": {
+    "features": [
+     "TCP_WIN_MAX_IN",
+     "FLOW_DURATION_MILLISECONDS",
+     "DURATION_IN"
+    ],
+    "recall": 1.0,
+    "auroc_vs_benign": 0.643318902993783,
+    "benign_control": {
+     "fpr_before": 0.4744452754923959,
+     "fpr_after": 0.7632855800395068
+    }
+   },
+   "control_random3": {
+    "features": [
+     "NUM_PKTS_256_TO_512_BYTES",
+     "RETRANSMITTED_OUT_PKTS",
+     "FTP_COMMAND_RET_CODE"
+    ],
+    "recall": 0.0,
+    "auroc_vs_benign": 0.12940022547169325,
+    "benign_control": {
+     "fpr_before": 0.4744452754923959,
+     "fpr_after": 0.47385075657326964
+    }
+   }
+  },
+  "Bot": {
+   "n": 658,
+   "auroc_vs_benign": 0.1315641396960323,
+   "recall": 0.001519756838905775,
+   "top3_diff": [
+    "FLOW_DURATION_MILLISECONDS",
+    "MIN_TTL",
+    "DURATION_IN"
+   ],
+   "top3_diff_values": [
+    -1.6519954709328117,
+    -1.058516590044629,
+    -0.9804813505610335
+   ],
+   "p2_share_top3_neg_diff": 0.30879679342884836,
+   "top3_abs_neg": [
+    "TCP_FLAGS",
+    "DST_TO_SRC_SECOND_BYTES",
+    "FLOW_DURATION_MILLISECONDS"
+   ],
+   "p2_share_top3_abs_neg": 0.415534953298389,
+   "transplant_top3": {
+    "features": [
+     "FLOW_DURATION_MILLISECONDS",
+     "MIN_TTL",
+     "DURATION_IN"
+    ],
+    "recall": 1.0,
+    "auroc_vs_benign": 0.5894935758555486,
+    "benign_control": {
+     "fpr_before": 0.4744452754923959,
+     "fpr_after": 0.7922252267802006
+    }
+   },
+   "control_random3": {
+    "features": [
+     "L4_DST_PORT",
+     "IN_BYTES",
+     "PROTOCOL"
+    ],
+    "recall": 0.001519756838905775,
+    "auroc_vs_benign": 0.22060650722787292,
+    "benign_control": {
+     "fpr_before": 0.4744452754923959,
+     "fpr_after": 0.4561877912663253
+    }
+   }
+  },
+  "Infilteration": {
+   "n": 617,
+   "auroc_vs_benign": 0.3192724651268356,
+   "recall": 0.24311183144246354,
+   "top3_diff": [
+    "MIN_TTL",
+    "FLOW_DURATION_MILLISECONDS",
+    "MAX_TTL"
+   ],
+   "top3_diff_values": [
+    -1.773562050499031,
+    -1.5765546436091626,
+    -1.0565724777118704
+   ],
+   "p2_share_top3_neg_diff": 0.420490452226818,
+   "top3_abs_neg": [
+    "FLOW_DURATION_MILLISECONDS",
+    "DURATION_IN",
+    "TCP_WIN_MAX_IN"
+   ],
+   "p2_share_top3_abs_neg": 0.3827450272593553,
+   "transplant_top3": {
+    "features": [
+     "MIN_TTL",
+     "FLOW_DURATION_MILLISECONDS",
+     "MAX_TTL"
+    ],
+    "recall": 0.4505672609400324,
+    "auroc_vs_benign": 0.5691261510586567,
+    "benign_control": {
+     "fpr_before": 0.4744452754923959,
+     "fpr_after": 0.598373703085745
+    }
+   },
+   "control_random3": {
+    "features": [
+     "NUM_PKTS_256_TO_512_BYTES",
+     "RETRANSMITTED_OUT_BYTES",
+     "SRC_TO_DST_IAT_AVG"
+    ],
+    "recall": 0.22852512155591573,
+    "auroc_vs_benign": 0.32788072732661905,
+    "benign_control": {
+     "fpr_before": 0.4744452754923959,
+     "fpr_after": 0.46686995378094853
+    }
+   }
+  }
+ }
+}
