@@ -32,7 +32,7 @@ Cycle 1 ≈ 0.4 CPU-h used so far of 15 h; global ≈ 0.6 of 120 h (state/budget
 D9 test locked; D10 source-only selection; D11 random pools for LODO, primary = mean macro-F1 UNSW/TON/CIC; D12 NaN→0; D13 Frontiers allowed (user); D14 no pivot yet; D15 Gazi code covers BRN/feature groups; D16 run plan_v1 anyway as replication; D17 keep JKSU-CIS; D18 re-sent master prompt = continue.
 
 ## Failures / problems so far
-1. Elsevier/ScienceDirect 403. 2. ESF τ=0.8 dropped 0 features → τ∈{0.3,0.4,0.5}. 3. NaN/inf in UNSW/BOT zero-duration flows. 4. Chrono splits contain unseen attack families; BOT ~no benign. 5. First quick mode too long. 6. Sub-agent could not write .md. 7. Session-2 first get_data attempt failed because logs/ did not exist (fixed: mkdir). 8. preprints.org (P02 full text) blocks curl and headless Chromium (403). 9. Frontiers n=80 sample misleading (71.5 d) vs n=300 (83.5 d).
+1. Elsevier/ScienceDirect 403. 2. ESF τ=0.8 dropped 0 features → τ∈{0.3,0.4,0.5}. 3. NaN/inf in UNSW/BOT zero-duration flows. 4. Chrono splits contain unseen attack families; BOT ~no benign. 5. First quick mode too long. 6. Sub-agent could not write .md. 7. Session-2 first get_data attempt failed because logs/ did not exist (fixed: mkdir). 8. preprints.org (P02 full text) blocks curl and headless Chromium (403). 9. Frontiers n=80 sample misleading (71.5 d) vs n=300 (83.5 d). 10. 04:20–08:41 UTC: worker restart (user usage limit) killed the tmux run; resumed 08:41, interrupted job retried as attempt 2 (journal 08). Compute runs die when the session idles — keep check-ins going.
 
 ## Commands
 - Status: `python3 scripts/status.py` • Logs: `tail -f logs/run_all_full.log`
