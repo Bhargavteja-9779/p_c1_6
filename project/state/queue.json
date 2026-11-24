@@ -174,9 +174,10 @@
     "eval_split": "val",
     "job_id": "tune_lodo_rf_TON"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:21:33"
   },
   "tune_lodo_rf_CIC": {
    "spec": {
@@ -191,9 +192,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_rf_CIC"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:19:47",
+   "finished": "2026-11-24T22:21:33"
   },
   "tune_lodo_rf_BOT": {
    "spec": {
@@ -208,9 +211,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_rf_BOT"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:17:30",
+   "finished": "2026-11-24T22:19:47"
   },
   "tune_lodo_lr_UNSW": {
    "spec": {
@@ -225,9 +230,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_lr_UNSW"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:04:52",
+   "finished": "2026-11-24T22:05:56"
   },
   "tune_lodo_lr_TON": {
    "spec": {
@@ -242,9 +249,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_lr_TON"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:04:01",
+   "finished": "2026-11-24T22:04:52"
   },
   "tune_lodo_lr_CIC": {
    "spec": {
@@ -259,10 +268,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_lr_CIC"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T22:03:08"
+   "started": "2026-11-24T22:03:08",
+   "finished": "2026-11-24T22:04:01"
   },
   "tune_lodo_lr_BOT": {
    "spec": {
@@ -296,9 +306,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_mlp_UNSW"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:14:37",
+   "finished": "2026-11-24T22:17:30"
   },
   "tune_lodo_mlp_TON": {
    "spec": {
@@ -313,9 +325,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_mlp_TON"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:11:42",
+   "finished": "2026-11-24T22:14:37"
   },
   "tune_lodo_mlp_CIC": {
    "spec": {
@@ -330,9 +344,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_mlp_CIC"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:08:51",
+   "finished": "2026-11-24T22:11:42"
   },
   "tune_lodo_mlp_BOT": {
    "spec": {
@@ -347,9 +363,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_mlp_BOT"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:05:56",
+   "finished": "2026-11-24T22:08:51"
   },
   "tune_lodo_dann_UNSW": {
    "spec": {

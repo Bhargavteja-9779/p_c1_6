@@ -1,0 +1,113 @@
+{
+ "best_cfg": {
+  "hidden": 128,
+  "depth": 3,
+  "dropout": 0.1,
+  "lr": 0.003,
+  "epochs": 8
+ },
+ "trials": [
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9950941999033598,
+   "fit_s": 24.296159505844116
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9956884249306592,
+   "fit_s": 34.78440284729004
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9956360900131773,
+   "fit_s": 15.8184072971344
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "epochs": 15
+   },
+   "src_val_macro_f1": 0.9956183415785103,
+   "fit_s": 10.589637994766235
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 15
+   },
+   "src_val_macro_f1": 0.9956883609169876,
+   "fit_s": 41.59373354911804
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.0,
+    "lr": 0.0003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9954260788207613,
+   "fit_s": 6.789763927459717
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 3,
+    "dropout": 0.1,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9957233364696823,
+   "fit_s": 6.610757350921631
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9955832967182181,
+   "fit_s": 5.511791229248047
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "mlp",
+  "target": "TON",
+  "eval_split": "val",
+  "job_id": "tune_lodo_mlp_TON"
+ },
+ "wall_s": 173.68470931053162,
+ "finished": "2026-11-24T22:14:36"
+}
