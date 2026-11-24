@@ -1,0 +1,1 @@
+{"issn": "2624-9898", "journal": "Frontiers in Computer Science", "window": ["2024-11-01", "2026-11-24"], "n_dois_in_window": 582, "n_with_dates": 80, "method": "random sample (seed 0) of Crossref DOIs; dates scraped from article pages", "median": 92.0, "q1": 53.25, "q3": 139.5, "min": 5, "max": 527, "frac_le_72": 0.388}

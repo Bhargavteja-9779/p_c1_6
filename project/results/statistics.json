@@ -1,0 +1,5 @@
+{
+ "reference_best_baseline": "E1_lodo_rf",
+ "E1_vs_reference": [],
+ "note": "Exploration statistics on TARGET VAL with seeds 0-2; units = (target, seed) pairs over UNSW/TON/CIC. Not confirmatory (Rule 5/8): confirmation needs frozen config on SEEDS_CONFIRM and target TEST."
+}
