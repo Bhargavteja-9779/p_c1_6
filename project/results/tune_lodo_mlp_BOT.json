@@ -1,0 +1,113 @@
+{
+ "best_cfg": {
+  "hidden": 512,
+  "depth": 2,
+  "dropout": 0.3,
+  "lr": 0.003,
+  "epochs": 15
+ },
+ "trials": [
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9554296660136652,
+   "fit_s": 16.266498565673828
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.958530232439887,
+   "fit_s": 25.767292022705078
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9594111309176353,
+   "fit_s": 12.74940824508667
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "epochs": 15
+   },
+   "src_val_macro_f1": 0.9590515931635486,
+   "fit_s": 8.165995597839355
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 15
+   },
+   "src_val_macro_f1": 0.9610644429815942,
+   "fit_s": 30.259647607803345
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.0,
+    "lr": 0.0003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9573378760314288,
+   "fit_s": 5.297165155410767
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 3,
+    "dropout": 0.1,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.959858838119659,
+   "fit_s": 4.675896406173706
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9571197948865415,
+   "fit_s": 4.216553211212158
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "mlp",
+  "target": "BOT",
+  "eval_split": "val",
+  "job_id": "tune_lodo_mlp_BOT"
+ },
+ "wall_s": 129.9597225189209,
+ "finished": "2026-11-24T20:26:16"
+}
