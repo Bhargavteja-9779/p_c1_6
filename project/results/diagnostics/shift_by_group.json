@@ -1,0 +1,270 @@
+{
+ "note": "H2 diagnostic (journal entry 07): per-feature-group domain separability, measured separately on BENIGN and on ATTACK flows.\nFor each target t: target flows (t random_train) vs pooled source flows (other 3 random_train), using only the group's\nfeatures; LightGBM 2-fold CV AUC, reported as Gini=|2AUC-1|. Uses train pools only; no target VAL/TEST data.\nOutput: results/diagnostics/shift_by_group.json. Idempotent (overwrites its own output only).",
+ "n_per_side": 20000,
+ "results": {
+  "UNSW": {
+   "benign": {
+    "ttl": {
+     "gini": 0.9998444124999999,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "tcpwin": {
+     "gini": 0.9129329775000001,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "port_proto": {
+     "gini": 0.9096780100000001,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "app_fields": {
+     "gini": 0.8633896074999998,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "flags": {
+     "gini": 0.8648083324999998,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "all": {
+     "gini": 0.9999932799999998,
+     "n_target": 20000,
+     "n_source": 20000
+    }
+   },
+   "attack": {
+    "ttl": {
+     "gini": 0.9998235133795836,
+     "n_target": 16144,
+     "n_source": 20000
+    },
+    "tcpwin": {
+     "gini": 0.9093630265113974,
+     "n_target": 16144,
+     "n_source": 20000
+    },
+    "port_proto": {
+     "gini": 0.8330557451684839,
+     "n_target": 16144,
+     "n_source": 20000
+    },
+    "app_fields": {
+     "gini": 0.80984099975223,
+     "n_target": 16144,
+     "n_source": 20000
+    },
+    "flags": {
+     "gini": 0.8491435146184343,
+     "n_target": 16144,
+     "n_source": 20000
+    },
+    "all": {
+     "gini": 0.999999207135778,
+     "n_target": 16144,
+     "n_source": 20000
+    }
+   }
+  },
+  "BOT": {
+   "benign": {
+    "ttl": {
+     "gini": 0.8028757770632367,
+     "n_target": 933,
+     "n_source": 20000
+    },
+    "tcpwin": {
+     "gini": 0.8373218649517689,
+     "n_target": 933,
+     "n_source": 20000
+    },
+    "port_proto": {
+     "gini": 0.8447193997856379,
+     "n_target": 933,
+     "n_source": 20000
+    },
+    "app_fields": {
+     "gini": 0.5812325294748124,
+     "n_target": 933,
+     "n_source": 20000
+    },
+    "flags": {
+     "gini": 0.7912511789924974,
+     "n_target": 933,
+     "n_source": 20000
+    },
+    "all": {
+     "gini": 0.9993381564844588,
+     "n_target": 933,
+     "n_source": 20000
+    }
+   },
+   "attack": {
+    "ttl": {
+     "gini": 0.46021997000000026,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "tcpwin": {
+     "gini": 0.9095194249999998,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "port_proto": {
+     "gini": 0.6967747149999997,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "app_fields": {
+     "gini": 0.20638976749999993,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "flags": {
+     "gini": 0.7791240175,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "all": {
+     "gini": 0.9999751324999999,
+     "n_target": 20000,
+     "n_source": 20000
+    }
+   }
+  },
+  "TON": {
+   "benign": {
+    "ttl": {
+     "gini": 0.94814796,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "tcpwin": {
+     "gini": 0.9092310325000001,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "port_proto": {
+     "gini": 0.9395002399999999,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "app_fields": {
+     "gini": 0.6355146300000003,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "flags": {
+     "gini": 0.8731588699999999,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "all": {
+     "gini": 0.9990968225000001,
+     "n_target": 20000,
+     "n_source": 20000
+    }
+   },
+   "attack": {
+    "ttl": {
+     "gini": 0.27454234499999997,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "tcpwin": {
+     "gini": 0.9104311300000003,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "port_proto": {
+     "gini": 0.6466780324999999,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "app_fields": {
+     "gini": 0.1855234775000001,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "flags": {
+     "gini": 0.7428814074999999,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "all": {
+     "gini": 0.999963545,
+     "n_target": 20000,
+     "n_source": 20000
+    }
+   }
+  },
+  "CIC": {
+   "benign": {
+    "ttl": {
+     "gini": 0.9594913274999999,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "tcpwin": {
+     "gini": 0.8723052975000003,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "port_proto": {
+     "gini": 0.9037687499999998,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "app_fields": {
+     "gini": 0.5901993375000001,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "flags": {
+     "gini": 0.7869331025000004,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "all": {
+     "gini": 0.9993722,
+     "n_target": 20000,
+     "n_source": 20000
+    }
+   },
+   "attack": {
+    "ttl": {
+     "gini": 0.9624429200000002,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "tcpwin": {
+     "gini": 0.9751374700000002,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "port_proto": {
+     "gini": 0.6392520500000001,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "app_fields": {
+     "gini": 0.048482337500000305,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "flags": {
+     "gini": 0.890369725,
+     "n_target": 20000,
+     "n_source": 20000
+    },
+    "all": {
+     "gini": 0.9999548724999998,
+     "n_target": 20000,
+     "n_source": 20000
+    }
+   }
+  }
+ }
+}
