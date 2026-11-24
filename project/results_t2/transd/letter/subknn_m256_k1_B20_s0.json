@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "subknn_m256_k1_B20", "seed": 0, "protocol": "transd", "n_train": 1600, "n_test": 1600, "anom_test": 100, "auc_roc": 0.9098733333333333, "auc_pr": 0.35512287416919347, "p_at_k": 0.39, "fit_s": 2.1738007068634033, "pred_s": 2.384185791015625e-06, "max_n": 20000}

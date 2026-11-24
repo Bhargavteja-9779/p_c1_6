@@ -1,0 +1,1 @@
+{"dataset": "Lymphography", "method": "scknn_Mms_X0.1_Gmax", "seed": 0, "protocol": "transd", "n_train": 148, "n_test": 148, "anom_test": 6, "auc_roc": 0.9900234741784038, "auc_pr": 0.6958333333333333, "p_at_k": 0.6666666666666666, "fit_s": 0.19898033142089844, "pred_s": 0.0, "max_n": 20000}

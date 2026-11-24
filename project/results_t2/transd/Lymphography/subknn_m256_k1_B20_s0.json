@@ -1,0 +1,1 @@
+{"dataset": "Lymphography", "method": "subknn_m256_k1_B20", "seed": 0, "protocol": "transd", "n_train": 148, "n_test": 148, "anom_test": 6, "auc_roc": 0.9859154929577465, "auc_pr": 0.6507936507936508, "p_at_k": 0.5, "fit_s": 1.7360343933105469, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

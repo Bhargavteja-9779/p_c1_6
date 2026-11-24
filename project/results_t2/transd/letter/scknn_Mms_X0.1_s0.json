@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "scknn_Mms_X0.1", "seed": 0, "protocol": "transd", "n_train": 1600, "n_test": 1600, "anom_test": 100, "auc_roc": 0.8848633333333333, "auc_pr": 0.305959820703181, "p_at_k": 0.36, "fit_s": 0.425647497177124, "pred_s": 7.152557373046875e-07, "max_n": 20000}
