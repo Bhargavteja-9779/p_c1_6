@@ -7,7 +7,7 @@ E8  LightGBM (cycle-1 tuned config of the same target, same seed, same data as E
     For each target family with cycle-1 XGBoost AUROC < 0.5: per-feature diff = mean contrib(family flows)
     - mean contrib(pooled source-attack val flows). P2 statistic = share of the total NEGATIVE diff mass held by
     the 3 most negative features (decision D22).
-E9  transplant: set those top-3 features of the family's flows to the median of source-attack val flows; re-score.
+E9  transplant (+ D23 benign control: same transplant on target benign flows, FPR before/after): set those top-3 features of the family's flows to the median of source-attack val flows; re-score.
     Control: 3 random features (rng 0). Report family recall at source threshold and family AUROC vs target benign.
 
 Outputs: results/h2/<...>.json + results/h2/H2_SUMMARY.md. Idempotent (skips finished files).
@@ -78,7 +78,7 @@ def e8_e9():
         cfg = json.load(open(os.path.join(ROOT, "results", f"tune_lodo_lgbm_{t}.json")))["best_cfg"]
         for s in SEEDS:
             f = os.path.join(OUT, f"E8_lgbm_{t}_s{s}.json")
-            if os.path.exists(f):
+            if os.path.exists(f) and "benign_control" in open(f).read():
                 continue
             spec = {"protocol": "lodo", "target": t, "n_per_source": 100000, "n_val_per_source": 60000, "eval_split": "val"}
             tr, va, te = assemble(spec, s)
@@ -116,6 +116,10 @@ def e8_e9():
                     p2 = m.predict_proba(X2)[:, 1]
                     fr[name] = {"features": [cols[i] for i in feats], "recall": float((p2[idx] >= thr).mean()),
                                 "auroc_vs_benign": family_auroc(p2, fam, a)}
+                    # D23 benign control: same transplant applied to target BENIGN flows -> FPR at source threshold
+                    b = np.flatnonzero(fam == "Benign"); Xb = Xte[b].copy(); Xb[:, feats] = med_att[feats]
+                    fr[name]["benign_control"] = {"fpr_before": float((pte[b] >= thr).mean()),
+                                                  "fpr_after": float((m.predict_proba(Xb)[:, 1] >= thr).mean())}
                 out["families"][a] = fr
                 print(f"E8 {t} s{s} {a}: auroc={fr['auroc_vs_benign']:.3f} rec={fr['recall']:.3f} top3={top3} share={share:.2f} "
                       f"-> transplant rec={fr['transplant_top3']['recall']:.3f} / control rec={fr['control_random3']['recall']:.3f}", flush=True)
@@ -147,7 +151,9 @@ def summary():
             rows.append({"target": r["target"], "seed": r["seed"], "family": a, "reproduces_c1": r["reproduces_cycle1"],
                          "auroc": x["auroc_vs_benign"], "recall": x["recall"], "top3": ",".join(x["top3_diff"]),
                          "P2_share": x["p2_share_top3_neg_diff"], "P3_recall_transplant": x["transplant_top3"]["recall"],
-                         "auroc_transplant": x["transplant_top3"]["auroc_vs_benign"], "recall_control": x["control_random3"]["recall"]})
+                         "auroc_transplant": x["transplant_top3"]["auroc_vs_benign"], "recall_control": x["control_random3"]["recall"],
+                         "benign_fpr_before": x["transplant_top3"]["benign_control"]["fpr_before"],
+                         "benign_fpr_after_transplant": x["transplant_top3"]["benign_control"]["fpr_after"]})
     if rows:
         L += ["## E8/E9 attribution and transplant (LightGBM)", "", pd.DataFrame(rows).round(3).to_markdown(index=False), ""]
     open(os.path.join(OUT, "H2_SUMMARY.md"), "w").write("\n".join(L))
