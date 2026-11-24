@@ -1,0 +1,7 @@
+# DIAGNOSIS — 2026-11-24 — the failure is inverted ranking of a few large attack families
+scripts/diagnose_v2.py (saved cycle-1 scores, target VAL only; results/diag_v2/DIAG_SUMMARY.md):
+- Threshold is not the main problem on CIC: tree models have AUROC 0.42–0.49 there, i.e. CIC attacks are ranked BELOW CIC benign on average.
+- Per family (XGBoost, mean of 3 seeds): CIC DDOS_attack-HOIC is 40 % of CIC attack flows and has AUROC 0.116 vs benign and recall 0.001; CIC Bot (8.4 %) AUROC 0.168. TON scanning (12.8 %) AUROC 0.398; BOT Reconnaissance AUROC 0.333.
+- Surprise: for HOIC, 0 % of sampled flows have a majority-BENIGN neighbourhood among pooled source training flows (5-NN, log1p + z-score) — they sit next to source ATTACKS — yet the trees score them as more benign than benign. For FTP-BruteForce and SlowHTTPTest it is the reverse: neighbourhoods 100 % benign, yet recall 1.0. Over 28 target families, Spearman(recall, share of benign-majority neighbourhoods) = −0.272 (weak).
+- PEN raises CIC AUROC (LightGBM 0.418 → 0.696) but its FPR at the source threshold jumps (0.455 → 0.744): PEN helps ranking on CIC but breaks threshold transfer, and destroys UNSW ranking (0.618 → 0.215).
+So what fails is not "attacks look like normal traffic". Tree models assign an inverted order to some families that are locally close to source attacks, which suggests split-based shortcuts that extrapolate wrongly.

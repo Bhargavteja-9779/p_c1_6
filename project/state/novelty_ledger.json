@@ -1889,5 +1889,19 @@
    ],
    "exact_difference_one_sentence": "Source-threshold transfer failure is already quantified on NF datasets (P05: 36.2% of target flows alerted; P06: label-free benign thresholds) and elsewhere (P47, P48, P28); only a systematic LODO threshold-transfer analysis across all four V3 sets tied to the environment-signature mechanism remains, and P01 ('target reference windows') may cover it."
   }
+ ],
+ "scores": [
+  {
+   "cycle": 1,
+   "date": "2026-11-24",
+   "claim": "H1 (ESF/PEN remedy + env-signature attribution)",
+   "differentiation": 1,
+   "mechanism": 1,
+   "evidence": 3,
+   "breadth": 3,
+   "significance": 1,
+   "total": 9,
+   "notes": "Prior art (Gazi code: BRN, feature-group ablation) covers the claims; our remedy failed (journal 10). Evidence/breadth are fine for a replication (3 seeds, 4 targets). Blind reviewer not run (no manuscript claim yet)."
+  }
  ]
 }

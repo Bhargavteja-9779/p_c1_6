@@ -1,18 +1,20 @@
 # HANDOFF — read this first (updated 2026-11-24, session 2)
 
 ## Where we are
-- **Cycle 1**, phase RUN_FULL: plan_v1 full run (376 jobs) launched 2026-11-24 03:52 UTC in tmux session `nids`. Est. ~7 CPU-h wall on 4 cores. Tuning jobs take ~6 min each.
-- **NEXT ACTION:**
-  1. `cd project && python3 scripts/status.py`. If this is a **fresh container**, data/ is gone: run `bash scripts/get_data.sh` (≈5 min; row counts must be UNSW 2,365,424 / BOT 16,933,808 / TON 27,520,260 / CIC 20,115,529), then `bash scripts/launch_full.sh` (resumes: finished jobs are in results/ + state/queue.json, which autosave pushes to git), then `setsid nohup bash scripts/autosave.sh >/dev/null 2>&1 &`.
-  2. When the queue is done, run_all.py calls `scripts/final_report.py` automatically (or run it by hand). Then: update gates, novelty score (expect ≤ 10, see below), variants_tried.csv (add V2 = plan_v1 full run, all arms), journal RESULT entries.
-  3. Cycle 2 = Section 6.4 ladder (diagnose with the saved scores in results/scores/*.npz). The key question: is there anything **not** already in Gazi et al.'s code? Candidates logged in D15/journal 06: counterfactual "transplant" attribution of single feature groups (vs their drop-and-retrain), data-driven environment-feature selection (ESF), random-vs-chrono pools. If novelty stays ≤ 14 after cycle 2 → pivot is allowed (6.5 needs ≥2 cycles).
+- **Cycle 2**, phase PLAN_V2 (cycle 1 closed 2026-11-24 12:22 UTC: 376/376 jobs, 4.18 CPU-h; H1 NOT supported — journal 09–10; results/RESULTS_SUMMARY.md).
+- Diagnosis (journal 11, results/diag_v2/): LODO failure = inverted ranking of a few large attack families (CIC DDoS-HOIC = 40 % of CIC attacks, AUROC 0.12, recall 0) although they sit next to SOURCE attacks in 5-NN space.
+- **NEXT ACTION:** implement `scripts/h2_tests.py` for plan_v2 (experiments/plan_v2.yaml): E7 source-kNN detector (k=5,25), E8 LightGBM pred_contrib attribution on inverted families, E9 feature transplant. Validation only. Then apply plan_v2's decision rule, write RESULT/FAILURE entries, update novelty score.
+- If the container is fresh: `bash scripts/get_data.sh` first (row counts in journal 00/HANDOFF history: UNSW 2,365,424 / BOT 16,933,808 / TON 27,520,260 / CIC 20,115,529).
 
 ## One-liners
 - Journal: JKSU-CIS (Springer Nature), JIF 6.4 (2025), verified median Received→Accepted 83.5 d (n=596) — **fails 72-day rule**; Q1 only partially verified. Frontiers checked this session (user allowed it): none ≤ 72 d (Frontiers in AI 83.5 d, n=300) → D17 keep JKSU-CIS.
 - Topic: cross-network (leave-one-dataset-out) generalization of flow-based NIDS on the four UQ NetFlow-V3 datasets.
-- Hypothesis H1: LODO collapse is driven by benign "environment-signature" features; ESF / PEN help. **Prior art now confirmed from code:** Gazi et al. (Zenodo 10.5281/zenodo.24172401) have BRN (== our PEN), feature-group drop ablation, failure decomposition and benign-divergence audit (journal 06, D15). Cycle 1 is therefore an independent replication (D16).
+- Hypothesis H1 (FAILED, journal 10): LODO collapse is driven by benign "environment-signature" features; ESF / PEN help. **Prior art now confirmed from code:** Gazi et al. (Zenodo 10.5281/zenodo.24172401) have BRN (== our PEN), feature-group drop ablation, failure decomposition and benign-divergence audit (journal 06, D15). Cycle 1 is therefore an independent replication (D16).
 
 ## Running now
+Nothing (cycle 1 queue finished; autosave stopped via state/STOP_AUTOSAVE — delete it and restart autosave.sh before the next long run).
+
+_Previous:_
 - tmux session `nids`: `python3 run_all.py --mode full --resume` (lock in state/, heartbeat state/heartbeat).
 - `scripts/autosave.sh` (setsid background): every 20 min commits results/ state/ journal/ and pushes to branch `claude/awesome-fermi-gqc7vh`. Stop: `touch state/STOP_AUTOSAVE`.
 
@@ -24,8 +26,13 @@ Cycle 1 ≈ 0.4 CPU-h used so far of 15 h; global ≈ 0.6 of 120 h (state/budget
 |---|---|
 | G1 journal | FAIL on 72-day rule (stated): no legitimate in-scope journal verified ≤72 d among 30 Springer + 5 Frontiers |
 | G2 prior art | FAIL: 54 papers opened (≥30 OK), but close prior work (Gazi code) covers our claims; P02 full text blocked (403) |
-| G3 novelty | FAIL (self-estimate ≤ 10/25 for H1 as planned) |
-| G4–G9 | unknown (full run in progress) |
+| G3 novelty | FAIL: cycle-1 score 9/25 (state/novelty_ledger.json) |
+| G4 baselines | partial: 7 baselines, equal 8-config tuning; published NF-v3 LODO numbers not directly comparable (different pools/protocol) |
+| G5 main result | FAIL (no arm beats XGB on val; confirmation not run) |
+| G6 ablation | done for H1 groups (E2) — components do not help |
+| G7 generalization | 4 targets × 3 seeds run |
+| G8 leakage | partial (source-only selection, test locked); duplicate check not yet run |
+| G9 reproducibility | unknown |
 | G10, G11 | not started (audit_numbers.py exists) |
 
 ## Last decisions (state/decisions.md)

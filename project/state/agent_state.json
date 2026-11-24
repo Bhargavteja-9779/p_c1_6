@@ -1,12 +1,12 @@
 {
- "cycle": 1,
- "phase": "RUN_FULL",
- "step": "plan_v1 full run in tmux 'nids'; next: report when queue done",
- "status": "RUNNING",
+ "cycle": 2,
+ "phase": "PLAN_V2",
+ "step": "implement scripts/h2_tests.py (E7 knn, E8 attribution, E9 transplant) and run on val",
+ "status": "ACTIVE",
  "pivots": 0,
  "topic": "cross-network NIDS generalization (NetFlow V3)",
  "journal": "JKSU-CIS",
- "last_action": "data rebuilt; full run launched 03:52; Frontiers checked (none <=72d); Gazi code read (BRN==PEN); final_report.py + audit_numbers.py written",
+ "last_action": "cycle1 closed (H1 failed, novelty 9/25); diagnose_v2 done; H2 + plan_v2 written",
  "updated": "2026-11-24",
  "user_notes": [
   "2026-11-24: user allows Frontiers journals"
