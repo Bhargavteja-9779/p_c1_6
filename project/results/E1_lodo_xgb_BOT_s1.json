@@ -1,0 +1,50 @@
+{
+ "macro_f1": 0.16435243324898186,
+ "f1_attack": 0.32241517049993695,
+ "bal_acc": 0.5383236984557883,
+ "tpr": 0.1922543333277617,
+ "fpr": 0.11560693641618497,
+ "auroc": 0.8068863005867302,
+ "prauc": 0.9983453050071984,
+ "n_eval": 60000,
+ "attack_rate_eval": 0.9971166666666667,
+ "threshold": 0.44801726937294006,
+ "src_val_macro_f1": 0.965951381497339,
+ "fit_s": 12.99884295463562,
+ "pred_ms_per_1k": 5.656886100769043,
+ "n_features": 47,
+ "n_train": 300000,
+ "model_bytes": 8657677,
+ "recall_by_family": {
+  "DDoS": 0.16167428661516633,
+  "DoS": 0.24843153061582138,
+  "Reconnaissance": 0.05204460966542751,
+  "Theft": 0.6666666666666666
+ },
+ "src_val_auroc": 0.9941288085816643,
+ "cfg": {
+  "n_estimators": 800,
+  "learning_rate": 0.03,
+  "max_depth": 10,
+  "subsample": 0.7,
+  "colsample_bytree": 0.5,
+  "reg_lambda": 10.0
+ },
+ "spec": {
+  "kind": "run",
+  "exp": "E1",
+  "protocol": "lodo",
+  "priority": 2,
+  "cfg_from": "tune_lodo_xgb_BOT",
+  "save_scores": true,
+  "method": "xgb",
+  "target": "BOT",
+  "seed": 1,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E1_lodo_xgb_BOT_s1"
+ },
+ "wall_s": 21.97288155555725,
+ "finished": "2026-11-24T11:27:02"
+}
