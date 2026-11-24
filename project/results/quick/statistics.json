@@ -1,0 +1,8 @@
+{
+ "primary_metric": "macro-F1 @ source-val threshold, mean over UNSW,TON,CIC",
+ "eval_split": "val",
+ "best_baseline": null,
+ "primary": {},
+ "tests_vs_best_baseline": [],
+ "note": "Holm over ALL methods/variants compared to the reference on the same data (Rule 8)."
+}
