@@ -1,0 +1,122 @@
+{
+ "best_cfg": {
+  "hidden": 256,
+  "depth": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "epochs": 15,
+  "lam": 0.1
+ },
+ "trials": [
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 8,
+    "lam": 1.0
+   },
+   "src_val_macro_f1": 0.9810340054956909,
+   "fit_s": 58.182942152023315
+  },
+  {
+   "cfg": {
+    "hidden": 256,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "epochs": 15,
+    "lam": 0.1
+   },
+   "src_val_macro_f1": 0.9956012440245126,
+   "fit_s": 69.04133915901184
+  },
+  {
+   "cfg": {
+    "hidden": 256,
+    "depth": 3,
+    "dropout": 0.0,
+    "lr": 0.0003,
+    "epochs": 8,
+    "lam": 1.0
+   },
+   "src_val_macro_f1": 0.9888207292894136,
+   "fit_s": 11.722064018249512
+  },
+  {
+   "cfg": {
+    "hidden": 256,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 15,
+    "lam": 1.0
+   },
+   "src_val_macro_f1": 0.9924889274913247,
+   "fit_s": 68.75414657592773
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 3,
+    "dropout": 0.0,
+    "lr": 0.0003,
+    "epochs": 8,
+    "lam": 0.3
+   },
+   "src_val_macro_f1": 0.9938697394006629,
+   "fit_s": 29.31196665763855
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 3,
+    "dropout": 0.1,
+    "lr": 0.003,
+    "epochs": 8,
+    "lam": 0.1
+   },
+   "src_val_macro_f1": 0.994765092086829,
+   "fit_s": 14.773571491241455
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 15,
+    "lam": 0.1
+   },
+   "src_val_macro_f1": 0.9949021199998376,
+   "fit_s": 33.49642300605774
+  },
+  {
+   "cfg": {
+    "hidden": 256,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "epochs": 8,
+    "lam": 0.3
+   },
+   "src_val_macro_f1": 0.9933812099061496,
+   "fit_s": 26.446817636489868
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "dann",
+  "target": "TON",
+  "eval_split": "val",
+  "job_id": "tune_lodo_dann_TON"
+ },
+ "wall_s": 343.7172508239746,
+ "finished": "2026-11-24T21:51:43"
+}

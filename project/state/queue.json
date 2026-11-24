@@ -13,9 +13,10 @@
     "eval_split": "val",
     "job_id": "tune_lodo_lgbm_UNSW"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:00:49"
   },
   "tune_lodo_lgbm_TON": {
    "spec": {
@@ -30,9 +31,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_lgbm_TON"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T21:59:28",
+   "finished": "2026-11-24T22:00:49"
   },
   "tune_lodo_lgbm_CIC": {
    "spec": {
@@ -47,9 +50,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_lgbm_CIC"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T21:58:13",
+   "finished": "2026-11-24T21:59:28"
   },
   "tune_lodo_lgbm_BOT": {
    "spec": {
@@ -64,9 +69,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_lgbm_BOT"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T21:56:57",
+   "finished": "2026-11-24T21:58:13"
   },
   "tune_lodo_xgb_UNSW": {
    "spec": {
@@ -353,9 +360,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_dann_UNSW"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T21:51:44",
+   "finished": "2026-11-24T21:56:57"
   },
   "tune_lodo_dann_TON": {
    "spec": {
@@ -370,9 +379,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_dann_TON"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T21:45:58",
+   "finished": "2026-11-24T21:51:44"
   },
   "tune_lodo_dann_CIC": {
    "spec": {
@@ -387,10 +398,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_dann_CIC"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T21:40:05"
+   "started": "2026-11-24T21:40:05",
+   "finished": "2026-11-24T21:45:58"
   },
   "tune_lodo_dann_BOT": {
    "spec": {

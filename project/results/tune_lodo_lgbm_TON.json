@@ -1,0 +1,122 @@
+{
+ "best_cfg": {
+  "n_estimators": 400,
+  "learning_rate": 0.1,
+  "num_leaves": 63,
+  "min_child_samples": 10,
+  "colsample_bytree": 1.0,
+  "reg_lambda": 10.0
+ },
+ "trials": [
+  {
+   "cfg": {
+    "n_estimators": 800,
+    "learning_rate": 0.02,
+    "num_leaves": 127,
+    "min_child_samples": 20,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.99647369890112,
+   "fit_s": 12.77260708808899
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.1,
+    "num_leaves": 127,
+    "min_child_samples": 20,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.0
+   },
+   "src_val_macro_f1": 0.9960374814905109,
+   "fit_s": 5.399173736572266
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.05,
+    "num_leaves": 15,
+    "min_child_samples": 10,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9964567942457583,
+   "fit_s": 3.6461105346679688
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.1,
+    "num_leaves": 63,
+    "min_child_samples": 10,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9964911297705608,
+   "fit_s": 3.8478264808654785
+  },
+  {
+   "cfg": {
+    "n_estimators": 800,
+    "learning_rate": 0.1,
+    "num_leaves": 15,
+    "min_child_samples": 10,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 1.0
+   },
+   "src_val_macro_f1": 0.9964563209284549,
+   "fit_s": 6.68080472946167
+  },
+  {
+   "cfg": {
+    "n_estimators": 200,
+    "learning_rate": 0.1,
+    "num_leaves": 31,
+    "min_child_samples": 50,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 0.0
+   },
+   "src_val_macro_f1": 0.996421673477937,
+   "fit_s": 2.3950510025024414
+  },
+  {
+   "cfg": {
+    "n_estimators": 200,
+    "learning_rate": 0.1,
+    "num_leaves": 127,
+    "min_child_samples": 10,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.0
+   },
+   "src_val_macro_f1": 0.9960201731650351,
+   "fit_s": 2.97847843170166
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.02,
+    "num_leaves": 63,
+    "min_child_samples": 20,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0
+   },
+   "src_val_macro_f1": 0.9964387850288539,
+   "fit_s": 3.732290267944336
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "lgbm",
+  "target": "TON",
+  "eval_split": "val",
+  "job_id": "tune_lodo_lgbm_TON"
+ },
+ "wall_s": 78.94071936607361,
+ "finished": "2026-11-24T22:00:48"
+}
