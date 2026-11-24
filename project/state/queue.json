@@ -174,9 +174,10 @@
     "eval_split": "val",
     "job_id": "tune_lodo_rf_TON"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T09:19:54"
   },
   "tune_lodo_rf_CIC": {
    "spec": {
@@ -191,9 +192,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_rf_CIC"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T09:18:09",
+   "finished": "2026-11-24T09:19:54"
   },
   "tune_lodo_rf_BOT": {
    "spec": {
@@ -208,9 +211,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_rf_BOT"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T09:15:58",
+   "finished": "2026-11-24T09:18:08"
   },
   "tune_lodo_lr_UNSW": {
    "spec": {
@@ -301,9 +306,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_mlp_UNSW"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T09:12:37",
+   "finished": "2026-11-24T09:15:58"
   },
   "tune_lodo_mlp_TON": {
    "spec": {
@@ -318,9 +325,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_mlp_TON"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T09:09:34",
+   "finished": "2026-11-24T09:12:37"
   },
   "tune_lodo_mlp_CIC": {
    "spec": {
@@ -335,10 +344,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_mlp_CIC"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T09:06:39"
+   "started": "2026-11-24T09:06:39",
+   "finished": "2026-11-24T09:09:34"
   },
   "tune_lodo_mlp_BOT": {
    "spec": {
