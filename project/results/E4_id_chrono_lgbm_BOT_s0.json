@@ -1,0 +1,39 @@
+{
+ "macro_f1": 0.8999916659721643,
+ "f1_attack": 0.9999833319443286,
+ "bal_acc": 0.8333333333333333,
+ "tpr": 1.0,
+ "fpr": 0.3333333333333333,
+ "auroc": 0.9999888877776667,
+ "prauc": 0.9999999988887036,
+ "n_eval": 30000,
+ "attack_rate_eval": 0.9999,
+ "threshold": 0.5,
+ "src_val_macro_f1": 1.0,
+ "fit_s": 1.7050082683563232,
+ "pred_ms_per_1k": 1.9148906071980794,
+ "n_features": 47,
+ "n_train": 100000,
+ "model_bytes": 2072183,
+ "recall_by_family": {
+  "DDoS": 1.0
+ },
+ "src_val_auroc": 1.0,
+ "cfg": {},
+ "spec": {
+  "kind": "run",
+  "exp": "E4",
+  "priority": 3,
+  "cfg": {},
+  "protocol": "id_chrono",
+  "method": "lgbm",
+  "target": "BOT",
+  "seed": 0,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E4_id_chrono_lgbm_BOT_s0"
+ },
+ "wall_s": 3.4922688007354736,
+ "finished": "2026-11-24T11:57:46"
+}

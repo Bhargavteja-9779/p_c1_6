@@ -4315,9 +4315,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_UNSW_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:55:45",
+   "finished": "2026-11-24T11:56:22"
   },
   "E2_lodo_drop_ttl-lgbm_UNSW_s1": {
    "spec": {
@@ -4334,9 +4336,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_UNSW_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:56:22",
+   "finished": "2026-11-24T11:57:01"
   },
   "E2_lodo_drop_ttl-lgbm_UNSW_s2": {
    "spec": {
@@ -4353,9 +4357,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_UNSW_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:57:01",
+   "finished": "2026-11-24T11:57:42"
   },
   "E2_lodo_drop_ttl-lgbm_TON_s0": {
    "spec": {
@@ -4372,9 +4378,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_TON_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:54:56",
+   "finished": "2026-11-24T11:55:12"
   },
   "E2_lodo_drop_ttl-lgbm_TON_s1": {
    "spec": {
@@ -4391,9 +4399,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_TON_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:55:12",
+   "finished": "2026-11-24T11:55:28"
   },
   "E2_lodo_drop_ttl-lgbm_TON_s2": {
    "spec": {
@@ -4410,9 +4420,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_TON_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:55:28",
+   "finished": "2026-11-24T11:55:45"
   },
   "E2_lodo_drop_ttl-lgbm_CIC_s0": {
    "spec": {
@@ -4429,9 +4441,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_CIC_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:53:07",
+   "finished": "2026-11-24T11:53:44"
   },
   "E2_lodo_drop_ttl-lgbm_CIC_s1": {
    "spec": {
@@ -4448,9 +4462,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_CIC_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:53:44",
+   "finished": "2026-11-24T11:54:21"
   },
   "E2_lodo_drop_ttl-lgbm_CIC_s2": {
    "spec": {
@@ -4467,9 +4483,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_CIC_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:54:21",
+   "finished": "2026-11-24T11:54:56"
   },
   "E2_lodo_drop_ttl-lgbm_BOT_s0": {
    "spec": {
@@ -4486,9 +4504,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_BOT_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:52:18",
+   "finished": "2026-11-24T11:52:34"
   },
   "E2_lodo_drop_ttl-lgbm_BOT_s1": {
    "spec": {
@@ -4505,9 +4525,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_BOT_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:52:34",
+   "finished": "2026-11-24T11:52:51"
   },
   "E2_lodo_drop_ttl-lgbm_BOT_s2": {
    "spec": {
@@ -4524,9 +4546,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_ttl-lgbm_BOT_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:52:51",
+   "finished": "2026-11-24T11:53:07"
   },
   "E2_lodo_drop_tcpwin-lgbm_UNSW_s0": {
    "spec": {
@@ -4543,9 +4567,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_UNSW_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:50:22",
+   "finished": "2026-11-24T11:51:01"
   },
   "E2_lodo_drop_tcpwin-lgbm_UNSW_s1": {
    "spec": {
@@ -4562,9 +4588,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_UNSW_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:51:01",
+   "finished": "2026-11-24T11:51:37"
   },
   "E2_lodo_drop_tcpwin-lgbm_UNSW_s2": {
    "spec": {
@@ -4581,9 +4609,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_UNSW_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:51:37",
+   "finished": "2026-11-24T11:52:18"
   },
   "E2_lodo_drop_tcpwin-lgbm_TON_s0": {
    "spec": {
@@ -4600,9 +4630,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_TON_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:49:31",
+   "finished": "2026-11-24T11:49:47"
   },
   "E2_lodo_drop_tcpwin-lgbm_TON_s1": {
    "spec": {
@@ -4619,9 +4651,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_TON_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:49:47",
+   "finished": "2026-11-24T11:50:04"
   },
   "E2_lodo_drop_tcpwin-lgbm_TON_s2": {
    "spec": {
@@ -4638,9 +4672,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_TON_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:50:04",
+   "finished": "2026-11-24T11:50:22"
   },
   "E2_lodo_drop_tcpwin-lgbm_CIC_s0": {
    "spec": {
@@ -4657,9 +4693,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_CIC_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:47:43",
+   "finished": "2026-11-24T11:48:22"
   },
   "E2_lodo_drop_tcpwin-lgbm_CIC_s1": {
    "spec": {
@@ -4676,9 +4714,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_CIC_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:48:22",
+   "finished": "2026-11-24T11:48:57"
   },
   "E2_lodo_drop_tcpwin-lgbm_CIC_s2": {
    "spec": {
@@ -4695,9 +4735,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_CIC_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:48:57",
+   "finished": "2026-11-24T11:49:31"
   },
   "E2_lodo_drop_tcpwin-lgbm_BOT_s0": {
    "spec": {
@@ -4714,9 +4756,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_BOT_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:46:51",
+   "finished": "2026-11-24T11:47:07"
   },
   "E2_lodo_drop_tcpwin-lgbm_BOT_s1": {
    "spec": {
@@ -4733,9 +4777,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_BOT_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:47:07",
+   "finished": "2026-11-24T11:47:26"
   },
   "E2_lodo_drop_tcpwin-lgbm_BOT_s2": {
    "spec": {
@@ -4752,9 +4798,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_tcpwin-lgbm_BOT_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:47:26",
+   "finished": "2026-11-24T11:47:43"
   },
   "E2_lodo_drop_port_proto-lgbm_UNSW_s0": {
    "spec": {
@@ -4771,9 +4819,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_UNSW_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:44:57",
+   "finished": "2026-11-24T11:45:35"
   },
   "E2_lodo_drop_port_proto-lgbm_UNSW_s1": {
    "spec": {
@@ -4790,9 +4840,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_UNSW_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:45:35",
+   "finished": "2026-11-24T11:46:11"
   },
   "E2_lodo_drop_port_proto-lgbm_UNSW_s2": {
    "spec": {
@@ -4809,9 +4861,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_UNSW_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:46:12",
+   "finished": "2026-11-24T11:46:51"
   },
   "E2_lodo_drop_port_proto-lgbm_TON_s0": {
    "spec": {
@@ -4828,9 +4882,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_TON_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:44:08",
+   "finished": "2026-11-24T11:44:24"
   },
   "E2_lodo_drop_port_proto-lgbm_TON_s1": {
    "spec": {
@@ -4847,9 +4903,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_TON_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:44:24",
+   "finished": "2026-11-24T11:44:41"
   },
   "E2_lodo_drop_port_proto-lgbm_TON_s2": {
    "spec": {
@@ -4866,9 +4924,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_TON_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:44:41",
+   "finished": "2026-11-24T11:44:57"
   },
   "E2_lodo_drop_port_proto-lgbm_CIC_s0": {
    "spec": {
@@ -4885,9 +4945,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_CIC_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:42:17",
+   "finished": "2026-11-24T11:42:53"
   },
   "E2_lodo_drop_port_proto-lgbm_CIC_s1": {
    "spec": {
@@ -4904,9 +4966,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_CIC_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:42:53",
+   "finished": "2026-11-24T11:43:30"
   },
   "E2_lodo_drop_port_proto-lgbm_CIC_s2": {
    "spec": {
@@ -4923,9 +4987,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_CIC_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:43:30",
+   "finished": "2026-11-24T11:44:08"
   },
   "E2_lodo_drop_port_proto-lgbm_BOT_s0": {
    "spec": {
@@ -4984,10 +5050,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_BOT_s2"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T11:41:59"
+   "started": "2026-11-24T11:41:59",
+   "finished": "2026-11-24T11:42:17"
   },
   "E2_lodo_drop_app_fields-lgbm_UNSW_s0": {
    "spec": {
@@ -5679,9 +5746,11 @@
     "eval_split": "val",
     "job_id": "E4_id_random_lgbm_BOT_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:02:07",
+   "finished": "2026-11-24T12:02:11"
   },
   "E4_id_random_lgbm_BOT_s1": {
    "spec": {
@@ -5698,9 +5767,10 @@
     "eval_split": "val",
     "job_id": "E4_id_random_lgbm_BOT_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:02:11"
   },
   "E4_id_random_lgbm_BOT_s2": {
    "spec": {
@@ -6192,9 +6262,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_UNSW_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:58:25",
+   "finished": "2026-11-24T11:58:31"
   },
   "E4_id_chrono_lgbm_UNSW_s1": {
    "spec": {
@@ -6211,9 +6283,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_UNSW_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:58:31",
+   "finished": "2026-11-24T11:58:36"
   },
   "E4_id_chrono_lgbm_UNSW_s2": {
    "spec": {
@@ -6230,9 +6304,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_UNSW_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:58:36",
+   "finished": "2026-11-24T11:58:41"
   },
   "E4_id_chrono_lgbm_TON_s0": {
    "spec": {
@@ -6249,9 +6325,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_TON_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:58:10",
+   "finished": "2026-11-24T11:58:15"
   },
   "E4_id_chrono_lgbm_TON_s1": {
    "spec": {
@@ -6268,9 +6346,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_TON_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:58:15",
+   "finished": "2026-11-24T11:58:20"
   },
   "E4_id_chrono_lgbm_TON_s2": {
    "spec": {
@@ -6287,9 +6367,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_TON_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:58:20",
+   "finished": "2026-11-24T11:58:25"
   },
   "E4_id_chrono_lgbm_CIC_s0": {
    "spec": {
@@ -6306,9 +6388,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_CIC_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:57:54",
+   "finished": "2026-11-24T11:58:00"
   },
   "E4_id_chrono_lgbm_CIC_s1": {
    "spec": {
@@ -6325,9 +6409,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_CIC_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:58:00",
+   "finished": "2026-11-24T11:58:05"
   },
   "E4_id_chrono_lgbm_CIC_s2": {
    "spec": {
@@ -6344,9 +6430,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_CIC_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:58:05",
+   "finished": "2026-11-24T11:58:10"
   },
   "E4_id_chrono_lgbm_BOT_s0": {
    "spec": {
@@ -6363,9 +6451,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_BOT_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:57:42",
+   "finished": "2026-11-24T11:57:47"
   },
   "E4_id_chrono_lgbm_BOT_s1": {
    "spec": {
@@ -6382,9 +6472,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_BOT_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:57:47",
+   "finished": "2026-11-24T11:57:50"
   },
   "E4_id_chrono_lgbm_BOT_s2": {
    "spec": {
@@ -6401,9 +6493,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_lgbm_BOT_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:57:50",
+   "finished": "2026-11-24T11:57:54"
   },
   "E4_id_chrono_rf_UNSW_s0": {
    "spec": {
@@ -6420,9 +6514,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_UNSW_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:01:54",
+   "finished": "2026-11-24T12:01:58"
   },
   "E4_id_chrono_rf_UNSW_s1": {
    "spec": {
@@ -6439,9 +6535,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_UNSW_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:01:58",
+   "finished": "2026-11-24T12:02:03"
   },
   "E4_id_chrono_rf_UNSW_s2": {
    "spec": {
@@ -6458,9 +6556,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_UNSW_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:02:03",
+   "finished": "2026-11-24T12:02:07"
   },
   "E4_id_chrono_rf_TON_s0": {
    "spec": {
@@ -6477,9 +6577,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_TON_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:01:34",
+   "finished": "2026-11-24T12:01:41"
   },
   "E4_id_chrono_rf_TON_s1": {
    "spec": {
@@ -6496,9 +6598,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_TON_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:01:41",
+   "finished": "2026-11-24T12:01:47"
   },
   "E4_id_chrono_rf_TON_s2": {
    "spec": {
@@ -6515,9 +6619,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_TON_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:01:47",
+   "finished": "2026-11-24T12:01:54"
   },
   "E4_id_chrono_rf_CIC_s0": {
    "spec": {
@@ -6534,9 +6640,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_CIC_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:01:20",
+   "finished": "2026-11-24T12:01:24"
   },
   "E4_id_chrono_rf_CIC_s1": {
    "spec": {
@@ -6553,9 +6661,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_CIC_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:01:24",
+   "finished": "2026-11-24T12:01:29"
   },
   "E4_id_chrono_rf_CIC_s2": {
    "spec": {
@@ -6572,9 +6682,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_CIC_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:01:29",
+   "finished": "2026-11-24T12:01:34"
   },
   "E4_id_chrono_rf_BOT_s0": {
    "spec": {
@@ -6591,9 +6703,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_BOT_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:01:05",
+   "finished": "2026-11-24T12:01:10"
   },
   "E4_id_chrono_rf_BOT_s1": {
    "spec": {
@@ -6610,9 +6724,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_BOT_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:01:10",
+   "finished": "2026-11-24T12:01:15"
   },
   "E4_id_chrono_rf_BOT_s2": {
    "spec": {
@@ -6629,9 +6745,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_rf_BOT_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:01:15",
+   "finished": "2026-11-24T12:01:20"
   },
   "E4_id_chrono_mlp_UNSW_s0": {
    "spec": {
@@ -6648,9 +6766,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_UNSW_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:00:20",
+   "finished": "2026-11-24T12:00:35"
   },
   "E4_id_chrono_mlp_UNSW_s1": {
    "spec": {
@@ -6667,9 +6787,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_UNSW_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:00:35",
+   "finished": "2026-11-24T12:00:50"
   },
   "E4_id_chrono_mlp_UNSW_s2": {
    "spec": {
@@ -6686,9 +6808,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_UNSW_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:00:50",
+   "finished": "2026-11-24T12:01:05"
   },
   "E4_id_chrono_mlp_TON_s0": {
    "spec": {
@@ -6705,9 +6829,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_TON_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:59:44",
+   "finished": "2026-11-24T11:59:56"
   },
   "E4_id_chrono_mlp_TON_s1": {
    "spec": {
@@ -6724,9 +6850,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_TON_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:59:56",
+   "finished": "2026-11-24T12:00:07"
   },
   "E4_id_chrono_mlp_TON_s2": {
    "spec": {
@@ -6743,9 +6871,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_TON_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:00:07",
+   "finished": "2026-11-24T12:00:20"
   },
   "E4_id_chrono_mlp_CIC_s0": {
    "spec": {
@@ -6762,9 +6892,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_CIC_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:59:11",
+   "finished": "2026-11-24T11:59:22"
   },
   "E4_id_chrono_mlp_CIC_s1": {
    "spec": {
@@ -6781,9 +6913,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_CIC_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:59:22",
+   "finished": "2026-11-24T11:59:33"
   },
   "E4_id_chrono_mlp_CIC_s2": {
    "spec": {
@@ -6800,9 +6934,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_CIC_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:59:33",
+   "finished": "2026-11-24T11:59:44"
   },
   "E4_id_chrono_mlp_BOT_s0": {
    "spec": {
@@ -6819,9 +6955,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_BOT_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:58:41",
+   "finished": "2026-11-24T11:58:51"
   },
   "E4_id_chrono_mlp_BOT_s1": {
    "spec": {
@@ -6838,9 +6976,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_BOT_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:58:51",
+   "finished": "2026-11-24T11:59:01"
   },
   "E4_id_chrono_mlp_BOT_s2": {
    "spec": {
@@ -6857,9 +6997,11 @@
     "eval_split": "val",
     "job_id": "E4_id_chrono_mlp_BOT_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:59:01",
+   "finished": "2026-11-24T11:59:11"
   },
   "E3_lodo_lgbm_n10000_UNSW_s0": {
    "spec": {
