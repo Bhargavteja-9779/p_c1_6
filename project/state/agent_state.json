@@ -1,0 +1,14 @@
+{
+ "cycle": 1,
+ "phase": "BUILD_DONE",
+ "step": "next: get_data.sh then launch_full.sh",
+ "status": "PAUSED_HANDOFF",
+ "pivots": 0,
+ "topic": "cross-network NIDS generalization (NetFlow V3)",
+ "journal": "JKSU-CIS",
+ "last_action": "quick run 32/32 ok; handoff written",
+ "updated": "2026-11-24",
+ "user_notes": [
+  "2026-11-24: user allows Frontiers journals"
+ ]
+}

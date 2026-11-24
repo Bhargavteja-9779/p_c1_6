@@ -1,0 +1,52 @@
+{
+ "macro_f1": 0.35557246744461357,
+ "f1_attack": 0.0591358024691358,
+ "bal_acc": 0.3988335127596375,
+ "tpr": 0.29440688383527963,
+ "fpr": 0.49673985831600465,
+ "auroc": 0.40152946997165745,
+ "prauc": 0.04177838223103031,
+ "n_eval": 60000,
+ "attack_rate_eval": 0.054233333333333335,
+ "threshold": 0.5718087652534769,
+ "src_val_macro_f1": 0.8751667202967645,
+ "fit_s": 0.5336077213287354,
+ "pred_ms_per_1k": 0.46079158782958984,
+ "n_features": 47,
+ "n_train": 15000,
+ "model_bytes": 2694,
+ "recall_by_family": {
+  "Analysis": 0.5384615384615384,
+  "Backdoor": 0.26229508196721313,
+  "DoS": 0.47058823529411764,
+  "Exploits": 0.4600896860986547,
+  "Fuzzers": 0.17437722419928825,
+  "Generic": 0.18473895582329317,
+  "Reconnaissance": 0.1712962962962963,
+  "Shellcode": 0.23376623376623376,
+  "Worms": 0.8
+ },
+ "src_val_auroc": 0.9399461511150471,
+ "cfg": {
+  "C": 0.003
+ },
+ "spec": {
+  "kind": "run",
+  "exp": "E1",
+  "protocol": "lodo",
+  "priority": 2,
+  "cfg_from": "tune_lodo_lr_UNSW",
+  "save_scores": true,
+  "method": "lr",
+  "target": "UNSW",
+  "seed": 0,
+  "n_per_source": 5000,
+  "n_val_per_source": 5000,
+  "eval_split": "val",
+  "job_id": "E1_lodo_lr_UNSW_s0",
+  "n_configs": 2,
+  "results_dir": "results/quick"
+ },
+ "wall_s": 2.6599855422973633,
+ "finished": "2026-11-24T03:35:55"
+}

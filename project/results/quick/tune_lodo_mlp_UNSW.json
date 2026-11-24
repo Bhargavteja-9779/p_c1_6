@@ -1,0 +1,49 @@
+{
+ "best_cfg": {
+  "hidden": 512,
+  "depth": 3,
+  "dropout": 0.3,
+  "lr": 0.003,
+  "epochs": 8
+ },
+ "trials": [
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.925007485883762,
+   "fit_s": 3.512540102005005
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9522659029211133,
+   "fit_s": 4.023331642150879
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 5000,
+  "n_val_per_source": 5000,
+  "method": "mlp",
+  "target": "UNSW",
+  "eval_split": "val",
+  "job_id": "tune_lodo_mlp_UNSW",
+  "n_configs": 2,
+  "results_dir": "results/quick"
+ },
+ "wall_s": 12.82630443572998,
+ "finished": "2026-11-24T03:34:45"
+}

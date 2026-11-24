@@ -1,0 +1,52 @@
+{
+ "best_cfg": {
+  "n_estimators": 800,
+  "learning_rate": 0.03,
+  "max_depth": 10,
+  "subsample": 0.7,
+  "colsample_bytree": 0.5,
+  "reg_lambda": 10.0
+ },
+ "trials": [
+  {
+   "cfg": {
+    "n_estimators": 800,
+    "learning_rate": 0.03,
+    "max_depth": 10,
+    "subsample": 0.7,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9744663478932054,
+   "fit_s": 2.4265518188476562
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.3,
+    "max_depth": 10,
+    "subsample": 0.9,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.1
+   },
+   "src_val_macro_f1": 0.9715320932713163,
+   "fit_s": 1.3823394775390625
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 5000,
+  "n_val_per_source": 5000,
+  "method": "xgb",
+  "target": "UNSW",
+  "eval_split": "val",
+  "job_id": "tune_lodo_xgb_UNSW",
+  "n_configs": 2,
+  "results_dir": "results/quick"
+ },
+ "wall_s": 7.630920648574829,
+ "finished": "2026-11-24T03:35:00"
+}

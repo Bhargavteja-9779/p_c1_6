@@ -1,0 +1,9 @@
+data/
+checkpoints/
+backups/
+__pycache__/
+*.pyc
+*.tmp
+state/heartbeat
+state/*.lock
+logs/*.log

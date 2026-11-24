@@ -1,0 +1,37 @@
+{
+ "best_cfg": {
+  "C": 0.003
+ },
+ "trials": [
+  {
+   "cfg": {
+    "C": 0.001
+   },
+   "src_val_macro_f1": 0.866584500338531,
+   "fit_s": 0.14938640594482422
+  },
+  {
+   "cfg": {
+    "C": 0.003
+   },
+   "src_val_macro_f1": 0.8751667202967645,
+   "fit_s": 0.2187361717224121
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 5000,
+  "n_val_per_source": 5000,
+  "method": "lr",
+  "target": "UNSW",
+  "eval_split": "val",
+  "job_id": "tune_lodo_lr_UNSW",
+  "n_configs": 2,
+  "results_dir": "results/quick"
+ },
+ "wall_s": 4.2005743980407715,
+ "finished": "2026-11-24T03:34:31"
+}

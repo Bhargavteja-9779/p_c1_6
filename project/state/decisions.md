@@ -1,0 +1,18 @@
+# Decisions log (append-only)
+
+| # | Date | Decision | Reason |
+|---|---|---|---|
+| D1 | 2026-11-24 | Project lives in `project/` inside the git repo; branch `claude/cool-ptolemy-6dtl6w`, pushed to origin after each step | Repo given by the environment; container is ephemeral so push is the only durable store |
+| D2 | 2026-11-24 | Compute budget counted in CPU hours (no GPU present) | Machine has 4 CPU cores, no CUDA/MPS |
+| D3 | 2026-11-24 | Acceptance-time verification via Crossref publisher-deposited article history (Received/Accepted) | Official, article-level, scriptable; Elsevier/IEEE do not deposit these and ScienceDirect blocks us (403) |
+| D4 | 2026-11-24 | Selected JKSU-CIS (JIF 6.4 2025, median 83.5 d, n=596) | Fastest verifiable journal with a JIF among 30 computed; fails 72-day rule by ~12 d (stated) |
+| D5 | 2026-11-24 | Topic: cross-network generalization of flow-based NIDS on UQ NetFlow V3 | Real problem, public data with shared schema + timestamps, CPU-feasible, in journal scope; see topic/selected_topic.md |
+| D6 | 2026-11-24 | Data via Hugging Face mirror keys-i/netFlow (parquet of the 4 official UQ records) | Official UQ RDM download not scriptable from here; mirror documents checksum verification and no filtering; we re-verify row counts |
+| D7 | 2026-11-24 | Features: drop IPV4_SRC_ADDR, IPV4_DST_ADDR, L4_SRC_PORT (ephemeral), DNS_QUERY_ID (random transaction id), FLOW_START/END_MILLISECONDS (used only for splitting); keep L4_DST_PORT | Identifiers/timestamps leak capture identity; dst port kept because it is a common NIDS feature and is a candidate environment signature to test |
+| D8 | 2026-11-24 | Splits: within each dataset chronological 60/20/20 by FLOW_START_MILLISECONDS; pools sampled with data seed 0: train ≤300k, val ≤60k, test ≤100k; each run seed draws 100k train flows from the pool | Temporal split avoids future leakage; fixed eval pools make all methods comparable; CPU budget |
+| D9 | 2026-11-24 | Exploration evaluates cross-network performance on the TARGET's VAL pool only; TARGET TEST pool touched only by the frozen confirmation run (seeds 100–104) | Rule 5; target-val use for design decisions is a forking-path risk, mitigated by fresh-seed confirmation on untouched test |
+| D10 | 2026-11-24 | Hyper-parameters and decision thresholds chosen on pooled SOURCE validation only (never target labels) | Realistic deployment; pre-registered primary metric |
+| D11 | 2026-11-24 | Two split schemes per dataset: `random` (i.i.d. over whole time span) and `chrono` (60/20/20 by time). LODO uses `random` pools; `chrono` is an RQ1 analysis lens. Primary metric = mean target macro-F1 over UNSW, TON, CIC targets; BOT-as-target reported separately (0.3 % benign) | Chronological splits put entirely unseen attack families in val/test (journal entry 03); mixing two shifts would confound the cross-network question |
+| D12 | 2026-11-24 | NaN/±inf in SRC/DST_TO_*_SECOND_BYTES set to 0 | They occur only for zero-duration flows, which exist only in UNSW (5.2 %) and BOT (6.2 %) — TON/CIC have no zero-duration flows (exporter difference, itself an environment signature; journal entry 04) |
+| D13 | 2026-11-24 | User message: "any frontier journal also fine" → Frontiers journals now allowed as candidates (overrides Section 4 exclusion); to evaluate next session | Explicit user instruction |
+| D14 | 2026-11-24 | Not pivoting yet despite strong prior art (Gazi 2026, Rayamajhi 2026) | Pivot rule 6.5 needs ≥2 cycles; plan_v1 data serves the open angles (attribution, remedy test) |

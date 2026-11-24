@@ -1,0 +1,1875 @@
+{
+ "queries": [
+  {
+   "claim": "C1",
+   "query": "cross-dataset evaluation NetFlow intrusion detection",
+   "source": "openalex",
+   "n_results": 1792,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "cross-dataset evaluation NetFlow intrusion detection",
+   "source": "arxiv",
+   "n_results": 3,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "leave-one-dataset-out network intrusion detection",
+   "source": "openalex",
+   "n_results": 22729,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "leave-one-dataset-out network intrusion detection",
+   "source": "arxiv",
+   "n_results": 7,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "NetFlow V3 dataset intrusion detection generalization",
+   "source": "openalex",
+   "n_results": 70,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "NetFlow V3 dataset intrusion detection generalization",
+   "source": "arxiv",
+   "n_results": 9,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "standard feature set NetFlow datasets machine learning NIDS",
+   "source": "openalex",
+   "n_results": 806,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "standard feature set NetFlow datasets machine learning NIDS",
+   "source": "arxiv",
+   "n_results": 1,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "cross-domain evaluation machine learning network intrusion detection NetFlow",
+   "source": "openalex",
+   "n_results": 1480,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "cross-domain evaluation machine learning network intrusion detection NetFlow",
+   "source": "arxiv",
+   "n_results": 1,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "generalizability network intrusion detection across datasets",
+   "source": "openalex",
+   "n_results": 35918,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "generalizability network intrusion detection across datasets",
+   "source": "arxiv",
+   "n_results": 11,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "NF-UNSW-NB15 NF-ToN-IoT cross dataset",
+   "source": "openalex",
+   "n_results": 252,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "NF-UNSW-NB15 NF-ToN-IoT cross dataset",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "train on one dataset test on another intrusion detection",
+   "source": "openalex",
+   "n_results": 43773,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "train on one dataset test on another intrusion detection",
+   "source": "arxiv",
+   "n_results": 3,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "shortcut learning network intrusion detection",
+   "source": "openalex",
+   "n_results": 2726,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "shortcut learning network intrusion detection",
+   "source": "arxiv",
+   "n_results": 2,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "spurious correlation intrusion detection dataset artifacts",
+   "source": "openalex",
+   "n_results": 846,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "spurious correlation intrusion detection dataset artifacts",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "TTL feature bias intrusion detection dataset",
+   "source": "openalex",
+   "n_results": 674,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "TTL feature bias intrusion detection dataset",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "explainable AI cross-dataset network intrusion detection features",
+   "source": "openalex",
+   "n_results": 22469,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "explainable AI cross-dataset network intrusion detection features",
+   "source": "arxiv",
+   "n_results": 6,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "dataset artifacts network intrusion detection testbed",
+   "source": "openalex",
+   "n_results": 1626,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "dataset artifacts network intrusion detection testbed",
+   "source": "arxiv",
+   "n_results": 2,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "flawed NIDS datasets design smells",
+   "source": "openalex",
+   "n_results": 40,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "flawed NIDS datasets design smells",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "troubleshooting intrusion detection dataset CICIDS2017",
+   "source": "openalex",
+   "n_results": 301,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "troubleshooting intrusion detection dataset CICIDS2017",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "dos and don'ts machine learning computer security pitfalls",
+   "source": "openalex",
+   "n_results": 345,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "dos and don'ts machine learning computer security pitfalls",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "domain invariant network intrusion detection",
+   "source": "openalex",
+   "n_results": 9142,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "domain invariant network intrusion detection",
+   "source": "arxiv",
+   "n_results": 4,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "domain adaptation network intrusion detection cross-dataset",
+   "source": "openalex",
+   "n_results": 18873,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "domain adaptation network intrusion detection cross-dataset",
+   "source": "arxiv",
+   "n_results": 8,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "domain generalization network intrusion detection",
+   "source": "openalex",
+   "n_results": 27992,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "domain generalization network intrusion detection",
+   "source": "arxiv",
+   "n_results": 103,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "feature normalization cross-domain intrusion detection",
+   "source": "openalex",
+   "n_results": 25776,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "feature normalization cross-domain intrusion detection",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "invariant feature selection intrusion detection transfer",
+   "source": "openalex",
+   "n_results": 4752,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "invariant feature selection intrusion detection transfer",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "contrastive learning cross-domain intrusion detection",
+   "source": "openalex",
+   "n_results": 38062,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "contrastive learning cross-domain intrusion detection",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "adversarial domain adaptation NIDS DANN",
+   "source": "openalex",
+   "n_results": 34,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "adversarial domain adaptation NIDS DANN",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "quantum cross-domain intrusion detection",
+   "source": "openalex",
+   "n_results": 9573,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "quantum cross-domain intrusion detection",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "temporal split evaluation intrusion detection inflated",
+   "source": "openalex",
+   "n_results": 857,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "temporal split evaluation intrusion detection inflated",
+   "source": "arxiv",
+   "n_results": 2,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "chronological split network intrusion detection evaluation",
+   "source": "openalex",
+   "n_results": 2924,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "chronological split network intrusion detection evaluation",
+   "source": "arxiv",
+   "n_results": 1,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "temporal analysis NetFlow datasets intrusion detection",
+   "source": "openalex",
+   "n_results": 1618,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "temporal analysis NetFlow datasets intrusion detection",
+   "source": "arxiv",
+   "n_results": 1,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "time-aware evaluation machine learning intrusion detection",
+   "source": "openalex",
+   "n_results": 65308,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "time-aware evaluation machine learning intrusion detection",
+   "source": "arxiv",
+   "n_results": 18,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "NetFlow v3 temporal features dataset",
+   "source": "openalex",
+   "n_results": 115,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "NetFlow v3 temporal features dataset",
+   "source": "arxiv",
+   "n_results": 1,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "concept drift network intrusion detection evaluation",
+   "source": "openalex",
+   "n_results": 15063,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "concept drift network intrusion detection evaluation",
+   "source": "arxiv",
+   "n_results": 9,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "random split data leakage intrusion detection",
+   "source": "openalex",
+   "n_results": 8151,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "random split data leakage intrusion detection",
+   "source": "arxiv",
+   "n_results": 1,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "realistic evaluation network intrusion detection deployment",
+   "source": "openalex",
+   "n_results": 36113,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "realistic evaluation network intrusion detection deployment",
+   "source": "arxiv",
+   "n_results": 10,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "threshold transfer anomaly detection across networks",
+   "source": "openalex",
+   "n_results": 99024,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "threshold transfer anomaly detection across networks",
+   "source": "arxiv",
+   "n_results": 1,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "calibration intrusion detection classifier distribution shift",
+   "source": "openalex",
+   "n_results": 7467,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "calibration intrusion detection classifier distribution shift",
+   "source": "arxiv",
+   "n_results": 2,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "false positive rate deployment intrusion detector new network",
+   "source": "openalex",
+   "n_results": 13157,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "false positive rate deployment intrusion detector new network",
+   "source": "arxiv",
+   "n_results": 2,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "decision threshold selection network intrusion detection",
+   "source": "openalex",
+   "n_results": 45250,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "decision threshold selection network intrusion detection",
+   "source": "arxiv",
+   "n_results": 1,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "uncertainty calibration network intrusion detection",
+   "source": "openalex",
+   "n_results": 12833,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "uncertainty calibration network intrusion detection",
+   "source": "arxiv",
+   "n_results": 2,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "operating point intrusion detection cross-dataset",
+   "source": "openalex",
+   "n_results": 38123,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "operating point intrusion detection cross-dataset",
+   "source": "arxiv",
+   "n_results": 3,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "anomaly detection threshold generalization network traffic",
+   "source": "openalex",
+   "n_results": 20023,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "anomaly detection threshold generalization network traffic",
+   "source": "arxiv",
+   "n_results": 11,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "out-of-distribution detection network intrusion",
+   "source": "openalex",
+   "n_results": 116038,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "out-of-distribution detection network intrusion",
+   "source": "arxiv",
+   "n_results": 29,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "shortcut learning undermines cross-domain generalization NetFlow",
+   "source": "openalex",
+   "n_results": 8,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "cross-network NetFlow intrusion detection controlled benchmark transfer adaptation",
+   "source": "openalex",
+   "n_results": 334,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "auditing NetFlow versions intrusion detection benchmarks shortcuts",
+   "source": "openalex",
+   "n_results": 21,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "NetFlow v3 cross-dataset",
+   "source": "openalex",
+   "n_results": 162,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "TTL window size shortcut intrusion detection",
+   "source": "openalex",
+   "n_results": 68,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "environment-specific features intrusion detection dataset bias",
+   "source": "openalex",
+   "n_results": 34167,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "benign traffic normalization cross-network intrusion detection",
+   "source": "openalex",
+   "n_results": 7275,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "benign traffic normalization cross-network intrusion detection",
+   "source": "s2",
+   "n_results": 2630,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "per-domain normalization intrusion detection generalization",
+   "source": "openalex",
+   "n_results": 11091,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "evaluating standard feature sets generalisability NIDS",
+   "source": "openalex",
+   "n_results": 998,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "temporal NetFlow features network intrusion detection",
+   "source": "openalex",
+   "n_results": 1650,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "source threshold target network false positive intrusion detection transfer",
+   "source": "openalex",
+   "n_results": 16442,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "transfer-aware deployment-oriented evaluation NetFlow intrusion detection",
+   "source": "openalex",
+   "n_results": 448,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "transfer-aware deployment-oriented evaluation NetFlow intrusion detection",
+   "source": "s2",
+   "n_results": 150,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "quantum cross-domain intrusion detection QuCAD",
+   "source": "openalex",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "feature relevance cross-dataset network intrusion detection",
+   "source": "openalex",
+   "n_results": 16851,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "generalizing across networks model transferability intrusion detection",
+   "source": "openalex",
+   "n_results": 27430,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "removing domain-specific features improves cross-dataset intrusion detection",
+   "source": "openalex",
+   "n_results": 23383,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "removing domain-specific features improves cross-dataset intrusion detection",
+   "source": "s2",
+   "n_results": 483,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "duplicate-aware evaluation NetFlow intrusion detection",
+   "source": "openalex",
+   "n_results": 598,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "cross-dataset intrusion detection probability calibration threshold",
+   "source": "openalex",
+   "n_results": 5875,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "contaminant features intrusion detection datasets",
+   "source": "openalex",
+   "n_results": 3349,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "zero-shot cross-dataset NetFlow intrusion detection",
+   "source": "openalex",
+   "n_results": 209,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "NetFlow datasets time-based split",
+   "source": "openalex",
+   "n_results": 1771,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "NetFlow datasets time-based split",
+   "source": "s2",
+   "n_results": 4239,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "TTL artifact NetFlow intrusion detection dataset",
+   "source": "openalex",
+   "n_results": 58,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "TTL artifact NetFlow intrusion detection dataset",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "time to live feature leakage intrusion detection dataset",
+   "source": "openalex",
+   "n_results": 3679,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "time to live feature leakage intrusion detection dataset",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "TTL shortcut NF-ToN-IoT",
+   "source": "openalex",
+   "n_results": 4,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "TTL shortcut NF-ToN-IoT",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "cross-network NetFlow intrusion detection target reference windows",
+   "source": "openalex",
+   "n_results": 697,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "cross-network NetFlow intrusion detection target reference windows",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "shortcut learning cross-domain generalization NetFlow university network deployment",
+   "source": "openalex",
+   "n_results": 18,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "shortcut learning cross-domain generalization NetFlow university network deployment",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "leave-one-testbed-out NetFlow",
+   "source": "openalex",
+   "n_results": 394,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C1",
+   "query": "leave-one-testbed-out NetFlow",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "domain classifier separates network datasets NetFlow features",
+   "source": "openalex",
+   "n_results": 1478,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "domain classifier separates network datasets NetFlow features",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "label-free threshold calibration benign traffic cross-dataset intrusion",
+   "source": "openalex",
+   "n_results": 559,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C5",
+   "query": "label-free threshold calibration benign traffic cross-dataset intrusion",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "NetFlow v3 datasets temporal features release",
+   "source": "openalex",
+   "n_results": 45,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C4",
+   "query": "NetFlow v3 datasets temporal features release",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "explainable cross-domain evaluation NIDS SHAP",
+   "source": "openalex",
+   "n_results": 674,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "explainable cross-domain evaluation NIDS SHAP",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "port shortcut intrusion detection cross-dataset",
+   "source": "openalex",
+   "n_results": 441,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C2",
+   "query": "port shortcut intrusion detection cross-dataset",
+   "source": "arxiv",
+   "n_results": 1,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "CORAL domain adaptation NetFlow intrusion detection",
+   "source": "openalex",
+   "n_results": 15,
+   "date": "2026-11-24"
+  },
+  {
+   "claim": "C3",
+   "query": "CORAL domain adaptation NetFlow intrusion detection",
+   "source": "arxiv",
+   "n_results": 0,
+   "date": "2026-11-24"
+  }
+ ],
+ "papers": [
+  {
+   "id": "P01",
+   "title": "Code for \"Cross-Network NetFlow Intrusion Detection: A Controlled Benchmark of Transfer, Adaptation and Target Reference Windows\" (Zenodo code+results deposit for an unpublished/under-review paper)",
+   "authors_first": "Nahid Gazi",
+   "year": 2026,
+   "doi_or_arxiv": "10.5281/zenodo.24172400",
+   "link": "https://doi.org/10.5281/zenodo.24172400",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C3",
+    "C5"
+   ],
+   "what_it_does": "Code/run-level results: 18 detection and adaptation methods under leave-one-testbed-out evaluation on four NetFlow testbeds in both NF-v2 and NF-v3, equal source-only tuning, ten seeds, pre-declared hypotheses; 'target reference windows' suggests unlabeled/limited target data used for adaptation or thresholds.",
+   "what_it_does_not_do": "Deposit description does not say whether feature-level environment-signature attribution or benign-relative normalization is studied; paper text not located.",
+   "datasets": "NF-v2 and NF-v3: four NetFlow testbeds"
+  },
+  {
+   "id": "P02",
+   "title": "Is It Transfer? A Target-Only Control Finds No Consistent Source Benefit in Few-Shot Cross-Dataset Intrusion Detection on NetFlow",
+   "authors_first": "Rijan Rayamajhi",
+   "year": 2026,
+   "doi_or_arxiv": "10.20944/preprints202610.1041.v1",
+   "link": "https://doi.org/10.20944/preprints202610.1041.v1",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C2",
+    "C3"
+   ],
+   "what_it_does": "On all four NetFlow v3 datasets, 12 directed pairs, RF/GBT/NN; compares pooled, importance-weighted, fine-tuned adaptation vs target-only training; domain classifier separability analysis; TTL-artifact removal check; shows per-domain feature scaling corrupts separability measurements.",
+   "what_it_does_not_do": "Focus is few-shot transfer vs target-only (needs target labels); not leave-one-dataset-out with pooled sources and source-only thresholds; no benign-relative normalization remedy proposed.",
+   "datasets": "NF-CICIDS2018-v3, NF-UNSW-NB15-v3, NF-ToN-IoT-v3, NF-BoT-IoT-v3",
+   "relevant_numbers": "540 comparisons: source significantly helps in 8%, hurts in 38% (uncorrected); mean F1 change -0.044 (95% CI -0.066 to -0.022); domain classifier AUC >= 0.996 for every pair on raw features; 23-40 of 45 features must be removed before AUC < 0.9; published zero-shot F1 of 0.81 does not reproduce on v3."
+  },
+  {
+   "id": "P03",
+   "title": "Code and results for \"Shortcut Learning Undermines Cross-Domain Generalization in NetFlow-Based Intrusion Detection: Evidence from a 14-Day University Network Deployment\" (Zenodo deposit)",
+   "authors_first": "T. D. Vu",
+   "year": 2026,
+   "doi_or_arxiv": "10.5281/zenodo.23206015",
+   "link": "https://doi.org/10.5281/zenodo.23206015",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C2",
+    "C3"
+   ],
+   "what_it_does": "XGBoost/MLP trained on NF-CSE-CIC-IDS2018-v2, tested on 16.79M flows of an operational university network (Suricata labels) and on NF-BoT-IoT-v2/NF-ToN-IoT-v2; zero-shot cross-domain under feature ablation, OT and CORAL UDA, few-shot fine-tuning.",
+   "what_it_does_not_do": "V2 not V3; single source rather than leave-one-out over four; no per-environment benign normalization described.",
+   "datasets": "NF-CSE-CIC-IDS2018-v2, NF-BoT-IoT-v2, NF-ToN-IoT-v2, private university network",
+   "relevant_numbers": "16.79 million target flows; 400-flow label audit."
+  },
+  {
+   "id": "P04",
+   "title": "Auditing the NetFlow versions of IoT and enterprise intrusion detection benchmarks: data quality, shortcuts and cross-dataset evaluation (Zenodo deposit + GitHub README)",
+   "authors_first": "Luiggi Valencia Velez",
+   "year": 2026,
+   "doi_or_arxiv": "10.5281/zenodo.23291191",
+   "link": "https://doi.org/10.5281/zenodo.23291191",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C2",
+    "C4"
+   ],
+   "what_it_does": "Record-level audit of NF-v2 and NF-v3 of NF-ToN-IoT, NF-BoT-IoT, NF-CSE-CIC-IDS2018: duplicates/label conflicts, shallow-tree shortcut probes per class vs benign, in-domain and cross-dataset runs, replication of Layeghy & Portmann 2023, SHAP; README lists checks incl. dns_ttl_anomaly, src_port_signal, temporal-split exploration.",
+   "what_it_does_not_do": "Excludes NF-UNSW-NB15; no remedy (normalization) proposed as far as the description shows.",
+   "datasets": "NF-ToN-IoT, NF-BoT-IoT, NF-CSE-CIC-IDS2018 (v2 and v3)"
+  },
+  {
+   "id": "P05",
+   "title": "Cross-Dataset Intrusion Detection under Benchmark Shift: Directed Transfer, Probability Calibration, and Alert Burden",
+   "authors_first": "Priyanga R",
+   "year": 2026,
+   "doi_or_arxiv": "10.66261/vx9swp16",
+   "link": "https://doi.org/10.66261/vx9swp16",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C2",
+    "C5"
+   ],
+   "what_it_does": "Crossed transfer among three NF datasets; removes endpoint-oriented fields; source Platt scaling; fixed source-negative 99.5th-percentile threshold measured on targets.",
+   "what_it_does_not_do": "Three datasets only (no CIC-2018), version not stated; endpoint removal hurt rather than helped; no environment-normalization remedy.",
+   "datasets": "NF-UNSW-NB15, NF-ToN-IoT, NF-BoT-IoT",
+   "relevant_numbers": "Within-domain AUROC 0.9773 vs 0.5445 cross-domain; removing endpoint fields: AUROC 0.5881 -> 0.4990; source threshold alerted on 36.2% of target flows."
+  },
+  {
+   "id": "P06",
+   "title": "Leakage-Controlled Cross-Dataset Evaluation of Self-Supervised Graph-Based Network Intrusion Detection",
+   "authors_first": "Sayyora Iskandarova",
+   "year": 2026,
+   "doi_or_arxiv": "10.1922/comdem.v3i3s.18688",
+   "link": "https://doi.org/10.1922/comdem.v3i3s.18688",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C5"
+   ],
+   "what_it_does": "Feature policy removing IPs and binning ports; port-only shortcut probes; zero-shot cross-dataset with a benign-trained graph autoencoder; CORAL alignment; label-free threshold from benign training traffic.",
+   "what_it_does_not_do": "V2, two datasets emphasised; graph AE not GBDT; no systematic attribution across TTL/window/DNS/FTP features.",
+   "datasets": "NF-BoT-IoT-v2, NF-UNSW-NB15-v2",
+   "relevant_numbers": "Port-only probe ROC-AUC 0.998 in NF-BoT-IoT-v2 vs 0.615 on NF-UNSW-NB15-v2; raw transfer 0.332 -> CORAL 0.926."
+  },
+  {
+   "id": "P07",
+   "title": "A transfer-aware, deployment-oriented evaluation framework for NetFlow-based intrusion detection systems (TAN-IDS)",
+   "authors_first": "Dung Ha Thanh",
+   "year": 2026,
+   "doi_or_arxiv": "10.1371/journal.pone.0346801",
+   "link": "https://doi.org/10.1371/journal.pone.0346801",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C3"
+   ],
+   "what_it_does": "Unifies datasets in an 8-dim NetFlow feature interface; scenarios in-dataset, direct cross-dataset, mixed-domain training, 5% target fine-tuning.",
+   "what_it_does_not_do": "Restricts to 8 features rather than diagnosing which features cause shift; uses target labels for recovery.",
+   "datasets": "multiple NetFlow datasets (unspecified in abstract)",
+   "relevant_numbers": "Fine-tuning with 5% target labels gives F1-macro >95% in several scenarios."
+  },
+  {
+   "id": "P08",
+   "title": "Temporal Analysis of NetFlow Datasets for Network Intrusion Detection Systems",
+   "authors_first": "Majed Luay",
+   "year": 2025,
+   "doi_or_arxiv": "arXiv:2503.04404",
+   "link": "https://arxiv.org/abs/2503.04404",
+   "opened": "abstract",
+   "claims": [
+    "C4"
+   ],
+   "what_it_does": "Creates NetFlow datasets with temporal features (the V3 release) and analyses feature distributions over time and time-frequency representations.",
+   "what_it_does_not_do": "No chronological-vs-random split comparison of detectors, no cross-dataset evaluation.",
+   "datasets": "NetFlow V3 datasets"
+  },
+  {
+   "id": "P09",
+   "title": "Time Matters: Temporal NetFlow Features for ML-Based Network Intrusion Detection",
+   "authors_first": "Majed Luay",
+   "year": 2026,
+   "doi_or_arxiv": "10.1109/access.2026.3688204",
+   "link": "https://doi.org/10.1109/access.2026.3688204",
+   "opened": "abstract",
+   "claims": [
+    "C4"
+   ],
+   "what_it_does": "Journal version of the temporal NetFlow (V3) analysis.",
+   "what_it_does_not_do": "Same as above: no split-inflation or cross-network study per abstract.",
+   "datasets": "NetFlow V3"
+  },
+  {
+   "id": "P10",
+   "title": "DI-NIDS: Domain invariant network intrusion detection system",
+   "authors_first": "Siamak Layeghy",
+   "year": 2023,
+   "doi_or_arxiv": "10.1016/j.knosys.2023.110626",
+   "link": "https://doi.org/10.1016/j.knosys.2023.110626",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C3"
+   ],
+   "what_it_does": "DANN feature extractor on multiple labelled source domains + One-Class SVM; cross-domain tests.",
+   "what_it_does_not_do": "V2, two datasets; adversarial representation rather than feature-level diagnosis.",
+   "datasets": "NFv2-CIC-2018, NFv2-UNSW-NB15"
+  },
+  {
+   "id": "P11",
+   "title": "Towards a Standard Feature Set for Network Intrusion Detection System Datasets",
+   "authors_first": "Mohanad Sarhan",
+   "year": 2021,
+   "doi_or_arxiv": "arXiv:2101.11315 / 10.1007/s11036-021-01843-0",
+   "link": "https://arxiv.org/abs/2101.11315",
+   "opened": "abstract",
+   "claims": [
+    "C1"
+   ],
+   "what_it_does": "Proposes NetFlow-based standard feature sets (12 and 43 features) to enable cross-dataset evaluation.",
+   "what_it_does_not_do": "No leave-one-out shift analysis.",
+   "datasets": "NF-v2 family",
+   "relevant_numbers": "12- and 43-feature variants."
+  },
+  {
+   "id": "P12",
+   "title": "NetFlow Datasets for Machine Learning-based Network Intrusion Detection Systems",
+   "authors_first": "Mohanad Sarhan",
+   "year": 2020,
+   "doi_or_arxiv": "arXiv:2011.09144",
+   "link": "https://arxiv.org/abs/2011.09144",
+   "opened": "abstract",
+   "claims": [
+    "C1"
+   ],
+   "what_it_does": "Releases NF-UNSW-NB15, NF-BoT-IoT, NF-ToN-IoT, NF-CSE-CIC-IDS2018, NF-UQ-NIDS.",
+   "what_it_does_not_do": "No cross-dataset evaluation of generalization in abstract.",
+   "datasets": "NF-v1"
+  },
+  {
+   "id": "P13",
+   "title": "Feature Analysis for Machine Learning-based IoT Intrusion Detection",
+   "authors_first": "Mohanad Sarhan",
+   "year": 2021,
+   "doi_or_arxiv": "arXiv:2108.12732",
+   "link": "https://arxiv.org/abs/2108.12732",
+   "opened": "abstract",
+   "claims": [
+    "C2"
+   ],
+   "what_it_does": "Feature ranking (chi2, IG, correlation) on original and NetFlow variants.",
+   "what_it_does_not_do": "In-dataset only; no environment-signature notion.",
+   "datasets": "UNSW-NB15, CSE-CIC-IDS2018, ToN-IoT and NF variants"
+  },
+  {
+   "id": "P14",
+   "title": "Machine Learning in Network Intrusion Detection: A Cross-Dataset Generalization Study",
+   "authors_first": "Marco Cantone",
+   "year": 2024,
+   "doi_or_arxiv": "10.1109/access.2024.3472907",
+   "link": "https://doi.org/10.1109/access.2024.3472907",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C2"
+   ],
+   "what_it_does": "Cross-dataset among CIC-IDS-2017, CSE-CIC-IDS2018 and corrected LycoS variants; visual analysis attributes failure to data anomalies.",
+   "what_it_does_not_do": "CICFlowMeter datasets, not NetFlow V3.",
+   "datasets": "CIC-IDS-2017, CSE-CIC-IDS2018, LycoS-IDS2017, LycoS-Unicas-IDS2018",
+   "relevant_numbers": "Cross-dataset accuracy largely commensurate with random chance."
+  },
+  {
+   "id": "P15",
+   "title": "Troubleshooting an Intrusion Detection Dataset: the CICIDS2017 Case Study",
+   "authors_first": "Gints Engelen",
+   "year": 2021,
+   "doi_or_arxiv": "10.1109/spw53761.2021.00009",
+   "link": "https://doi.org/10.1109/spw53761.2021.00009",
+   "opened": "abstract",
+   "claims": [
+    "C2"
+   ],
+   "what_it_does": "Finds traffic generation, flow construction, feature and labelling errors in CICIDS2017; reprocesses.",
+   "what_it_does_not_do": "Single dataset; no cross-dataset.",
+   "datasets": "CICIDS2017",
+   "relevant_numbers": ">20% of traces reconstructed or relabelled."
+  },
+  {
+   "id": "P16",
+   "title": "Bad Design Smells in Benchmark NIDS Datasets",
+   "authors_first": "Robert Flood",
+   "year": 2024,
+   "doi_or_arxiv": "10.1109/eurosp60621.2024.00042",
+   "link": "https://doi.org/10.1109/eurosp60621.2024.00042",
+   "opened": "abstract",
+   "claims": [
+    "C2"
+   ],
+   "what_it_does": "Manual analysis of seven datasets, six 'data design smells', heuristics, impact on literature.",
+   "what_it_does_not_do": "No cross-dataset remedy.",
+   "datasets": "seven benchmark NIDS datasets",
+   "relevant_numbers": "six smells, seven datasets."
+  },
+  {
+   "id": "P17",
+   "title": "Dos and Don'ts of Machine Learning in Computer Security",
+   "authors_first": "Daniel Arp",
+   "year": 2020,
+   "doi_or_arxiv": "arXiv:2010.09470",
+   "link": "https://arxiv.org/abs/2010.09470",
+   "opened": "abstract",
+   "claims": [
+    "C2",
+    "C4"
+   ],
+   "what_it_does": "Ten pitfalls (incl. sampling bias, data snooping, spurious correlations) surveyed in 30 papers.",
+   "what_it_does_not_do": "Generic; not NetFlow cross-dataset.",
+   "datasets": "various",
+   "relevant_numbers": "30 papers studied."
+  },
+  {
+   "id": "P18",
+   "title": "Pitfalls in Machine Learning for Computer Security",
+   "authors_first": "Daniel Arp",
+   "year": 2024,
+   "doi_or_arxiv": "10.1145/3643456",
+   "link": "https://doi.org/10.1145/3643456",
+   "opened": "abstract",
+   "claims": [
+    "C2",
+    "C4"
+   ],
+   "what_it_does": "CACM version of the pitfalls study.",
+   "what_it_does_not_do": "Same.",
+   "datasets": "various"
+  },
+  {
+   "id": "P19",
+   "title": "Lessons Learned on Machine Learning for Computer Security",
+   "authors_first": "Daniel Arp",
+   "year": 2023,
+   "doi_or_arxiv": "10.1109/msec.2023.3287207",
+   "link": "https://doi.org/10.1109/msec.2023.3287207",
+   "opened": "abstract",
+   "claims": [
+    "C2"
+   ],
+   "what_it_does": "Short IEEE S&P magazine summary of 10 pitfalls.",
+   "what_it_does_not_do": "Same.",
+   "datasets": "-"
+  },
+  {
+   "id": "P20",
+   "title": "SHAP-Guided Feature Selection for Cross-Dataset Generalization in Network Intrusion Detection Systems",
+   "authors_first": "Can Kilic",
+   "year": 2026,
+   "doi_or_arxiv": "10.1109/ACCESS.2026.3703481",
+   "link": "https://doi.org/10.1109/ACCESS.2026.3703481",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C2",
+    "C3"
+   ],
+   "what_it_does": "CICIDS2017 -> CSE-CIC-IDS2018 with RF/XGBoost; SHAP feature subsets; port-removal ablation.",
+   "what_it_does_not_do": "CICFlowMeter features, one direction; no NetFlow V3.",
+   "datasets": "CICIDS2017, CSE-CIC-IDS2018",
+   "relevant_numbers": "Macro-F1 0.127 (RF) / 0.119 (XGB) cross; SHAP subset 0.166; + port removal 0.207 (RF)."
+  },
+  {
+   "id": "P21",
+   "title": "The 99 Percent Accuracy Illusion: A Base-Rate-Aware and Cross-Dataset Re-Evaluation of Machine-Learning Intrusion Detection",
+   "authors_first": "Otabek Esanov",
+   "year": 2026,
+   "doi_or_arxiv": "10.1109/rusautocon69876.2026.11707464",
+   "link": "https://doi.org/10.1109/rusautocon69876.2026.11707464",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C5"
+   ],
+   "what_it_does": "Leakage-safe re-evaluation; base-rate projection; cross-network NF-v2 experiment.",
+   "what_it_does_not_do": "Two NF-v2 datasets; no feature attribution remedy.",
+   "datasets": "NSL-KDD, NF-UNSW-NB15-v2, NF-ToN-IoT-v2",
+   "relevant_numbers": "Cross-network MCC collapses from 0.96 to ~0; best-model precision 0.96 -> 0.023 at 0.1% base rate."
+  },
+  {
+   "id": "P22",
+   "title": "Cross-Domain Generalization Failure in Lightweight Intrusion Detection Models for IIoT Networks",
+   "authors_first": "M. A. Hakim",
+   "year": 2026,
+   "doi_or_arxiv": "10.21203/rs.3.rs-10207045/v1",
+   "link": "https://doi.org/10.21203/rs.3.rs-10207045/v1",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C2"
+   ],
+   "what_it_does": "Train on one IIoT dataset, test on two others; XAI shows reliance on port-category features (a shortcut).",
+   "what_it_does_not_do": "IIoT datasets, not NetFlow V3; no normalization remedy.",
+   "datasets": "three IIoT datasets",
+   "relevant_numbers": "Most influential port category 96-435x more frequent in source attack traffic than in targets."
+  },
+  {
+   "id": "P23",
+   "title": "Unmasking Shortcut Learning in IoT Intrusion Detection: A Forensic, Multi-Paradigm Evaluation of Feature Dependence and Data Leakage",
+   "authors_first": "Uday Shankar Roy",
+   "year": 2026,
+   "doi_or_arxiv": "arXiv:2609.28725",
+   "link": "https://arxiv.org/abs/2609.28725",
+   "opened": "abstract",
+   "claims": [
+    "C2",
+    "C4"
+   ],
+   "what_it_does": "Shortcut analysis (IP/MAC, timestamps) with PCAP-disjoint splits vs random-flow splits.",
+   "what_it_does_not_do": "Single dataset (CyberFlowIoT-GICAP), not cross-network.",
+   "datasets": "CyberFlowIoT-GICAP",
+   "relevant_numbers": "Random-flow splitting increases attack recall by up to 14.00%."
+  },
+  {
+   "id": "P24",
+   "title": "Discovering Non-Metadata Contaminant Features in Intrusion Detection Datasets",
+   "authors_first": "Laurens D'hooge",
+   "year": 2022,
+   "doi_or_arxiv": "10.1109/pst55820.2022.9851974",
+   "link": "https://doi.org/10.1109/pst55820.2022.9851974",
+   "opened": "abstract",
+   "claims": [
+    "C2"
+   ],
+   "what_it_does": "'Blind generalization' method to detect contaminant features across six datasets.",
+   "what_it_does_not_do": "Within-dataset contamination, not cross-network shift.",
+   "datasets": "six IDS datasets",
+   "relevant_numbers": "Some contaminant features alone push balanced accuracy above 90%."
+  },
+  {
+   "id": "P25",
+   "title": "Characterizing the Impact of Data-Damaged Models on Generalization Strength in Intrusion Detection",
+   "authors_first": "Laurens D'hooge",
+   "year": 2023,
+   "doi_or_arxiv": "10.3390/jcp3020008",
+   "link": "https://doi.org/10.3390/jcp3020008",
+   "opened": "abstract",
+   "claims": [
+    "C1"
+   ],
+   "what_it_does": "Train on CICIDS2017, test on CSE-CIC-IDS2018 without retraining.",
+   "what_it_does_not_do": "CICFlowMeter; one direction.",
+   "datasets": "CICIDS2017, CSE-CIC-IDS2018",
+   "relevant_numbers": "Performance losses 0-50% depending on attack class."
+  },
+  {
+   "id": "P26",
+   "title": "The Choice of Training Data and the Generalizability of Machine Learning Models for Network Intrusion Detection Systems",
+   "authors_first": "Marcin Iwanowski",
+   "year": 2025,
+   "doi_or_arxiv": "10.3390/app15158466",
+   "link": "https://doi.org/10.3390/app15158466",
+   "opened": "abstract",
+   "claims": [
+    "C1"
+   ],
+   "what_it_does": "Cross-validation across sets sharing classes + t-SNE on UNSW-NB15, CIC-2018, BoT-IoT, ToN-IoT; benign generalizability differs from attacks.",
+   "what_it_does_not_do": "No feature-level shift attribution or remedy per abstract.",
+   "datasets": "UNSW-NB15, CSE-CIC-IDS2018, BoT-IoT, ToN-IoT"
+  },
+  {
+   "id": "P27",
+   "title": "Generalizing across Networks: Evaluating Model Transferability for Intrusion Detection",
+   "authors_first": "Miguel Silva",
+   "year": 2026,
+   "doi_or_arxiv": "10.5220/0015002100004103",
+   "link": "https://doi.org/10.5220/0015002100004103",
+   "opened": "abstract",
+   "claims": [
+    "C1"
+   ],
+   "what_it_does": "Rebuilds datasets from PCAP with HERA to remove exporter inconsistencies; LGBM/RF/XGB/LSTM cross-dataset; feature selection; dataset combination.",
+   "what_it_does_not_do": "Not the UQ V3 files; no environment-signature normalization.",
+   "datasets": "datasets rebuilt from PCAPs"
+  },
+  {
+   "id": "P28",
+   "title": "Reproducibility and Cross-Scenario Generalization of NetFlow-Based SQL Injection Detection: Threshold Transfer and Feature Dependence",
+   "authors_first": "Seema B. Joshi",
+   "year": 2026,
+   "doi_or_arxiv": "10.70917/ijcisim-2026-3943",
+   "link": "https://doi.org/10.70917/ijcisim-2026-3943",
+   "opened": "abstract",
+   "claims": [
+    "C2",
+    "C5"
+   ],
+   "what_it_does": "Threshold calibrated on D1 transferred to D2; with/without IP ablation.",
+   "what_it_does_not_do": "SQLi only, NetFlow V5, two datasets.",
+   "datasets": "two NetFlow V5 SQLi datasets",
+   "relevant_numbers": "LinearSVC D2 FAR 15.63% at D1 operating point; RF thresholds collapse to all-benign."
+  },
+  {
+   "id": "P29",
+   "title": "What Does Normal Even Mean? Evaluating Benign Traffic in Intrusion Detection Datasets",
+   "authors_first": "Meghan Wilkinson",
+   "year": 2025,
+   "doi_or_arxiv": "arXiv:2509.09564",
+   "link": "https://arxiv.org/abs/2509.09564",
+   "opened": "abstract",
+   "claims": [
+    "C2"
+   ],
+   "what_it_does": "Clusters benign traffic into sub-categories.",
+   "what_it_does_not_do": "No cross-dataset.",
+   "datasets": "NSL-KDD, UNSW-NB15, CIC-IDS2017"
+  },
+  {
+   "id": "P30",
+   "title": "Toward deployment-oriented benchmarking of intrusion detection systems: integrating threshold dynamics, distribution shift, and interpretability (SH4)",
+   "authors_first": "Ali Farmani",
+   "year": 2026,
+   "doi_or_arxiv": "10.1038/s41598-026-78345-0",
+   "link": "https://doi.org/10.1038/s41598-026-78345-0",
+   "opened": "abstract",
+   "claims": [
+    "C5"
+   ],
+   "what_it_does": "Benchmark framework with threshold-dependent/independent evaluation, drift-aware evaluation, adaptive thresholds.",
+   "what_it_does_not_do": "Not cross-network NetFlow.",
+   "datasets": "not stated in abstract"
+  },
+  {
+   "id": "P31",
+   "title": "Feature Relevance is Contextual: A Class-Specific and Cross-Dataset Analysis for Network Intrusion Detection",
+   "authors_first": "Daniel Schneider Martins",
+   "year": 2026,
+   "doi_or_arxiv": "10.5753/sbseg.2026.27016",
+   "link": "https://doi.org/10.5753/sbseg.2026.27016",
+   "opened": "abstract",
+   "claims": [
+    "C2"
+   ],
+   "what_it_does": "Class-wise cross-dataset feature-relevance stability analysis.",
+   "what_it_does_not_do": "No remedy evaluated cross-network.",
+   "datasets": "not stated",
+   "relevant_numbers": "Class-specific relevance discrepancies can exceed 40x."
+  },
+  {
+   "id": "P32",
+   "title": "Eleven Detectors on Eleven Corpora: A Seeded Cross-dataset Benchmark for IoT and IIoT Intrusion Detection",
+   "authors_first": "Layla A. Al Hak",
+   "year": 2026,
+   "doi_or_arxiv": "10.22266/ijies2026.1231.70",
+   "link": "https://doi.org/10.22266/ijies2026.1231.70",
+   "opened": "abstract",
+   "claims": [
+    "C1"
+   ],
+   "what_it_does": "Benchmark of 11 detectors on 11 corpora, 5 seeds, Holm correction; trees beat neural models.",
+   "what_it_does_not_do": "Per-corpus in-distribution ranking, not leave-one-out transfer.",
+   "datasets": "11 IoT/IIoT corpora",
+   "relevant_numbers": "Tree-vs-neural mean margin 0.104 macro-F1."
+  },
+  {
+   "id": "P33",
+   "title": "Deployment-oriented evaluation of deep learning network intrusion detection systems (review)",
+   "authors_first": "Kai Liang Lew",
+   "year": 2026,
+   "doi_or_arxiv": "10.3389/frcmn.2026.1863367",
+   "link": "https://doi.org/10.3389/frcmn.2026.1863367",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C5"
+   ],
+   "what_it_does": "Review of 29 empirical studies 2024-2026 on cross-dataset, open-set and calibration.",
+   "what_it_does_not_do": "Review only.",
+   "datasets": "-",
+   "relevant_numbers": "None of 29 studies evaluated all three concerns together."
+  },
+  {
+   "id": "P34",
+   "title": "Deployment-Oriented Network Intrusion Detection System Via Unsupervised Domain Adaptation (Sec-CDAN)",
+   "authors_first": "Davide Di Monda",
+   "year": 2026,
+   "doi_or_arxiv": "10.1109/tccn.2026.3741946",
+   "link": "https://doi.org/10.1109/tccn.2026.3741946",
+   "opened": "abstract",
+   "claims": [
+    "C3"
+   ],
+   "what_it_does": "Transformer + conditional domain adversarial UDA on raw packets; compared with many UDA baselines.",
+   "what_it_does_not_do": "Per-packet raw representation, needs unlabeled target data; not NetFlow V3.",
+   "datasets": "IP, IoT, SDN benchmarks + live testbed",
+   "relevant_numbers": "+13 pp F1 over best UDA competitor."
+  },
+  {
+   "id": "P35",
+   "title": "QuCAD-IDS: cross-domain network intrusion detection via hierarchical contrastive autoencoding and queue-based adaptive distillation",
+   "authors_first": "Mingqi Wang",
+   "year": 2026,
+   "doi_or_arxiv": "10.1007/s44443-026-00688-5",
+   "link": "https://doi.org/10.1007/s44443-026-00688-5",
+   "opened": "abstract",
+   "claims": [
+    "C3"
+   ],
+   "what_it_does": "Contrastive AE teacher, distillation to GhostNet student, MMD alignment and target fine-tuning (JKSU-CIS).",
+   "what_it_does_not_do": "Uses NSL-KDD/UNSW-NB15/CIC-IDS2017, target fine-tuning; no NetFlow V3, no feature-level diagnosis.",
+   "datasets": "UNSW-NB15, NSL-KDD, CIC-IDS2017",
+   "relevant_numbers": "99.70% F1 on NSL-KDD multi-class; 98% parameter reduction."
+  },
+  {
+   "id": "P36",
+   "title": "Improving Intrusion Detection with Domain-Invariant Representation Learning in Latent Space",
+   "authors_first": "Padmaksha Roy",
+   "year": 2023,
+   "doi_or_arxiv": "arXiv:2312.17300",
+   "link": "https://arxiv.org/abs/2312.17300",
+   "opened": "abstract",
+   "claims": [
+    "C3"
+   ],
+   "what_it_does": "Multi-task domain-generalization with MI regularization to discard spurious correlations.",
+   "what_it_does_not_do": "Generic anomaly datasets; not NetFlow V3.",
+   "datasets": "various anomaly detection datasets"
+  },
+  {
+   "id": "P37",
+   "title": "Preparing Network Intrusion Detection Deep Learning Models with Minimal Data Using Adversarial Domain Adaptation",
+   "authors_first": "Ankush Singla",
+   "year": 2020,
+   "doi_or_arxiv": "10.1145/3320269.3384718",
+   "link": "https://doi.org/10.1145/3320269.3384718",
+   "opened": "abstract",
+   "claims": [
+    "C3"
+   ],
+   "what_it_does": "Adversarial DA to transfer from an existing NID dataset with few target labels.",
+   "what_it_does_not_do": "Requires target labels; older datasets.",
+   "datasets": "NID datasets"
+  },
+  {
+   "id": "P38",
+   "title": "Generalizing intrusion detection for heterogeneous networks: A stacked-unsupervised federated learning approach",
+   "authors_first": "Gustavo de Carvalho Bertoli",
+   "year": 2022,
+   "doi_or_arxiv": "arXiv:2209.00721",
+   "link": "https://arxiv.org/abs/2209.00721",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C3"
+   ],
+   "what_it_does": "Federated stacked AE + energy flow classifier for cross-silo NetFlow NIDS.",
+   "what_it_does_not_do": "Federated; not feature-level invariance.",
+   "datasets": "flow-based datasets (silos)"
+  },
+  {
+   "id": "P39",
+   "title": "Evaluation of Inter-Dataset Generalisability of Autoencoders for Network Intrusion Detection",
+   "authors_first": "Ivan Sicic",
+   "year": 2023,
+   "doi_or_arxiv": "10.1109/contel58387.2023.10199097",
+   "link": "https://doi.org/10.1109/contel58387.2023.10199097",
+   "opened": "abstract",
+   "claims": [
+    "C1"
+   ],
+   "what_it_does": "AE and PCA inter-dataset on shared-feature datasets.",
+   "what_it_does_not_do": "Unsupervised only; no remedy.",
+   "datasets": "shared-feature flow datasets",
+   "relevant_numbers": "Better than random but does not fully transfer."
+  },
+  {
+   "id": "P40",
+   "title": "Cross-Dataset Temporal and Semantic Generalization of Intrusion Detection Models for the Future Internet",
+   "authors_first": "Rajesh Elangovan",
+   "year": 2026,
+   "doi_or_arxiv": "10.3390/fi18040194",
+   "link": "https://doi.org/10.3390/fi18040194",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C4"
+   ],
+   "what_it_does": "In-dataset, forward-temporal, enterprise-to-IoT transfer protocols for 5 models.",
+   "what_it_does_not_do": "Not UQ NetFlow V3 specifically.",
+   "datasets": "four datasets 2017-2024",
+   "relevant_numbers": "Delta F1 ~0.20-0.27 forward temporal; cross-domain macro-F1 0.69-0.78; benign FPR up to 0.30."
+  },
+  {
+   "id": "P41",
+   "title": "Temporal Fragility in Network Intrusion Detection: Evaluation Methodology, Threshold Calibration, and Structured Feature Modeling",
+   "authors_first": "Sashi bharadwaj Pulikanti",
+   "year": 2026,
+   "doi_or_arxiv": "10.5281/zenodo.20083723",
+   "link": "https://doi.org/10.5281/zenodo.20083723",
+   "opened": "abstract",
+   "claims": [
+    "C4",
+    "C5"
+   ],
+   "what_it_does": "Random vs temporal (Mon-Wed train / Thu-Fri test) on CIC-IDS-2017; threshold miscalibration.",
+   "what_it_does_not_do": "CIC-IDS-2017 only.",
+   "datasets": "CIC-IDS-2017",
+   "relevant_numbers": "RF F1 0.9962 random vs 0.4349 temporal; optimal threshold 0.06-0.15."
+  },
+  {
+   "id": "P42",
+   "title": "Poster: Rethinking Intrusion Detection Evaluation: The Impact of Cross-Scenario Leakage",
+   "authors_first": "Zahra Ghausi",
+   "year": 2026,
+   "doi_or_arxiv": "10.1109/svcc69905.2026.11642257",
+   "link": "https://doi.org/10.1109/svcc69905.2026.11642257",
+   "opened": "abstract",
+   "claims": [
+    "C4"
+   ],
+   "what_it_does": "Random stratified split vs day-based holdout on CICIDS2017.",
+   "what_it_does_not_do": "Single dataset.",
+   "datasets": "CICIDS2017"
+  },
+  {
+   "id": "P43",
+   "title": "Leakage-Aware Evaluation of Intrusion Detection Systems for Rare and Unseen Attacks under Temporal Distribution Shift",
+   "authors_first": "Ameen Shaheen",
+   "year": 2026,
+   "doi_or_arxiv": "10.18178/ijeetc.15.5.367-377",
+   "link": "https://doi.org/10.18178/ijeetc.15.5.367-377",
+   "opened": "abstract",
+   "claims": [
+    "C4",
+    "C5"
+   ],
+   "what_it_does": "Time-based split on CSE-CIC-IDS2018 with XGBoost, threshold sensitivity.",
+   "what_it_does_not_do": "Single dataset, original CIC features.",
+   "datasets": "CSE-CIC-IDS2018"
+  },
+  {
+   "id": "P44",
+   "title": "Do Transformers Actually Help Intrusion Detection? A Temporal Sequence Evaluation on CIC-IDS2017",
+   "authors_first": "Zach Moczkodan",
+   "year": 2026,
+   "doi_or_arxiv": "arXiv:2606.11098",
+   "link": "https://arxiv.org/abs/2606.11098",
+   "opened": "abstract",
+   "claims": [
+    "C4"
+   ],
+   "what_it_does": "Random vs leakage-free splits for sequence models.",
+   "what_it_does_not_do": "Single dataset.",
+   "datasets": "CIC-IDS2017",
+   "relevant_numbers": "67x Transformer false-alarm increase revealed only under leakage-free evaluation."
+  },
+  {
+   "id": "P45",
+   "title": "Duplicate-Aware Evaluation of NetFlow Intrusion Detection: A Hash-Group-Disjoint Protocol for the NF-v2 Datasets (code deposit)",
+   "authors_first": "Ngoc Quy Nguyen",
+   "year": 2026,
+   "doi_or_arxiv": "10.5281/zenodo.24125935",
+   "link": "https://doi.org/10.5281/zenodo.24125935",
+   "opened": "abstract",
+   "claims": [
+    "C4"
+   ],
+   "what_it_does": "Group-disjoint split protocol for duplicates in NF-v2.",
+   "what_it_does_not_do": "V2; within-dataset.",
+   "datasets": "NF-v2"
+  },
+  {
+   "id": "P46",
+   "title": "Benchmark-Shift-Aware Intrusion Detection for Evolving Network Traffic: Cross-Dataset Generalization, Calibrated Alerting, and Score-Orientation Diagnostics",
+   "authors_first": "Hyejin Jin",
+   "year": 2026,
+   "doi_or_arxiv": "10.3390/electronics15173761",
+   "link": "https://doi.org/10.3390/electronics15173761",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C5"
+   ],
+   "what_it_does": "Threshold transfer, alert budgets, chronological robustness across HIKARI-2021/CICIDS2017/CICIoT2023.",
+   "what_it_does_not_do": "Not NetFlow V3.",
+   "datasets": "HIKARI-2021, CICIDS2017, CICIoT2023",
+   "relevant_numbers": "Zero recall at source thresholds for all models HIKARI->CICIDS2017; reverse XGBoost target FPR 18.9%."
+  },
+  {
+   "id": "P47",
+   "title": "Evaluation and Calibration of Cross-Dataset Robustness in IoT Intrusion Detection Systems: A Deployment-Aware Approach",
+   "authors_first": "Ola Madi Mohammed Al Mari",
+   "year": 2026,
+   "doi_or_arxiv": "10.65080/mjai.v1.cm2601105008",
+   "link": "https://doi.org/10.65080/mjai.v1.cm2601105008",
+   "opened": "abstract",
+   "claims": [
+    "C5"
+   ],
+   "what_it_does": "Unsupervised threshold adaptation by positive-rate matching Edge-IIoTset <-> NF-ToN-IoT-v2.",
+   "what_it_does_not_do": "Two datasets; pseudo-flows.",
+   "datasets": "NF-ToN-IoT-v2, Edge-IIoTset",
+   "relevant_numbers": "Edge->NF F1 0.6630 -> 0.8981 with threshold adaptation."
+  },
+  {
+   "id": "P48",
+   "title": "When Calibrated Detectors Meet New Attacks: Per-Category Reliability of ML Intrusion Detection Under Distribution Shift",
+   "authors_first": "Khalid Alalawi",
+   "year": 2026,
+   "doi_or_arxiv": "10.14569/ijacsa.2026.0170812",
+   "link": "https://doi.org/10.14569/ijacsa.2026.0170812",
+   "opened": "abstract",
+   "claims": [
+    "C5"
+   ],
+   "what_it_does": "Calibration (ECE) under official-split shift; source recalibration does not transfer.",
+   "what_it_does_not_do": "NSL-KDD/UNSW-NB15 only.",
+   "datasets": "NSL-KDD, UNSW-NB15",
+   "relevant_numbers": "Top-label ECE rises to 0.170-0.209 on NSL-KDD under shift."
+  },
+  {
+   "id": "P49",
+   "title": "Provenance, Not Behaviour: A Serialisation Artifact in Edge-IIoTset and a Leakage-Free Benchmark",
+   "authors_first": "Mostafa M. Galal",
+   "year": 2026,
+   "doi_or_arxiv": "arXiv:2608.15761",
+   "link": "https://arxiv.org/abs/2608.15761",
+   "opened": "abstract",
+   "claims": [
+    "C2"
+   ],
+   "what_it_does": "Shows label recoverable from a serialization artifact.",
+   "what_it_does_not_do": "Different dataset.",
+   "datasets": "Edge-IIoTset",
+   "relevant_numbers": "Four columns separate attack/normal with accuracy 1.0000."
+  },
+  {
+   "id": "P50",
+   "title": "nCMD: Benign-Anchored Feature Selection for Imbalanced Network Intrusion Detection",
+   "authors_first": "A. Ahmad",
+   "year": 2026,
+   "doi_or_arxiv": "arXiv:2606.09934",
+   "link": "https://arxiv.org/abs/2606.09934",
+   "opened": "abstract",
+   "claims": [
+    "C3"
+   ],
+   "what_it_does": "Feature scores relative to benign-class mean.",
+   "what_it_does_not_do": "In-dataset feature selection; no cross-network evaluation.",
+   "datasets": "CICIDS2017, CICDDoS2019, NSL-KDD, UNSW-NB15"
+  },
+  {
+   "id": "P51",
+   "title": "Deep Learning for Contextualized NetFlow-Based Network Intrusion Detection (survey)",
+   "authors_first": "Abdelkader El Mahdaouy",
+   "year": 2026,
+   "doi_or_arxiv": "arXiv:2602.05594",
+   "link": "https://arxiv.org/abs/2602.05594",
+   "opened": "abstract",
+   "claims": [
+    "C1",
+    "C4"
+   ],
+   "what_it_does": "Survey; reviews failure modes incl. temporal leakage, dataset flaws, weak cross-dataset generalization.",
+   "what_it_does_not_do": "Survey.",
+   "datasets": "-"
+  },
+  {
+   "id": "P52",
+   "title": "Mitigating Cross-Domain Performance Degradation in Time-Series NIDS via LoRA",
+   "authors_first": "Ji-Hyun Choi",
+   "year": 2026,
+   "doi_or_arxiv": "10.3390/electronics15132773",
+   "link": "https://doi.org/10.3390/electronics15132773",
+   "opened": "abstract",
+   "claims": [
+    "C3"
+   ],
+   "what_it_does": "LoRA adaptation of time-series NIDS across datasets.",
+   "what_it_does_not_do": "Needs target data; deep models.",
+   "datasets": "multiple benchmark datasets"
+  },
+  {
+   "id": "P53",
+   "title": "Assessing Generalisation Capability of Machine Learning Models for Intrusion Detection",
+   "authors_first": "Md Zakir Hossain",
+   "year": 2026,
+   "doi_or_arxiv": "arXiv:2605.04407",
+   "link": "https://arxiv.org/abs/2605.04407",
+   "opened": "abstract",
+   "claims": [
+    "C1"
+   ],
+   "what_it_does": "UNSW-NB15 <-> TON_IoT cross-dataset with RF/LR/NB.",
+   "what_it_does_not_do": "Original features, two datasets.",
+   "datasets": "UNSW-NB15, TON_IoT",
+   "relevant_numbers": "Cross-dataset accuracy below 40%."
+  }
+ ],
+ "located_not_opened": [
+  {
+   "title": "Explainable Cross-domain Evaluation of ML-based Network Intrusion Detection Systems",
+   "authors_first": "Siamak Layeghy",
+   "year": 2023,
+   "doi": "10.1016/j.compeleceng.2023.108692",
+   "note": "metadata only (no abstract returned by OpenAlex/Crossref; S2 rate-limited)"
+  },
+  {
+   "title": "Evaluating Standard Feature Sets Towards Increased Generalisability and Explainability of ML-Based Network Intrusion Detection",
+   "authors_first": "Mohanad Sarhan",
+   "year": 2022,
+   "doi": "10.1016/j.bdr.2022.100359",
+   "note": "metadata only"
+  },
+  {
+   "title": "SHAP Insights into Domain Adaptation in Netflow-Based Network Intrusion Detection Powered by Deep Learning",
+   "authors_first": "Marek Pawlicki",
+   "year": 2025,
+   "doi": "10.1007/978-3-032-00644-8_18",
+   "note": "metadata only"
+  },
+  {
+   "title": "How Dataset Diversity Affects Generalization in ML-Based NIDS",
+   "authors_first": "Kokouvi Benoit Nougnanke",
+   "year": 2025,
+   "doi": "10.1007/978-3-032-07884-1_14",
+   "note": "metadata only"
+  },
+  {
+   "title": "An Empirical Study of Cross-Domain Generalization in Network Intrusion Detection",
+   "authors_first": "Shanshan Tang",
+   "year": 2026,
+   "doi": "10.1007/978-981-92-6843-6_32",
+   "note": "metadata only"
+  },
+  {
+   "title": "Budget-aware two-stage NetFlow intrusion detection for high-traffic critical information infrastructure under domain shift",
+   "authors_first": "Dung Ha Thanh",
+   "year": 2026,
+   "doi": "10.1016/j.ijcip.2026.100876",
+   "note": "metadata only"
+  }
+ ],
+ "claim_table": [
+  {
+   "claim": "C1: LODO on NetFlow V2/V3 shows large collapse",
+   "closest_prior_work": [
+    "P01",
+    "P02",
+    "P04",
+    "P05",
+    "P21",
+    "P10"
+   ],
+   "exact_difference_one_sentence": "NO CLEAR DIFFERENCE \u2014 claim already done: leave-one-testbed-out on the four NF-v3 (and NF-v2) testbeds with source-only tuning is in Gazi et al. (P01) and directed-pair collapse on all four NF-v3 sets is in Rayamajhi (P02); our RQ1 can only be a replication/baseline."
+  },
+  {
+   "claim": "C2: environment-signature features (TTL, window, ports, DNS/FTP) explain collapse",
+   "closest_prior_work": [
+    "P02",
+    "P04",
+    "P06",
+    "P05",
+    "P20",
+    "P22",
+    "P03"
+   ],
+   "exact_difference_one_sentence": "Partly done: port shortcuts (P06, P20, P22), a 'documented TTL artifact' and near-perfect domain separability needing 23-40 of 45 features removed (P02), and shortcut probes on NF-v3 (P04) exist; what we have not found is a per-feature attribution of the *benign-distribution* shift to the LODO performance loss across all four V3 sets with controlled feature-group ablations (but P01's paper text was not available, so this may also be covered)."
+  },
+  {
+   "claim": "C3: per-environment/benign-relative normalization or invariant feature removal improves cross-domain NIDS",
+   "closest_prior_work": [
+    "P02",
+    "P06",
+    "P10",
+    "P05",
+    "P20",
+    "P34",
+    "P50"
+   ],
+   "exact_difference_one_sentence": "Feature removal mostly fails in prior work (endpoint removal hurt AUROC in P05; TTL removal did not change P02's conclusion; SHAP/port removal gave small gains in P20) and DANN/CORAL/MMD are established (P10, P06, P34, P03); per-environment benign-relative normalization as a source-only LODO remedy on NetFlow V3 was not found, but P02 warns that per-domain scaling corrupts separability measurements, so it is an open but risky angle."
+  },
+  {
+   "claim": "C4: chronological vs random split inflation, esp. NetFlow V3",
+   "closest_prior_work": [
+    "P08",
+    "P09",
+    "P41",
+    "P42",
+    "P23",
+    "P04",
+    "P46"
+   ],
+   "exact_difference_one_sentence": "Split inflation is well documented on CIC-IDS2017/2018 (P41, P42, P43, P44) and IoT data (P23); Luay et al. (P08/P09) released V3 with timestamps but only analysed temporal distributions, so a quantified random-vs-chronological gap on all four V3 sets appears not yet published as a headline result (P04 has temporal-split exploration scripts on three V3 sets)."
+  },
+  {
+   "claim": "C5: threshold transfer / calibration across networks",
+   "closest_prior_work": [
+    "P05",
+    "P06",
+    "P47",
+    "P48",
+    "P28",
+    "P01"
+   ],
+   "exact_difference_one_sentence": "Source-threshold transfer failure is already quantified on NF datasets (P05: 36.2% of target flows alerted; P06: label-free benign thresholds) and elsewhere (P47, P48, P28); only a systematic LODO threshold-transfer analysis across all four V3 sets tied to the environment-signature mechanism remains, and P01 ('target reference windows') may cover it."
+  }
+ ]
+}

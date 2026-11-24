@@ -1,0 +1,86 @@
+# plan_v1 — cycle 1 — written 2026-11-24 BEFORE any full run. Never edit after training starts; changes go to plan_v2.
+# Compute estimate (CPU, 4 cores): tuning ~3 h, E1 ~2.5 h, E2 ~0.5 h, E3 ~0.5 h, E4 ~0.3 h  => ~7 h  (< 15 h cycle budget)
+# Protocol: LODO over {UNSW, BOT, TON, CIC}; sources' random-train pools (n_per_source flows each), thresholds + hyper-params on
+# pooled SOURCE random-val; exploration evaluates on TARGET random-val; TARGET random-test only in E6 confirmation (plan_v>1).
+# Primary metric: macro-F1 at source-val threshold, mean over targets UNSW, TON, CIC (BOT reported separately; 0.3 % benign).
+# ESF tau: the smoke test (results/quicktest, 20k/source, UNSW target) showed tau=0.8 drops 0 features (max score 0.57),
+# so three a-priori values {0.3, 0.4, 0.5} are run and ALL reported (counted in variants_tried.csv).
+globals:
+  n_per_source: 100000
+  n_val_per_source: 60000
+  eval_split: val
+blocks:
+  # ---------- E1a: equal-budget tuning (8 configs each; LR has its 8-value grid), seed 0, selection on pooled source val
+  - id: "tune_lodo_{method}_{target}"
+    kind: tune
+    exp: E1a
+    protocol: lodo
+    priority: 1
+    n_per_source: 50000
+    n_val_per_source: 20000
+    method: [lgbm, xgb, rf, lr, mlp, dann, coral]
+    target: [UNSW, TON, CIC, BOT]
+  # ---------- E1: main LODO comparison, baselines with their own tuned configs
+  - id: "E1_lodo_{method}_{target}_s{seed}"
+    kind: run
+    exp: E1
+    protocol: lodo
+    priority: 2
+    cfg_from: "tune_lodo_{method}_{target}"
+    method: [lgbm, xgb, rf, lr, mlp, dann, coral]
+    target: [UNSW, TON, CIC, BOT]
+    seed: [0, 1, 2]
+    save_scores: true
+  # ---------- E1: proposed variants (re-use the tuned LightGBM config of the same target; no extra tuning)
+  - id: "E1_lodo_{method}_t{tau}_{target}_s{seed}"
+    kind: run
+    exp: E1
+    protocol: lodo
+    priority: 2
+    cfg_from: "tune_lodo_lgbm_{target}"
+    method: ["esf+lgbm", "esf+pen+lgbm"]
+    tau: [0.3, 0.4, 0.5]
+    target: [UNSW, TON, CIC, BOT]
+    seed: [0, 1, 2]
+    save_scores: true
+  - id: "E1_lodo_{method}_{target}_s{seed}"
+    kind: run
+    exp: E1
+    protocol: lodo
+    priority: 2
+    cfg_from: "tune_lodo_lgbm_{target}"
+    method: ["pen+lgbm"]
+    target: [UNSW, TON, CIC, BOT]
+    seed: [0, 1, 2]
+    save_scores: true
+  # ---------- E2: diagnostic — remove one candidate environment-signature group at a time
+  - id: "E2_lodo_{method}_{target}_s{seed}"
+    kind: run
+    exp: E2
+    protocol: lodo
+    priority: 3
+    cfg_from: "tune_lodo_lgbm_{target}"
+    method: ["drop_ttl+lgbm", "drop_tcpwin+lgbm", "drop_port_proto+lgbm", "drop_app_fields+lgbm", "drop_flags+lgbm"]
+    target: [UNSW, TON, CIC, BOT]
+    seed: [0, 1, 2]
+  # ---------- E4 / RQ1: in-distribution (random and chronological) for the same detectors, default configs
+  - id: "E4_{protocol}_{method}_{target}_s{seed}"
+    kind: run
+    exp: E4
+    priority: 3
+    protocol: [id_random, id_chrono]
+    method: [lgbm, rf, mlp]
+    target: [UNSW, TON, CIC, BOT]
+    seed: [0, 1, 2]
+    cfg: {}
+  # ---------- E3: reduced source data
+  - id: "E3_lodo_{method}_n{n_per_source}_{target}_s{seed}"
+    kind: run
+    exp: E3
+    protocol: lodo
+    priority: 4
+    cfg_from: "tune_lodo_lgbm_{target}"
+    method: [lgbm, "pen+lgbm"]
+    n_per_source: [10000, 30000]
+    target: [UNSW, TON, CIC, BOT]
+    seed: [0, 1, 2]

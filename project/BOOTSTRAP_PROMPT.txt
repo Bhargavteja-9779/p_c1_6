@@ -1,0 +1,1 @@
+Read project/HANDOFF.md and project/MASTER_PROMPT.md, verify state with `python scripts/status.py` (run from project/), then continue from NEXT ACTION. Do not restart finished work. Do not ask me questions.

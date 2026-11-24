@@ -1,0 +1,2 @@
+# OBSERVATION — 2026-11-24 — Q1 journals are rarely fast
+I computed Accepted−Received from Crossref article history for 30 Springer Nature journals (~11,000 articles). Only Energy Informatics had a median under 72 days (68 d), and its page shows no Impact Factor. The fastest journal with a JIF is JKSU-CIS: median 83.5 days over 596 articles (journal_selection/times_2213-1248.json). Most AI journals sit at 130–290 days. Elsevier pages were blocked (HTTP 403), so I could not verify any Elsevier journal. I chose JKSU-CIS and record that it fails the 72-day rule by ~12 days.

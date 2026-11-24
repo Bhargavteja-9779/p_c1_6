@@ -1,0 +1,3 @@
+variant_id,date,cycle,method,description,evaluated_on,outcome,result_file
+V0,2026-11-24,1,smoke,pipeline smoke tests (20k/source; lgbm/esf+pen+lgbm UNSW target; dann CIC; lr tune; rf id_chrono TON),target val (dev),smoke only - not used for claims,results/quicktest/
+V1,2026-11-24,1,quick,quick-mode run of plan_v1 (UNSW target seed 0; 5k/source),target val (dev),pipeline check only,results/quick/
