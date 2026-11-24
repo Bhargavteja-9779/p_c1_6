@@ -1,0 +1,15 @@
+# Full-text / full-deposit check of closest prior work (session 2, 2026-11-24)
+
+Obtained by a sub-agent; archives inspected as data only (not executed). Local copies were in the ephemeral /tmp (not in git).
+
+| Work | What was obtained | Key content relevant to us |
+|---|---|---|
+| P01 Gazi, Prappo & Hossain 2026, Zenodo 10.5281/zenodo.24172401 (v1.0.0 code) | Full code archive (README, docs/PROTOCOL.md, docs/EXPERIMENTS.md, feature_groups.py, preprocess.py, methods.py, benchmark tests). **No paper, no result numbers** ("saved scores and result tables ... will be deposited"). | LOTO on NF-v2 + NF-v3 (4 testbeds), 100k flows/source, 10 seeds, source-only tuning, Wilcoxon+Holm. 18 methods incl. CORAL, DANN, AdaBN, TENT, **BRN** (each testbed z-scored by its own benign flows; target by a 500-flow 95%-benign window) and **DomNorm** (mixture control); pre-declared H-B1..H-B5 (H-B4: BRN > DomNorm). E4 identifier-free features; **E7 drop-one-group XGB ablation (TTL, TCP window, timing, +ports), "association only"**, target-benign FPR at 1%-source-FPR threshold; **E6 Spearman of transfer loss vs aggregate benign PSI/Wasserstein/SMD**; E2 seen vs novel attack families; threshold rules (EM prior, MAD window, 99th pct window, BBSE). All outcomes UNVERIFIED (not released). |
+| P02 Rayamajhi 2026, 10.20944/preprints202610.1041.v1 | Abstract only (preprints.org 403). Full text UNVERIFIED. | 4 NF-v3 sets, 12 pairs, 10 seeds; source helps 8 % / hurts 38 %; mean ΔF1 −0.044 (95 % CI −0.066…−0.022); domain AUC ≥ 0.996; 23–40 of 45 features must be removed for AUC < 0.9; TTL artifact removal does not change conclusion; per-domain scaling corrupts separability measurement. |
+| P04 Valencia Vélez 2026, Zenodo 23291192 | Full code+results archive (paper not included; submitted to Computer Networks). | NF-v2/v3 ToN, BoT, CIC (no UNSW); pairwise single-source; removal (no ports/TTL/TCP win/DNS) does **not** rescue transfer, e.g. ToN-v3→BoT-v3 XGB macro-F1 0.492 → 0.346; shortcut probes + SHAP; target benign p95/p90 thresholds; simulated chrono split shows missing classes. |
+| Layeghy & Portmann (arXiv 2205.04112; assumed preprint of CompElecEng 2023 version — UNVERIFIED match) | Full preprint. | NF-v2 pairwise transfer; supervised decay 56.28 % vs unsupervised 28.33 %; SHAP: TTL and TCP-window features dominate. |
+| Sarhan et al. (arXiv 2104.07183v2) | Full text. | Within-dataset feature-set comparison only; not cross-dataset. |
+
+## Consequence (decision D15)
+- Remedy test (b) — BRN vs feature removal vs CORAL/DANN — is **already pre-registered and implemented by P01**. We can present our ESF/PEN results only as an independent replication/extension, not as a novel test.
+- Attribution (a) is **narrowly open**: P01 has drop-one-group ablation (XGB only, association only) and aggregate benign-shift↔loss correlation. Not found anywhere: (i) **interventional transplant tests** — replace one feature group's target *benign* distribution by the source one (or vice versa) and measure the loss change; (ii) group-level split of the loss into benign-shift vs attack-tooling-shift; (iii) across several model families.
