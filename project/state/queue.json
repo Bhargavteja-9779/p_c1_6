@@ -4942,9 +4942,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_BOT_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:41:27",
+   "finished": "2026-11-24T11:41:44"
   },
   "E2_lodo_drop_port_proto-lgbm_BOT_s1": {
    "spec": {
@@ -4961,9 +4963,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_BOT_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:41:44",
+   "finished": "2026-11-24T11:41:59"
   },
   "E2_lodo_drop_port_proto-lgbm_BOT_s2": {
    "spec": {
@@ -4980,9 +4984,10 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_port_proto-lgbm_BOT_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:41:59"
   },
   "E2_lodo_drop_app_fields-lgbm_UNSW_s0": {
    "spec": {
@@ -5251,10 +5256,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_flags-lgbm_UNSW_s0"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T11:39:25"
+   "started": "2026-11-24T11:39:25",
+   "finished": "2026-11-24T11:40:09"
   },
   "E2_lodo_drop_flags-lgbm_UNSW_s1": {
    "spec": {
@@ -5271,9 +5277,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_flags-lgbm_UNSW_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:40:09",
+   "finished": "2026-11-24T11:40:45"
   },
   "E2_lodo_drop_flags-lgbm_UNSW_s2": {
    "spec": {
@@ -5290,9 +5298,11 @@
     "eval_split": "val",
     "job_id": "E2_lodo_drop_flags-lgbm_UNSW_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T11:40:45",
+   "finished": "2026-11-24T11:41:27"
   },
   "E2_lodo_drop_flags-lgbm_TON_s0": {
    "spec": {
