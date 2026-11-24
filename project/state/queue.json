@@ -6133,10 +6133,11 @@
     "eval_split": "val",
     "job_id": "E4_id_random_mlp_TON_s1"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T12:04:28"
+   "started": "2026-11-24T12:04:28",
+   "finished": "2026-11-24T12:04:41"
   },
   "E4_id_random_mlp_TON_s2": {
    "spec": {
@@ -6153,9 +6154,10 @@
     "eval_split": "val",
     "job_id": "E4_id_random_mlp_TON_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T12:04:41"
   },
   "E4_id_random_mlp_CIC_s0": {
    "spec": {
