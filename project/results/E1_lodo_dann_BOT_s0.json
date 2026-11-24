@@ -1,0 +1,50 @@
+{
+ "macro_f1": 0.027690264855586524,
+ "f1_attack": 0.0506691849294995,
+ "bal_acc": 0.41184809263627276,
+ "tpr": 0.026008324000869172,
+ "fpr": 0.2023121387283237,
+ "auroc": 0.10069486479851202,
+ "prauc": 0.9944846538933422,
+ "n_eval": 60000,
+ "attack_rate_eval": 0.9971166666666667,
+ "threshold": 0.36554673314094543,
+ "src_val_macro_f1": 0.9546317641019268,
+ "fit_s": 118.38265562057495,
+ "pred_ms_per_1k": 1.8282373746236165,
+ "n_features": 47,
+ "n_train": 300000,
+ "model_bytes": -1,
+ "recall_by_family": {
+  "DDoS": 0.018445530506069684,
+  "DoS": 0.02194104658091199,
+  "Reconnaissance": 0.07722203447110511,
+  "Theft": 0.8333333333333334
+ },
+ "src_val_auroc": 0.9884933904754354,
+ "cfg": {
+  "hidden": 256,
+  "depth": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "epochs": 15,
+  "lam": 0.1
+ },
+ "spec": {
+  "kind": "run",
+  "exp": "E1",
+  "protocol": "lodo",
+  "priority": 2,
+  "cfg_from": "tune_lodo_dann_BOT",
+  "save_scores": true,
+  "method": "dann",
+  "target": "BOT",
+  "seed": 0,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E1_lodo_dann_BOT_s0"
+ },
+ "wall_s": 125.68763661384583,
+ "finished": "2026-11-24T09:54:07"
+}
