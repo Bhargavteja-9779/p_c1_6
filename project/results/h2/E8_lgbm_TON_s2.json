@@ -34,7 +34,11 @@
      "DST_TO_SRC_SECOND_BYTES"
     ],
     "recall": 0.7733466267863077,
-    "auroc_vs_benign": 0.892765097914356
+    "auroc_vs_benign": 0.892765097914356,
+    "benign_control": {
+     "fpr_before": 0.20046620046620048,
+     "fpr_after": 0.6183189359659947
+    }
    },
    "control_random3": {
     "features": [
@@ -43,7 +47,11 @@
      "FTP_COMMAND_RET_CODE"
     ],
     "recall": 0.1751412429378531,
-    "auroc_vs_benign": 0.39958195252899376
+    "auroc_vs_benign": 0.39958195252899376,
+    "benign_control": {
+     "fpr_before": 0.20046620046620048,
+     "fpr_after": 0.2
+    }
    }
   }
  }
