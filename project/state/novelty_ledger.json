@@ -1902,6 +1902,18 @@
    "significance": 1,
    "total": 9,
    "notes": "Prior art (Gazi code: BRN, feature-group ablation) covers the claims; our remedy failed (journal 10). Evidence/breadth are fine for a replication (3 seeds, 4 targets). Blind reviewer not run (no manuscript claim yet)."
+  },
+  {
+   "cycle": 2,
+   "date": "2026-11-24",
+   "claim": "H2: cross-network inversion of large attack families is caused by few-feature shortcuts in tree ensembles",
+   "differentiation": 2,
+   "mechanism": 2,
+   "evidence": 2,
+   "breadth": 1,
+   "significance": 2,
+   "total": 9,
+   "notes": "P2 failed; P1/P3 hold only for CIC HOIC/Bot (one target). Family-level counterfactual flips not seen in Gazi code, but not yet searched in broader literature (SHAP/counterfactual NIDS cross-dataset work exists). Blind reviewer not run."
   }
  ]
 }
