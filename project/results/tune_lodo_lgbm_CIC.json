@@ -1,0 +1,122 @@
+{
+ "best_cfg": {
+  "n_estimators": 800,
+  "learning_rate": 0.02,
+  "num_leaves": 127,
+  "min_child_samples": 20,
+  "colsample_bytree": 0.5,
+  "reg_lambda": 10.0
+ },
+ "trials": [
+  {
+   "cfg": {
+    "n_estimators": 800,
+    "learning_rate": 0.02,
+    "num_leaves": 127,
+    "min_child_samples": 20,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9815350184268495,
+   "fit_s": 9.32137680053711
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.1,
+    "num_leaves": 127,
+    "min_child_samples": 20,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.0
+   },
+   "src_val_macro_f1": 0.9798856792984809,
+   "fit_s": 6.260587930679321
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.05,
+    "num_leaves": 15,
+    "min_child_samples": 10,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9801662243141085,
+   "fit_s": 3.052589178085327
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.1,
+    "num_leaves": 63,
+    "min_child_samples": 10,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9811678782382323,
+   "fit_s": 3.7969062328338623
+  },
+  {
+   "cfg": {
+    "n_estimators": 800,
+    "learning_rate": 0.1,
+    "num_leaves": 15,
+    "min_child_samples": 10,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 1.0
+   },
+   "src_val_macro_f1": 0.9812840435848879,
+   "fit_s": 5.775717735290527
+  },
+  {
+   "cfg": {
+    "n_estimators": 200,
+    "learning_rate": 0.1,
+    "num_leaves": 31,
+    "min_child_samples": 50,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 0.0
+   },
+   "src_val_macro_f1": 0.981134017952775,
+   "fit_s": 1.6718003749847412
+  },
+  {
+   "cfg": {
+    "n_estimators": 200,
+    "learning_rate": 0.1,
+    "num_leaves": 127,
+    "min_child_samples": 10,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.0
+   },
+   "src_val_macro_f1": 0.980714202211075,
+   "fit_s": 2.4675352573394775
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.02,
+    "num_leaves": 63,
+    "min_child_samples": 20,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0
+   },
+   "src_val_macro_f1": 0.9811506349156107,
+   "fit_s": 3.4389023780822754
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "lgbm",
+  "target": "CIC",
+  "eval_split": "val",
+  "job_id": "tune_lodo_lgbm_CIC"
+ },
+ "wall_s": 68.29855585098267,
+ "finished": "2026-11-24T08:58:27"
+}

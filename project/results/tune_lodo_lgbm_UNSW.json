@@ -1,0 +1,122 @@
+{
+ "best_cfg": {
+  "n_estimators": 800,
+  "learning_rate": 0.02,
+  "num_leaves": 127,
+  "min_child_samples": 20,
+  "colsample_bytree": 0.5,
+  "reg_lambda": 10.0
+ },
+ "trials": [
+  {
+   "cfg": {
+    "n_estimators": 800,
+    "learning_rate": 0.02,
+    "num_leaves": 127,
+    "min_child_samples": 20,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9779662902329762,
+   "fit_s": 10.035228729248047
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.1,
+    "num_leaves": 127,
+    "min_child_samples": 20,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.0
+   },
+   "src_val_macro_f1": 0.9768164827376565,
+   "fit_s": 5.6045567989349365
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.05,
+    "num_leaves": 15,
+    "min_child_samples": 10,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9762331425382831,
+   "fit_s": 3.189460277557373
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.1,
+    "num_leaves": 63,
+    "min_child_samples": 10,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9778827081450732,
+   "fit_s": 3.875322103500366
+  },
+  {
+   "cfg": {
+    "n_estimators": 800,
+    "learning_rate": 0.1,
+    "num_leaves": 15,
+    "min_child_samples": 10,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 1.0
+   },
+   "src_val_macro_f1": 0.9775329678446469,
+   "fit_s": 5.18425989151001
+  },
+  {
+   "cfg": {
+    "n_estimators": 200,
+    "learning_rate": 0.1,
+    "num_leaves": 31,
+    "min_child_samples": 50,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 0.0
+   },
+   "src_val_macro_f1": 0.9773831539000718,
+   "fit_s": 1.6100883483886719
+  },
+  {
+   "cfg": {
+    "n_estimators": 200,
+    "learning_rate": 0.1,
+    "num_leaves": 127,
+    "min_child_samples": 10,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.0
+   },
+   "src_val_macro_f1": 0.9776993735754037,
+   "fit_s": 2.4845757484436035
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.02,
+    "num_leaves": 63,
+    "min_child_samples": 20,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0
+   },
+   "src_val_macro_f1": 0.977382943811083,
+   "fit_s": 3.7966315746307373
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "lgbm",
+  "target": "UNSW",
+  "eval_split": "val",
+  "job_id": "tune_lodo_lgbm_UNSW"
+ },
+ "wall_s": 69.77191925048828,
+ "finished": "2026-11-24T09:00:46"
+}
