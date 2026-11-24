@@ -1,0 +1,50 @@
+{
+ "target": "UNSW",
+ "seed": 1,
+ "auroc": 0.6247047437755766,
+ "auroc_cycle1": 0.6247047437755766,
+ "reproduces_cycle1": true,
+ "threshold": 0.44806510620963713,
+ "families": {
+  "Fuzzers": {
+   "n": 843,
+   "auroc_vs_benign": 0.46746104543026407,
+   "recall": 0.2479240806642942,
+   "top3_diff": [
+    "SRC_TO_DST_IAT_MIN",
+    "TCP_WIN_MAX_IN",
+    "MAX_TTL"
+   ],
+   "top3_diff_values": [
+    -2.1422297947436824,
+    -1.2656937339904344,
+    -1.156545587900933
+   ],
+   "p2_share_top3_neg_diff": 0.4282895316933064,
+   "top3_abs_neg": [
+    "MAX_TTL",
+    "MIN_TTL",
+    "SRC_TO_DST_IAT_MIN"
+   ],
+   "p2_share_top3_abs_neg": 0.4571656120544561,
+   "transplant_top3": {
+    "features": [
+     "SRC_TO_DST_IAT_MIN",
+     "TCP_WIN_MAX_IN",
+     "MAX_TTL"
+    ],
+    "recall": 0.5516014234875445,
+    "auroc_vs_benign": 0.892298071793063
+   },
+   "control_random3": {
+    "features": [
+     "NUM_PKTS_256_TO_512_BYTES",
+     "RETRANSMITTED_OUT_PKTS",
+     "FTP_COMMAND_RET_CODE"
+    ],
+    "recall": 0.24555160142348753,
+    "auroc_vs_benign": 0.4620870952322599
+   }
+  }
+ }
+}
