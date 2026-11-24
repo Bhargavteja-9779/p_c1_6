@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Is822ffHSj0aA+2mK5qM1lYQtlQ</id>
+  <title>arXiv Query: search_query=all:multiplicity AND all:malware&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-24T18:59:50Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:multiplicity+AND+all:malware&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>252</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1507.03528v2</id>
+    <title>Visibility-Aware Optimal Contagion of Malware Epidemics</title>
+    <updated>2016-10-30T19:53:38Z</updated>
+    <link href="https://arxiv.org/abs/1507.03528v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.03528v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent innovations in the design of computer viruses have led to new trade-offs for the attacker. Multiple variants of a malware may spread at different rates and have different levels of visibility to the network. In this work we examine the optimal strategies for the attacker so as to trade off the extent of spread of the malware against the need for stealth. We show that in the mean-field deterministic regime, this spread-stealth trade-off is optimized by computationally simple single-threshold policies. Specifically, we show that only one variant of the malware is spread by the attacker at each time, as there exists a time up to which the attacker prioritizes maximizing the spread of the malware, and after which she prioritizes stealth.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-13T17:32:37Z</published>
+    <arxiv:comment>Amended to include more explanations on assumptions, add more real-world context on new stealthy malware, and improve figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Soheil Eshghi</name>
+    </author>
+    <author>
+      <name>Saswati Sarkar</name>
+    </author>
+    <author>
+      <name>Santosh S. Venkatesh</name>
+    </author>
+    <arxiv:doi>10.1109/TAC.2016.2632426</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TAC.2016.2632426" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.16545v1</id>
+    <title>Adversarial Deep Ensemble: Evasion Attacks and Defenses for Malware Detection</title>
+    <updated>2020-06-30T05:56:33Z</updated>
+    <link href="https://arxiv.org/abs/2006.16545v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.16545v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Malware remains a big threat to cyber security, calling for machine learning based malware detection. While promising, such detectors are known to be vulnerable to evasion attacks. Ensemble learning typically facilitates countermeasures, while attackers can leverage this technique to improve attack effectiveness as well. This motivates us to investigate which kind of robustness the ensemble defense or effectiveness the ensemble attack can achieve, particularly when they combat with each other. We thus propose a new attack approach, named mixture of attacks, by rendering attackers capable of multiple generative methods and multiple manipulation sets, to perturb a malware example without ruining its malicious functionality. This naturally leads to a new instantiation of adversarial training, which is further geared to enhancing the ensemble of deep neural networks. We evaluate defenses using Android malware detectors against 26 different attacks upon two practical datasets. Experimental results show that the new adversarial training significantly enhances the robustness of deep neural networks against a wide range of attacks, ensemble methods promote the robustness when base classifiers are robust enough, and yet ensemble attacks can evade the enhanced malware detectors effectively, even notably downgrading the VirusTotal service.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-30T05:56:33Z</published>
+    <arxiv:comment>D. Li and Q. Li, "Adversarial Deep Ensemble: Evasion Attacks and Defenses for Malware Detection," in IEEE Transactions on Information Forensics and Security (early access)</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Deqiang Li</name>
+    </author>
+    <author>
+      <name>Qianmu Li</name>
+    </author>
+    <arxiv:doi>10.1109/TIFS.2020.3003571</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TIFS.2020.3003571" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.06792v2</id>
+    <title>SoK: How Not to Architect Your Next-Generation TEE Malware?</title>
+    <updated>2022-10-31T23:48:41Z</updated>
+    <link href="https://arxiv.org/abs/2210.06792v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.06792v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Besides Intel's SGX technology, there are long-running discussions on how trusted computing technologies can be used to cloak malware. Past research showed example methods of malicious activities utilising Flicker, Trusted Platform Module, and recently integrating with enclaves. We observe two ambiguous methodologies of malware development being associated with SGX, and it is crucial to systematise their details. One methodology is to use the core SGX ecosystem to cloak malware; potentially affecting a large number of systems. The second methodology is to create a custom enclave not adhering to base assumptions of SGX, creating a demonstration code of malware behaviour with these incorrect assumptions; remaining local without any impact. We examine what malware aims to do in real-world scenarios and state-of-art techniques in malware evasion. We present multiple limitations of maintaining the SGX-assisted malware and evading it from anti-malware mechanisms. The limitations make SGX enclaves a poor choice for achieving a successful malware campaign. We systematise twelve misconceptions (myths) outlining how an overfit-malware using SGX weakens malware's existing abilities. We find the differences by comparing SGX assistance for malware with non-SGX malware (i.e., malware in the wild in our paper). We conclude that the use of hardware enclaves does not increase the preexisting attack surface, enables no new infection vector, and does not contribute any new methods to the stealthiness of malware.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-13T07:11:51Z</published>
+    <arxiv:comment>Kubilay Ahmet Küçük, Steve Moyle, Andrew Martin, Alexandru Mereacre, and Nicholas Allott. 2022. SoK: How Not to Architect Your Next-Generation TEE Malware?. In Hardware and Architectural Support for Security and Privacy (HASP 22), October 1, 2022, Chicago, IL, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3569562.3569568</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Kubilay Ahmet Küçük</name>
+    </author>
+    <author>
+      <name>Steve Moyle</name>
+    </author>
+    <author>
+      <name>Andrew Martin</name>
+    </author>
+    <author>
+      <name>Alexandru Mereacre</name>
+    </author>
+    <author>
+      <name>Nicholas Allott</name>
+    </author>
+    <arxiv:doi>10.1145/3569562.3569568</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3569562.3569568" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.02660v1</id>
+    <title>Tarallo: Evading Behavioral Malware Detectors in the Problem Space</title>
+    <updated>2025-06-03T09:12:43Z</updated>
+    <link href="https://arxiv.org/abs/2506.02660v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.02660v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning algorithms can effectively classify malware through dynamic behavior but are susceptible to adversarial attacks. Existing attacks, however, often fail to find an effective solution in both the feature and problem spaces. This issue arises from not addressing the intrinsic nondeterministic nature of malware, namely executing the same sample multiple times may yield significantly different behaviors. Hence, the perturbations computed for a specific behavior may be ineffective for others observed in subsequent executions. In this paper, we show how an attacker can augment their chance of success by leveraging a new and more efficient feature space algorithm for sequential data, which we have named PS-FGSM, and by adopting two problem space strategies specially tailored to address nondeterminism in the problem space. We implement our novel algorithm and attack strategies in Tarallo, an end-to-end adversarial framework that significantly outperforms previous works in both white and black-box scenarios. Our preliminary analysis in a sandboxed environment and against two RNN-based malware detectors, shows that Tarallo achieves a success rate up to 99% on both feature and problem space attacks while significantly minimizing the number of modifications required for misclassification.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-03T09:12:43Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <arxiv:journal_ref>International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment, 2024</arxiv:journal_ref>
+    <author>
+      <name>Gabriele Digregorio</name>
+    </author>
+    <author>
+      <name>Salvatore Maccarrone</name>
+    </author>
+    <author>
+      <name>Mario D'Onghia</name>
+    </author>
+    <author>
+      <name>Luigi Gallo</name>
+    </author>
+    <author>
+      <name>Michele Carminati</name>
+    </author>
+    <author>
+      <name>Mario Polino</name>
+    </author>
+    <author>
+      <name>Stefano Zanero</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-031-64171-8_7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-031-64171-8_7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1707.02691v1</id>
+    <title>Malware Analysis using Multiple API Sequence Mining Control Flow Graph</title>
+    <updated>2017-07-10T04:25:33Z</updated>
+    <link href="https://arxiv.org/abs/1707.02691v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1707.02691v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Malwares are becoming persistent by creating full- edged variants of the same or different family. Malwares belonging to same family share same characteristics in their functionality of spreading infections into the victim computer. These similar characteristics among malware families can be taken as a measure for creating a solution that can help in the detection of the malware belonging to particular family. In our approach we have taken the advantage of detecting these malware families by creating the database of these characteristics in the form of n-grams of API sequences. We use various similarity score methods and also extract multiple API sequences to analyze malware effectively.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-07-10T04:25:33Z</published>
+    <arxiv:comment>We really appreciate your work. This one is smart, short, efficient and well explained. This is a quality work that deserves to be published. Just few questions, which are more about curiosity than something else... First, when you disassemble opcodes and draw the CFG, how you treat instructions such as: call rax, jmp rbx, movcc, jcc rcx</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Anishka Singh</name>
+    </author>
+    <author>
+      <name>Rohit Arora</name>
+    </author>
+    <author>
+      <name>Himanshu Pareek</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.12760v1</id>
+    <title>High-resolution Image-based Malware Classification using Multiple Instance Learning</title>
+    <updated>2023-11-21T18:11:26Z</updated>
+    <link href="https://arxiv.org/abs/2311.12760v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.12760v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper proposes a novel method of classifying malware into families using high-resolution greyscale images and multiple instance learning to overcome adversarial binary enlargement. Current methods of visualisation-based malware classification largely rely on lossy transformations of inputs such as resizing to handle the large, variable-sized images. Through empirical analysis and experimentation, it is shown that these approaches cause crucial information loss that can be exploited. The proposed solution divides the images into patches and uses embedding-based multiple instance learning with a convolutional neural network and an attention aggregation function for classification. The implementation is evaluated on the Microsoft Malware Classification dataset and achieves accuracies of up to $96.6\%$ on adversarially enlarged samples compared to the baseline of $22.8\%$. The Python code is available online at https://github.com/timppeters/MIL-Malware-Images .</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-21T18:11:26Z</published>
+    <arxiv:comment>14 pages, 13 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Tim Peters</name>
+    </author>
+    <author>
+      <name>Hikmat Farhat</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1705.02268v1</id>
+    <title>Multiple Instance Learning for Malware Classification</title>
+    <updated>2017-05-05T15:35:44Z</updated>
+    <link href="https://arxiv.org/abs/1705.02268v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1705.02268v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work addresses classification of unknown binaries executed in sandbox by modeling their interaction with system resources (files, mutexes, registry keys and communication with servers over the network) and error messages provided by the operating system, using vocabulary-based method from the multiple instance learning paradigm. It introduces similarities suitable for individual resource types that combined with an approximative clustering method efficiently group the system resources and define features directly from data. This approach effectively removes randomization often employed by malware authors and projects samples into low-dimensional feature space suitable for common classifiers. An extensive comparison to the state of the art on a large corpus of binaries demonstrates that the proposed solution achieves superior results using only a fraction of training samples. Moreover, it makes use of a source of information different than most of the prior art, which increases the diversity of tools detecting the malware, hence making detection evasion more difficult.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-05-05T15:35:44Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Jan Stiborek</name>
+    </author>
+    <author>
+      <name>Tomáš Pevný</name>
+    </author>
+    <author>
+      <name>Martin Rehák</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.13125v1</id>
+    <title>Towards Robust Real-Time Hardware-based Mobile Malware Detection using Multiple Instance Learning Formulation</title>
+    <updated>2024-04-19T18:28:38Z</updated>
+    <link href="https://arxiv.org/abs/2404.13125v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.13125v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This study introduces RT-HMD, a Hardware-based Malware Detector (HMD) for mobile devices, that refines malware representation in segmented time-series through a Multiple Instance Learning (MIL) approach. We address the mislabeling issue in real-time HMDs, where benign segments in malware time-series incorrectly inherit malware labels, leading to increased false positives. Utilizing the proposed Malicious Discriminative Score within the MIL framework, RT-HMD effectively identifies localized malware behaviors, thereby improving the predictive accuracy. Empirical analysis, using a hardware telemetry dataset collected from a mobile platform across 723 benign and 1033 malware samples, shows a 5% precision boost while maintaining recall, outperforming baselines affected by mislabeled benign segments.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-19T18:28:38Z</published>
+    <arxiv:comment>Under peer review</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Harshit Kumar</name>
+    </author>
+    <author>
+      <name>Sudarshan Sharma</name>
+    </author>
+    <author>
+      <name>Biswadeep Chakraborty</name>
+    </author>
+    <author>
+      <name>Saibal Mukhopadhyay</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.12866v1</id>
+    <title>Obfuscated Memory Malware Detection</title>
+    <updated>2024-08-23T06:39:15Z</updated>
+    <link href="https://arxiv.org/abs/2408.12866v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.12866v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Providing security for information is highly critical in the current era with devices enabled with smart technology, where assuming a day without the internet is highly impossible. Fast internet at a cheaper price, not only made communication easy for legitimate users but also for cybercriminals to induce attacks in various dimensions to breach privacy and security. Cybercriminals gain illegal access and breach the privacy of users to harm them in multiple ways. Malware is one such tool used by hackers to execute their malicious intent. Development in AI technology is utilized by malware developers to cause social harm. In this work, we intend to show how Artificial Intelligence and Machine learning can be used to detect and mitigate these cyber-attacks induced by malware in specific obfuscated malware. We conducted experiments with memory feature engineering on memory analysis of malware samples. Binary classification can identify whether a given sample is malware or not, but identifying the type of malware will only guide what next step to be taken for that malware, to stop it from proceeding with its further action. Hence, we propose a multi-class classification model to detect the three types of obfuscated malware with an accuracy of 89.07% using the Classic Random Forest algorithm. To the best of our knowledge, there is very little amount of work done in classifying multiple obfuscated malware by a single model. We also compared our model with a few state-of-the-art models and found it comparatively better.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-23T06:39:15Z</published>
+    <arxiv:comment>8 pages 9 figures presented in IEEE CCEM Conference paper</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Sharmila S P</name>
+    </author>
+    <author>
+      <name>Aruna Tiwari</name>
+    </author>
+    <author>
+      <name>Narendra S Chaudhari</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.06157v1</id>
+    <title>Detecting Android Malware by Visualizing App Behaviors from Multiple Complementary Views</title>
+    <updated>2024-10-08T16:00:27Z</updated>
+    <link href="https://arxiv.org/abs/2410.06157v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.06157v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep learning has emerged as a promising technology for achieving Android malware detection. To further unleash its detection potentials, software visualization can be integrated for analyzing the details of app behaviors clearly. However, facing increasingly sophisticated malware, existing visualization-based methods, analyzing from one or randomly-selected few views, can only detect limited attack types. We propose and implement LensDroid, a novel technique that detects Android malware by visualizing app behaviors from multiple complementary views. Our goal is to harness the power of combining deep learning and software visualization to automatically capture and aggregate high-level features that are not inherently linked, thereby revealing hidden maliciousness of Android app behaviors. To thoroughly comprehend the details of apps, we visualize app behaviors from three related but distinct views of behavioral sensitivities, operational contexts and supported environments. We then extract high-order semantics based on the views accordingly. To exploit semantic complementarity of the views, we design a deep neural network based model for fusing the visualized features from local to global based on their contributions to downstream tasks. A comprehensive comparison with five baseline techniques is performed on datasets of more than 51K apps in three real-world typical scenarios, including overall threats, app evolution and zero-day malware. The experimental results show that the overall performance of LensDroid is better than the baseline techniques. We also validate the complementarity of the views and demonstrate that the multi-view fusion in LensDroid enhances Android malware detection.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-08T16:00:27Z</published>
+    <arxiv:comment>Submitted to TIFS</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Zhaoyi Meng</name>
+    </author>
+    <author>
+      <name>Jiale Zhang</name>
+    </author>
+    <author>
+      <name>Jiaqi Guo</name>
+    </author>
+    <author>
+      <name>Wansen Wang</name>
+    </author>
+    <author>
+      <name>Wenchao Huang</name>
+    </author>
+    <author>
+      <name>Jie Cui</name>
+    </author>
+    <author>
+      <name>Hong Zhong</name>
+    </author>
+    <author>
+      <name>Yan Xiong</name>
+    </author>
+  </entry>
+</feed>
