@@ -2742,10 +2742,11 @@
     "eval_split": "val",
     "job_id": "E1_lodo_esf-lgbm_t0.4_BOT_s0"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T10:23:23"
+   "started": "2026-11-24T10:23:23",
+   "finished": "2026-11-24T10:23:39"
   },
   "E1_lodo_esf-lgbm_t0.4_BOT_s1": {
    "spec": {
@@ -2764,9 +2765,10 @@
     "eval_split": "val",
     "job_id": "E1_lodo_esf-lgbm_t0.4_BOT_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T10:23:39"
   },
   "E1_lodo_esf-lgbm_t0.4_BOT_s2": {
    "spec": {
