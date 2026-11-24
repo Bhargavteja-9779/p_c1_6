@@ -1,0 +1,50 @@
+{
+ "macro_f1": 0.6068267412452725,
+ "f1_attack": 0.4633512662380265,
+ "bal_acc": 0.6088174250923098,
+ "tpr": 0.37510091353303593,
+ "fpr": 0.15746606334841629,
+ "auroc": 0.7208550574133747,
+ "prauc": 0.5420758561010574,
+ "n_eval": 60000,
+ "attack_rate_eval": 0.39225,
+ "threshold": 0.45642571678063,
+ "src_val_macro_f1": 0.979912904402904,
+ "fit_s": 7.322840213775635,
+ "pred_ms_per_1k": 0.6420572598775228,
+ "n_features": 47,
+ "n_train": 300000,
+ "model_bytes": 2694,
+ "recall_by_family": {
+  "Backdoor": 0.5775656324582339,
+  "ddos": 0.3285603285603286,
+  "dos": 0.45601851851851855,
+  "injection": 0.5201958384332925,
+  "mitm": 0.0,
+  "password": 0.7592488789237668,
+  "ransomware": 0.9,
+  "scanning": 0.16583582585576603,
+  "xss": 0.28541766490975884
+ },
+ "src_val_auroc": 0.992572194022048,
+ "cfg": {
+  "C": 10.0
+ },
+ "spec": {
+  "kind": "run",
+  "exp": "E1",
+  "protocol": "lodo",
+  "priority": 2,
+  "cfg_from": "tune_lodo_lr_TON",
+  "save_scores": true,
+  "method": "lr",
+  "target": "TON",
+  "seed": 2,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E1_lodo_lr_TON_s2"
+ },
+ "wall_s": 15.935983180999756,
+ "finished": "2026-11-24T10:58:05"
+}

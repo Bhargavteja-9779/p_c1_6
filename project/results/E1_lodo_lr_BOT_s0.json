@@ -1,0 +1,45 @@
+{
+ "macro_f1": 0.07032229148846635,
+ "f1_attack": 0.13626743027888447,
+ "bal_acc": 0.3891899871991216,
+ "tpr": 0.07317766225951493,
+ "fpr": 0.2947976878612717,
+ "auroc": 0.17979113379995174,
+ "prauc": 0.9920591926234552,
+ "n_eval": 60000,
+ "attack_rate_eval": 0.9971166666666667,
+ "threshold": 0.45824041962623596,
+ "src_val_macro_f1": 0.8763438860575272,
+ "fit_s": 10.494165420532227,
+ "pred_ms_per_1k": 0.71182648340861,
+ "n_features": 47,
+ "n_train": 300000,
+ "model_bytes": 2694,
+ "recall_by_family": {
+  "DDoS": 0.08793157811760996,
+  "DoS": 0.03876485226595633,
+  "Reconnaissance": 0.17505914160189254,
+  "Theft": 0.8333333333333334
+ },
+ "src_val_auroc": 0.9331096814916514,
+ "cfg": {
+  "C": 100.0
+ },
+ "spec": {
+  "kind": "run",
+  "exp": "E1",
+  "protocol": "lodo",
+  "priority": 2,
+  "cfg_from": "tune_lodo_lr_BOT",
+  "save_scores": true,
+  "method": "lr",
+  "target": "BOT",
+  "seed": 0,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E1_lodo_lr_BOT_s0"
+ },
+ "wall_s": 18.195395946502686,
+ "finished": "2026-11-24T10:55:33"
+}
