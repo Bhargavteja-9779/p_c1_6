@@ -34,7 +34,11 @@
      "MAX_TTL"
     ],
     "recall": 0.5516014234875445,
-    "auroc_vs_benign": 0.892298071793063
+    "auroc_vs_benign": 0.892298071793063,
+    "benign_control": {
+     "fpr_before": 0.03501568392485814,
+     "fpr_after": 0.31070031367849715
+    }
    },
    "control_random3": {
     "features": [
@@ -43,7 +47,11 @@
      "FTP_COMMAND_RET_CODE"
     ],
     "recall": 0.24555160142348753,
-    "auroc_vs_benign": 0.4620870952322599
+    "auroc_vs_benign": 0.4620870952322599,
+    "benign_control": {
+     "fpr_before": 0.03501568392485814,
+     "fpr_after": 0.03374687202622211
+    }
    }
   }
  }
