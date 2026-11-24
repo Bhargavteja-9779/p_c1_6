@@ -1,0 +1,113 @@
+{
+ "best_cfg": {
+  "hidden": 512,
+  "depth": 2,
+  "dropout": 0.3,
+  "lr": 0.003,
+  "epochs": 15
+ },
+ "trials": [
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9554296660136652,
+   "fit_s": 20.29082226753235
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.958530232439887,
+   "fit_s": 32.6640784740448
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9594111309176353,
+   "fit_s": 12.920820713043213
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "epochs": 15
+   },
+   "src_val_macro_f1": 0.9590515931635486,
+   "fit_s": 9.084890365600586
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 15
+   },
+   "src_val_macro_f1": 0.9610644429815942,
+   "fit_s": 38.17848086357117
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.0,
+    "lr": 0.0003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9573378760314288,
+   "fit_s": 7.301322937011719
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 3,
+    "dropout": 0.1,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.959858838119659,
+   "fit_s": 6.32103157043457
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9571197948865415,
+   "fit_s": 5.095094442367554
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "mlp",
+  "target": "BOT",
+  "eval_split": "val",
+  "job_id": "tune_lodo_mlp_BOT"
+ },
+ "wall_s": 156.66481947898865,
+ "finished": "2026-11-24T09:06:38"
+}
