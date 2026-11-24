@@ -1,0 +1,1 @@
+{"dataset": "Pima", "method": "scknn_Mms_X0.1_Gmax", "seed": 0, "protocol": "transd", "n_train": 768, "n_test": 768, "anom_test": 268, "auc_roc": 0.7127276119402984, "auc_pr": 0.5176178016567783, "p_at_k": 0.5298507462686567, "fit_s": 0.021242380142211914, "pred_s": 4.76837158203125e-07, "max_n": 20000}

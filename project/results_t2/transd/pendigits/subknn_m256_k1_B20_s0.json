@@ -1,0 +1,1 @@
+{"dataset": "pendigits", "method": "subknn_m256_k1_B20", "seed": 0, "protocol": "transd", "n_train": 6870, "n_test": 6870, "anom_test": 156, "auc_roc": 0.8999555081994759, "auc_pr": 0.13180700697072956, "p_at_k": 0.10897435897435898, "fit_s": 2.094684600830078, "pred_s": 2.1457672119140625e-06, "max_n": 20000}

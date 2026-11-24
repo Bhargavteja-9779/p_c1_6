@@ -1,0 +1,1 @@
+{"dataset": "WPBC", "method": "scknn_F0.1", "seed": 0, "protocol": "transd", "n_train": 198, "n_test": 198, "anom_test": 47, "auc_roc": 0.521487952656052, "auc_pr": 0.23524187192575388, "p_at_k": 0.1702127659574468, "fit_s": 0.08863687515258789, "pred_s": 7.152557373046875e-07, "max_n": 20000}

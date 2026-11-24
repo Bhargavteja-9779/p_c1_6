@@ -1,0 +1,1 @@
+{"dataset": "shuttle", "method": "scknn_F0.05", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1430, "auc_roc": 0.9925957349059127, "auc_pr": 0.8686195551291768, "p_at_k": 0.8685314685314686, "fit_s": 10.07352614402771, "pred_s": 2.384185791015625e-06, "max_n": 20000}

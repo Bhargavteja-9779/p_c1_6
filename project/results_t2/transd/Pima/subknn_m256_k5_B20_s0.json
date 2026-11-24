@@ -1,0 +1,1 @@
+{"dataset": "Pima", "method": "subknn_m256_k5_B20", "seed": 0, "protocol": "transd", "n_train": 768, "n_test": 768, "anom_test": 268, "auc_roc": 0.7175671641791045, "auc_pr": 0.5247224586789649, "p_at_k": 0.5559701492537313, "fit_s": 0.06438732147216797, "pred_s": 9.5367431640625e-07, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "satimage-2", "method": "scknn_F0.02", "seed": 0, "protocol": "transd", "n_train": 5803, "n_test": 5803, "anom_test": 71, "auc_roc": 0.998999931199198, "auc_pr": 0.9597797424912742, "p_at_k": 0.9014084507042254, "fit_s": 1.3842625617980957, "pred_s": 9.5367431640625e-07, "max_n": 20000}

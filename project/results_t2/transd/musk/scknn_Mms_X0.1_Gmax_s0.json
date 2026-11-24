@@ -1,0 +1,1 @@
+{"dataset": "musk", "method": "scknn_Mms_X0.1_Gmax", "seed": 0, "protocol": "transd", "n_train": 3062, "n_test": 3062, "anom_test": 97, "auc_roc": 0.9771109681681474, "auc_pr": 0.4653846833497062, "p_at_k": 0.4329896907216495, "fit_s": 0.95664381980896, "pred_s": 1.1920928955078125e-06, "max_n": 20000}
