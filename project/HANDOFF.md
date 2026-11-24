@@ -24,9 +24,9 @@ Cycle 1 ≈ 0.4 CPU-h used so far of 15 h; global ≈ 0.6 of 120 h (state/budget
 ## Gates
 | Gate | Status |
 |---|---|
-| G1 journal | FAIL on 72-day rule (stated): no legitimate in-scope journal verified ≤72 d among 30 Springer + 5 Frontiers |
+| G1 journal | PASS under user-relaxed rule ≈80 d (D27): JKSU-CIS median 83.5 d (n=596); original 72-d rule failed (stated) |
 | G2 prior art | FAIL: 54 papers opened (≥30 OK), but close prior work (Gazi code) covers our claims; P02 full text blocked (403) |
-| G3 novelty | FAIL: topic 1 scored 9/25 in cycles 1 and 2 (state/novelty_ledger.json) |
+| G3 novelty | FAIL: target now > 25/30 (D28); topic 1 scored 9/25 |
 | G4 baselines | partial: 7 baselines, equal 8-config tuning; published NF-v3 LODO numbers not directly comparable (different pools/protocol) |
 | G5 main result | FAIL (no arm beats XGB on val; confirmation not run) |
 | G6 ablation | done for H1 groups (E2) — components do not help |

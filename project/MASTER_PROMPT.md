@@ -207,3 +207,8 @@ scripts/final_report.py: results/metrics.json (mean ± std, 95% CI); results/sta
 FINAL_REPORT.md; paper/; journal/; results/ tables/ figures/; literature/; reproducible code with README and fresh-clone test; HANDOFF.md current. Print a short summary and what the user must fill in (authors, funding, ethics, declarations).
 
 START NOW — Do not ask anything. Begin with Section 2, then Section 3, then Phase 1. If HANDOFF.md exists, continue from NEXT ACTION.
+
+---
+## USER AMENDMENTS (appended verbatim-in-substance, 2026-11-24)
+- "no problem is around 80 days also" → acceptance-time rule relaxed to ≈80 days (decisions D27).
+- "dont stop improving novility till we reach score above 25/30" → novelty must exceed 25/30; 30-point rubric = Section 6.3's five dimensions + prior-art clearance (D28).
