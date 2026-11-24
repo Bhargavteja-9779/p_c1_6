@@ -34,7 +34,11 @@
      "TCP_WIN_MAX_IN"
     ],
     "recall": 0.6868327402135231,
-    "auroc_vs_benign": 0.8945518559969571
+    "auroc_vs_benign": 0.8945518559969571,
+    "benign_control": {
+     "fpr_before": 0.06270045465759701,
+     "fpr_after": 0.3663165685687097
+    }
    },
    "control_random3": {
     "features": [
@@ -43,7 +47,11 @@
      "FTP_COMMAND_RET_CODE"
     ],
     "recall": 0.1933570581257414,
-    "auroc_vs_benign": 0.4753994397376852
+    "auroc_vs_benign": 0.4753994397376852,
+    "benign_control": {
+     "fpr_before": 0.06270045465759701,
+     "fpr_after": 0.06062101293483241
+    }
    }
   }
  }
