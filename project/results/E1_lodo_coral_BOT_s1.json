@@ -1,0 +1,50 @@
+{
+ "macro_f1": 0.22913958658208922,
+ "f1_attack": 0.4513015577291311,
+ "bal_acc": 0.5763977850973196,
+ "tpr": 0.2915238938940612,
+ "fpr": 0.13872832369942195,
+ "auroc": 0.3447711131643445,
+ "prauc": 0.9959722074947126,
+ "n_eval": 60000,
+ "attack_rate_eval": 0.9971166666666667,
+ "threshold": 0.6626321077346802,
+ "src_val_macro_f1": 0.961526035495166,
+ "fit_s": 116.9239149093628,
+ "pred_ms_per_1k": 1.834551493326823,
+ "n_features": 47,
+ "n_train": 300000,
+ "model_bytes": -1,
+ "recall_by_family": {
+  "DDoS": 0.3992984392243418,
+  "DoS": 0.24773053871227788,
+  "Reconnaissance": 0.04038526529232849,
+  "Theft": 0.5
+ },
+ "src_val_auroc": 0.992858936571545,
+ "cfg": {
+  "hidden": 256,
+  "depth": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "epochs": 15,
+  "lam": 0.1
+ },
+ "spec": {
+  "kind": "run",
+  "exp": "E1",
+  "protocol": "lodo",
+  "priority": 2,
+  "cfg_from": "tune_lodo_coral_BOT",
+  "save_scores": true,
+  "method": "coral",
+  "target": "BOT",
+  "seed": 1,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E1_lodo_coral_BOT_s1"
+ },
+ "wall_s": 126.72666382789612,
+ "finished": "2026-11-24T22:34:00"
+}

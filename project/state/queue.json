@@ -89,9 +89,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_xgb_UNSW"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:28:49",
+   "finished": "2026-11-24T22:29:46"
   },
   "tune_lodo_xgb_TON": {
    "spec": {
@@ -106,9 +108,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_xgb_TON"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:27:43",
+   "finished": "2026-11-24T22:28:49"
   },
   "tune_lodo_xgb_CIC": {
    "spec": {
@@ -123,9 +127,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_xgb_CIC"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:26:48",
+   "finished": "2026-11-24T22:27:43"
   },
   "tune_lodo_xgb_BOT": {
    "spec": {
@@ -140,9 +146,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_xgb_BOT"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:25:48",
+   "finished": "2026-11-24T22:26:48"
   },
   "tune_lodo_rf_UNSW": {
    "spec": {
@@ -157,9 +165,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_rf_UNSW"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:23:46",
+   "finished": "2026-11-24T22:25:48"
   },
   "tune_lodo_rf_TON": {
    "spec": {
@@ -174,10 +184,11 @@
     "eval_split": "val",
     "job_id": "tune_lodo_rf_TON"
    },
-   "status": "running",
+   "status": "done",
    "attempts": 1,
    "plan": "plan_v1.yaml",
-   "started": "2026-11-24T22:21:33"
+   "started": "2026-11-24T22:21:33",
+   "finished": "2026-11-24T22:23:46"
   },
   "tune_lodo_rf_CIC": {
    "spec": {
@@ -2097,9 +2108,11 @@
     "eval_split": "val",
     "job_id": "E1_lodo_coral_CIC_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:36:13",
+   "finished": "2026-11-24T22:38:25"
   },
   "E1_lodo_coral_CIC_s1": {
    "spec": {
@@ -2117,9 +2130,11 @@
     "eval_split": "val",
     "job_id": "E1_lodo_coral_CIC_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:38:25",
+   "finished": "2026-11-24T22:40:34"
   },
   "E1_lodo_coral_CIC_s2": {
    "spec": {
@@ -2137,9 +2152,10 @@
     "eval_split": "val",
     "job_id": "E1_lodo_coral_CIC_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "running",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:40:34"
   },
   "E1_lodo_coral_BOT_s0": {
    "spec": {
@@ -2157,9 +2173,11 @@
     "eval_split": "val",
     "job_id": "E1_lodo_coral_BOT_s0"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:29:46",
+   "finished": "2026-11-24T22:31:52"
   },
   "E1_lodo_coral_BOT_s1": {
    "spec": {
@@ -2177,9 +2195,11 @@
     "eval_split": "val",
     "job_id": "E1_lodo_coral_BOT_s1"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:31:52",
+   "finished": "2026-11-24T22:34:01"
   },
   "E1_lodo_coral_BOT_s2": {
    "spec": {
@@ -2197,9 +2217,11 @@
     "eval_split": "val",
     "job_id": "E1_lodo_coral_BOT_s2"
    },
-   "status": "pending",
-   "attempts": 0,
-   "plan": "plan_v1.yaml"
+   "status": "done",
+   "attempts": 1,
+   "plan": "plan_v1.yaml",
+   "started": "2026-11-24T22:34:01",
+   "finished": "2026-11-24T22:36:13"
   },
   "E1_lodo_esf-lgbm_t0.3_UNSW_s0": {
    "spec": {
