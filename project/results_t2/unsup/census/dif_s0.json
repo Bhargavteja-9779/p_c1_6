@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "dif", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 186, "auc_roc": 0.5560580354754645, "auc_pr": 0.06528262443272508, "p_at_k": 0.03763440860215054, "fit_s": 14.151651620864868, "pred_s": 4.278932332992554, "max_n": 10000}

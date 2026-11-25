@@ -1,0 +1,1 @@
+{"dataset": "speech", "method": "copod", "seed": 0, "protocol": "trans", "n_train": 3686, "n_test": 3686, "anom_test": 61, "auc_roc": 0.49113397399660824, "auc_pr": 0.019321520802048124, "p_at_k": 0.03278688524590164, "fit_s": 0.22449254989624023, "pred_s": 0.5913479328155518, "max_n": 10000}

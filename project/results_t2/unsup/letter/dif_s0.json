@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "dif", "seed": 0, "protocol": "unsup", "n_train": 1120, "n_test": 480, "anom_test": 30, "auc_roc": 0.6673333333333333, "auc_pr": 0.17842098222804798, "p_at_k": 0.16666666666666666, "fit_s": 1.7635231018066406, "pred_s": 0.62851881980896, "max_n": 10000}

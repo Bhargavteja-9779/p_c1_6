@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "dif", "seed": 1, "protocol": "unsup", "n_train": 2410, "n_test": 1033, "anom_test": 30, "auc_roc": 0.7387836490528414, "auc_pr": 0.07117674358450346, "p_at_k": 0.1, "fit_s": 3.562284231185913, "pred_s": 1.3345448970794678, "max_n": 10000}
