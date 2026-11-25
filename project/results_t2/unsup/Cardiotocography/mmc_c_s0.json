@@ -1,0 +1,1 @@
+{"dataset": "Cardiotocography", "method": "mmc_c", "seed": 0, "protocol": "unsup", "n_train": 1480, "n_test": 634, "anom_test": 140, "auc_roc": 0.5684788895315211, "auc_pr": 0.30427976539360546, "p_at_k": 0.19285714285714287, "fit_s": 0.3653738498687744, "pred_s": 0.010652303695678711, "max_n": 10000}

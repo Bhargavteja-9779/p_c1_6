@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "mmc_c", "seed": 0, "protocol": "unsup", "n_train": 3373, "n_test": 1446, "anom_test": 77, "auc_roc": 0.4430335916822403, "auc_pr": 0.04382498530995364, "p_at_k": 0.0, "fit_s": 2.0869154930114746, "pred_s": 0.02431201934814453, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "glosh", "seed": 2, "protocol": "unsup", "n_train": 238, "n_test": 102, "anom_test": 9, "auc_roc": 0.8626045400238949, "auc_pr": 0.41953992639646653, "p_at_k": 0.4444444444444444, "fit_s": 0.003942966461181641, "pred_s": 0.0012540817260742188, "max_n": 10000}

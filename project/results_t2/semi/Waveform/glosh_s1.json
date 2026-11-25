@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "glosh", "seed": 1, "protocol": "semi", "n_train": 1671, "n_test": 1772, "anom_test": 100, "auc_roc": 0.7575179425837322, "auc_pr": 0.3145848294450937, "p_at_k": 0.33, "fit_s": 0.11003613471984863, "pred_s": 0.06122303009033203, "max_n": 10000}

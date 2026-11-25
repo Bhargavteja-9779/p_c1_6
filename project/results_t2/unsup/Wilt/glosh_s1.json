@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "glosh", "seed": 1, "protocol": "unsup", "n_train": 3373, "n_test": 1446, "anom_test": 77, "auc_roc": 0.598152030584463, "auc_pr": 0.060187705143750034, "p_at_k": 0.012987012987012988, "fit_s": 0.07929849624633789, "pred_s": 0.019905805587768555, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "knn1", "seed": 0, "protocol": "unsup", "n_train": 3373, "n_test": 1446, "anom_test": 77, "auc_roc": 0.5264720670126075, "auc_pr": 0.05173218796656892, "p_at_k": 0.0, "fit_s": 0.00864553451538086, "pred_s": 0.0031566619873046875, "max_n": 10000}

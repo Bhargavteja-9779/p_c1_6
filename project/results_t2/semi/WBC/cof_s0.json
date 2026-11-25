@@ -1,0 +1,1 @@
+{"dataset": "WBC", "method": "cof", "seed": 0, "protocol": "semi", "n_train": 106, "n_test": 117, "anom_test": 10, "auc_roc": 0.902803738317757, "auc_pr": 0.3732001322523144, "p_at_k": 0.3, "fit_s": 0.0055315494537353516, "pred_s": 0.005820751190185547, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "mmc_b", "seed": 1, "protocol": "semi", "n_train": 154, "n_test": 186, "anom_test": 31, "auc_roc": 0.9467221644120708, "auc_pr": 0.6530048070191738, "p_at_k": 0.6774193548387096, "fit_s": 0.002981901168823242, "pred_s": 0.0004966259002685547, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "backdoor", "method": "mmc_a", "seed": 1, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 73, "auc_roc": 0.7726387764366713, "auc_pr": 0.062016705864331896, "p_at_k": 0.0, "fit_s": 10.271512508392334, "pred_s": 0.19381380081176758, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "cblof", "seed": 0, "protocol": "semi", "n_train": 1671, "n_test": 1772, "anom_test": 100, "auc_roc": 0.7450777511961723, "auc_pr": 0.26171868227707146, "p_at_k": 0.3, "fit_s": 0.2223658561706543, "pred_s": 0.011839866638183594, "max_n": 10000}

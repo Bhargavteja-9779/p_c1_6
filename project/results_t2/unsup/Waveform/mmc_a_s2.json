@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "mmc_a", "seed": 2, "protocol": "unsup", "n_train": 2410, "n_test": 1033, "anom_test": 30, "auc_roc": 0.7177135260884014, "auc_pr": 0.09962532899723381, "p_at_k": 0.06666666666666667, "fit_s": 1.0126323699951172, "pred_s": 0.01946425437927246, "max_n": 10000}

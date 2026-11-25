@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "cof", "seed": 0, "protocol": "semi", "n_train": 2281, "n_test": 2538, "anom_test": 257, "auc_roc": 0.599556137061873, "auc_pr": 0.12594236627633654, "p_at_k": 0.13618677042801555, "fit_s": 0.5668537616729736, "pred_s": 0.6554851531982422, "max_n": 10000}

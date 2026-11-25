@@ -1,0 +1,1 @@
+{"dataset": "Cardiotocography", "method": "cblof", "seed": 2, "protocol": "semi", "n_train": 824, "n_test": 1290, "anom_test": 466, "auc_roc": 0.771002177174049, "auc_pr": 0.7111125848769428, "p_at_k": 0.630901287553648, "fit_s": 0.13862395286560059, "pred_s": 0.019062519073486328, "max_n": 10000}

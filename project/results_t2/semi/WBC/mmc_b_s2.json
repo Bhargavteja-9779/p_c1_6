@@ -1,0 +1,1 @@
+{"dataset": "WBC", "method": "mmc_b", "seed": 2, "protocol": "semi", "n_train": 106, "n_test": 117, "anom_test": 10, "auc_roc": 0.994392523364486, "auc_pr": 0.9408119658119657, "p_at_k": 0.8, "fit_s": 0.0017626285552978516, "pred_s": 0.0003948211669921875, "max_n": 10000}
