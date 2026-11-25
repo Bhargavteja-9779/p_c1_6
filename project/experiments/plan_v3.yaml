@@ -1,0 +1,9 @@
+# plan_v3 — cycle 3 — written 2026-11-24 before any cycle-3 run. Reason: H2 partial (journal 14); H3 (journal 15).
+# Target VAL only; test locked. Est. compute < 1 CPU-h.
+E10_rank_ensemble:
+  members: [xgb (cfg from results/tune_lodo_xgb_<target>.json, 100k/source, same seed as E1), knn_src k=5 (20k/source, as E7)]
+  combine: mean over members of F_m(score), F_m = empirical CDF of member m on pooled SOURCE val (fixed; applied unchanged to target scores, no target statistics)
+  threshold: best macro-F1 on pooled source val (60k/source)
+  targets: [UNSW, TON, CIC, BOT]
+  seeds: [0, 1, 2]
+  success: mean paired gain over XGBoost (primary metric units) > 0.02 AND Holm p < 0.05 (Holm family = all variants V0-V7)

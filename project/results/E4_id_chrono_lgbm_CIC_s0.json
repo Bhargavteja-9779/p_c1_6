@@ -1,0 +1,39 @@
+{
+ "macro_f1": 0.5864817139922762,
+ "f1_attack": 0.185589519650655,
+ "bal_acc": 0.5664037426953198,
+ "tpr": 0.14049586776859505,
+ "fpr": 0.007688382377955435,
+ "auroc": 0.44637419362094244,
+ "prauc": 0.05962023660012168,
+ "n_eval": 30000,
+ "attack_rate_eval": 0.020166666666666666,
+ "threshold": 2.79956289191928e-06,
+ "src_val_macro_f1": 0.5890681160690804,
+ "fit_s": 2.109823703765869,
+ "pred_ms_per_1k": 4.80336348215739,
+ "n_features": 47,
+ "n_train": 100000,
+ "model_bytes": 2043193,
+ "recall_by_family": {
+  "Infilteration": 0.14049586776859505
+ },
+ "src_val_auroc": 0.4393419102307911,
+ "cfg": {},
+ "spec": {
+  "kind": "run",
+  "exp": "E4",
+  "priority": 3,
+  "cfg": {},
+  "protocol": "id_chrono",
+  "method": "lgbm",
+  "target": "CIC",
+  "seed": 0,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E4_id_chrono_lgbm_CIC_s0"
+ },
+ "wall_s": 4.593533039093018,
+ "finished": "2026-11-24T11:58:00"
+}

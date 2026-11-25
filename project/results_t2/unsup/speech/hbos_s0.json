@@ -1,0 +1,1 @@
+{"dataset": "speech", "method": "hbos", "seed": 0, "protocol": "unsup", "n_train": 2581, "n_test": 1105, "anom_test": 18, "auc_roc": 0.4812429725033221, "auc_pr": 0.05344742215046071, "p_at_k": 0.1111111111111111, "fit_s": 0.07002043724060059, "pred_s": 0.012794733047485352, "max_n": 10000}

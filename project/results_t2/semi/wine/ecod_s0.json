@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "ecod", "seed": 0, "protocol": "semi", "n_train": 59, "n_test": 70, "anom_test": 10, "auc_roc": 0.7283333333333333, "auc_pr": 0.2773678192708453, "p_at_k": 0.3, "fit_s": 0.0012252330780029297, "pred_s": 0.0010175704956054688, "max_n": 10000}

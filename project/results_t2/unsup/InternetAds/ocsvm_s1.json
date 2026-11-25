@@ -1,0 +1,1 @@
+{"dataset": "InternetAds", "method": "ocsvm", "seed": 1, "protocol": "unsup", "n_train": 1377, "n_test": 589, "anom_test": 110, "auc_roc": 0.7044600493452268, "auc_pr": 0.5505871726547097, "p_at_k": 0.4636363636363636, "fit_s": 1.2160677909851074, "pred_s": 0.24198317527770996, "max_n": 10000}

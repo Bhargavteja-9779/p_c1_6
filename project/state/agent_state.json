@@ -1,14 +1,16 @@
 {
- "cycle": 1,
- "phase": "RUN_FULL",
- "step": "plan_v1 full run in tmux 'nids'; meanwhile Frontiers check + prior-art full texts",
- "status": "RUNNING",
- "pivots": 0,
- "topic": "cross-network NIDS generalization (NetFlow V3)",
+ "cycle": 4,
+ "phase": "T2_LADDER_H6",
+ "step": "prior-art check for H6 (cluster-size / regime-aware kNN), then pre-register H6 and run on DEV",
+ "status": "ACTIVE",
+ "pivots": 1,
+ "topic": "T2: unsupervised/semi-supervised tabular anomaly detection on ADBench (named method; beat HF-DIF, JKSU-CIS)",
  "journal": "JKSU-CIS",
- "last_action": "data rebuilt (row counts verified), final_report.py written, full run launched",
+ "last_action": "H4 supported; H5 failed; k-sweep done",
  "updated": "2026-11-24",
  "user_notes": [
-  "2026-11-24: user allows Frontiers journals"
+  "2026-11-24: user allows Frontiers journals",
+  "2026-11-24: ~80 days acceptance is fine (D27)",
+  "2026-11-24: novelty target > 25/30 with 6th dimension prior-art clearance (D28); do not stop"
  ]
 }

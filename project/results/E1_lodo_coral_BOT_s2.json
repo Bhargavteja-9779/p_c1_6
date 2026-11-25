@@ -10,8 +10,8 @@
  "attack_rate_eval": 0.9971166666666667,
  "threshold": 0.5797157295193887,
  "src_val_macro_f1": 0.961551080809631,
- "fit_s": 90.55855941772461,
- "pred_ms_per_1k": 1.4664292335510254,
+ "fit_s": 127.240558385849,
+ "pred_ms_per_1k": 3.047207991282145,
  "n_features": 47,
  "n_train": 300000,
  "model_bytes": -1,
@@ -45,6 +45,6 @@
   "eval_split": "val",
   "job_id": "E1_lodo_coral_BOT_s2"
  },
- "wall_s": 98.29293918609619,
- "finished": "2026-11-24T20:47:04"
+ "wall_s": 136.94596123695374,
+ "finished": "2026-11-24T09:34:30"
 }

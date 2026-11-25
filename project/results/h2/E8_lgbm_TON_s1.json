@@ -1,0 +1,58 @@
+{
+ "target": "TON",
+ "seed": 1,
+ "auroc": 0.8226202419116602,
+ "auroc_cycle1": 0.8226202419116602,
+ "reproduces_cycle1": true,
+ "threshold": 0.5,
+ "families": {
+  "scanning": {
+   "n": 3009,
+   "auroc_vs_benign": 0.39824275060918074,
+   "recall": 0.17713526088401463,
+   "top3_diff": [
+    "SRC_TO_DST_IAT_MIN",
+    "MAX_TTL",
+    "DST_TO_SRC_SECOND_BYTES"
+   ],
+   "top3_diff_values": [
+    -4.730739011112305,
+    -2.2911434682374527,
+    -1.3798286315843633
+   ],
+   "p2_share_top3_neg_diff": 0.5049018428432949,
+   "top3_abs_neg": [
+    "FLOW_DURATION_MILLISECONDS",
+    "SRC_TO_DST_IAT_MIN",
+    "DST_TO_SRC_SECOND_BYTES"
+   ],
+   "p2_share_top3_abs_neg": 0.4958545688331715,
+   "transplant_top3": {
+    "features": [
+     "SRC_TO_DST_IAT_MIN",
+     "MAX_TTL",
+     "DST_TO_SRC_SECOND_BYTES"
+    ],
+    "recall": 0.7557328015952144,
+    "auroc_vs_benign": 0.8579178138148287,
+    "benign_control": {
+     "fpr_before": 0.15653366241601535,
+     "fpr_after": 0.5362402303578774
+    }
+   },
+   "control_random3": {
+    "features": [
+     "NUM_PKTS_256_TO_512_BYTES",
+     "RETRANSMITTED_OUT_PKTS",
+     "FTP_COMMAND_RET_CODE"
+    ],
+    "recall": 0.17713526088401463,
+    "auroc_vs_benign": 0.398256986433633,
+    "benign_control": {
+     "fpr_before": 0.15653366241601535,
+     "fpr_after": 0.15601261483614426
+    }
+   }
+  }
+ }
+}

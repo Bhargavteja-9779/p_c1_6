@@ -1,0 +1,1 @@
+{"dataset": "breastw", "method": "scr_a4", "seed": 0, "protocol": "unsup", "n_train": 478, "n_test": 205, "anom_test": 72, "auc_roc": 0.9739974937343359, "auc_pr": 0.934860371321981, "p_at_k": 0.9027777777777778, "fit_s": 0.09300088882446289, "pred_s": 0.0010690689086914062, "max_n": 10000}

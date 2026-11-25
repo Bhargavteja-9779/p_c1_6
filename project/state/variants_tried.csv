@@ -1,3 +1,18 @@
 variant_id,date,cycle,method,description,evaluated_on,outcome,result_file
 V0,2026-11-24,1,smoke,pipeline smoke tests (20k/source; lgbm/esf+pen+lgbm UNSW target; dann CIC; lr tune; rf id_chrono TON),target val (dev),smoke only - not used for claims,results/quicktest/
 V1,2026-11-24,1,quick,quick-mode run of plan_v1 (UNSW target seed 0; 5k/source),target val (dev),pipeline check only,results/quick/
+V2,2026-11-24,1,plan_v1 full,"23 LODO arms (7 baselines; ESF tau .3/.4/.5; ESF+PEN x3; PEN; 5 group drops; E3 n10k/n30k x2) + E4 id arms, seeds 0-2",target val,"H1 not supported: no arm beats XGB (best diff +0.001, Holm p=1); PEN -0.178",results/RESULTS_SUMMARY.md
+V3,2026-11-24,1,diagnostics,"diagnose_v2.py D1 per-family AUROC, D2 5-NN source label, D4 oracle threshold (analysis only)",target val,inverted ranking of CIC HOIC/Bot; see journal 11,results/diag_v2/
+V4,2026-11-24,2,knn_src k5,"source-labelled kNN detector (20k/source), k=5",target val,primary 0.5107 vs XGB 0.6114; CIC HOIC AUROC 0.66-0.84,results/h2/
+V5,2026-11-24,2,knn_src k25,"same, k=25",target val,primary 0.4753; CIC HOIC AUROC 0.68-0.89,results/h2/
+V6,2026-11-24,2,attribution+transplant,"LightGBM pred_contrib top-3 + transplant (+benign control D23), 6 inverted families",target val,"P2 fails (share 0.30-0.59, HOIC 0.34-0.38); P3 holds for CIC HOIC/Bot only",results/h2/
+V7,2026-11-24,3,ens xgb+knn5,CDF-average ensemble (plan_v3),target val,"FAILED: ens - xgb = -0.0563 (Wilcoxon p 0.0195, Holm p 0.1562); hurts TON",results/h3/
+V8,2026-11-24,4,smoke T2,bench.py smoke: knn/iforest/ecod seed 0 on 5 ADBench sets (semi protocol),test (smoke),pipeline check only - deleted,none
+V9,2026-11-25,4,T2,"H4 diagnostic (shield rate, oracle removal) DEV contaminated",DEV val (seeds 0-2),"supported: P1 21/23, rho .558, oracle recovers 94%",results_t2/
+V10,2026-11-25,4,T2,SCREEN A1 iforest trust drop10,DEV val (seeds 0-2),A1 contam 73.98 clean 85.44 NOT MET,results_t2/
+V11,2026-11-25,4,T2,SCREEN A2 iforest drop20,DEV val (seeds 0-2),A2 contam 75.80 clean 84.45 NOT MET,results_t2/
+V12,2026-11-25,4,T2,SCREEN A3 subknn trust drop10,DEV val (seeds 0-2),A3 contam 72.93 clean 85.68 NOT MET,results_t2/
+V13,2026-11-25,4,T2,SCREEN A4 subknn drop20,DEV val (seeds 0-2),A4 contam 73.33 clean 85.11 NOT MET,results_t2/
+V14,2026-11-25,4,T2,SCREEN A5 subknn adaptive IQR,DEV val (seeds 0-2),A5 contam 72.70 clean 85.89 NOT MET,results_t2/
+V15,2026-11-25,4,T2,baseline subknn ensemble (B1),DEV val (seeds 0-2),subknn contam 74.07 clean 83.99,results_t2/
+V16,2026-11-25,4,T2,k sweep diagnostic k in 1..500 (DEV),DEV val,no k fixes both regimes; clean k=1 88.56,results_t2/diag_ksweep.csv

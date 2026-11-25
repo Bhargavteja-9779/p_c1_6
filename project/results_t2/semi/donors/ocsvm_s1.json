@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "ocsvm", "seed": 1, "protocol": "semi", "n_train": 4703, "n_test": 5297, "anom_test": 593, "auc_roc": 0.8867534787945532, "auc_pr": 0.3314375419083274, "p_at_k": 0.3069139966273187, "fit_s": 0.7328665256500244, "pred_s": 0.47934985160827637, "max_n": 10000}

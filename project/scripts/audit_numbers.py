@@ -1,42 +1,57 @@
-#!/usr/bin/env python3
-"""G11 integrity audit: every decimal number in paper/*.md must match a number in a result file
-(results/**/*.json|csv|md, tables/*.md, journal_selection/*.json, literature/*.md for cited prior numbers),
-after rounding to the number of decimals shown (also tries x100 for percentages).
-Integers, years, DOIs, and lines containing '<!-- noaudit -->' are skipped. Exit 1 if any number is unmatched."""
-import os, re, sys, glob, json
-R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NUM = re.compile(r"(?<![\w./-])[-−]?\d+\.\d+")
+"""G11 integrity audit: every decimal number in paper/*.md must match a value in result files.
 
-def source_numbers():
+A number like 0.4567 / 45.67 / 45.7 matches if some value v in results/**/*.json|csv or tables/*.csv
+satisfies round(v, d) == number or round(100*v, d) == number (d = decimals shown).
+Integers (years, counts, seeds) and numbers inside lines marked `<!-- audit:skip -->` are ignored.
+Exit code 1 on any mismatch; writes results/audit_report.md.
+Usage: python scripts/audit_numbers.py [paper_dir]
+"""
+import glob, json, os, re, sys
+import pandas as pd
+
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+NUM = re.compile(r"(?<![\w.])-?\d+\.\d+(?![\w.])")
+
+
+def values():
     vals = set()
-    pats = ["results/**/*.json", "results/**/*.csv", "results/**/*.md", "tables/*.md", "journal_selection/*.json",
-            "journal_selection/*.md", "literature/*.md", "literature/*.csv"]
-    for p in pats:
-        for f in glob.glob(os.path.join(R, p), recursive=True):
-            if "/quick" in f: continue
-            for m in re.findall(r"-?\d+\.?\d*(?:e-?\d+)?", open(f, errors="ignore").read()):
-                try: vals.add(float(m))
-                except ValueError: pass
+    def walk(x):
+        if isinstance(x, dict): [walk(v) for v in x.values()]
+        elif isinstance(x, list): [walk(v) for v in x]
+        elif isinstance(x, (int, float)) and not isinstance(x, bool): vals.add(float(x))
+    for p in glob.glob(os.path.join(ROOT, "results", "**", "*.json"), recursive=True):
+        try: walk(json.load(open(p)))
+        except Exception: pass
+    for p in glob.glob(os.path.join(ROOT, "results", "**", "*.csv"), recursive=True) + glob.glob(os.path.join(ROOT, "tables", "*.csv")):
+        try:
+            d = pd.read_csv(p).select_dtypes("number")
+            vals.update(float(v) for v in d.values.ravel() if pd.notna(v))
+        except Exception: pass
     return vals
 
-def matches(tok, vals):
-    x = float(tok.replace("−", "-")); d = len(tok.split(".")[1])
-    for v in vals:
-        for s in (v, v * 100, abs(v), abs(v) * 100):
-            if round(s, d) == x or abs(round(s, d) - x) < 10 ** -d / 2 + 1e-12: return True
-    return False
 
 def main():
-    files = glob.glob(os.path.join(R, "paper", "*.md"))
-    if not files: print("no paper/*.md yet"); return 0
-    vals = sorted(source_numbers()); bad = []
+    pdir = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "paper")
+    files = glob.glob(os.path.join(pdir, "**", "*.md"), recursive=True)
+    vals = values()
+    rounded = {}
+    bad, n = [], 0
     for f in files:
         for i, line in enumerate(open(f), 1):
-            if "noaudit" in line or "doi" in line.lower(): continue
-            for tok in NUM.findall(line):
-                if not matches(tok, vals): bad.append(f"{os.path.relpath(f, R)}:{i}: {tok}")
-    print("\n".join(bad) or "AUDIT PASS"); print(f"{len(bad)} unmatched numbers")
-    return 1 if bad else 0
+            if "audit:skip" in line: continue
+            for s in NUM.findall(line):
+                n += 1; d = len(s.split(".")[1]); x = float(s)
+                key = d
+                if key not in rounded:
+                    rounded[key] = {round(v, d) for v in vals} | {round(100 * v, d) for v in vals}
+                if round(x, d) not in rounded[key] and round(-x, d) not in rounded[key]:
+                    bad.append(f"{os.path.relpath(f, ROOT)}:{i}: {s}")
+    rep = [f"# Number audit — {n} decimal numbers checked in {len(files)} files, {len(bad)} unmatched", ""] + [f"- {b}" for b in bad]
+    os.makedirs(os.path.join(ROOT, "results"), exist_ok=True)
+    open(os.path.join(ROOT, "results", "audit_report.md"), "w").write("\n".join(rep) + "\n")
+    print(rep[0])
+    sys.exit(1 if bad else 0)
+
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()

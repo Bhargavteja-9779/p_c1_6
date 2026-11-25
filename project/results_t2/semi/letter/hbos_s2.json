@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "hbos", "seed": 2, "protocol": "semi", "n_train": 750, "n_test": 850, "anom_test": 100, "auc_roc": 0.6082133333333333, "auc_pr": 0.14931405544704543, "p_at_k": 0.14, "fit_s": 0.004538536071777344, "pred_s": 0.0009124279022216797, "max_n": 10000}

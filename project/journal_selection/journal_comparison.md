@@ -36,14 +36,16 @@ JIF column = value displayed on official Springer journal page (fetched 2026-11-
 | International Journal of Computer Vision | 1573-1405 | 578 | 289.5 | 223.0–399.5 | 0–1057 | 0.003 | - |
 | Financial Innovation | 2199-4730 | 306 | 517.5 | 386.0–662.25 | 19–1178 | 0.007 | - |
 
-## Frontiers candidates (added session 2, 2026-11-24, after user allowed Frontiers — D13)
-Crossref holds no Received/Accepted for Frontiers, so dates were scraped from article pages for a random sample of 80 DOIs per journal (seed 0; scripts/frontiers_times.py; raw data in times_<ISSN>.json). IF = value shown on the journal homepage, frontiersin.org, fetched 2026-11-24. Quartile is UNVERIFIED for every journal (we have no JCR access).
+## Frontiers candidates (added 2026-11-24, session 2; user allowed Frontiers, D13)
+Frontiers does not deposit Received/Accepted in Crossref, so DOIs were listed via Crossref and dates read from the official article pages (scripts/frontiers_times.py; fixed-seed random sample of the window's DOIs, Crossref listing capped at 1000). JIF = value displayed on the official journal home page (fetched 2026-11-24 with headless Chromium). Quartile: UNVERIFIED (Clarivate not accessible).
 
-| Journal | ISSN | DOIs in window | n sampled | median days | IQR | min–max | share ≤72 d | IF (homepage) |
-|---|---|---|---|---|---|---|---|---|
-| Frontiers in Communications and Networks | 2673-530X | 89 | 80 | 76.0 | 50.5–103.75 | 2–247 | 0.475 | 2.7 |
-| Frontiers in Artificial Intelligence | 2624-8212 | 1825 | 80 | 81.5 | 51.25–101.75 | 29–217 | 0.438 | 6.7 |
-| Frontiers in Computer Science | 2624-9898 | 582 | 80 | 92.0 | 53.25–139.5 | 5–527 | 0.388 | 3.4 |
-| Frontiers in Big Data | 2624-909X | 236 | 80 | 93.0 | 58.0–145.25 | 2–363 | 0.388 | 3.8 |
-Frontiers in the Internet of Things: its homepage shows no IF, so there is no evidence it is JCR-listed; excluded. (One mistaken ISSN, 2673-3439 = Frontiers in Genome Editing, was scraped by error; it is off-scope, so the file was deleted.)
-No Frontiers journal meets the 72-day rule.
+| Journal | ISSN | n sampled (population) | median days | IQR | min–max | share ≤72 d | JIF (journal page) |
+|---|---|---|---|---|---|---|---|
+| Frontiers in Artificial Intelligence | 2624-8212 | **300** (1000) | **83.5** | 57.0–122.0 | 0–398 | 0.387 | 6.7 |
+| Frontiers in Artificial Intelligence (first, smaller sample — superseded) | 2624-8212 | 80 (1000) | 71.5 | 54.25–110.5 | 0–242 | 0.512 | 6.7 |
+| Frontiers in Computer Science | 2624-9898 | 80 (582) | 92.0 | 53.25–139.5 | 5–527 | 0.388 | 3.4 |
+| Frontiers in Big Data | 2624-909X | 80 (236) | 93.0 | 58.0–145.25 | 2–363 | 0.388 | 3.8 |
+| Frontiers in Neuroinformatics | 1662-5196 | 80 (114) | 86.0 | 48.5–127.25 | 1–357 | 0.388 | 2.9 |
+| Frontiers in Physics (out of scope; timing reference only) | 2296-424X | 80 (926) | 58.5 | 35.0–99.0 | 1–197 | 0.613 | 2.2 |
+
+The n=80 Frontiers in AI sample suggested the rule was met (71.5 d); the larger n=300 sample (raw file times_2624-8212.json; the n=80 file is kept as times_2624-8212_n80.json) gives 83.5 d. The larger sample is reported as the estimate. No in-scope Frontiers journal meets the 72-day rule.

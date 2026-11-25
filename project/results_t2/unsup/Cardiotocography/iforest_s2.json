@@ -1,0 +1,1 @@
+{"dataset": "Cardiotocography", "method": "iforest", "seed": 2, "protocol": "unsup", "n_train": 1480, "n_test": 634, "anom_test": 140, "auc_roc": 0.6482504337767495, "auc_pr": 0.4301443360451824, "p_at_k": 0.35714285714285715, "fit_s": 0.14454221725463867, "pred_s": 0.007687807083129883, "max_n": 10000}

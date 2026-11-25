@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "scr_a1", "seed": 1, "protocol": "semi", "n_train": 4690, "n_test": 5310, "anom_test": 620, "auc_roc": 0.6795874888231653, "auc_pr": 0.16853727919162761, "p_at_k": 0.15, "fit_s": 0.19841980934143066, "pred_s": 0.4286336898803711, "max_n": 10000}

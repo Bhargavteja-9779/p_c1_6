@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "iforest", "seed": 2, "protocol": "semi", "n_train": 59, "n_test": 70, "anom_test": 10, "auc_roc": 0.8566666666666667, "auc_pr": 0.4977219605791034, "p_at_k": 0.6, "fit_s": 0.07725334167480469, "pred_s": 0.005188703536987305, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "knn", "seed": 0, "protocol": "semi", "n_train": 750, "n_test": 850, "anom_test": 100, "auc_roc": 0.89564, "auc_pr": 0.5438120194003366, "p_at_k": 0.53, "fit_s": 0.09697413444519043, "pred_s": 0.0595090389251709, "max_n": 10000}

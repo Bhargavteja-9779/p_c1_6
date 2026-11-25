@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "scr_a4", "seed": 2, "protocol": "unsup", "n_train": 238, "n_test": 102, "anom_test": 9, "auc_roc": 0.918757467144564, "auc_pr": 0.4062590187590187, "p_at_k": 0.3333333333333333, "fit_s": 0.06635212898254395, "pred_s": 0.0005838871002197266, "max_n": 10000}

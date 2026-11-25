@@ -1,0 +1,1 @@
+{"dataset": "smtp", "method": "hbos", "seed": 1, "protocol": "semi", "n_train": 4998, "n_test": 5002, "anom_test": 3, "auc_roc": 0.9587917583516703, "auc_pr": 0.027191243868054576, "p_at_k": 0.0, "fit_s": 0.001438140869140625, "pred_s": 0.0005457401275634766, "max_n": 10000}

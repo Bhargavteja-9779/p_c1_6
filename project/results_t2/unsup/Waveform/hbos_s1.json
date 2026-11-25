@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "hbos", "seed": 1, "protocol": "unsup", "n_train": 2410, "n_test": 1033, "anom_test": 30, "auc_roc": 0.7136922565636424, "auc_pr": 0.06244926113727765, "p_at_k": 0.1, "fit_s": 0.004109621047973633, "pred_s": 0.0007503032684326172, "max_n": 10000}

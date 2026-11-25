@@ -1,0 +1,1 @@
+{"dataset": "cardio", "method": "copod", "seed": 1, "protocol": "unsup", "n_train": 1281, "n_test": 550, "anom_test": 53, "auc_roc": 0.9301848828821989, "auc_pr": 0.6026095558992376, "p_at_k": 0.5283018867924528, "fit_s": 0.005003452301025391, "pred_s": 0.006643772125244141, "max_n": 10000}

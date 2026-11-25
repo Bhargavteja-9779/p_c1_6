@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "pca", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 29, "auc_roc": 0.934261075453522, "auc_pr": 0.07238959773901293, "p_at_k": 0.034482758620689655, "fit_s": 0.01100468635559082, "pred_s": 0.0008440017700195312, "max_n": 10000}

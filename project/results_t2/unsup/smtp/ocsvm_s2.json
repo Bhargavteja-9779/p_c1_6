@@ -1,0 +1,1 @@
+{"dataset": "smtp", "method": "ocsvm", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 1, "auc_roc": 0.026342114038012676, "auc_pr": 0.00034234851078397807, "p_at_k": 0.0, "fit_s": 1.3239881992340088, "pred_s": 0.2783665657043457, "max_n": 10000}

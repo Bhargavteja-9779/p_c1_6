@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "ecod", "seed": 0, "protocol": "unsup", "n_train": 3651, "n_test": 1565, "anom_test": 45, "auc_roc": 0.6099415204678362, "auc_pr": 0.035461777523637925, "p_at_k": 0.022222222222222223, "fit_s": 0.04017496109008789, "pred_s": 0.06840991973876953, "max_n": 10000}

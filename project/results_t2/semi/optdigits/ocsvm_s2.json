@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "ocsvm", "seed": 2, "protocol": "semi", "n_train": 2533, "n_test": 2683, "anom_test": 150, "auc_roc": 0.5975838926174497, "auc_pr": 0.06355775831793327, "p_at_k": 0.03333333333333333, "fit_s": 0.4624195098876953, "pred_s": 0.21622014045715332, "max_n": 10000}

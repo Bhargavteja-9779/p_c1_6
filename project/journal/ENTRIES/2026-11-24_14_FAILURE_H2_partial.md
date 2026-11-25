@@ -1,0 +1,5 @@
+# FAILURE (partial) — 2026-11-24 — H2 as stated is not supported
+By the pre-registered rule (plan_v2: P1, P2, P3 must all hold on CIC HOIC for all seeds), H2 fails because P2 fails: the push towards "benign" is spread over many features (top-3 share 0.34–0.38), not concentrated in a few.
+What survived: for the two CIC families that make up ~48 % of CIC attacks, a 3-feature counterfactual flips the trees' decision completely, with a much smaller rise in benign false alarms; and a similarity-based detector does not invert HOIC. So "a small set of features is SUFFICIENT to flip the decision" holds for CIC, while "a small set DOMINATES the attribution" does not. In additive attributions, many weak contributions sum up; in trees, a few splits can still gate the outcome.
+The control I added mid-way (D23) mattered: without it, UNSW and TON would have looked like strong support (recall 0.18 → 0.55–0.98), but benign FPR rose almost as much.
+It does not generalise: UNSW/TON transplants are non-specific, BOT Reconnaissance does not respond, and kNN has its own inversions (CIC Bot, BOT).

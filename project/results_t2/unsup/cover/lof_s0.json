@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "lof", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 29, "auc_roc": 0.8856532689562321, "auc_pr": 0.12699638104669195, "p_at_k": 0.20689655172413793, "fit_s": 0.2150585651397705, "pred_s": 0.0794060230255127, "max_n": 10000}

@@ -207,3 +207,14 @@ scripts/final_report.py: results/metrics.json (mean ± std, 95% CI); results/sta
 FINAL_REPORT.md; paper/; journal/; results/ tables/ figures/; literature/; reproducible code with README and fresh-clone test; HANDOFF.md current. Print a short summary and what the user must fill in (authors, funding, ethics, declarations).
 
 START NOW — Do not ask anything. Begin with Section 2, then Section 3, then Phase 1. If HANDOFF.md exists, continue from NEXT ACTION.
+
+---
+## USER AMENDMENTS (appended verbatim-in-substance, 2026-11-24)
+- "no problem is around 80 days also" → acceptance-time rule relaxed to ≈80 days (decisions D27).
+- "dont stop improving novility till we reach score above 25/30" → novelty must exceed 25/30; 30-point rubric = Section 6.3's five dimensions + prior-art clearance (D28).
+- 2026-11-24 (user, paraphrased faithfully): "Improvise more — feedback says the candidate topics are not good for our journal and its readers. Compare with many more papers in the SAME journal we submit to (JKSU-CIS); our paper must follow the same type of writing and be better than all those papers. Do not stop until we reach a top-notch quality paper. Save everything so a new account can continue. Do not stop or hand out papers until the paper is top-notch; keep iterating again and again with new methods. No need to ask permission. Add this to git so new accounts follow exactly."
+  Operational rules derived from this (decisions D29–D31):
+  1. JOURNAL-FIT GATE (G0, before any topic is chosen): build journal_selection/jksu_profile.md from ≥ 40 recent JKSU-CIS papers (topics, paper type, datasets, baselines, metrics, section structure, length, figure/table count, writing style). A topic must score ≥ 4/5 on journal fit (common paper type and reader interest in JKSU-CIS) as well as on novelty.
+  2. BEAT-THE-JOURNAL GATE: literature/journal_benchmark.md lists the strongest comparable JKSU-CIS papers (same task/datasets) with their exact numbers; our method must beat them under a fair, stated protocol, or the gap must be explained.
+  3. Writing follows the JKSU-CIS profile (structure, tone, length), while keeping Section 1 honesty rules (no fabrication, no test-set peeking).
+  4. Never stop and never hand over a "final" paper until G0–G11 pass with novelty > 25/30; on any ceiling, follow Section 11.7 honestly, then keep improving if the user allows more budget.

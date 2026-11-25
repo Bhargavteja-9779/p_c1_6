@@ -1,0 +1,1 @@
+{"dataset": "WBC", "method": "scr_a1", "seed": 1, "protocol": "unsup", "n_train": 156, "n_test": 67, "anom_test": 3, "auc_roc": 1.0, "auc_pr": 1.0, "p_at_k": 1.0, "fit_s": 0.08829021453857422, "pred_s": 0.0007092952728271484, "max_n": 10000}

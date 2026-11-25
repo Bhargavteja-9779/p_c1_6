@@ -1,0 +1,41 @@
+{
+ "macro_f1": 0.9601595429213015,
+ "f1_attack": 0.9684065175365921,
+ "bal_acc": 0.9602526629579253,
+ "tpr": 0.9680322438162544,
+ "fpr": 0.04752691790040377,
+ "auroc": 0.971959093823715,
+ "prauc": 0.9848187451601714,
+ "n_eval": 30000,
+ "attack_rate_eval": 0.6037333333333333,
+ "threshold": 0.212879478931427,
+ "src_val_macro_f1": 0.9597126649014018,
+ "fit_s": 7.654361009597778,
+ "pred_ms_per_1k": 1.3386885325113933,
+ "n_features": 47,
+ "n_train": 100000,
+ "model_bytes": -1,
+ "recall_by_family": {
+  "ddos": 0.9781355379092788,
+  "password": 0.9567858780375974,
+  "xss": 0.9948717948717949
+ },
+ "src_val_auroc": 0.9722524893563662,
+ "cfg": {},
+ "spec": {
+  "kind": "run",
+  "exp": "E4",
+  "priority": 3,
+  "cfg": {},
+  "protocol": "id_chrono",
+  "method": "mlp",
+  "target": "TON",
+  "seed": 1,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E4_id_chrono_mlp_TON_s1"
+ },
+ "wall_s": 9.92605710029602,
+ "finished": "2026-11-24T12:00:07"
+}

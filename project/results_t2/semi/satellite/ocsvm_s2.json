@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "ocsvm", "seed": 2, "protocol": "semi", "n_train": 2199, "n_test": 4236, "anom_test": 2036, "auc_roc": 0.6480487587069119, "auc_pr": 0.7586376343136237, "p_at_k": 0.599705304518664, "fit_s": 0.20355486869812012, "pred_s": 0.24195146560668945, "max_n": 10000}

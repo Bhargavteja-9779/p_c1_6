@@ -1,0 +1,1 @@
+{"dataset": "Cardiotocography", "method": "hbos", "seed": 1, "protocol": "unsup", "n_train": 1480, "n_test": 634, "anom_test": 140, "auc_roc": 0.620908039329092, "auc_pr": 0.3949527496305227, "p_at_k": 0.32857142857142857, "fit_s": 0.003348112106323242, "pred_s": 0.0005300045013427734, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "fraud", "method": "ocsvm", "seed": 1, "protocol": "semi", "n_train": 4991, "n_test": 5009, "anom_test": 17, "auc_roc": 0.9401395173453996, "auc_pr": 0.6191233923477654, "p_at_k": 0.6470588235294118, "fit_s": 1.1970527172088623, "pred_s": 0.7034425735473633, "max_n": 10000}

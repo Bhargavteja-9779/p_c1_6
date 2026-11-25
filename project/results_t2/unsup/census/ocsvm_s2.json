@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "ocsvm", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 186, "auc_roc": 0.5431960779818267, "auc_pr": 0.06433394149567727, "p_at_k": 0.053763440860215055, "fit_s": 11.653105974197388, "pred_s": 2.443246364593506, "max_n": 10000}

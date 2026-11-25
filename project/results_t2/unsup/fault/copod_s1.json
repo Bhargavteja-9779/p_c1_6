@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "copod", "seed": 1, "protocol": "unsup", "n_train": 1359, "n_test": 582, "anom_test": 202, "auc_roc": 0.46206357477853044, "auc_pr": 0.3312787333935806, "p_at_k": 0.32673267326732675, "fit_s": 0.006059408187866211, "pred_s": 0.0079193115234375, "max_n": 10000}

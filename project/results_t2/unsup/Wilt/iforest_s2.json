@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "iforest", "seed": 2, "protocol": "unsup", "n_train": 3373, "n_test": 1446, "anom_test": 77, "auc_roc": 0.42230085473328716, "auc_pr": 0.042140930535926234, "p_at_k": 0.0, "fit_s": 0.12209606170654297, "pred_s": 0.011425495147705078, "max_n": 10000}

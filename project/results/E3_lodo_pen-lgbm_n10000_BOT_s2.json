@@ -1,0 +1,49 @@
+{
+ "macro_f1": 0.0034781378558803935,
+ "f1_attack": 0.0012027462706513206,
+ "bal_acc": 0.5003008675012954,
+ "tpr": 0.0006017350025908035,
+ "fpr": 0.0,
+ "auroc": 0.23075426245868266,
+ "prauc": 0.9937671079224049,
+ "n_eval": 60000,
+ "attack_rate_eval": 0.9971166666666667,
+ "threshold": 0.6063177973374148,
+ "src_val_macro_f1": 0.9638947275250107,
+ "fit_s": 2.131891965866089,
+ "pred_ms_per_1k": 3.359417120615641,
+ "n_features": 47,
+ "n_train": 30000,
+ "model_bytes": 2789394,
+ "recall_by_family": {
+  "DDoS": 0.000670029954280309,
+  "DoS": 0.0006659423083663384,
+  "Reconnaissance": 0.0,
+  "Theft": 0.0
+ },
+ "src_val_auroc": 0.9927859446598017,
+ "cfg": {
+  "n_estimators": 400,
+  "learning_rate": 0.1,
+  "num_leaves": 63,
+  "min_child_samples": 10,
+  "colsample_bytree": 1.0,
+  "reg_lambda": 10.0
+ },
+ "spec": {
+  "kind": "run",
+  "exp": "E3",
+  "protocol": "lodo",
+  "priority": 4,
+  "cfg_from": "tune_lodo_lgbm_BOT",
+  "method": "pen+lgbm",
+  "n_per_source": 10000,
+  "target": "BOT",
+  "seed": 2,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E3_lodo_pen-lgbm_n10000_BOT_s2"
+ },
+ "wall_s": 12.450616121292114,
+ "finished": "2026-11-24T12:14:53"
+}

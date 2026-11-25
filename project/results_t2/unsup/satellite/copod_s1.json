@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "copod", "seed": 1, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 611, "auc_roc": 0.6415724346575411, "auc_pr": 0.5782213068758959, "p_at_k": 0.4828150572831424, "fit_s": 0.026980161666870117, "pred_s": 0.03609728813171387, "max_n": 10000}

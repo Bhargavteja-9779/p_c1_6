@@ -1,0 +1,1 @@
+{"dataset": "landsat", "method": "hbos", "seed": 2, "protocol": "semi", "n_train": 2551, "n_test": 3884, "anom_test": 1333, "auc_roc": 0.7063270129566888, "auc_pr": 0.5276582462737155, "p_at_k": 0.5401350337584396, "fit_s": 0.013231277465820312, "pred_s": 0.006407260894775391, "max_n": 10000}

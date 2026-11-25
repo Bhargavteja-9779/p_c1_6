@@ -1,0 +1,1 @@
+{"dataset": "Cardiotocography", "method": "copod", "seed": 2, "protocol": "semi", "n_train": 824, "n_test": 1290, "anom_test": 466, "auc_roc": 0.6721360785866078, "auc_pr": 0.5621654426652982, "p_at_k": 0.49356223175965663, "fit_s": 0.0075244903564453125, "pred_s": 0.012690067291259766, "max_n": 10000}

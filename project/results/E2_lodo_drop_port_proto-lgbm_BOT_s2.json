@@ -1,0 +1,49 @@
+{
+ "macro_f1": 0.018568919150089576,
+ "f1_attack": 0.031900024664967525,
+ "bal_acc": 0.4560835862865096,
+ "tpr": 0.01621341534758554,
+ "fpr": 0.10404624277456648,
+ "auroc": 0.43481112351789664,
+ "prauc": 0.9958802498621595,
+ "n_eval": 60000,
+ "attack_rate_eval": 0.9971166666666667,
+ "threshold": 0.42635392512765286,
+ "src_val_macro_f1": 0.9599998952938436,
+ "fit_s": 8.454930305480957,
+ "pred_ms_per_1k": 3.549337387084961,
+ "n_features": 44,
+ "n_train": 300000,
+ "model_bytes": 2786271,
+ "recall_by_family": {
+  "DDoS": 0.0042960744127384515,
+  "DoS": 0.013529143738389822,
+  "Reconnaissance": 0.07924974653599189,
+  "Theft": 1.0
+ },
+ "src_val_auroc": 0.9917431765681733,
+ "cfg": {
+  "n_estimators": 400,
+  "learning_rate": 0.1,
+  "num_leaves": 63,
+  "min_child_samples": 10,
+  "colsample_bytree": 1.0,
+  "reg_lambda": 10.0
+ },
+ "spec": {
+  "kind": "run",
+  "exp": "E2",
+  "protocol": "lodo",
+  "priority": 3,
+  "cfg_from": "tune_lodo_lgbm_BOT",
+  "method": "drop_port_proto+lgbm",
+  "target": "BOT",
+  "seed": 2,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E2_lodo_drop_port_proto-lgbm_BOT_s2"
+ },
+ "wall_s": 17.139806509017944,
+ "finished": "2026-11-24T11:42:17"
+}

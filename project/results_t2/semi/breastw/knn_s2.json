@@ -1,0 +1,1 @@
+{"dataset": "breastw", "method": "knn", "seed": 2, "protocol": "semi", "n_train": 222, "n_test": 461, "anom_test": 239, "auc_roc": 0.9944211994421199, "auc_pr": 0.9941761397734679, "p_at_k": 0.9707112970711297, "fit_s": 0.002009153366088867, "pred_s": 0.0018944740295410156, "max_n": 10000}

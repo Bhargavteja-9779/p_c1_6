@@ -1,0 +1,1 @@
+{"dataset": "speech", "method": "scr_a3", "seed": 1, "protocol": "unsup", "n_train": 2581, "n_test": 1105, "anom_test": 18, "auc_roc": 0.4922825309209854, "auc_pr": 0.01609771241935174, "p_at_k": 0.0, "fit_s": 0.36218953132629395, "pred_s": 0.01936650276184082, "max_n": 10000}

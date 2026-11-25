@@ -1,0 +1,1 @@
+{"dataset": "backdoor", "method": "ecod", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 73, "auc_roc": 0.8598780367948857, "auc_pr": 0.09849292201923848, "p_at_k": 0.0958904109589041, "fit_s": 0.2630155086517334, "pred_s": 0.5036072731018066, "max_n": 10000}

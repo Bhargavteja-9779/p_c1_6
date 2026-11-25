@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "pca", "seed": 1, "protocol": "unsup", "n_train": 2410, "n_test": 1033, "anom_test": 30, "auc_roc": 0.68670654702559, "auc_pr": 0.06116822058756325, "p_at_k": 0.1, "fit_s": 0.0028405189514160156, "pred_s": 0.000579833984375, "max_n": 10000}

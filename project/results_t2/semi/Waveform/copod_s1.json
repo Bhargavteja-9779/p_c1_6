@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "copod", "seed": 1, "protocol": "semi", "n_train": 1671, "n_test": 1772, "anom_test": 100, "auc_roc": 0.7333791866028708, "auc_pr": 0.10479631808137116, "p_at_k": 0.09, "fit_s": 0.005930423736572266, "pred_s": 0.011220216751098633, "max_n": 10000}

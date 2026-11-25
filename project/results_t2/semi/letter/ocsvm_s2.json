@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "ocsvm", "seed": 2, "protocol": "semi", "n_train": 750, "n_test": 850, "anom_test": 100, "auc_roc": 0.5006933333333334, "auc_pr": 0.14292566322925776, "p_at_k": 0.16, "fit_s": 0.021974563598632812, "pred_s": 0.015505313873291016, "max_n": 10000}

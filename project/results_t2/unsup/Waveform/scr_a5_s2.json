@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "scr_a5", "seed": 2, "protocol": "unsup", "n_train": 2410, "n_test": 1033, "anom_test": 30, "auc_roc": 0.7416417414423396, "auc_pr": 0.11801931241004143, "p_at_k": 0.13333333333333333, "fit_s": 2.728452444076538, "pred_s": 0.19718146324157715, "max_n": 10000}

@@ -1,0 +1,42 @@
+{
+ "macro_f1": 0.8327815123240025,
+ "f1_attack": 0.9988963579813385,
+ "bal_acc": 0.8785581635017412,
+ "tpr": 0.9984956373483101,
+ "fpr": 0.2413793103448276,
+ "auroc": 0.9817522539502488,
+ "prauc": 0.9998963290391145,
+ "n_eval": 30000,
+ "attack_rate_eval": 0.9971,
+ "threshold": 0.71,
+ "src_val_macro_f1": 0.8503088234019657,
+ "fit_s": 3.36757230758667,
+ "pred_ms_per_1k": 2.902865409851074,
+ "n_features": 47,
+ "n_train": 100000,
+ "model_bytes": 6354234,
+ "recall_by_family": {
+  "DDoS": 0.9999216975961162,
+  "DoS": 1.0,
+  "Reconnaissance": 0.9853392430958063,
+  "Theft": 0.75
+ },
+ "src_val_auroc": 0.9641046581595925,
+ "cfg": {},
+ "spec": {
+  "kind": "run",
+  "exp": "E4",
+  "priority": 3,
+  "cfg": {},
+  "protocol": "id_random",
+  "method": "rf",
+  "target": "BOT",
+  "seed": 2,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E4_id_random_rf_BOT_s2"
+ },
+ "wall_s": 4.03527307510376,
+ "finished": "2026-11-24T12:05:46"
+}

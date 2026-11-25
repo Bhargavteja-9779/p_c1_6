@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "ocsvm", "seed": 0, "protocol": "unsup", "n_train": 1359, "n_test": 582, "anom_test": 202, "auc_roc": 0.5590411672746223, "auc_pr": 0.46231601092585783, "p_at_k": 0.40594059405940597, "fit_s": 0.08011221885681152, "pred_s": 0.020861148834228516, "max_n": 10000}

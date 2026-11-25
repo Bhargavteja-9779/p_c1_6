@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "ecod", "seed": 0, "protocol": "semi", "n_train": 1671, "n_test": 1772, "anom_test": 100, "auc_roc": 0.6005143540669857, "auc_pr": 0.07818229816299853, "p_at_k": 0.08, "fit_s": 0.007671833038330078, "pred_s": 0.01152348518371582, "max_n": 10000}

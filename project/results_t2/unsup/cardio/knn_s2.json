@@ -1,0 +1,1 @@
+{"dataset": "cardio", "method": "knn", "seed": 2, "protocol": "unsup", "n_train": 1281, "n_test": 550, "anom_test": 53, "auc_roc": 0.7740404692304773, "auc_pr": 0.3680670708194602, "p_at_k": 0.33962264150943394, "fit_s": 0.08771014213562012, "pred_s": 0.002974271774291992, "max_n": 10000}

@@ -912,14 +912,15 @@
    "year": 2026,
    "doi_or_arxiv": "10.5281/zenodo.24172400",
    "link": "https://doi.org/10.5281/zenodo.24172400",
-   "opened": "abstract",
+   "opened": "code (README, docs/EXPERIMENTS.md, crossnet/preprocess.py, experiments/feature_groups.py) read 2026-11-24 session 2; paper text still not public",
    "claims": [
     "C1",
+    "C2",
     "C3",
     "C5"
    ],
    "what_it_does": "Code/run-level results: 18 detection and adaptation methods under leave-one-testbed-out evaluation on four NetFlow testbeds in both NF-v2 and NF-v3, equal source-only tuning, ten seeds, pre-declared hypotheses; 'target reference windows' suggests unlabeled/limited target data used for adaptation or thresholds.",
-   "what_it_does_not_do": "Deposit description does not say whether feature-level environment-signature attribution or benign-relative normalization is studied; paper text not located.",
+   "what_it_does_not_do": "Covered (from code): BRN = per-testbed benign-referenced z-scoring with a target benign window (== our PEN); DomNorm control; E7 drop-group XGBoost ablation (TTL, TCP window, timing, all artefacts incl. ports) on target AUROC and target-benign FPR; E2 failure decomposition benign vs seen vs novel attack families; E6 pairwise transfer with benign divergence audit (PSI, Wasserstein, SMD). NOT seen in code: counterfactual 'transplant' of single feature groups; LightGBM; random-vs-chrono pools; ESF-style data-driven environment-feature selection.",
    "datasets": "NF-v2 and NF-v3: four NetFlow testbeds"
   },
   {
@@ -938,7 +939,8 @@
    "what_it_does": "On all four NetFlow v3 datasets, 12 directed pairs, RF/GBT/NN; compares pooled, importance-weighted, fine-tuned adaptation vs target-only training; domain classifier separability analysis; TTL-artifact removal check; shows per-domain feature scaling corrupts separability measurements.",
    "what_it_does_not_do": "Focus is few-shot transfer vs target-only (needs target labels); not leave-one-dataset-out with pooled sources and source-only thresholds; no benign-relative normalization remedy proposed.",
    "datasets": "NF-CICIDS2018-v3, NF-UNSW-NB15-v3, NF-ToN-IoT-v3, NF-BoT-IoT-v3",
-   "relevant_numbers": "540 comparisons: source significantly helps in 8%, hurts in 38% (uncorrected); mean F1 change -0.044 (95% CI -0.066 to -0.022); domain classifier AUC >= 0.996 for every pair on raw features; 23-40 of 45 features must be removed before AUC < 0.9; published zero-shot F1 of 0.81 does not reproduce on v3."
+   "relevant_numbers": "540 comparisons: source significantly helps in 8%, hurts in 38% (uncorrected); mean F1 change -0.044 (95% CI -0.066 to -0.022); domain classifier AUC >= 0.996 for every pair on raw features; 23-40 of 45 features must be removed before AUC < 0.9; published zero-shot F1 of 0.81 does not reproduce on v3.",
+   "fulltext_attempt": "2026-11-24 s2: preprints.org returns 403 to curl and headless Chromium; no arXiv copy; abstract only"
   },
   {
    "id": "P03",
@@ -1761,6 +1763,22 @@
    "what_it_does_not_do": "Original features, two datasets.",
    "datasets": "UNSW-NB15, TON_IoT",
    "relevant_numbers": "Cross-dataset accuracy below 40%."
+  },
+  {
+   "id": "P54",
+   "title": "The dashboard says \"perfect\": a systematic audit of label-free model monitoring and test-time adaptation under temporal distribution shift in network intrusion detection",
+   "authors_first": "Wali Ahmed",
+   "year": 2026,
+   "doi_or_arxiv": "10.3389/frai.2026.1928858",
+   "link": "https://doi.org/10.3389/frai.2026.1928858",
+   "opened": "abstract (OpenAlex)",
+   "claims": [
+    "C3",
+    "C5"
+   ],
+   "what_it_does": "CIC-IDS2017 -> CSE-CIC-IDS2018 (and reverse), 16 label-free adaptation/monitoring variants (quantile alignment, BN adaptation, TENT, pseudo-labels, per-domain rank representation, ratio features, invariance); none beats the unadapted source model in both directions; label-free monitors invert; conformal abstention rate is a reliable drift alarm.",
+   "what_it_does_not_do": "Not NetFlow v3, not leave-one-dataset-out across four networks; temporal (year) shift of one testbed family.",
+   "datasets": "CIC-IDS2017, CSE-CIC-IDS2018 (77 CICFlowMeter features)"
   }
  ],
  "located_not_opened": [
@@ -1870,6 +1888,32 @@
     "P01"
    ],
    "exact_difference_one_sentence": "Source-threshold transfer failure is already quantified on NF datasets (P05: 36.2% of target flows alerted; P06: label-free benign thresholds) and elsewhere (P47, P48, P28); only a systematic LODO threshold-transfer analysis across all four V3 sets tied to the environment-signature mechanism remains, and P01 ('target reference windows') may cover it."
+  }
+ ],
+ "scores": [
+  {
+   "cycle": 1,
+   "date": "2026-11-24",
+   "claim": "H1 (ESF/PEN remedy + env-signature attribution)",
+   "differentiation": 1,
+   "mechanism": 1,
+   "evidence": 3,
+   "breadth": 3,
+   "significance": 1,
+   "total": 9,
+   "notes": "Prior art (Gazi code: BRN, feature-group ablation) covers the claims; our remedy failed (journal 10). Evidence/breadth are fine for a replication (3 seeds, 4 targets). Blind reviewer not run (no manuscript claim yet)."
+  },
+  {
+   "cycle": 2,
+   "date": "2026-11-24",
+   "claim": "H2: cross-network inversion of large attack families is caused by few-feature shortcuts in tree ensembles",
+   "differentiation": 2,
+   "mechanism": 2,
+   "evidence": 2,
+   "breadth": 1,
+   "significance": 2,
+   "total": 9,
+   "notes": "P2 failed; P1/P3 hold only for CIC HOIC/Bot (one target). Family-level counterfactual flips not seen in Gazi code, but not yet searched in broader literature (SHAP/counterfactual NIDS cross-dataset work exists). Blind reviewer not run."
   }
  ]
 }

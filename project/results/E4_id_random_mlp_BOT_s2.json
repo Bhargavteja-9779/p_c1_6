@@ -1,0 +1,42 @@
+{
+ "macro_f1": 0.7473706205733659,
+ "f1_attack": 0.9990147454202362,
+ "bal_acc": 0.6666499515260923,
+ "tpr": 0.9999665697188513,
+ "fpr": 0.6666666666666666,
+ "auroc": 0.99589595266887,
+ "prauc": 0.999987987856517,
+ "n_eval": 30000,
+ "attack_rate_eval": 0.9971,
+ "threshold": 0.6317156194448471,
+ "src_val_macro_f1": 0.74951573041213,
+ "fit_s": 7.74416971206665,
+ "pred_ms_per_1k": 2.157322565714518,
+ "n_features": 47,
+ "n_train": 100000,
+ "model_bytes": -1,
+ "recall_by_family": {
+  "DDoS": 1.0,
+  "DoS": 1.0,
+  "Reconnaissance": 0.9996590521650187,
+  "Theft": 1.0
+ },
+ "src_val_auroc": 0.9950690040130544,
+ "cfg": {},
+ "spec": {
+  "kind": "run",
+  "exp": "E4",
+  "priority": 3,
+  "cfg": {},
+  "protocol": "id_random",
+  "method": "mlp",
+  "target": "BOT",
+  "seed": 2,
+  "n_per_source": 100000,
+  "n_val_per_source": 60000,
+  "eval_split": "val",
+  "job_id": "E4_id_random_mlp_BOT_s2"
+ },
+ "wall_s": 9.877617597579956,
+ "finished": "2026-11-24T12:03:39"
+}

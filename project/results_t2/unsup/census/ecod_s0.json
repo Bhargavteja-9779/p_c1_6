@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "ecod", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 186, "auc_roc": 0.6675684557244499, "auc_pr": 0.08763417946436301, "p_at_k": 0.08602150537634409, "fit_s": 1.0238382816314697, "pred_s": 1.8600635528564453, "max_n": 10000}

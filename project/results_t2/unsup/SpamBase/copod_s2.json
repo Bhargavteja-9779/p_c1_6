@@ -1,0 +1,1 @@
+{"dataset": "SpamBase", "method": "copod", "seed": 2, "protocol": "unsup", "n_train": 2945, "n_test": 1262, "anom_test": 504, "auc_roc": 0.6674022071449511, "auc_pr": 0.5196456072951474, "p_at_k": 0.5575396825396826, "fit_s": 0.03191637992858887, "pred_s": 0.04921460151672363, "max_n": 10000}

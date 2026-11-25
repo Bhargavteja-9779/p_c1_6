@@ -1,0 +1,1 @@
+{"dataset": "speech", "method": "ocsvm", "seed": 1, "protocol": "semi", "n_train": 1812, "n_test": 1874, "anom_test": 61, "auc_roc": 0.45693669581257396, "auc_pr": 0.03506024812493219, "p_at_k": 0.04918032786885246, "fit_s": 0.5779354572296143, "pred_s": 0.3265256881713867, "max_n": 10000}

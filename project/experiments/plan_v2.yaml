@@ -1,0 +1,19 @@
+# plan_v2 — cycle 2 — written 2026-11-24 BEFORE any cycle-2 run. Reason: H1 failed (journal 10); diagnosis (journal 11)
+# points to inverted ranking of specific families; H2 (journal 12) = shortcut splits in tree ensembles.
+# All evaluation on TARGET random-val pools; test pools untouched. Seeds 0-2. Est. compute <= 2 CPU-h.
+# Same LODO protocol, same 100k flows/source as plan_v1 E1 so numbers compare directly with cycle-1 arms.
+experiments:
+  E7_knn:      # P1: source-labelled kNN detector, LODO, source-val threshold
+    method: knn_src          # log1p + source z-score; score = distance-weighted share of attack neighbours
+    k: [5, 25]               # both reported (2 variants, counted in variants_tried.csv)
+    n_per_source: 20000      # kNN memory/latency cap (documented difference from E1's 100k)
+    targets: [UNSW, TON, CIC, BOT]
+    seeds: [0, 1, 2]
+  E8_attribution:  # P2: LightGBM pred_contrib on target families with AUROC < 0.5 (CIC HOIC, CIC Bot, TON scanning, BOT Reconnaissance)
+    model: E1 LightGBM config of the same target, retrained with the same seed (scores must match cycle 1 within 1e-6 AUROC)
+    output: share of negative logit mass carried by the top-3 features per family
+  E9_transplant:   # P3: replace top-3 attributed features of the family's flows with the median of source-attack flows
+    metric: family recall at the source-val threshold and family AUROC vs benign
+decision_rule: >
+  H2 is supported only if P1, P2 and P3 all hold on CIC HOIC for all 3 seeds. If any fails, log FAILURE and go to
+  ladder rung 5 (change angle). No hyper-parameter search on target data.

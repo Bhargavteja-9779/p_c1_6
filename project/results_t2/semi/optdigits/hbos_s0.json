@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "hbos", "seed": 0, "protocol": "semi", "n_train": 2533, "n_test": 2683, "anom_test": 150, "auc_roc": 0.8647479931569944, "auc_pr": 0.2579000489325153, "p_at_k": 0.30666666666666664, "fit_s": 0.011868953704833984, "pred_s": 0.004780292510986328, "max_n": 10000}

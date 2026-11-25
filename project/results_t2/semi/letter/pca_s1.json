@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "pca", "seed": 1, "protocol": "semi", "n_train": 750, "n_test": 850, "anom_test": 100, "auc_roc": 0.5360533333333333, "auc_pr": 0.14226723449872902, "p_at_k": 0.14, "fit_s": 0.0019898414611816406, "pred_s": 0.0006797313690185547, "max_n": 10000}
