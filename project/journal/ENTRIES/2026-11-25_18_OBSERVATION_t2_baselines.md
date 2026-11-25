@@ -1,0 +1,3 @@
+# OBSERVATION — 2026-11-25 — topic-2 dev baselines reproduce the literature
+results_t2/ (23 DEV datasets × 8 PyOD baselines × seeds 0–2 × 2 regimes; 1,104 runs, 0 failures). Mean AUROC: CLEAN kNN 86.1, LOF 83.9, IForest 78.4, HBOS 75.8, PCA 75.2, OCSVM 73.2, COPOD 73.0, ECOD 72.0 (kNN mean rank 2.02). CONTAMINATED IForest 73.5, COPOD 72.8, kNN 72.8, ECOD 71.8, HBOS 71.8, PCA 70.0, LOF 67.5, OCSVM 66.7. kNN loses 13.3 AUROC points under contamination (literature: −11, Bershtman & Cohen 2610.06693). Mean AUPRC: clean kNN 65.6; contaminated kNN 35.1.
+The open problem for a CPU method: keep kNN's clean accuracy and stop the collapse under contamination.
