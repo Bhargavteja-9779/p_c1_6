@@ -1,0 +1,166 @@
+{
+ "auc_roc": {
+  "scknn_F0.1 vs iforest": {
+   "n_sets": 18,
+   "mean_a": 69.14,
+   "mean_b": 66.49,
+   "diff": 2.65,
+   "wins": 11,
+   "losses": 7,
+   "wilcoxon_p": 0.2645263671875,
+   "ttest_p": 0.22633049252105503
+  },
+  "scknn_F0.1 vs knn": {
+   "n_sets": 18,
+   "mean_a": 69.14,
+   "mean_b": 64.85,
+   "diff": 4.29,
+   "wins": 11,
+   "losses": 7,
+   "wilcoxon_p": 0.16735076904296875,
+   "ttest_p": 0.13319919874018574
+  },
+  "scknn_F0.1 vs paper:HF-DIF": {
+   "n_sets": 18,
+   "mean_a": 69.14,
+   "mean_b": 81.28,
+   "diff": -12.14,
+   "wins": 0,
+   "losses": 18,
+   "wilcoxon_p": 7.62939453125e-06,
+   "ttest_p": 0.0003040289707599672
+  },
+  "fuse_F0.1_w0.5 vs iforest": {
+   "n_sets": 16,
+   "mean_a": 66.43,
+   "mean_b": 65.35,
+   "diff": 1.08,
+   "wins": 8,
+   "losses": 5,
+   "wilcoxon_p": 0.40374755859375,
+   "ttest_p": 0.31173668200098387
+  },
+  "fuse_F0.1_w0.5 vs paper:HF-DIF": {
+   "n_sets": 16,
+   "mean_a": 66.43,
+   "mean_b": 79.64,
+   "diff": -13.21,
+   "wins": 0,
+   "losses": 16,
+   "wilcoxon_p": 3.0517578125e-05,
+   "ttest_p": 4.7609985655484394e-05
+  },
+  "iforest vs paper:iForest": {
+   "n_sets": 20,
+   "mean_a": 69.11,
+   "mean_b": 68.7,
+   "diff": 0.42,
+   "wins": 9,
+   "losses": 2,
+   "wilcoxon_p": 0.058258056640625,
+   "ttest_p": 0.05054860688222625
+  },
+  "ecod vs paper:ECOD": {
+   "n_sets": 20,
+   "mean_a": 67.13,
+   "mean_b": 65.47,
+   "diff": 1.66,
+   "wins": 1,
+   "losses": 2,
+   "wilcoxon_p": 0.7011814117431641,
+   "ttest_p": 0.3512771436438462
+  },
+  "dif vs paper:DIF": {
+   "n_sets": 15,
+   "mean_a": 60.57,
+   "mean_b": 69.09,
+   "diff": -8.52,
+   "wins": 3,
+   "losses": 10,
+   "wilcoxon_p": 0.00836181640625,
+   "ttest_p": 0.005862730886575402
+  }
+ },
+ "auc_pr": {
+  "scknn_F0.1 vs iforest": {
+   "n_sets": 18,
+   "mean_a": 30.02,
+   "mean_b": 24.42,
+   "diff": 5.59,
+   "wins": 10,
+   "losses": 6,
+   "wilcoxon_p": 0.2121429443359375,
+   "ttest_p": 0.15307994403132458
+  },
+  "scknn_F0.1 vs knn": {
+   "n_sets": 18,
+   "mean_a": 30.02,
+   "mean_b": 26.1,
+   "diff": 3.92,
+   "wins": 11,
+   "losses": 6,
+   "wilcoxon_p": 0.19638824462890625,
+   "ttest_p": 0.15597854441567588
+  },
+  "scknn_F0.1 vs paper:HF-DIF": {
+   "n_sets": 18,
+   "mean_a": 30.02,
+   "mean_b": 33.74,
+   "diff": -3.72,
+   "wins": 5,
+   "losses": 12,
+   "wilcoxon_p": 0.2121429443359375,
+   "ttest_p": 0.37987240140603934
+  },
+  "fuse_F0.1_w0.5 vs iforest": {
+   "n_sets": 16,
+   "mean_a": 27.14,
+   "mean_b": 26.11,
+   "diff": 1.03,
+   "wins": 8,
+   "losses": 5,
+   "wilcoxon_p": 0.231201171875,
+   "ttest_p": 0.1542560576775686
+  },
+  "fuse_F0.1_w0.5 vs paper:HF-DIF": {
+   "n_sets": 16,
+   "mean_a": 27.14,
+   "mean_b": 35.55,
+   "diff": -8.41,
+   "wins": 0,
+   "losses": 16,
+   "wilcoxon_p": 3.0517578125e-05,
+   "ttest_p": 5.5200789156587056e-05
+  },
+  "iforest vs paper:iForest": {
+   "n_sets": 20,
+   "mean_a": 25.11,
+   "mean_b": 25.07,
+   "diff": 0.03,
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.7841262817382812,
+   "ttest_p": 0.9123643446882348
+  },
+  "ecod vs paper:ECOD": {
+   "n_sets": 20,
+   "mean_a": 28.82,
+   "mean_b": 28.88,
+   "diff": -0.06,
+   "wins": 1,
+   "losses": 2,
+   "wilcoxon_p": 0.34881019592285156,
+   "ttest_p": 0.9157893768969628
+  },
+  "dif vs paper:DIF": {
+   "n_sets": 15,
+   "mean_a": 27.83,
+   "mean_b": 29.37,
+   "diff": -1.54,
+   "wins": 5,
+   "losses": 9,
+   "wilcoxon_p": 0.25238037109375,
+   "ttest_p": 0.7253129018314629
+  }
+ }
+}

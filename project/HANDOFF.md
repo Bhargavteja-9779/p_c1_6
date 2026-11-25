@@ -1,3 +1,13 @@
+# HANDOFF — read this first (updated 2026-11-25, branch claude/cool-sagan-72nsby)
+
+## Where we are (this line)
+- Topic 2 (tabular AD vs HF-DIF, JKSU-CIS). Protocol `transd` (D34) reproduces HF-DIF's baselines; DEV = 27 non-HF-DIF ADBench sets,
+  EVAL = HF-DIF's 20 (D35). Rounds 1–3 on DEV (journals 20–26) → frozen kNN k=10 % n (plan_v4, D36) → EVAL: P1/P2 FAIL, P3 holds (journal 27, D37).
+- **FINAL_REPORT.md** = honest status requested by the user: no submission-ready paper; recommended next steps in its §6.
+- Parallel lines exist (claude/admiring-archimedes-xzq77t is furthest on another protocol, cycle 5 "representation angle").
+  They were NOT merged here because decision/journal numbers collide (both use D34–D39); merge by hand if continuing.
+- **NEXT ACTION:** (1) finish Backdoor/Fraud for scknn_F0.1/fuse and rerun `python3 scripts/t2_eval_report.py`; (2) §6A of FINAL_REPORT on DEV.
+
 # HANDOFF — read this first (updated 2026-11-24, session 2)
 
 ## Where we are
