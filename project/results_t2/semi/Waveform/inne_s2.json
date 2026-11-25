@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "inne", "seed": 2, "protocol": "semi", "n_train": 1671, "n_test": 1772, "anom_test": 100, "auc_roc": 0.7578110047846891, "auc_pr": 0.28055600705270667, "p_at_k": 0.31, "fit_s": 0.17476868629455566, "pred_s": 0.085662841796875, "max_n": 10000}

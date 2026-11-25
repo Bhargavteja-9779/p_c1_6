@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "loco_c", "seed": 0, "protocol": "semi", "n_train": 4690, "n_test": 5310, "anom_test": 620, "auc_roc": 0.6433955223880599, "auc_pr": 0.14616432544569097, "p_at_k": 0.11290322580645161, "fit_s": 0.22441601753234863, "pred_s": 0.6894540786743164, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "SpamBase", "method": "subknn16", "seed": 1, "protocol": "semi", "n_train": 1264, "n_test": 2943, "anom_test": 1679, "auc_roc": 0.7513047436313056, "auc_pr": 0.7760006781955826, "p_at_k": 0.7266229898749256, "fit_s": 7.152557373046875e-07, "pred_s": 0.04403042793273926, "max_n": 10000}

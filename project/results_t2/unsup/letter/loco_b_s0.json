@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "loco_b", "seed": 0, "protocol": "unsup", "n_train": 1120, "n_test": 480, "anom_test": 30, "auc_roc": 0.8831111111111111, "auc_pr": 0.41140740430217654, "p_at_k": 0.43333333333333335, "fit_s": 0.01540374755859375, "pred_s": 0.00956106185913086, "max_n": 10000}

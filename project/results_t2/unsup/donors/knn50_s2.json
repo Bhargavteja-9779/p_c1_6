@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "knn50", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 178, "auc_roc": 0.7663880903654274, "auc_pr": 0.12032318305025823, "p_at_k": 0.016853932584269662, "fit_s": 0.1991713047027588, "pred_s": 0.08167362213134766, "max_n": 10000}

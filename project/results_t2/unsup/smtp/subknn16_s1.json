@@ -1,0 +1,1 @@
+{"dataset": "smtp", "method": "subknn16", "seed": 1, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 1, "auc_roc": 1.0, "auc_pr": 1.0, "p_at_k": 1.0, "fit_s": 7.152557373046875e-07, "pred_s": 0.05286145210266113, "max_n": 10000}

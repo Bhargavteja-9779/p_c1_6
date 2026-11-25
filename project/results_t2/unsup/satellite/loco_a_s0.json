@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "loco_a", "seed": 0, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 611, "auc_roc": 0.6577964588602886, "auc_pr": 0.48953820113210117, "p_at_k": 0.46808510638297873, "fit_s": 0.03373861312866211, "pred_s": 0.1299431324005127, "max_n": 10000}

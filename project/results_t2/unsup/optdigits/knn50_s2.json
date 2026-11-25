@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "knn50", "seed": 2, "protocol": "unsup", "n_train": 3651, "n_test": 1565, "anom_test": 45, "auc_roc": 0.4421929824561404, "auc_pr": 0.026830000977167447, "p_at_k": 0.044444444444444446, "fit_s": 0.06725311279296875, "pred_s": 0.036458492279052734, "max_n": 10000}

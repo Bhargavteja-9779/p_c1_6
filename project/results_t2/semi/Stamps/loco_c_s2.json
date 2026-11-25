@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "loco_c", "seed": 2, "protocol": "semi", "n_train": 154, "n_test": 186, "anom_test": 31, "auc_roc": 0.9290322580645162, "auc_pr": 0.5872849706865612, "p_at_k": 0.6451612903225806, "fit_s": 0.0015332698822021484, "pred_s": 0.002020597457885742, "max_n": 10000}

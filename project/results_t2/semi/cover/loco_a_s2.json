@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "loco_a", "seed": 2, "protocol": "semi", "n_train": 4952, "n_test": 5048, "anom_test": 96, "auc_roc": 0.9698838011577814, "auc_pr": 0.4508517855232398, "p_at_k": 0.5, "fit_s": 0.06856346130371094, "pred_s": 0.272597074508667, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "landsat", "method": "knn50", "seed": 0, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 400, "auc_roc": 0.6172893533638145, "auc_pr": 0.2624343945122847, "p_at_k": 0.315, "fit_s": 0.04394125938415527, "pred_s": 0.02904200553894043, "max_n": 10000}

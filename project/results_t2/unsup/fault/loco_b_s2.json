@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "loco_b", "seed": 2, "protocol": "unsup", "n_train": 1359, "n_test": 582, "anom_test": 202, "auc_roc": 0.6839630015633142, "auc_pr": 0.47767140448932544, "p_at_k": 0.48514851485148514, "fit_s": 0.12718749046325684, "pred_s": 0.019855737686157227, "max_n": 10000}

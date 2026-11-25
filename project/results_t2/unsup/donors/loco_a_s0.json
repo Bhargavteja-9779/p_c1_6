@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "loco_a", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 178, "auc_roc": 0.8428459376169584, "auc_pr": 0.16673494745548123, "p_at_k": 0.09550561797752809, "fit_s": 0.11148858070373535, "pred_s": 0.44977855682373047, "max_n": 10000}

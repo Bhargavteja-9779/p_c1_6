@@ -1,0 +1,1 @@
+{"dataset": "cardio", "method": "inne", "seed": 0, "protocol": "semi", "n_train": 827, "n_test": 1004, "anom_test": 176, "auc_roc": 0.9718825483091788, "auc_pr": 0.8744509501227166, "p_at_k": 0.7727272727272727, "fit_s": 0.1703174114227295, "pred_s": 0.0533757209777832, "max_n": 10000}

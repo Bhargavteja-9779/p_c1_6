@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "loco_b", "seed": 1, "protocol": "unsup", "n_train": 3651, "n_test": 1565, "anom_test": 45, "auc_roc": 0.9914912280701754, "auc_pr": 0.6339176745758837, "p_at_k": 0.6666666666666666, "fit_s": 0.14866924285888672, "pred_s": 0.06663131713867188, "max_n": 10000}

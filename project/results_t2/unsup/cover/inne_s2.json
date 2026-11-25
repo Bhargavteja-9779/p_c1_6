@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "inne", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 29, "auc_roc": 0.9684652793091841, "auc_pr": 0.17251635203016394, "p_at_k": 0.2413793103448276, "fit_s": 0.05156993865966797, "pred_s": 0.08124470710754395, "max_n": 10000}

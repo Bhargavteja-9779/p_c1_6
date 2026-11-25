@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "loco_c", "seed": 2, "protocol": "semi", "n_train": 634, "n_test": 1307, "anom_test": 673, "auc_roc": 0.7229857364500963, "auc_pr": 0.7304980173961003, "p_at_k": 0.6523031203566122, "fit_s": 0.1019139289855957, "pred_s": 0.053713321685791016, "max_n": 10000}

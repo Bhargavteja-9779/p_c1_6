@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "loco_c", "seed": 0, "protocol": "semi", "n_train": 2533, "n_test": 2683, "anom_test": 150, "auc_roc": 0.9910672456902224, "auc_pr": 0.7801927867701232, "p_at_k": 0.7933333333333333, "fit_s": 0.10860896110534668, "pred_s": 0.11533904075622559, "max_n": 10000}

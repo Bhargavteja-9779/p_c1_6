@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "loco_b", "seed": 2, "protocol": "semi", "n_train": 59, "n_test": 70, "anom_test": 10, "auc_roc": 0.9550000000000001, "auc_pr": 0.716060606060606, "p_at_k": 0.7, "fit_s": 0.0012345314025878906, "pred_s": 0.0005779266357421875, "max_n": 10000}

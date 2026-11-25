@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "loco_b", "seed": 0, "protocol": "semi", "n_train": 2281, "n_test": 2538, "anom_test": 257, "auc_roc": 0.6294836212528808, "auc_pr": 0.12175097861137125, "p_at_k": 0.019455252918287938, "fit_s": 0.02458810806274414, "pred_s": 0.08016037940979004, "max_n": 10000}

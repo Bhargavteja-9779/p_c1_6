@@ -1,0 +1,1 @@
+{"dataset": "landsat", "method": "loco_b", "seed": 0, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 400, "auc_roc": 0.5939255388634879, "auc_pr": 0.26399566817694026, "p_at_k": 0.3075, "fit_s": 0.09743213653564453, "pred_s": 0.09746098518371582, "max_n": 10000}

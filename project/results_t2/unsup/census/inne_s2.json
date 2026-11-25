@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "inne", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 186, "auc_roc": 0.43866592536549204, "auc_pr": 0.058437559765496874, "p_at_k": 0.08064516129032258, "fit_s": 0.05937695503234863, "pred_s": 0.32727909088134766, "max_n": 10000}

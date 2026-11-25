@@ -1,0 +1,1 @@
+{"dataset": "landsat", "method": "inne", "seed": 1, "protocol": "semi", "n_train": 2551, "n_test": 3884, "anom_test": 1333, "auc_roc": 0.7246302951668925, "auc_pr": 0.6046416206651337, "p_at_k": 0.5483870967741935, "fit_s": 0.1686851978302002, "pred_s": 0.12523221969604492, "max_n": 10000}

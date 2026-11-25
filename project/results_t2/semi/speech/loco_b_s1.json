@@ -1,0 +1,1 @@
+{"dataset": "speech", "method": "loco_b", "seed": 1, "protocol": "semi", "n_train": 1812, "n_test": 1874, "anom_test": 61, "auc_roc": 0.4717839284584015, "auc_pr": 0.03500000408353626, "p_at_k": 0.04918032786885246, "fit_s": 0.06095004081726074, "pred_s": 0.09985160827636719, "max_n": 10000}

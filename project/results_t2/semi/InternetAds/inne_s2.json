@@ -1,0 +1,1 @@
+{"dataset": "InternetAds", "method": "inne", "seed": 2, "protocol": "semi", "n_train": 799, "n_test": 1167, "anom_test": 368, "auc_roc": 0.8143552402459597, "auc_pr": 0.7749204979053225, "p_at_k": 0.7228260869565217, "fit_s": 0.13688087463378906, "pred_s": 0.2913858890533447, "max_n": 10000}

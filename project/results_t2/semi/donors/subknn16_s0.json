@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "subknn16", "seed": 0, "protocol": "semi", "n_train": 4703, "n_test": 5297, "anom_test": 593, "auc_roc": 0.9586427108786179, "auc_pr": 0.5766202418929688, "p_at_k": 0.5615514333895447, "fit_s": 2.86102294921875e-06, "pred_s": 0.09681892395019531, "max_n": 10000}

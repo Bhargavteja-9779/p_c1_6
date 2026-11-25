@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "inne", "seed": 2, "protocol": "semi", "n_train": 4952, "n_test": 5048, "anom_test": 96, "auc_roc": 0.988091932552504, "auc_pr": 0.7112479068594026, "p_at_k": 0.6666666666666666, "fit_s": 0.06301212310791016, "pred_s": 0.15036869049072266, "max_n": 10000}

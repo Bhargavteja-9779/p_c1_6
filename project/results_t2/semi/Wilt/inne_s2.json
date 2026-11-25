@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "inne", "seed": 2, "protocol": "semi", "n_train": 2281, "n_test": 2538, "anom_test": 257, "auc_roc": 0.4091727124938376, "auc_pr": 0.07838851629170099, "p_at_k": 0.011673151750972763, "fit_s": 0.0568697452545166, "pred_s": 0.06780123710632324, "max_n": 10000}

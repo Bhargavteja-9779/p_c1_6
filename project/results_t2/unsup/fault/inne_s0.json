@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "inne", "seed": 0, "protocol": "unsup", "n_train": 1359, "n_test": 582, "anom_test": 202, "auc_roc": 0.6389134966128192, "auc_pr": 0.5249691374145568, "p_at_k": 0.49504950495049505, "fit_s": 0.17077159881591797, "pred_s": 0.029656171798706055, "max_n": 10000}

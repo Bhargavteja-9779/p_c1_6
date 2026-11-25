@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "inne", "seed": 0, "protocol": "semi", "n_train": 4703, "n_test": 5297, "anom_test": 593, "auc_roc": 0.884343703754689, "auc_pr": 0.47012251181383635, "p_at_k": 0.5632377740303541, "fit_s": 0.059453487396240234, "pred_s": 0.1370227336883545, "max_n": 10000}

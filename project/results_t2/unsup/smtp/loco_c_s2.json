@@ -1,0 +1,1 @@
+{"dataset": "smtp", "method": "loco_c", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 1, "auc_roc": 0.7105701900633544, "auc_pr": 0.0011507479861910242, "p_at_k": 0.0, "fit_s": 0.023197174072265625, "pred_s": 0.3882932662963867, "max_n": 10000}

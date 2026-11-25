@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "inne", "seed": 2, "protocol": "semi", "n_train": 154, "n_test": 186, "anom_test": 31, "auc_roc": 0.9238293444328824, "auc_pr": 0.5878294998052029, "p_at_k": 0.6129032258064516, "fit_s": 0.052481651306152344, "pred_s": 0.023998498916625977, "max_n": 10000}

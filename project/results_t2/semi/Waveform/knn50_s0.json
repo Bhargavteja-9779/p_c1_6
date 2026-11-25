@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "knn50", "seed": 0, "protocol": "semi", "n_train": 1671, "n_test": 1772, "anom_test": 100, "auc_roc": 0.7913098086124402, "auc_pr": 0.2921993780021455, "p_at_k": 0.32, "fit_s": 0.018138408660888672, "pred_s": 0.009608745574951172, "max_n": 10000}
