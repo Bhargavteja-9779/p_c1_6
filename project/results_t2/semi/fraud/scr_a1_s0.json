@@ -1,0 +1,1 @@
+{"dataset": "fraud", "method": "scr_a1", "seed": 0, "protocol": "semi", "n_train": 4991, "n_test": 5009, "anom_test": 17, "auc_roc": 0.9303238122171946, "auc_pr": 0.47373532102856764, "p_at_k": 0.47058823529411764, "fit_s": 0.12198162078857422, "pred_s": 0.12769126892089844, "max_n": 10000}

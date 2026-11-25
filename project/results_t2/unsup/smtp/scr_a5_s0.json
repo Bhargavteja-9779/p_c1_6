@@ -1,0 +1,1 @@
+{"dataset": "smtp", "method": "scr_a5", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 1, "auc_roc": 0.703567855951984, "auc_pr": 0.0011235955056179776, "p_at_k": 0.0, "fit_s": 0.28564929962158203, "pred_s": 0.008707284927368164, "max_n": 10000}

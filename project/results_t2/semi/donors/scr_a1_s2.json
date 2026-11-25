@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "scr_a1", "seed": 2, "protocol": "semi", "n_train": 4703, "n_test": 5297, "anom_test": 593, "auc_roc": 0.9752454944878457, "auc_pr": 0.6796852643825546, "p_at_k": 0.7554806070826307, "fit_s": 0.12876033782958984, "pred_s": 0.13799691200256348, "max_n": 10000}

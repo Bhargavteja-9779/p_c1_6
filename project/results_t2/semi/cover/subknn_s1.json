@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "subknn", "seed": 1, "protocol": "semi", "n_train": 4952, "n_test": 5048, "anom_test": 96, "auc_roc": 0.9428029920570813, "auc_pr": 0.22898273986847636, "p_at_k": 0.2604166666666667, "fit_s": 9.5367431640625e-07, "pred_s": 0.7763075828552246, "max_n": 10000}

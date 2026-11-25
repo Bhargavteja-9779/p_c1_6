@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "scr_a1", "seed": 1, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 29, "auc_roc": 0.8851541916688912, "auc_pr": 0.10507529172538756, "p_at_k": 0.10344827586206896, "fit_s": 0.13660025596618652, "pred_s": 0.03729748725891113, "max_n": 10000}

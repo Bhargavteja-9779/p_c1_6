@@ -1,0 +1,1 @@
+{"dataset": "backdoor", "method": "scr_a3", "seed": 1, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 73, "auc_roc": 0.7510612109270794, "auc_pr": 0.17256332317074863, "p_at_k": 0.3287671232876712, "fit_s": 3.9298603534698486, "pred_s": 0.4488701820373535, "max_n": 10000}
