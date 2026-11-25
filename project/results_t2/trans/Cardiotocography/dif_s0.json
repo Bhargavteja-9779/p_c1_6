@@ -1,0 +1,1 @@
+{"dataset": "Cardiotocography", "method": "dif", "seed": 0, "protocol": "trans", "n_train": 2114, "n_test": 2114, "anom_test": 466, "auc_roc": 0.6232460206675279, "auc_pr": 0.4137237492789463, "p_at_k": 0.388412017167382, "fit_s": 3.718528985977173, "pred_s": 2.8369674682617188, "max_n": 10000}
