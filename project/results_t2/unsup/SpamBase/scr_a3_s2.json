@@ -1,0 +1,1 @@
+{"dataset": "SpamBase", "method": "scr_a3", "seed": 2, "protocol": "unsup", "n_train": 2945, "n_test": 1262, "anom_test": 504, "auc_roc": 0.5001361142522092, "auc_pr": 0.38752101637153735, "p_at_k": 0.39087301587301587, "fit_s": 3.4251506328582764, "pred_s": 0.24363160133361816, "max_n": 10000}
