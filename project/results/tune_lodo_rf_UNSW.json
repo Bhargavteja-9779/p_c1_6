@@ -1,0 +1,104 @@
+{
+ "best_cfg": {
+  "n_estimators": 200,
+  "max_depth": 20,
+  "min_samples_leaf": 1,
+  "max_features": "sqrt"
+ },
+ "trials": [
+  {
+   "cfg": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "min_samples_leaf": 10,
+    "max_features": "sqrt"
+   },
+   "src_val_macro_f1": 0.975999950693232,
+   "fit_s": 7.299936532974243
+  },
+  {
+   "cfg": {
+    "n_estimators": 100,
+    "max_depth": 30,
+    "min_samples_leaf": 5,
+    "max_features": 0.5
+   },
+   "src_val_macro_f1": 0.9775162794407893,
+   "fit_s": 8.642691612243652
+  },
+  {
+   "cfg": {
+    "n_estimators": 300,
+    "max_depth": 12,
+    "min_samples_leaf": 10,
+    "max_features": "sqrt"
+   },
+   "src_val_macro_f1": 0.9745992864939577,
+   "fit_s": 6.541919946670532
+  },
+  {
+   "cfg": {
+    "n_estimators": 200,
+    "max_depth": 20,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+   },
+   "src_val_macro_f1": 0.9778162006528262,
+   "fit_s": 5.325486183166504
+  },
+  {
+   "cfg": {
+    "n_estimators": 100,
+    "max_depth": 20,
+    "min_samples_leaf": 5,
+    "max_features": 0.5
+   },
+   "src_val_macro_f1": 0.9774993679572459,
+   "fit_s": 8.769850492477417
+  },
+  {
+   "cfg": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "min_samples_leaf": 10,
+    "max_features": 0.5
+   },
+   "src_val_macro_f1": 0.9769326853724654,
+   "fit_s": 25.287124395370483
+  },
+  {
+   "cfg": {
+    "n_estimators": 300,
+    "max_depth": 20,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+   },
+   "src_val_macro_f1": 0.9777662164325494,
+   "fit_s": 7.813819408416748
+  },
+  {
+   "cfg": {
+    "n_estimators": 100,
+    "max_depth": 12,
+    "min_samples_leaf": 1,
+    "max_features": 0.5
+   },
+   "src_val_macro_f1": 0.9763163095100353,
+   "fit_s": 7.350432395935059
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "rf",
+  "target": "UNSW",
+  "eval_split": "val",
+  "job_id": "tune_lodo_rf_UNSW"
+ },
+ "wall_s": 93.02673816680908,
+ "finished": "2026-11-24T20:38:55"
+}

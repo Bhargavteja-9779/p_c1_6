@@ -1,0 +1,113 @@
+{
+ "best_cfg": {
+  "hidden": 512,
+  "depth": 2,
+  "dropout": 0.3,
+  "lr": 0.003,
+  "epochs": 15
+ },
+ "trials": [
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9654665420008832,
+   "fit_s": 16.372740268707275
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9691664687839152,
+   "fit_s": 24.943690538406372
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.970699908551159,
+   "fit_s": 11.996425151824951
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "epochs": 15
+   },
+   "src_val_macro_f1": 0.9694830912240467,
+   "fit_s": 7.645497798919678
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 15
+   },
+   "src_val_macro_f1": 0.971733330789333,
+   "fit_s": 27.914544582366943
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.0,
+    "lr": 0.0003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9667333303393331,
+   "fit_s": 4.87150764465332
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 3,
+    "dropout": 0.1,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9706499354217051,
+   "fit_s": 4.454235076904297
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9691664249314381,
+   "fit_s": 4.093820810317993
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "mlp",
+  "target": "UNSW",
+  "eval_split": "val",
+  "job_id": "tune_lodo_mlp_UNSW"
+ },
+ "wall_s": 121.6489269733429,
+ "finished": "2026-11-24T20:32:37"
+}

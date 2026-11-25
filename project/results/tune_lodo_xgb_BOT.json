@@ -1,0 +1,122 @@
+{
+ "best_cfg": {
+  "n_estimators": 800,
+  "learning_rate": 0.03,
+  "max_depth": 10,
+  "subsample": 0.7,
+  "colsample_bytree": 0.5,
+  "reg_lambda": 10.0
+ },
+ "trials": [
+  {
+   "cfg": {
+    "n_estimators": 800,
+    "learning_rate": 0.03,
+    "max_depth": 10,
+    "subsample": 0.7,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9669452545572719,
+   "fit_s": 6.654896020889282
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.3,
+    "max_depth": 10,
+    "subsample": 0.9,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.1
+   },
+   "src_val_macro_f1": 0.9647140826712184,
+   "fit_s": 3.876187801361084
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.1,
+    "max_depth": 4,
+    "subsample": 0.7,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9660632435701815,
+   "fit_s": 1.5362229347229004
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.3,
+    "max_depth": 8,
+    "subsample": 0.7,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 10.0
+   },
+   "src_val_macro_f1": 0.9660135315811247,
+   "fit_s": 3.801609754562378
+  },
+  {
+   "cfg": {
+    "n_estimators": 800,
+    "learning_rate": 0.3,
+    "max_depth": 4,
+    "subsample": 0.7,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 1.0
+   },
+   "src_val_macro_f1": 0.96620546182384,
+   "fit_s": 3.1364078521728516
+  },
+  {
+   "cfg": {
+    "n_estimators": 200,
+    "learning_rate": 0.3,
+    "max_depth": 6,
+    "subsample": 1.0,
+    "colsample_bytree": 0.5,
+    "reg_lambda": 0.1
+   },
+   "src_val_macro_f1": 0.9666063246891377,
+   "fit_s": 0.8810775279998779
+  },
+  {
+   "cfg": {
+    "n_estimators": 200,
+    "learning_rate": 0.3,
+    "max_depth": 10,
+    "subsample": 0.7,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.1
+   },
+   "src_val_macro_f1": 0.9652756710290938,
+   "fit_s": 2.1209096908569336
+  },
+  {
+   "cfg": {
+    "n_estimators": 400,
+    "learning_rate": 0.03,
+    "max_depth": 8,
+    "subsample": 0.9,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0
+   },
+   "src_val_macro_f1": 0.9668244058340248,
+   "fit_s": 2.621563196182251
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "xgb",
+  "target": "BOT",
+  "eval_split": "val",
+  "job_id": "tune_lodo_xgb_BOT"
+ },
+ "wall_s": 46.56743001937866,
+ "finished": "2026-11-24T20:39:43"
+}

@@ -1,0 +1,113 @@
+{
+ "best_cfg": {
+  "hidden": 128,
+  "depth": 3,
+  "dropout": 0.1,
+  "lr": 0.003,
+  "epochs": 8
+ },
+ "trials": [
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.0003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9950941999033598,
+   "fit_s": 17.157336235046387
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 3,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9956884249306592,
+   "fit_s": 25.380290031433105
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9956360900131773,
+   "fit_s": 12.005382061004639
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "epochs": 15
+   },
+   "src_val_macro_f1": 0.9956183415785103,
+   "fit_s": 7.8409717082977295
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 15
+   },
+   "src_val_macro_f1": 0.9956883609169876,
+   "fit_s": 29.776265621185303
+  },
+  {
+   "cfg": {
+    "hidden": 512,
+    "depth": 2,
+    "dropout": 0.0,
+    "lr": 0.0003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9954260788207613,
+   "fit_s": 5.570852279663086
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 3,
+    "dropout": 0.1,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9957233364696823,
+   "fit_s": 4.971158504486084
+  },
+  {
+   "cfg": {
+    "hidden": 128,
+    "depth": 2,
+    "dropout": 0.3,
+    "lr": 0.003,
+    "epochs": 8
+   },
+   "src_val_macro_f1": 0.9955832967182181,
+   "fit_s": 4.117035627365112
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "mlp",
+  "target": "TON",
+  "eval_split": "val",
+  "job_id": "tune_lodo_mlp_TON"
+ },
+ "wall_s": 126.96514058113098,
+ "finished": "2026-11-24T20:30:34"
+}

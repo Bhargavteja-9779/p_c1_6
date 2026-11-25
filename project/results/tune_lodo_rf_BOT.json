@@ -1,0 +1,104 @@
+{
+ "best_cfg": {
+  "n_estimators": 100,
+  "max_depth": 20,
+  "min_samples_leaf": 5,
+  "max_features": 0.5
+ },
+ "trials": [
+  {
+   "cfg": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "min_samples_leaf": 10,
+    "max_features": "sqrt"
+   },
+   "src_val_macro_f1": 0.9655159189647012,
+   "fit_s": 7.799117088317871
+  },
+  {
+   "cfg": {
+    "n_estimators": 100,
+    "max_depth": 30,
+    "min_samples_leaf": 5,
+    "max_features": 0.5
+   },
+   "src_val_macro_f1": 0.9666620367577472,
+   "fit_s": 10.199873924255371
+  },
+  {
+   "cfg": {
+    "n_estimators": 300,
+    "max_depth": 12,
+    "min_samples_leaf": 10,
+    "max_features": "sqrt"
+   },
+   "src_val_macro_f1": 0.9645630183377529,
+   "fit_s": 7.038910627365112
+  },
+  {
+   "cfg": {
+    "n_estimators": 200,
+    "max_depth": 20,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+   },
+   "src_val_macro_f1": 0.9664995612171678,
+   "fit_s": 5.516283988952637
+  },
+  {
+   "cfg": {
+    "n_estimators": 100,
+    "max_depth": 20,
+    "min_samples_leaf": 5,
+    "max_features": 0.5
+   },
+   "src_val_macro_f1": 0.9668244058340248,
+   "fit_s": 9.775583028793335
+  },
+  {
+   "cfg": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "min_samples_leaf": 10,
+    "max_features": 0.5
+   },
+   "src_val_macro_f1": 0.9664427638304721,
+   "fit_s": 28.079540491104126
+  },
+  {
+   "cfg": {
+    "n_estimators": 300,
+    "max_depth": 20,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+   },
+   "src_val_macro_f1": 0.966581324985016,
+   "fit_s": 8.160271167755127
+  },
+  {
+   "cfg": {
+    "n_estimators": 100,
+    "max_depth": 12,
+    "min_samples_leaf": 1,
+    "max_features": 0.5
+   },
+   "src_val_macro_f1": 0.9668244058340248,
+   "fit_s": 8.487625360488892
+  }
+ ],
+ "spec": {
+  "kind": "tune",
+  "exp": "E1a",
+  "protocol": "lodo",
+  "priority": 1,
+  "n_per_source": 50000,
+  "n_val_per_source": 20000,
+  "method": "rf",
+  "target": "BOT",
+  "eval_split": "val",
+  "job_id": "tune_lodo_rf_BOT"
+ },
+ "wall_s": 101.3239803314209,
+ "finished": "2026-11-24T20:34:20"
+}
