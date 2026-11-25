@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "fuse_F0.05_w0.5", "seed": 0, "protocol": "transd", "n_train": 1600, "n_test": 1600, "anom_test": 100, "auc_roc": 0.7349866666666667, "auc_pr": 0.12907975107990108, "p_at_k": 0.15, "fit_s": 0.7751398086547852, "pred_s": 0.0, "max_n": 20000}

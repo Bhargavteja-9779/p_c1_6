@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "fuse_F0.1_w0.3", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1241, "auc_roc": 0.6551082931173429, "auc_pr": 0.08328256338118906, "p_at_k": 0.06607574536663981, "fit_s": 39.019320487976074, "pred_s": 2.384185791015625e-07, "max_n": 20000}

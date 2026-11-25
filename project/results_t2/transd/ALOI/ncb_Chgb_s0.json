@@ -1,0 +1,1 @@
+{"dataset": "ALOI", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 609, "auc_roc": 0.5093930800426348, "auc_pr": 0.032006440758803906, "p_at_k": 0.042692939244663386, "fit_s": 851.8658092021942, "pred_s": 4.291534423828125e-06, "max_n": 20000}

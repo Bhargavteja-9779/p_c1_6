@@ -1,0 +1,1 @@
+{"dataset": "campaign", "method": "mrk_F0.1_V8_Rs", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 2253, "auc_roc": 0.7552005751501896, "auc_pr": 0.3033431441016269, "p_at_k": 0.3550821127385708, "fit_s": 185.53270530700684, "pred_s": 4.76837158203125e-07, "max_n": 20000}

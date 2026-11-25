@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "fuse_F0.1_w0.3", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 192, "auc_roc": 0.915006720769386, "auc_pr": 0.059290910039214786, "p_at_k": 0.06770833333333333, "fit_s": 13.187365770339966, "pred_s": 4.76837158203125e-07, "max_n": 20000}

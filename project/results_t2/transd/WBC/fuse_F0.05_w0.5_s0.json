@@ -1,0 +1,1 @@
+{"dataset": "WBC", "method": "fuse_F0.05_w0.5", "seed": 0, "protocol": "transd", "n_train": 223, "n_test": 223, "anom_test": 10, "auc_roc": 0.9938967136150234, "auc_pr": 0.9434782608695652, "p_at_k": 0.9, "fit_s": 0.12270665168762207, "pred_s": 0.0, "max_n": 20000}

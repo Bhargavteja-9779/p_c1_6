@@ -1,0 +1,1 @@
+{"dataset": "skin", "method": "fuse_F0.1_w0.3", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 4151, "auc_roc": 0.7580083624365149, "auc_pr": 0.3174419418780393, "p_at_k": 0.31871838111298484, "fit_s": 5.783520936965942, "pred_s": 9.5367431640625e-07, "max_n": 20000}
