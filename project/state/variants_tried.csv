@@ -24,3 +24,4 @@ V21,2026-11-25,4,T2,H7a LOCO-kNN k_m=5 cap=0.05,DEV val (seeds 0-2),H7a contam 7
 V22,2026-11-25,4,T2,H7b LOCO-kNN k_m=10 cap=0.05,DEV val (seeds 0-2),H7b contam 75.83 clean 85.33 (bar not met),results_t2/
 V23,2026-11-25,4,T2,H7c LOCO-kNN k_m=5 cap=0.10,DEV val (seeds 0-2),H7c contam 74.73 clean 84.47 (bar not met),results_t2/
 V24,2026-11-25,4,T2,baselines iNNE psi16 / subknn16 / kNN50 (H7 pre-registration),DEV val (seeds 0-2),contam iNNE 67.26 subknn16 74.17 kNN50 74.53; clean 81.14/82.92/82.16,results_t2/
+V25,2026-11-25,5,T2,representation diagnostic: kNN5/kNN50 in raw/rank/PCA-white/feature-bagging/random-projection (10 variants),DEV val (seeds 0-2),best contam fbag kNN50 75.44; none near 83,results_t2/diag_repr.csv

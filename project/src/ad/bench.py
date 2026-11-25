@@ -40,6 +40,8 @@ def split(X, y, protocol, seed, max_n=None):
         for c in (0, 1):
             i = np.flatnonzero(y == c); rng.shuffle(i); k = int(round(0.7 * len(i))); tr.append(i[:k]); te.append(i[k:])
         tr, te = np.concatenate(tr), np.concatenate(te)
+    elif protocol == "trans":   # HF-DIF / DDAE style (D39): fit on ALL (contaminated) data, score the SAME data
+        tr = te = np.arange(len(y))
     else:
         raise ValueError(protocol)
     Xtr, Xte = X[tr].astype(np.float64), X[te].astype(np.float64)
