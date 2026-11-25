@@ -257,3 +257,136 @@ def make(method, seed, n_train):
     if name == "subknn":
         return SubKNN(seed=seed, **{k: v for k, v in kw.items() if k in ("m", "k", "B")})
     raise ValueError(f"unknown method {method}")
+
+
+# ---------------------------------------------------------------- round 2 (journal 23): bolder ideas, DEV only
+def _knn_scale(X, frac=0.1, cap=20000, seed=0):
+    n = len(X); rng = np.random.default_rng(seed)
+    ref = np.sort(rng.choice(n, cap, replace=False)) if n > cap else np.arange(n)
+    k = max(1, int(round(frac * len(ref))))
+    return knn_profile(X, ref, [k])[:, 0]
+
+
+def _views(X, n_views, seed, kinds="zrms"):
+    """Random representations: z (as is), r (rank/copula), m (random tanh MLP, d=40), s (random half feature subspace)."""
+    rng = np.random.default_rng(seed); n, d = X.shape; V = []
+    for v in range(n_views):
+        kd = kinds[v % len(kinds)]
+        if kd == "z": V.append(X)
+        elif kd == "r": V.append(np.column_stack([_rank01(X[:, j]) for j in range(d)]) * np.sqrt(12))
+        elif kd == "m":
+            W1 = rng.standard_normal((d, 128)) / np.sqrt(d); W2 = rng.standard_normal((128, 40)) / np.sqrt(128)
+            Z = np.tanh(X @ W1) @ W2; V.append((Z - Z.mean(0)) / (Z.std(0) + 1e-9))
+        elif kd == "s":
+            idx = rng.choice(d, max(1, d // 2), replace=False); V.append(X[:, idx])
+    return V
+
+
+class MRK:
+    def __init__(self, frac=0.1, n_views=8, kinds="zrms", seed=0):
+        self.frac, self.n_views, self.kinds, self.seed = frac, n_views, kinds, seed
+    def fit(self, X):
+        X = np.asarray(X, float)
+        self.s_ = np.mean([_rank01(_knn_scale(V, self.frac, seed=self.seed + i)) for i, V in enumerate(_views(X, self.n_views, self.seed, self.kinds))], 0)
+        return self
+    def decision_function(self, X): return self.s_
+
+
+class Fuse:
+    """Rank fusion of masking-safe kNN and isolation forest."""
+    def __init__(self, frac=0.1, w=0.5, seed=0):
+        self.frac, self.w, self.seed = frac, w, seed
+    def fit(self, X):
+        X = np.asarray(X, float)
+        a = _rank01(_knn_scale(X, self.frac, seed=self.seed))
+        b = _rank01(-IsolationForest(n_estimators=200, random_state=self.seed, n_jobs=1).fit(X).score_samples(X))
+        self.s_ = (1 - self.w) * a + self.w * b; return self
+    def decision_function(self, X): return self.s_
+
+
+class NCB:
+    """Noise-contrastive scoring: a classifier learns real vs. Gaussian-perturbed copies (several noise scales); the cross-fitted
+    probability that a REAL point is 'perturbed' is its anomaly score (off-manifold points look like noise)."""
+    def __init__(self, clf="hgb", sigmas=(0.1, 0.3, 1.0), folds=3, cap=20000, seed=0):
+        self.clf, self.sigmas, self.folds, self.cap, self.seed = clf, sigmas, folds, cap, seed
+    def _model(self):
+        if self.clf == "hgb":
+            from sklearn.ensemble import HistGradientBoostingClassifier
+            return HistGradientBoostingClassifier(max_iter=150, learning_rate=0.1, random_state=self.seed)
+        from sklearn.neural_network import MLPClassifier
+        return MLPClassifier(hidden_layer_sizes=(128, 128), max_iter=60, early_stopping=False, random_state=self.seed)
+    def fit(self, X):
+        X = np.asarray(X, float); n = len(X); rng = np.random.default_rng(self.seed)
+        fold = rng.integers(0, self.folds, n); s = np.zeros(n)
+        for f in range(self.folds):
+            tr = np.flatnonzero(fold != f)
+            if len(tr) > self.cap: tr = rng.choice(tr, self.cap, replace=False)
+            Xr = X[tr]; Xn = np.vstack([Xr + sg * rng.standard_normal(Xr.shape) for sg in self.sigmas])
+            m = self._model().fit(np.vstack([Xr, Xn]), np.r_[np.zeros(len(Xr)), np.ones(len(Xn))])
+            te = np.flatnonzero(fold == f); s[te] = m.predict_proba(X[te])[:, 1]
+        self.s_ = s; return self
+    def decision_function(self, X): return self.s_
+
+
+class PLST:
+    """Pseudo-label self-training: consensus score -> top q as pseudo-anomalies, bottom half as pseudo-normals ->
+    cross-fitted gradient boosting -> blend with the consensus; repeated `rounds` times."""
+    def __init__(self, q=0.05, rounds=2, blend=0.5, frac=0.1, seed=0):
+        self.q, self.rounds, self.blend, self.frac, self.seed = q, rounds, blend, frac, seed
+    def fit(self, X):
+        from sklearn.ensemble import HistGradientBoostingClassifier
+        X = np.asarray(X, float); n = len(X); rng = np.random.default_rng(self.seed)
+        s = 0.5 * _rank01(_knn_scale(X, self.frac, seed=self.seed)) + \
+            0.5 * _rank01(-IsolationForest(n_estimators=200, random_state=self.seed, n_jobs=1).fit(X).score_samples(X))
+        for r in range(self.rounds):
+            hi = s >= np.quantile(s, 1 - self.q); lo = s <= np.quantile(s, 0.5)
+            fold = rng.integers(0, 3, n); p = np.zeros(n)
+            for f in range(3):
+                tr = np.flatnonzero((fold != f) & (hi | lo))
+                m = HistGradientBoostingClassifier(max_iter=100, random_state=self.seed + r, class_weight="balanced").fit(X[tr], hi[tr].astype(int))
+                te = np.flatnonzero(fold == f); p[te] = m.predict_proba(X[te])[:, 1]
+            s = (1 - self.blend) * s + self.blend * _rank01(p)
+        self.s_ = s; return self
+    def decision_function(self, X): return self.s_
+
+
+class SelK:
+    """Label-free choice of the kNN scale per dataset from the distance profile over a geometric k grid (k <= kmax_frac * n).
+    rule 'stab': smallest k whose ranking agrees with the next scale (Spearman >= tau) -> end of the masking regime.
+    rule 'cent': the scale whose ranking has the highest mean Spearman correlation with all other scales."""
+    def __init__(self, rule="stab", tau=0.95, kmax_frac=0.2, cap=20000, seed=0):
+        self.rule, self.tau, self.kmax_frac, self.cap, self.seed = rule, tau, kmax_frac, cap, seed
+    def fit(self, X):
+        X = np.asarray(X, float); n = len(X); rng = np.random.default_rng(self.seed)
+        ref = np.sort(rng.choice(n, self.cap, replace=False)) if n > self.cap else np.arange(n)
+        kmax = max(2, int(self.kmax_frac * len(ref))); ks = sorted(set(int(2 ** e) for e in np.arange(0, np.log2(kmax) + 1)))
+        P = knn_profile(X, ref, ks); Rk = np.column_stack([_rank01(P[:, j]) for j in range(len(ks))])
+        C = np.corrcoef(Rk.T)
+        if self.rule == "stab":
+            j = next((j for j in range(len(ks) - 1) if C[j, j + 1] >= self.tau), len(ks) - 1)
+        else:
+            j = int(np.argmax(C.mean(1)))
+        self.k_ = ks[j]; self.s_ = Rk[:, j]; return self
+    def decision_function(self, X): return self.s_
+
+
+_make1 = make
+
+
+def make(method, seed, n_train):
+    p = method.split("_"); name = p[0]; kw = {}
+    for t in p[1:]:
+        key, val = t[0], t[1:]
+        kw[key] = val
+    if name == "mrk":
+        return MRK(frac=float(kw.get("F", 0.1)), n_views=int(kw.get("V", 8)), kinds=kw.get("R", "zrms"), seed=seed)
+    if name == "selk":
+        return SelK(rule=kw.get("U", "stab"), tau=float(kw.get("T", 0.95)), kmax_frac=float(kw.get("X", 0.2)), seed=seed)
+    if name == "fuse":
+        return Fuse(frac=float(kw.get("F", 0.1)), w=float(kw.get("w", 0.5)), seed=seed)
+    if name == "ncb":
+        sg = tuple(float(x) for x in kw.get("S", "0.1-0.3-1.0").split("-"))
+        return NCB(clf=kw.get("C", "hgb"), sigmas=sg, seed=seed)
+    if name == "plst":
+        return PLST(q=float(kw.get("q", 0.05)), rounds=int(kw.get("r", 2)), blend=float(kw.get("b", 0.5)), seed=seed)
+    return _make1(method, seed, n_train)
