@@ -1,0 +1,1 @@
+{"dataset": "InternetAds", "method": "copod", "seed": 0, "protocol": "semi", "n_train": 799, "n_test": 1167, "anom_test": 368, "auc_roc": 0.6791471676552212, "auc_pr": 0.6215378572405659, "p_at_k": 0.5108695652173914, "fit_s": 0.24043607711791992, "pred_s": 0.7587871551513672, "max_n": 10000}

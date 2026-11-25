@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "iforest", "seed": 0, "protocol": "unsup", "n_train": 1120, "n_test": 480, "anom_test": 30, "auc_roc": 0.6596296296296296, "auc_pr": 0.11780534822599842, "p_at_k": 0.13333333333333333, "fit_s": 0.11181211471557617, "pred_s": 0.007898807525634766, "max_n": 10000}

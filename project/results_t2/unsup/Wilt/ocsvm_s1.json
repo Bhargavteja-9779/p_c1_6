@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "ocsvm", "seed": 1, "protocol": "unsup", "n_train": 3373, "n_test": 1446, "anom_test": 77, "auc_roc": 0.4282299147164012, "auc_pr": 0.045714207597155616, "p_at_k": 0.025974025974025976, "fit_s": 0.3727426528930664, "pred_s": 0.10189294815063477, "max_n": 10000}

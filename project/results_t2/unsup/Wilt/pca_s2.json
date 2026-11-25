@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "pca", "seed": 2, "protocol": "unsup", "n_train": 3373, "n_test": 1446, "anom_test": 77, "auc_roc": 0.40490262111883735, "auc_pr": 0.04107807623949493, "p_at_k": 0.0, "fit_s": 0.0019197463989257812, "pred_s": 0.0003230571746826172, "max_n": 10000}

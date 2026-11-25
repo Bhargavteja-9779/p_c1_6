@@ -1,0 +1,1 @@
+{"dataset": "fraud", "method": "copod", "seed": 2, "protocol": "semi", "n_train": 4991, "n_test": 5009, "anom_test": 17, "auc_roc": 0.9781768476621417, "auc_pr": 0.5396825778846641, "p_at_k": 0.6470588235294118, "fit_s": 0.024313688278198242, "pred_s": 0.05002784729003906, "max_n": 10000}

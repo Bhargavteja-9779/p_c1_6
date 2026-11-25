@@ -91,7 +91,7 @@ def run_one(protocol, name, path, method, seed, max_n):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--protocol", default="semi"); ap.add_argument("--methods", default="knn")
-    ap.add_argument("--seeds", default="0-9"); ap.add_argument("--datasets", default="all"); ap.add_argument("--max_n", type=int, default=50000)
+    ap.add_argument("--seeds", default="0-9"); ap.add_argument("--datasets", default="all"); ap.add_argument("--max_n", type=int, default=10000)
     a = ap.parse_args()
     lo, hi = (a.seeds.split("-") + [None])[:2]; seeds = range(int(lo), int(hi or lo) + 1)
     D = datasets(); names = list(D) if a.datasets == "all" else a.datasets.split(",")

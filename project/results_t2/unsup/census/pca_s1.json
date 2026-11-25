@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "pca", "seed": 1, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 186, "auc_roc": 0.6695267900130684, "auc_pr": 0.08932372357881838, "p_at_k": 0.06989247311827956, "fit_s": 0.9962892532348633, "pred_s": 0.25866270065307617, "max_n": 10000}

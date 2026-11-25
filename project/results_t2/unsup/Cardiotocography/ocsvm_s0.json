@@ -1,0 +1,1 @@
+{"dataset": "Cardiotocography", "method": "ocsvm", "seed": 0, "protocol": "unsup", "n_train": 1480, "n_test": 634, "anom_test": 140, "auc_roc": 0.7666714864083286, "auc_pr": 0.5148362428184692, "p_at_k": 0.4857142857142857, "fit_s": 0.08772873878479004, "pred_s": 0.02069854736328125, "max_n": 10000}

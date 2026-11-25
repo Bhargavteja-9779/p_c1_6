@@ -1,0 +1,1 @@
+{"dataset": "speech", "method": "ecod", "seed": 2, "protocol": "unsup", "n_train": 2581, "n_test": 1105, "anom_test": 18, "auc_roc": 0.5494224675457426, "auc_pr": 0.050951436389389974, "p_at_k": 0.05555555555555555, "fit_s": 0.15760016441345215, "pred_s": 0.25547242164611816, "max_n": 10000}

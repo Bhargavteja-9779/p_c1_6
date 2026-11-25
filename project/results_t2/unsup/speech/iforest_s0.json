@@ -1,0 +1,1 @@
+{"dataset": "speech", "method": "iforest", "seed": 0, "protocol": "unsup", "n_train": 2581, "n_test": 1105, "anom_test": 18, "auc_roc": 0.48712051517939275, "auc_pr": 0.02426888200752496, "p_at_k": 0.0, "fit_s": 0.1689891815185547, "pred_s": 0.011651039123535156, "max_n": 10000}

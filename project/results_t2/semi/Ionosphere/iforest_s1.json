@@ -1,0 +1,1 @@
+{"dataset": "Ionosphere", "method": "iforest", "seed": 1, "protocol": "semi", "n_train": 112, "n_test": 239, "anom_test": 126, "auc_roc": 0.908905745188931, "auc_pr": 0.9219617818000855, "p_at_k": 0.8174603174603174, "fit_s": 0.1281130313873291, "pred_s": 0.006403207778930664, "max_n": 10000}

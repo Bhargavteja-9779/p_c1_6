@@ -1,0 +1,1 @@
+{"dataset": "fraud", "method": "pca", "seed": 1, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 5, "auc_roc": 0.9975292153589316, "auc_pr": 0.5454887218045112, "p_at_k": 0.4, "fit_s": 0.007718324661254883, "pred_s": 0.0018963813781738281, "max_n": 10000}

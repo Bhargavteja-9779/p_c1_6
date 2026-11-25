@@ -1,0 +1,1 @@
+{"dataset": "landsat", "method": "ocsvm", "seed": 0, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 400, "auc_roc": 0.3532364467668191, "auc_pr": 0.15892475745976126, "p_at_k": 0.185, "fit_s": 0.8880701065063477, "pred_s": 0.22136354446411133, "max_n": 10000}

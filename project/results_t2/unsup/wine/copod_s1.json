@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "copod", "seed": 1, "protocol": "unsup", "n_train": 90, "n_test": 39, "anom_test": 3, "auc_roc": 0.8333333333333334, "auc_pr": 0.25, "p_at_k": 0.0, "fit_s": 0.001123666763305664, "pred_s": 0.0009715557098388672, "max_n": 10000}

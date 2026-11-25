@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "pca", "seed": 1, "protocol": "semi", "n_train": 4703, "n_test": 5297, "anom_test": 593, "auc_roc": 0.8838851940438908, "auc_pr": 0.34700649049517407, "p_at_k": 0.3440134907251265, "fit_s": 0.003113985061645508, "pred_s": 0.000980377197265625, "max_n": 10000}

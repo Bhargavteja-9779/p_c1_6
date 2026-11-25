@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "hbos", "seed": 1, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 611, "auc_roc": 0.7522256112681645, "auc_pr": 0.6894020548491656, "p_at_k": 0.6072013093289689, "fit_s": 0.010522842407226562, "pred_s": 0.003589153289794922, "max_n": 10000}

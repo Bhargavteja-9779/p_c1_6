@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "iforest", "seed": 0, "protocol": "unsup", "n_train": 3651, "n_test": 1565, "anom_test": 45, "auc_roc": 0.7429824561403509, "auc_pr": 0.06314681708687263, "p_at_k": 0.044444444444444446, "fit_s": 0.16302490234375, "pred_s": 0.015870332717895508, "max_n": 10000}

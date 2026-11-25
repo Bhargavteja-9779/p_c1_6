@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "lof", "seed": 1, "protocol": "semi", "n_train": 4703, "n_test": 5297, "anom_test": 593, "auc_roc": 0.9472047039726514, "auc_pr": 0.5424885247534043, "p_at_k": 0.5750421585160203, "fit_s": 0.09898209571838379, "pred_s": 0.13870930671691895, "max_n": 10000}

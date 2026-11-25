@@ -1,0 +1,1 @@
+{"dataset": "landsat", "method": "copod", "seed": 1, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 400, "auc_roc": 0.43942847811887653, "auc_pr": 0.18385241046301093, "p_at_k": 0.21, "fit_s": 0.030559778213500977, "pred_s": 0.036347389221191406, "max_n": 10000}

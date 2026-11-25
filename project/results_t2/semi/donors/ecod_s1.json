@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "ecod", "seed": 1, "protocol": "semi", "n_train": 4703, "n_test": 5297, "anom_test": 593, "auc_roc": 0.8808527205148502, "auc_pr": 0.38948343453954587, "p_at_k": 0.4300168634064081, "fit_s": 0.008467435836791992, "pred_s": 0.01620769500732422, "max_n": 10000}

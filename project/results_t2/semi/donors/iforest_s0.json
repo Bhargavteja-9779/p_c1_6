@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "iforest", "seed": 0, "protocol": "semi", "n_train": 4703, "n_test": 5297, "anom_test": 593, "auc_roc": 0.8835338730770553, "auc_pr": 0.36012523111911576, "p_at_k": 0.4114671163575042, "fit_s": 0.20329999923706055, "pred_s": 0.02781081199645996, "max_n": 10000}

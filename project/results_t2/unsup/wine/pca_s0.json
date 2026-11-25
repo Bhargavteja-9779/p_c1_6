@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "pca", "seed": 0, "protocol": "unsup", "n_train": 90, "n_test": 39, "anom_test": 3, "auc_roc": 0.9444444444444444, "auc_pr": 0.5, "p_at_k": 0.3333333333333333, "fit_s": 0.0013537406921386719, "pred_s": 0.0002028942108154297, "max_n": 10000}

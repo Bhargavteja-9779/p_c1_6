@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "copod", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 29, "auc_roc": 0.8940215183555984, "auc_pr": 0.06697230381817426, "p_at_k": 0.034482758620689655, "fit_s": 0.012334346771240234, "pred_s": 0.01700878143310547, "max_n": 10000}

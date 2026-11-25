@@ -1,0 +1,1 @@
+{"dataset": "cardio", "method": "ocsvm", "seed": 2, "protocol": "semi", "n_train": 827, "n_test": 1004, "anom_test": 176, "auc_roc": 0.9752689942907334, "auc_pr": 0.8839337630559637, "p_at_k": 0.8011363636363636, "fit_s": 0.02715444564819336, "pred_s": 0.018275022506713867, "max_n": 10000}

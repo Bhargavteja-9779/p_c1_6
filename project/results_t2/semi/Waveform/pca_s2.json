@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "pca", "seed": 2, "protocol": "semi", "n_train": 1671, "n_test": 1772, "anom_test": 100, "auc_roc": 0.6592643540669856, "auc_pr": 0.09002746613462767, "p_at_k": 0.09, "fit_s": 0.006178617477416992, "pred_s": 0.0007798671722412109, "max_n": 10000}

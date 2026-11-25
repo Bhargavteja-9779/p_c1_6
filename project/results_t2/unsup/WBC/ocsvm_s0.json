@@ -1,0 +1,1 @@
+{"dataset": "WBC", "method": "ocsvm", "seed": 0, "protocol": "unsup", "n_train": 156, "n_test": 67, "anom_test": 3, "auc_roc": 1.0, "auc_pr": 1.0, "p_at_k": 1.0, "fit_s": 0.003226041793823242, "pred_s": 0.0007722377777099609, "max_n": 10000}

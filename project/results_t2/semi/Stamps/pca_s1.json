@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "pca", "seed": 1, "protocol": "semi", "n_train": 154, "n_test": 186, "anom_test": 31, "auc_roc": 0.9458896982310093, "auc_pr": 0.6338737772518068, "p_at_k": 0.6774193548387096, "fit_s": 0.0012769699096679688, "pred_s": 0.00026226043701171875, "max_n": 10000}

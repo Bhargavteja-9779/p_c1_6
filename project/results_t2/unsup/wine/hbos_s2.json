@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "hbos", "seed": 2, "protocol": "unsup", "n_train": 90, "n_test": 39, "anom_test": 3, "auc_roc": 0.9351851851851851, "auc_pr": 0.4666666666666667, "p_at_k": 0.3333333333333333, "fit_s": 0.001474142074584961, "pred_s": 0.00018787384033203125, "max_n": 10000}

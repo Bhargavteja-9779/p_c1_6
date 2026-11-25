@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "pca", "seed": 0, "protocol": "unsup", "n_train": 1359, "n_test": 582, "anom_test": 202, "auc_roc": 0.5257556018759771, "auc_pr": 0.3720161334099469, "p_at_k": 0.36633663366336633, "fit_s": 0.00222015380859375, "pred_s": 0.0004413127899169922, "max_n": 10000}

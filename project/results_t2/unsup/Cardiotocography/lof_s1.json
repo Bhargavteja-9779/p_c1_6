@@ -1,0 +1,1 @@
+{"dataset": "Cardiotocography", "method": "lof", "seed": 1, "protocol": "unsup", "n_train": 1480, "n_test": 634, "anom_test": 140, "auc_roc": 0.6047281665702718, "auc_pr": 0.32816976673603104, "p_at_k": 0.32857142857142857, "fit_s": 0.20746731758117676, "pred_s": 0.14725208282470703, "max_n": 10000}

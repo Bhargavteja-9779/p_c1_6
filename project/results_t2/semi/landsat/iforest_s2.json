@@ -1,0 +1,1 @@
+{"dataset": "landsat", "method": "iforest", "seed": 2, "protocol": "semi", "n_train": 2551, "n_test": 3884, "anom_test": 1333, "auc_roc": 0.5837250178871649, "auc_pr": 0.38448437425460547, "p_at_k": 0.4508627156789197, "fit_s": 0.28627681732177734, "pred_s": 0.04574942588806152, "max_n": 10000}

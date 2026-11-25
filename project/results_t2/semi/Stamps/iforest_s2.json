@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "iforest", "seed": 2, "protocol": "semi", "n_train": 154, "n_test": 186, "anom_test": 31, "auc_roc": 0.9446409989594173, "auc_pr": 0.619507277588385, "p_at_k": 0.6451612903225806, "fit_s": 0.08871293067932129, "pred_s": 0.005863666534423828, "max_n": 10000}

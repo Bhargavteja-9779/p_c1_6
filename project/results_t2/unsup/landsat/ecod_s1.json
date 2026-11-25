@@ -1,0 +1,1 @@
+{"dataset": "landsat", "method": "ecod", "seed": 1, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 400, "auc_roc": 0.3848024167210973, "auc_pr": 0.17058419736126162, "p_at_k": 0.175, "fit_s": 0.023840904235839844, "pred_s": 0.03262042999267578, "max_n": 10000}

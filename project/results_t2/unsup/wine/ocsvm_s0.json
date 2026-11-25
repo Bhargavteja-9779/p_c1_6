@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "ocsvm", "seed": 0, "protocol": "unsup", "n_train": 90, "n_test": 39, "anom_test": 3, "auc_roc": 0.8055555555555556, "auc_pr": 0.21766381766381765, "p_at_k": 0.0, "fit_s": 0.0012240409851074219, "pred_s": 0.00028395652770996094, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "backdoor", "method": "hbos", "seed": 2, "protocol": "semi", "n_train": 4878, "n_test": 5122, "anom_test": 244, "auc_roc": 0.6201564064820976, "auc_pr": 0.06341154556100563, "p_at_k": 0.036885245901639344, "fit_s": 0.06452822685241699, "pred_s": 0.04907059669494629, "max_n": 10000}

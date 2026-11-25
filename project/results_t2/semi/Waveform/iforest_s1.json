@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "iforest", "seed": 1, "protocol": "semi", "n_train": 1671, "n_test": 1772, "anom_test": 100, "auc_roc": 0.7455083732057416, "auc_pr": 0.11434108321399385, "p_at_k": 0.12, "fit_s": 0.15539050102233887, "pred_s": 0.03142142295837402, "max_n": 10000}

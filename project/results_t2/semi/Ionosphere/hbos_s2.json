@@ -1,0 +1,1 @@
+{"dataset": "Ionosphere", "method": "hbos", "seed": 2, "protocol": "semi", "n_train": 112, "n_test": 239, "anom_test": 126, "auc_roc": 0.7345835089197921, "auc_pr": 0.6830802626545246, "p_at_k": 0.6825396825396826, "fit_s": 0.0032072067260742188, "pred_s": 0.0003781318664550781, "max_n": 10000}

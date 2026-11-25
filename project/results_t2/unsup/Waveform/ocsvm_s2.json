@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "ocsvm", "seed": 2, "protocol": "unsup", "n_train": 2410, "n_test": 1033, "anom_test": 30, "auc_roc": 0.5173479561316052, "auc_pr": 0.03967055087542739, "p_at_k": 0.03333333333333333, "fit_s": 0.2274923324584961, "pred_s": 0.053072214126586914, "max_n": 10000}

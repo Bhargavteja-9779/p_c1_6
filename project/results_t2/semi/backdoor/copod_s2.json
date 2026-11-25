@@ -1,0 +1,1 @@
+{"dataset": "backdoor", "method": "copod", "seed": 2, "protocol": "semi", "n_train": 4878, "n_test": 5122, "anom_test": 244, "auc_roc": 0.7677662842202192, "auc_pr": 0.11878950780971581, "p_at_k": 0.10655737704918032, "fit_s": 0.1258375644683838, "pred_s": 0.5626440048217773, "max_n": 10000}

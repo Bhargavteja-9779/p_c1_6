@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "pca", "seed": 1, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 611, "auc_roc": 0.6113772752070624, "auc_pr": 0.6131044881381837, "p_at_k": 0.4877250409165303, "fit_s": 0.006479024887084961, "pred_s": 0.0017039775848388672, "max_n": 10000}

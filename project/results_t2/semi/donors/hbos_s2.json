@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "hbos", "seed": 2, "protocol": "semi", "n_train": 4703, "n_test": 5297, "anom_test": 593, "auc_roc": 0.8164236816142982, "auc_pr": 0.41278161813903796, "p_at_k": 0.42833052276559863, "fit_s": 0.0034720897674560547, "pred_s": 0.001287698745727539, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "ocsvm", "seed": 1, "protocol": "semi", "n_train": 4952, "n_test": 5048, "anom_test": 96, "auc_roc": 0.960948017635972, "auc_pr": 0.3200110226863437, "p_at_k": 0.3854166666666667, "fit_s": 0.7984559535980225, "pred_s": 0.36391592025756836, "max_n": 10000}

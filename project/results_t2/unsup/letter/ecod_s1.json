@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "ecod", "seed": 1, "protocol": "unsup", "n_train": 1120, "n_test": 480, "anom_test": 30, "auc_roc": 0.514, "auc_pr": 0.07756440994672761, "p_at_k": 0.03333333333333333, "fit_s": 0.006391286849975586, "pred_s": 0.007935047149658203, "max_n": 10000}
