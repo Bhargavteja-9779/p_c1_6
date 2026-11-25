@@ -110,10 +110,35 @@ class MinimaxCore:
         return out
 
 
+class GLOSH:
+    """Baseline: GLOSH (Campello et al. 2015) via the hdbscan package; test points via approximate_predict_scores."""
+    def __init__(self, seed=0, mcs=5, ms=5):
+        self.mcs, self.ms = mcs, ms
+
+    def fit(self, X):
+        import hdbscan
+        self.h = hdbscan.HDBSCAN(min_cluster_size=self.mcs, min_samples=self.ms, prediction_data=True).fit(X); return self
+
+    def decision_function(self, X):
+        import hdbscan
+        return np.asarray(hdbscan.prediction.approximate_predict_scores(self.h, X), float)
+
+
 def make(method, seed, n_train):
     M = {"scr_a1": lambda: KNNScreen(seed, trust="iforest", drop=0.10), "scr_a2": lambda: KNNScreen(seed, trust="iforest", drop=0.20),
          "scr_a3": lambda: KNNScreen(seed, trust="subknn", drop=0.10), "scr_a4": lambda: KNNScreen(seed, trust="subknn", drop=0.20),
-         "scr_a5": lambda: KNNScreen(seed, trust="subknn", adaptive=True), "subknn": lambda: SubKNN(seed)}
+         "scr_a5": lambda: KNNScreen(seed, trust="subknn", adaptive=True), "subknn": lambda: SubKNN(seed),
+         "mmc_a": lambda: MinimaxCore(seed, frac=0.5), "mmc_b": lambda: MinimaxCore(seed, frac=0.5, min_comp=0.05),
+         "mmc_c": lambda: MinimaxCore(seed, frac=0.3), "glosh": lambda: GLOSH(seed)}
+    if method == "knn1":
+        from pyod.models.knn import KNN
+        return KNN(n_neighbors=1)
+    if method == "cblof":
+        from pyod.models.cblof import CBLOF
+        return CBLOF(random_state=seed)
+    if method == "cof":
+        from pyod.models.cof import COF
+        return COF(n_neighbors=min(20, max(2, n_train - 1)), method="fast")
     if method not in M:
         raise ValueError(f"unknown method {method}")
     return M[method]()

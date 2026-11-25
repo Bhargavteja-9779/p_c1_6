@@ -16,3 +16,6 @@ V13,2026-11-25,4,T2,SCREEN A4 subknn drop20,DEV val (seeds 0-2),A4 contam 73.33 
 V14,2026-11-25,4,T2,SCREEN A5 subknn adaptive IQR,DEV val (seeds 0-2),A5 contam 72.70 clean 85.89 NOT MET,results_t2/
 V15,2026-11-25,4,T2,baseline subknn ensemble (B1),DEV val (seeds 0-2),subknn contam 74.07 clean 83.99,results_t2/
 V16,2026-11-25,4,T2,k sweep diagnostic k in 1..500 (DEV),DEV val,no k fixes both regimes; clean k=1 88.56,results_t2/diag_ksweep.csv
+V17,2026-11-25,4,T2,H6a MinimaxCore frac0.5,DEV val (seeds 0-2),pending,results_t2/
+V18,2026-11-25,4,T2,H6b MinimaxCore frac0.5 + comps>=5%,DEV val (seeds 0-2),pending,results_t2/
+V19,2026-11-25,4,T2,H6c MinimaxCore frac0.3,DEV val (seeds 0-2),pending,results_t2/
