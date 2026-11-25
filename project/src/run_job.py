@@ -81,6 +81,24 @@ def treat(spec, cfg, tr, va, te, cols):
     return Xtr, Xva, Xte, use, info, None
 
 
+def confound_weights(method, dom, y):
+    """CB (confound-breaking) reweighting: each (environment, class) cell gets total weight proportional to
+    n_cell^(1-alpha), alpha in {0.5 ('cb05'), 1.0 ('cb')}, so that with alpha=1 every environment contributes equal
+    benign and attack mass and environment identity carries no information about the label in the pooled data.
+    Cells with < 20 flows are left at weight 1 (cannot be balanced). Weights renormalised to mean 1."""
+    parts = method.split("+")[:-1]
+    a = 1.0 if "cb" in parts else 0.5 if "cb05" in parts else None
+    if a is None:
+        return None
+    w = np.ones(len(y), dtype=np.float64)
+    for e in np.unique(dom):
+        for c in (0, 1):
+            m = (dom == e) & (y == c); n = int(m.sum())
+            if n >= 20:
+                w[m] = n ** (-a)
+    return w / w.mean()
+
+
 def fit_eval(spec, cfg, seed, ckpt=None):
     tr, va, te = assemble(spec, seed)
     cols = feature_cols(load(spec["target"], "random", "train") if spec["protocol"] == "lodo" else tr.drop(columns="_env"))
@@ -95,7 +113,11 @@ def fit_eval(spec, cfg, seed, ckpt=None):
     if base in ("mlp", "dann", "coral"):
         m.fit(Xtr, ytr, domains=dom, X_target=Xte if base != "mlp" else None, ckpt=ckpt)
     else:
-        m.fit(Xtr, ytr)
+        sw = confound_weights(spec["method"], dom, ytr)
+        if sw is not None:
+            m.fit(Xtr, ytr, sample_weight=sw)
+        else:
+            m.fit(Xtr, ytr)
     fit_s = time.time() - t0
     pva = m.predict_proba(Xva)[:, 1]
     thr, f_va = best_threshold(yva, pva)
@@ -108,6 +130,14 @@ def fit_eval(spec, cfg, seed, ckpt=None):
     res["recall_by_family"] = {a: float(yhat[fam == a].mean()) for a in np.unique(fam) if a != "Benign"}
     # in-distribution check of the same model on source val (threshold-tuned) -> how much is lost
     res["src_val_auroc"] = float(nids.roc_auc_score(yva, pva)) if len(np.unique(yva)) > 1 else float("nan")
+    # environment leakage of the score: among BENIGN source-val flows, how well does the attack score identify the
+    # source network? (mean one-vs-rest |2AUC-1|; 0 = score carries no network identity)
+    envs = va._env.to_numpy(); bm = yva == 0; g = []
+    for e in np.unique(envs[bm]):
+        t = (envs[bm] == e).astype(int)
+        if 20 <= t.sum() <= len(t) - 20:
+            g.append(abs(2 * nids.roc_auc_score(t, pva[bm]) - 1))
+    res["score_env_gini_benign"] = float(np.mean(g)) if g else float("nan")
     if "esf_dropped" in info:
         res["esf_dropped"] = info["esf_dropped"]; res["esf_scores"] = info["esf_scores"]; res["tau"] = info["tau"]
     if spec.get("save_scores"):
