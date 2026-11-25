@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "cblof", "seed": 2, "protocol": "unsup", "n_train": 1120, "n_test": 480, "anom_test": 30, "auc_roc": 0.7538518518518518, "auc_pr": 0.14539312734346996, "p_at_k": 0.2, "fit_s": 0.004551410675048828, "pred_s": 0.0004904270172119141, "max_n": 10000}

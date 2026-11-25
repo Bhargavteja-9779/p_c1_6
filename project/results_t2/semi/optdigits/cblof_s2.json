@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "cblof", "seed": 2, "protocol": "semi", "n_train": 2533, "n_test": 2683, "anom_test": 150, "auc_roc": 0.9039163047769443, "auc_pr": 0.2202214876559191, "p_at_k": 0.16, "fit_s": 0.2780647277832031, "pred_s": 0.012120723724365234, "max_n": 10000}

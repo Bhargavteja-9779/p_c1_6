@@ -1,0 +1,1 @@
+{"dataset": "fraud", "method": "mmc_c", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 5, "auc_roc": 0.7758263772954924, "auc_pr": 0.07833936951301919, "p_at_k": 0.0, "fit_s": 10.706330060958862, "pred_s": 0.08930563926696777, "max_n": 10000}

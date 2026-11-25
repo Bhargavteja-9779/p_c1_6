@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "cof", "seed": 2, "protocol": "unsup", "n_train": 1359, "n_test": 582, "anom_test": 202, "auc_roc": 0.6153204794163627, "auc_pr": 0.42215406513228454, "p_at_k": 0.46534653465346537, "fit_s": 0.25588512420654297, "pred_s": 0.06281352043151855, "max_n": 10000}

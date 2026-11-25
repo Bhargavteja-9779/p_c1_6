@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "glosh", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 178, "auc_roc": 0.6200230532174966, "auc_pr": 0.10012080056780856, "p_at_k": 0.1797752808988764, "fit_s": 0.34661173820495605, "pred_s": 0.07035088539123535, "max_n": 10000}

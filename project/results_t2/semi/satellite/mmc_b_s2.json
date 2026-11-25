@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "mmc_b", "seed": 2, "protocol": "semi", "n_train": 2199, "n_test": 4236, "anom_test": 2036, "auc_roc": 0.8764305009823183, "auc_pr": 0.8926461271416943, "p_at_k": 0.7716110019646365, "fit_s": 0.815361738204956, "pred_s": 0.14133787155151367, "max_n": 10000}

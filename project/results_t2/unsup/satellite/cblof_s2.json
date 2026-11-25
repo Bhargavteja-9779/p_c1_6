@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "cblof", "seed": 2, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 611, "auc_roc": 0.7853952784803848, "auc_pr": 0.7241054420740398, "p_at_k": 0.6088379705400983, "fit_s": 0.1260058879852295, "pred_s": 0.0010509490966796875, "max_n": 10000}

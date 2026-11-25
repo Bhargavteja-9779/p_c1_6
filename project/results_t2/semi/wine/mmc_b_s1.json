@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "mmc_b", "seed": 1, "protocol": "semi", "n_train": 59, "n_test": 70, "anom_test": 10, "auc_roc": 0.935, "auc_pr": 0.687121212121212, "p_at_k": 0.6, "fit_s": 0.0009534358978271484, "pred_s": 0.0002753734588623047, "max_n": 10000}

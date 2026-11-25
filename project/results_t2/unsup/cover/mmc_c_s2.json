@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "mmc_c", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 29, "auc_roc": 0.9311505472440488, "auc_pr": 0.07534555800183552, "p_at_k": 0.034482758620689655, "fit_s": 11.453722953796387, "pred_s": 0.24330782890319824, "max_n": 10000}

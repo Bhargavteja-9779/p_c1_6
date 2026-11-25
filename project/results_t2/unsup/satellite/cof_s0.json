@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "cof", "seed": 0, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 611, "auc_roc": 0.5314276149382533, "auc_pr": 0.3957641447732538, "p_at_k": 0.3878887070376432, "fit_s": 3.84093976020813, "pred_s": 0.6094462871551514, "max_n": 10000}

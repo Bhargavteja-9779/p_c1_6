@@ -1,0 +1,1 @@
+{"dataset": "landsat", "method": "cblof", "seed": 1, "protocol": "unsup", "n_train": 4504, "n_test": 1931, "anom_test": 400, "auc_roc": 0.5681939908556499, "auc_pr": 0.22007121092743448, "p_at_k": 0.21, "fit_s": 0.12645673751831055, "pred_s": 0.0009837150573730469, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "glosh", "seed": 2, "protocol": "unsup", "n_train": 1359, "n_test": 582, "anom_test": 202, "auc_roc": 0.6580119854090671, "auc_pr": 0.4960629754819338, "p_at_k": 0.5297029702970297, "fit_s": 0.0555722713470459, "pred_s": 0.012991666793823242, "max_n": 10000}

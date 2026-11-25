@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "glosh", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 29, "auc_roc": 0.9150175837695423, "auc_pr": 0.07384693578862675, "p_at_k": 0.06896551724137931, "fit_s": 0.47315192222595215, "pred_s": 0.07348370552062988, "max_n": 10000}

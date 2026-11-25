@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "cblof", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 178, "auc_roc": 0.8190840028985737, "auc_pr": 0.15900719075337816, "p_at_k": 0.1797752808988764, "fit_s": 0.005161762237548828, "pred_s": 0.0009300708770751953, "max_n": 10000}

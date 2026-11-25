@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "mmc_a", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 178, "auc_roc": 0.9885480454534594, "auc_pr": 0.7462037515866673, "p_at_k": 0.6741573033707865, "fit_s": 7.93768310546875, "pred_s": 0.09046697616577148, "max_n": 10000}

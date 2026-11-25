@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "mmc_a", "seed": 1, "protocol": "semi", "n_train": 750, "n_test": 850, "anom_test": 100, "auc_roc": 0.7805533333333333, "auc_pr": 0.3588517070775651, "p_at_k": 0.27, "fit_s": 0.07015061378479004, "pred_s": 0.006097316741943359, "max_n": 10000}

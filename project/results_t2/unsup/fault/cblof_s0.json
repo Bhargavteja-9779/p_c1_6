@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "cblof", "seed": 0, "protocol": "unsup", "n_train": 1359, "n_test": 582, "anom_test": 202, "auc_roc": 0.7026706618030224, "auc_pr": 0.5436563403030966, "p_at_k": 0.5198019801980198, "fit_s": 0.0040018558502197266, "pred_s": 0.0006692409515380859, "max_n": 10000}
