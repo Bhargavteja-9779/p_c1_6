@@ -8,4 +8,4 @@ if [ ! -d data/adbench/repo/adbench/datasets/Classical ]; then
 fi
 git -C data/adbench/repo rev-parse HEAD > data/adbench/COMMIT
 ls data/adbench/repo/adbench/datasets/Classical/*.npz | wc -l
-python3 -c "import pyod" 2>/dev/null || pip install -q pyod==3.6.9 scikit-learn scipy
+python3 -c "import pyod, hdbscan" 2>/dev/null || pip install -q pyod==3.6.9 hdbscan scikit-learn scipy

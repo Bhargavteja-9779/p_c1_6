@@ -1,13 +1,13 @@
 {
  "cycle": 4,
- "phase": "T2_LADDER_H6",
- "step": "prior-art check for H6 (cluster-size / regime-aware kNN), then pre-register H6 and run on DEV",
+ "phase": "T2_LADDER_H7",
+ "step": "H6 failed (journal 25); next: change angle per 6.4 (see HANDOFF), prior-art check before H7",
  "status": "ACTIVE",
  "pivots": 1,
  "topic": "T2: unsupervised/semi-supervised tabular anomaly detection on ADBench (named method; beat HF-DIF, JKSU-CIS)",
  "journal": "JKSU-CIS",
- "last_action": "H4 supported; H5 failed; k-sweep done",
- "updated": "2026-11-24",
+ "last_action": "H6 DEV complete after restart; diagnosis t2_diag_h6",
+ "updated": "2026-11-25",
  "user_notes": [
   "2026-11-24: user allows Frontiers journals",
   "2026-11-24: ~80 days acceptance is fine (D27)",
