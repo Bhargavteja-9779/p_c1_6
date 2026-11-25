@@ -1,0 +1,1 @@
+{"dataset": "cardio", "method": "hbos", "seed": 0, "protocol": "trans", "n_train": 1831, "n_test": 1831, "anom_test": 176, "auc_roc": 0.8516650645427082, "auc_pr": 0.4818566021440577, "p_at_k": 0.5170454545454546, "fit_s": 0.0032761096954345703, "pred_s": 0.0009064674377441406, "max_n": 10000}

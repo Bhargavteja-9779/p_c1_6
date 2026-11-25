@@ -1,0 +1,1 @@
+{"dataset": "Wilt", "method": "hbos", "seed": 2, "protocol": "trans", "n_train": 4819, "n_test": 4819, "anom_test": 257, "auc_roc": 0.34556230883785355, "auc_pr": 0.03935974972214823, "p_at_k": 0.0, "fit_s": 0.0014491081237792969, "pred_s": 0.0005280971527099609, "max_n": 10000}

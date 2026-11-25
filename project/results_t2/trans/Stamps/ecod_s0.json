@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "ecod", "seed": 0, "protocol": "trans", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.876083098444514, "auc_pr": 0.3141920643604329, "p_at_k": 0.2903225806451613, "fit_s": 0.001466512680053711, "pred_s": 0.0016024112701416016, "max_n": 10000}

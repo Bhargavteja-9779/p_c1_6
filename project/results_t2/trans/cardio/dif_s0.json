@@ -1,0 +1,1 @@
+{"dataset": "cardio", "method": "dif", "seed": 0, "protocol": "trans", "n_train": 1831, "n_test": 1831, "anom_test": 176, "auc_roc": 0.9018950837681955, "auc_pr": 0.5566439291346409, "p_at_k": 0.5170454545454546, "fit_s": 2.782280683517456, "pred_s": 1.9573020935058594, "max_n": 10000}

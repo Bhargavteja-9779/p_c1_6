@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "hbos", "seed": 2, "protocol": "trans", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.9044785468211713, "auc_pr": 0.32517878960150015, "p_at_k": 0.2903225806451613, "fit_s": 0.0011627674102783203, "pred_s": 0.00023508071899414062, "max_n": 10000}

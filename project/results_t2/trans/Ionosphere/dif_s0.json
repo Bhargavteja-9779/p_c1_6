@@ -1,0 +1,1 @@
+{"dataset": "Ionosphere", "method": "dif", "seed": 0, "protocol": "trans", "n_train": 351, "n_test": 351, "anom_test": 126, "auc_roc": 0.9038800705467371, "auc_pr": 0.8796059089253794, "p_at_k": 0.7857142857142857, "fit_s": 1.1065514087677002, "pred_s": 0.6098127365112305, "max_n": 10000}

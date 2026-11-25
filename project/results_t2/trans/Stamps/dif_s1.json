@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "dif", "seed": 1, "protocol": "trans", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.7995615408706546, "auc_pr": 0.21823689746344832, "p_at_k": 0.12903225806451613, "fit_s": 0.9909491539001465, "pred_s": 0.5326738357543945, "max_n": 10000}

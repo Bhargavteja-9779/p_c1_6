@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "copod", "seed": 1, "protocol": "trans", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.9301597243971187, "auc_pr": 0.396127963309908, "p_at_k": 0.41935483870967744, "fit_s": 0.001277923583984375, "pred_s": 0.0015611648559570312, "max_n": 10000}
