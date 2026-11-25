@@ -124,12 +124,84 @@ class GLOSH:
         return np.asarray(hdbscan.prediction.approximate_predict_scores(self.h, X), float)
 
 
+class LocoKNN:
+    """H7 (journal 28): leave-own-cluster-out kNN. Training graph = MUTUAL kNN (k_m); components of size <= cap*n are
+    'small groups'. A test point's score is its k-th NN distance to the training set after removing every small group that
+    contains one of its k nearest training neighbours. Large components (normal modes) are never removed. Per query, no
+    iteration, no contamination ratio."""
+    def __init__(self, seed=0, k=5, k_m=5, cap=0.05, chunk=512):
+        self.k, self.k_m, self.cap, self.chunk = k, k_m, cap, chunk
+
+    def fit(self, X):
+        from scipy.sparse import csr_matrix
+        from scipy.sparse.csgraph import connected_components
+        n = len(X); self.X = X; km = min(self.k_m, n - 1)
+        _, nb = NearestNeighbors(n_neighbors=km + 1).fit(X).kneighbors(X)
+        nb = nb[:, 1:]
+        A = csr_matrix((np.ones(n * km), (np.repeat(np.arange(n), km), nb.ravel())), shape=(n, n))
+        M = A.multiply(A.T)                                   # mutual edges only
+        _, lab = connected_components(M, directed=False)
+        size = np.bincount(lab)
+        self.lab = lab; self.small = size[lab] <= max(1, self.cap * n)
+        self.small_frac_ = float(self.small.mean())
+        return self
+
+    def decision_function(self, Q):
+        from sklearn.metrics import pairwise_distances
+        n = len(self.X); k = min(self.k, n); out = np.empty(len(Q))
+        for i in range(0, len(Q), self.chunk):
+            d = pairwise_distances(Q[i:i + self.chunk], self.X)
+            nn = np.argpartition(d, k - 1, axis=1)[:, :k]
+            for r in range(len(d)):
+                g = self.lab[nn[r][self.small[nn[r]]]]
+                if len(g):
+                    ex = np.isin(self.lab, g)
+                    if ex.sum() <= n - k:
+                        d[r, ex] = np.inf
+            out[i:i + self.chunk] = np.partition(d, k - 1, axis=1)[:, k - 1]
+        return out
+
+
+class INNE:
+    """Baseline: iNNE (Bandaragoda et al. 2018, 10.1111/coin.12156). t subsamples of size psi; each sampled point c has
+    radius tau(c) = distance to its nearest neighbour in the subsample; x covered by balls -> take the smallest-radius ball c,
+    isolation score 1 - tau(nn_in_sample(c)) / tau(c); not covered -> 1. Final score = mean over subsamples."""
+    def __init__(self, seed=0, psi=16, t=100):
+        self.psi, self.t, self.seed = psi, t, seed
+
+    def fit(self, X):
+        rng = np.random.default_rng(self.seed); self.models = []
+        for _ in range(self.t):
+            S = X[rng.choice(len(X), min(self.psi, len(X)), replace=False)]
+            d, i = NearestNeighbors(n_neighbors=2).fit(S).kneighbors(S)
+            tau = d[:, 1]; ratio = 1 - tau[i[:, 1]] / np.where(tau > 0, tau, 1e-12)
+            self.models.append((S, tau, ratio))
+        return self
+
+    def decision_function(self, Q):
+        from sklearn.metrics import pairwise_distances
+        out = np.zeros(len(Q))
+        for S, tau, ratio in self.models:
+            d = pairwise_distances(Q, S); cov = d <= tau[None, :]
+            r = np.where(cov, tau[None, :], np.inf); c = r.argmin(1)
+            out += np.where(cov.any(1), ratio[c], 1.0)
+        return out / self.t
+
+
+def _KNNk(k):
+    from pyod.models.knn import KNN
+    return KNN(n_neighbors=k, method="largest")
+
+
 def make(method, seed, n_train):
     M = {"scr_a1": lambda: KNNScreen(seed, trust="iforest", drop=0.10), "scr_a2": lambda: KNNScreen(seed, trust="iforest", drop=0.20),
          "scr_a3": lambda: KNNScreen(seed, trust="subknn", drop=0.10), "scr_a4": lambda: KNNScreen(seed, trust="subknn", drop=0.20),
          "scr_a5": lambda: KNNScreen(seed, trust="subknn", adaptive=True), "subknn": lambda: SubKNN(seed),
          "mmc_a": lambda: MinimaxCore(seed, frac=0.5), "mmc_b": lambda: MinimaxCore(seed, frac=0.5, min_comp=0.05),
-         "mmc_c": lambda: MinimaxCore(seed, frac=0.3), "glosh": lambda: GLOSH(seed)}
+         "mmc_c": lambda: MinimaxCore(seed, frac=0.3), "glosh": lambda: GLOSH(seed),
+         "loco_a": lambda: LocoKNN(seed, k_m=5, cap=0.05), "loco_b": lambda: LocoKNN(seed, k_m=10, cap=0.05),
+         "loco_c": lambda: LocoKNN(seed, k_m=5, cap=0.10), "inne": lambda: INNE(seed, psi=16),
+         "subknn16": lambda: SubKNN(seed, k=1, psi=16), "knn50": lambda: _KNNk(min(50, max(1, n_train - 1)))}
     if method == "knn1":
         from pyod.models.knn import KNN
         return KNN(n_neighbors=1)
