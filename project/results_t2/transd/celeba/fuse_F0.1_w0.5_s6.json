@@ -1,0 +1,1 @@
+{"dataset": "celeba", "method": "fuse_F0.1_w0.5", "seed": 6, "protocol": "transd", "n_train": 202599, "n_test": 202599, "anom_test": 4547, "auc_roc": 0.7615621968396639, "auc_pr": 0.08603879106580009, "p_at_k": 0.13041565867605015, "fit_s": 199.26933526992798, "pred_s": 1.6689300537109375e-06, "max_n": 1000000}
