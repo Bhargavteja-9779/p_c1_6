@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "lof", "seed": 0, "protocol": "transd", "n_train": 619326, "n_test": 619326, "anom_test": 36710, "auc_roc": 0.5513541346854779, "auc_pr": 0.08943937195599455, "p_at_k": 0.19397984200490329, "fit_s": 441.74540877342224, "pred_s": 455.3169975280762, "max_n": 1000000}
