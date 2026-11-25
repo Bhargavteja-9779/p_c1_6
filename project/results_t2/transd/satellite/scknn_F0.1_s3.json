@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "scknn_F0.1", "seed": 3, "protocol": "transd", "n_train": 6435, "n_test": 6435, "anom_test": 2036, "auc_roc": 0.796902292046192, "auc_pr": 0.7227131580245267, "p_at_k": 0.6331041257367387, "fit_s": 1.4781584739685059, "pred_s": 1.430511474609375e-06, "max_n": 1000000}

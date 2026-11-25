@@ -1,0 +1,1 @@
+{"dataset": "optdigits", "method": "fuse_F0.1_w0.5", "seed": 2, "protocol": "transd", "n_train": 5216, "n_test": 5216, "anom_test": 150, "auc_roc": 0.6620081589682854, "auc_pr": 0.03891120980996998, "p_at_k": 0.006666666666666667, "fit_s": 1.2675087451934814, "pred_s": 2.384185791015625e-07, "max_n": 1000000}

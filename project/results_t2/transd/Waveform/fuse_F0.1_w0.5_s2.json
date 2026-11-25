@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "fuse_F0.1_w0.5", "seed": 2, "protocol": "transd", "n_train": 3443, "n_test": 3443, "anom_test": 100, "auc_roc": 0.7404741250373916, "auc_pr": 0.06739825619448853, "p_at_k": 0.09, "fit_s": 0.6294910907745361, "pred_s": 2.384185791015625e-07, "max_n": 1000000}

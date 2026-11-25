@@ -1,0 +1,1 @@
+{"dataset": "smtp", "method": "fuse_F0.1_w0.5", "seed": 1, "protocol": "transd", "n_train": 95156, "n_test": 95156, "anom_test": 30, "auc_roc": 0.9146715934655089, "auc_pr": 0.007562749965682684, "p_at_k": 0.0, "fit_s": 52.12272548675537, "pred_s": 1.9073486328125e-06, "max_n": 1000000}

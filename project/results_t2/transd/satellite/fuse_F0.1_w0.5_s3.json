@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "fuse_F0.1_w0.5", "seed": 3, "protocol": "transd", "n_train": 6435, "n_test": 6435, "anom_test": 2036, "auc_roc": 0.7480431791293878, "auc_pr": 0.7132975265059269, "p_at_k": 0.6316306483300589, "fit_s": 1.517446517944336, "pred_s": 2.384185791015625e-07, "max_n": 1000000}

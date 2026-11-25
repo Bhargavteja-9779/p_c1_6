@@ -1,0 +1,1 @@
+{"dataset": "smtp", "method": "dif", "seed": 0, "protocol": "transd", "n_train": 95156, "n_test": 95156, "anom_test": 30, "auc_roc": 0.853041579939589, "auc_pr": 0.47362686087359324, "p_at_k": 0.6333333333333333, "fit_s": 219.73316550254822, "pred_s": 200.47138357162476, "max_n": 1000000}

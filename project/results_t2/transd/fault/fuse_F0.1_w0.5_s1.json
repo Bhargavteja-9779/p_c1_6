@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "fuse_F0.1_w0.5", "seed": 1, "protocol": "transd", "n_train": 1941, "n_test": 1941, "anom_test": 673, "auc_roc": 0.6367441091960758, "auc_pr": 0.4683725626173941, "p_at_k": 0.4814264487369985, "fit_s": 0.4167470932006836, "pred_s": 9.5367431640625e-07, "max_n": 1000000}

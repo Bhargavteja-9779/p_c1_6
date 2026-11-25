@@ -1,0 +1,1 @@
+{"dataset": "speech", "method": "fuse_F0.1_w0.5", "seed": 0, "protocol": "transd", "n_train": 3686, "n_test": 3686, "anom_test": 61, "auc_roc": 0.45548445449406444, "auc_pr": 0.016441723551888766, "p_at_k": 0.0, "fit_s": 0.9741935729980469, "pred_s": 0.0, "max_n": 1000000}

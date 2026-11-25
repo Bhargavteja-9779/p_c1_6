@@ -1,0 +1,1 @@
+{"dataset": "mammography", "method": "scknn_F0.1", "seed": 1, "protocol": "transd", "n_train": 11183, "n_test": 11183, "anom_test": 260, "auc_roc": 0.8524795949267248, "auc_pr": 0.16494768311108443, "p_at_k": 0.2692307692307692, "fit_s": 2.940605878829956, "pred_s": 9.5367431640625e-07, "max_n": 1000000}
