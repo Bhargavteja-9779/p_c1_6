@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "dif", "seed": 2, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 96, "auc_roc": 0.9659628264674205, "auc_pr": 0.23576073040126191, "p_at_k": 0.2916666666666667, "fit_s": 15.202084064483643, "pred_s": 12.980895757675171, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "iforest", "seed": 1, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 620, "auc_roc": 0.6317261331590893, "auc_pr": 0.08002490484920752, "p_at_k": 0.07096774193548387, "fit_s": 0.20551490783691406, "pred_s": 0.06378650665283203, "max_n": 10000}

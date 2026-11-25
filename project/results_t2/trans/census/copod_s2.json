@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "copod", "seed": 2, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 620, "auc_roc": 0.674087626384208, "auc_pr": 0.08738675012007763, "p_at_k": 0.07258064516129033, "fit_s": 1.3305513858795166, "pred_s": 3.1890981197357178, "max_n": 10000}

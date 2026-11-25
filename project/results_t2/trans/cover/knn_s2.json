@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "knn", "seed": 2, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 96, "auc_roc": 0.8768921227113624, "auc_pr": 0.06443778977757768, "p_at_k": 0.09375, "fit_s": 0.17111468315124512, "pred_s": 0.15167784690856934, "max_n": 10000}

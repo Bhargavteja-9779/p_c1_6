@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "dif", "seed": 0, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 593, "auc_roc": 0.6823265513410685, "auc_pr": 0.08118805616735714, "p_at_k": 0.01011804384485666, "fit_s": 11.453012228012085, "pred_s": 9.741095542907715, "max_n": 10000}

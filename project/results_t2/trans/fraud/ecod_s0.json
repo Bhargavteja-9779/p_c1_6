@@ -1,0 +1,1 @@
+{"dataset": "fraud", "method": "ecod", "seed": 0, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 17, "auc_roc": 0.9119503155364118, "auc_pr": 0.19041635712800523, "p_at_k": 0.23529411764705882, "fit_s": 0.054266929626464844, "pred_s": 0.12935733795166016, "max_n": 10000}

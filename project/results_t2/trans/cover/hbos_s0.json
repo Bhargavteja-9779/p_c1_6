@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "hbos", "seed": 0, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 96, "auc_roc": 0.7878098495557351, "auc_pr": 0.03662650338105508, "p_at_k": 0.08333333333333333, "fit_s": 0.005630970001220703, "pred_s": 0.002991914749145508, "max_n": 10000}

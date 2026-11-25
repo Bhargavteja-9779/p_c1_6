@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "dif", "seed": 1, "protocol": "trans", "n_train": 6435, "n_test": 6435, "anom_test": 2036, "auc_roc": 0.7415447831285106, "auc_pr": 0.6791909417495722, "p_at_k": 0.6385068762278978, "fit_s": 9.380541801452637, "pred_s": 7.9445178508758545, "max_n": 10000}

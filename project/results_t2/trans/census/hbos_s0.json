@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "hbos", "seed": 0, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 620, "auc_roc": 0.6306990680239355, "auc_pr": 0.07677071837860852, "p_at_k": 0.05161290322580645, "fit_s": 0.1927933692932129, "pred_s": 0.07984185218811035, "max_n": 10000}

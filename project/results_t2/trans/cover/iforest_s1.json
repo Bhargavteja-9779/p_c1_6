@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "iforest", "seed": 1, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 96, "auc_roc": 0.9252816622913301, "auc_pr": 0.08711597168688295, "p_at_k": 0.13541666666666666, "fit_s": 0.19081592559814453, "pred_s": 0.04567384719848633, "max_n": 10000}

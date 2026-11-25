@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "knn", "seed": 2, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 620, "auc_roc": 0.6401178726184744, "auc_pr": 0.07868026668574751, "p_at_k": 0.054838709677419356, "fit_s": 0.6001558303833008, "pred_s": 0.6162261962890625, "max_n": 10000}

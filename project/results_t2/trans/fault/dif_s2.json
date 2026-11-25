@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "dif", "seed": 2, "protocol": "trans", "n_train": 1941, "n_test": 1941, "anom_test": 673, "auc_roc": 0.7030493435392166, "auc_pr": 0.5458553948071337, "p_at_k": 0.5111441307578009, "fit_s": 2.9317638874053955, "pred_s": 2.3741631507873535, "max_n": 10000}

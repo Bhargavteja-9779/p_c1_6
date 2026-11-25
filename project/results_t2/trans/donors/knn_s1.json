@@ -1,0 +1,1 @@
+{"dataset": "donors", "method": "knn", "seed": 1, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 593, "auc_roc": 0.8008438335988538, "auc_pr": 0.15012738913565193, "p_at_k": 0.1281618887015177, "fit_s": 0.21663165092468262, "pred_s": 0.2115306854248047, "max_n": 10000}

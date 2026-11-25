@@ -1,0 +1,1 @@
+{"dataset": "landsat", "method": "dif", "seed": 1, "protocol": "trans", "n_train": 6435, "n_test": 6435, "anom_test": 1333, "auc_roc": 0.5514263709008397, "auc_pr": 0.2414457268258206, "p_at_k": 0.2873218304576144, "fit_s": 8.28373122215271, "pred_s": 7.214641809463501, "max_n": 10000}

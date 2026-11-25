@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "hbos", "seed": 0, "protocol": "trans", "n_train": 1941, "n_test": 1941, "anom_test": 673, "auc_roc": 0.5595361416699087, "auc_pr": 0.40253266238793606, "p_at_k": 0.40416047548291234, "fit_s": 0.004317760467529297, "pred_s": 0.001241922378540039, "max_n": 10000}

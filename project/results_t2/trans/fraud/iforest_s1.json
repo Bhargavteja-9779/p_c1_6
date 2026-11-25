@@ -1,0 +1,1 @@
+{"dataset": "fraud", "method": "iforest", "seed": 1, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 17, "auc_roc": 0.9306821596714414, "auc_pr": 0.19557240122275232, "p_at_k": 0.29411764705882354, "fit_s": 0.18442916870117188, "pred_s": 0.041921138763427734, "max_n": 10000}

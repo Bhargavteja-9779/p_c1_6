@@ -1,0 +1,1 @@
+{"dataset": "fraud", "method": "hbos", "seed": 1, "protocol": "trans", "n_train": 10000, "n_test": 10000, "anom_test": 17, "auc_roc": 0.9250136997601806, "auc_pr": 0.1874172050836129, "p_at_k": 0.23529411764705882, "fit_s": 0.016503572463989258, "pred_s": 0.010215044021606445, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "satellite", "method": "ecod", "seed": 0, "protocol": "trans", "n_train": 6435, "n_test": 6435, "anom_test": 2036, "auc_roc": 0.5829611212764465, "auc_pr": 0.5261240658997652, "p_at_k": 0.4494106090373281, "fit_s": 0.04353761672973633, "pred_s": 0.08292174339294434, "max_n": 10000}
