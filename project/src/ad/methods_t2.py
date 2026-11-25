@@ -55,6 +55,61 @@ class SubKNN:
         return _subsample_knn_scores(self.X, X, self.n_sub, self.psi, self.k, np.random.default_rng(self.seed))
 
 
+class MinimaxCore:
+    """H6 candidate (journal 24): minimax (bottleneck) path distance from a test point to the training 'core'.
+    Core = Kruskal components of the training MST at the first level where the largest component holds >= frac*n
+    points; with min_comp>0, every component of size >= min_comp*n at that level also joins the core.
+    m_j = minimax path distance from training point j to the core (0 inside); score(x) = min_j max(d(x,j), m_j)."""
+    def __init__(self, seed=0, frac=0.5, min_comp=0.0, chunk=512):
+        self.frac, self.min_comp, self.chunk = frac, min_comp, chunk
+
+    def fit(self, X):
+        from scipy.sparse.csgraph import minimum_spanning_tree
+        from sklearn.metrics import pairwise_distances
+        n = len(X); self.X = X
+        D = pairwise_distances(X); D[D == 0] = 1e-12; np.fill_diagonal(D, 0)
+        T = minimum_spanning_tree(D).tocoo(); del D
+        order = np.argsort(T.data); a, b, w = T.row[order], T.col[order], T.data[order]
+        parent = np.arange(n); size = np.ones(n, int)
+        def find(i):
+            while parent[i] != i:
+                parent[i] = parent[parent[i]]; i = parent[i]
+            return i
+        for u, v in zip(a, b):
+            ru, rv = find(u), find(v)
+            if ru != rv:
+                if size[ru] < size[rv]: ru, rv = rv, ru
+                parent[rv] = ru; size[ru] += size[rv]
+                if size[ru] >= self.frac * n: break
+        roots = np.array([find(i) for i in range(n)])
+        csize = np.bincount(roots, minlength=n)
+        big = roots == np.argmax(csize)
+        if self.min_comp > 0:
+            big |= csize[roots] >= self.min_comp * n
+        # propagate minimax distance outward from the core along the MST (a tree: unique path)
+        adj = [[] for _ in range(n)]
+        for u, v, ww in zip(T.row, T.col, T.data):
+            adj[u].append((v, ww)); adj[v].append((u, ww))
+        m = np.full(n, np.inf); m[big] = 0.0
+        stack = list(np.flatnonzero(big))
+        while stack:
+            u = stack.pop()
+            for v, ww in adj[u]:
+                c = max(m[u], ww)
+                if c < m[v]:
+                    m[v] = c; stack.append(v)
+        self.m = m; self.core_frac_ = float(big.mean())
+        return self
+
+    def decision_function(self, Q):
+        from sklearn.metrics import pairwise_distances
+        out = np.empty(len(Q))
+        for i in range(0, len(Q), self.chunk):
+            d = pairwise_distances(Q[i:i + self.chunk], self.X)
+            out[i:i + self.chunk] = np.maximum(d, self.m[None, :]).min(1)
+        return out
+
+
 def make(method, seed, n_train):
     M = {"scr_a1": lambda: KNNScreen(seed, trust="iforest", drop=0.10), "scr_a2": lambda: KNNScreen(seed, trust="iforest", drop=0.20),
          "scr_a3": lambda: KNNScreen(seed, trust="subknn", drop=0.10), "scr_a4": lambda: KNNScreen(seed, trust="subknn", drop=0.20),
