@@ -1,0 +1,5 @@
+# OBSERVATION — 2026-11-25 — no single k breaks shielding (scripts/t2_diag_ksweep.py, results_t2/diag_ksweep.csv; DEV, seeds 0–2)
+k-th-NN AUROC (clean / contaminated): k=1 88.56/66.94; k=5 86.13/72.83; k=10 85.21/75.19; k=20 84.27/75.11; k=50 82.16/74.53; k=100 80.59/76.04; k=200 76.37/73.15; k=500 71.67/68.02.
+- Contaminated accuracy plateaus ≈ 75–76 for any k, far below the 85.8 obtained with an oracle-clean reference (journal 20). Raw distances alone cannot close the gap.
+- Side finding: in the CLEAN regime k = 1 beats the PyOD default k = 5 by 2.4 points on DEV (would need holdout confirmation; it is a hyper-parameter choice, weak novelty).
+- Implication: the method must use information beyond distance magnitudes — e.g. that shielding clusters are SMALL relative to the normal mass, or regime awareness (estimate the contamination level and adapt) — and must be tested against GLOSH/HDBSCAN-style core-distance scores and unsupervised model-selection prior art (MetaOD etc.) before any novelty claim.
