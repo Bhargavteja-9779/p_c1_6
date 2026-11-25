@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "lwk_F0.05", "seed": 0, "protocol": "transd", "n_train": 129, "n_test": 129, "anom_test": 10, "auc_roc": 0.10840336134453782, "auc_pr": 0.04700397929550815, "p_at_k": 0.0, "fit_s": 0.02334880828857422, "pred_s": 9.5367431640625e-07, "max_n": 20000}

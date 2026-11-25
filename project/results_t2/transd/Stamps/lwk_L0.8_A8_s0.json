@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "lwk_L0.8_A8", "seed": 0, "protocol": "transd", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.6352437623969099, "auc_pr": 0.17543493883558198, "p_at_k": 0.1935483870967742, "fit_s": 0.021548032760620117, "pred_s": 4.76837158203125e-07, "max_n": 20000}

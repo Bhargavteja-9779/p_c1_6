@@ -1,0 +1,22 @@
+# plan_v4 — frozen EVAL run for topic 2 (written 2026-11-25 BEFORE any EVAL result of these methods; D36)
+protocol: transd            # D34: z-score whole set, fit on all, score all (HF-DIF setting)
+datasets: hfdif20           # EVAL, untouched by any method variant until now (D35)
+seeds: 0-9
+max_n: 1000000              # full data, like HF-DIF; methods cap their kNN REFERENCE at 20 000 random points (seeded)
+primary_method: scknn_F0.1  # kNN mean distance to the k = round(0.1 * |ref|) nearest reference points, self excluded
+secondary_method: fuse_F0.1_w0.5   # rank fusion with a 200-tree isolation forest (AUC-PR motivation, journal 24)
+baselines_reproduced: [iforest, ecod, copod, hbos, pca, loda, knn, lof, dif]
+external_comparison: HF-DIF and its 12 baselines, reported per-dataset means (literature/hfdif_tables.csv)
+primary_metric: mean AUC-ROC over the 20 sets (seed-averaged per set)
+secondary: AUC-PR, P@K, mean rank, win/tie/loss, runtime
+statistics: two-sided Wilcoxon signed-rank AND paired t over the 20 per-set means; Holm over all comparisons of the primary
+            method (incl. the ~25 DEV variants counted as a family note); effect = mean difference with bootstrap 95 % CI
+predictions_written_before_running:
+  P1: scknn_F0.1 > reproduced iforest (69.1) on EVAL mean AUC-ROC, Holm p < 0.05
+  P2: scknn_F0.1 > reproduced default kNN (k=5)
+  P3: scknn_F0.1 does NOT reach HF-DIF's reported 82.6 (expected 72-78) — stated in advance to avoid post-hoc reframing
+decision_rule:
+  if P1 and P2 hold and gap to HF-DIF > 3 points -> the method alone is not a JKSU "beats the journal" paper; next cycle combines the
+     scale finding with a representation component designed on DEV, OR reframes as a reproducibility/benchmark paper (journal 24)
+  if scknn_F0.1 >= 82.6 -> proceed to G5 confirmation (fresh seeds 100-109 are meaningless for deterministic parts; use 5 bootstrap
+     resamples of each dataset as the confirmation unit, fixed now)

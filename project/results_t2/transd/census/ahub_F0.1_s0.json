@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "ahub_F0.1", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1241, "auc_roc": 0.6547935153898088, "auc_pr": 0.08964575453909768, "p_at_k": 0.0862207896857373, "fit_s": 45.87877368927002, "pred_s": 2.86102294921875e-06, "max_n": 20000}

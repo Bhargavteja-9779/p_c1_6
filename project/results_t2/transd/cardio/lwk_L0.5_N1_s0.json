@@ -1,0 +1,1 @@
+{"dataset": "cardio", "method": "lwk_L0.5_N1", "seed": 0, "protocol": "transd", "n_train": 1831, "n_test": 1831, "anom_test": 176, "auc_roc": 0.7410601483109036, "auc_pr": 0.23830346220278084, "p_at_k": 0.25, "fit_s": 0.11096358299255371, "pred_s": 1.430511474609375e-06, "max_n": 20000}

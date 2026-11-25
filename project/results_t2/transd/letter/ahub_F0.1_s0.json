@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "ahub_F0.1", "seed": 0, "protocol": "transd", "n_train": 1600, "n_test": 1600, "anom_test": 100, "auc_roc": 0.7575400000000001, "auc_pr": 0.24362077266489507, "p_at_k": 0.3, "fit_s": 0.1360611915588379, "pred_s": 4.76837158203125e-07, "max_n": 20000}

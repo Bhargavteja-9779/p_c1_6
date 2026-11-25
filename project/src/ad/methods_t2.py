@@ -380,6 +380,10 @@ def make(method, seed, n_train):
         kw[key] = val
     if name == "mrk":
         return MRK(frac=float(kw.get("F", 0.1)), n_views=int(kw.get("V", 8)), kinds=kw.get("R", "zrms"), seed=seed)
+    if name == "lwk":
+        return LWK(n_anchor=int(kw.get("A", 32)), frac=float(kw.get("F", 0.1)), near=int(kw.get("N", 3)), seed=seed, lam=float(kw.get("L", 0)))
+    if name == "ahub":
+        return AntiHub(frac=float(kw.get("F", 0.02)), seed=seed)
     if name == "selk":
         return SelK(rule=kw.get("U", "stab"), tau=float(kw.get("T", 0.95)), kmax_frac=float(kw.get("X", 0.2)), seed=seed)
     if name == "fuse":
@@ -390,3 +394,54 @@ def make(method, seed, n_train):
     if name == "plst":
         return PLST(q=float(kw.get("q", 0.05)), rounds=int(kw.get("r", 2)), blend=float(kw.get("b", 0.5)), seed=seed)
     return _make1(method, seed, n_train)
+
+
+# ---------------------------------------------------------------- round 3 (journal 25)
+class LWK:
+    """Locally whitened kNN via anchors: local mean/covariance (Ledoit-Wolf) of each anchor's K = frac*n neighbourhood;
+    score = min Mahalanobis distance over the `near` nearest anchors."""
+    def __init__(self, n_anchor=32, frac=0.1, near=3, cap=20000, pca=50, seed=0, lam=0.0):
+        self.n_anchor, self.frac, self.near, self.cap, self.pca, self.seed, self.lam = n_anchor, frac, near, cap, pca, seed, lam
+    def fit(self, X):
+        from sklearn.cluster import MiniBatchKMeans
+        from sklearn.covariance import LedoitWolf
+        from sklearn.decomposition import PCA
+        X = np.asarray(X, float); n, d = X.shape; rng = np.random.default_rng(self.seed)
+        if d > self.pca: X = PCA(self.pca, random_state=self.seed).fit_transform(X)
+        ref = np.sort(rng.choice(n, self.cap, replace=False)) if n > self.cap else np.arange(n); R = X[ref]
+        A = MiniBatchKMeans(self.n_anchor, random_state=self.seed, n_init=3).fit(R).cluster_centers_
+        K = max(X.shape[1] + 2, int(self.frac * len(R)))
+        nnR = NearestNeighbors(n_neighbors=min(K, len(R))).fit(R); _, idx = nnR.kneighbors(A)
+        mus, Ps = [], []
+        for a in range(len(A)):
+            P = R[idx[a]]; lw = LedoitWolf().fit(P); C = lw.covariance_
+            if self.lam > 0:  # shrink toward an isotropic covariance at the GLOBAL scale (1 per z-scored feature)
+                C = (1 - self.lam) * C + self.lam * np.eye(len(C)) * (np.trace(np.cov(R.T)) / len(C) if len(C) > 1 else 1.0)
+            mus.append(lw.location_); Ps.append(np.linalg.pinv(C))
+        near = NearestNeighbors(n_neighbors=min(self.near, len(A))).fit(A).kneighbors(X, return_distance=False)
+        S = np.full(n, np.inf)
+        for a in range(len(A)):
+            rows = np.flatnonzero((near == a).any(1))
+            if len(rows):
+                D = X[rows] - mus[a]; S[rows] = np.minimum(S[rows], np.einsum("ij,jk,ik->i", D, Ps[a], D))
+        self.s_ = np.sqrt(S); return self
+    def decision_function(self, X): return self.s_
+
+
+class AntiHub:
+    def __init__(self, frac=0.02, cap=20000, seed=0):
+        self.frac, self.cap, self.seed = frac, cap, seed
+    def fit(self, X):
+        X = np.asarray(X, float); n = len(X)
+        if n > self.cap:  # score all points by distance-to-hub proxy is out of scope; subsample reference AND rank all via kNN fallback
+            rng = np.random.default_rng(self.seed); ref = np.sort(rng.choice(n, self.cap, replace=False))
+        else: ref = np.arange(n)
+        R = X[ref]; k = max(1, int(self.frac * len(R)))
+        _, i = NearestNeighbors(n_neighbors=k + 1).fit(R).kneighbors(R)
+        cnt = np.bincount(i[:, 1:].ravel(), minlength=len(R)).astype(float)
+        # every point: mean reverse-count of its k nearest reference points vs its own (outsiders get a neighbour-based estimate)
+        _, j = NearestNeighbors(n_neighbors=min(k, len(R))).fit(R).kneighbors(X)
+        s = -cnt[j].mean(1) * 0.0
+        own = np.full(n, np.nan); own[ref] = cnt
+        self.s_ = np.where(np.isnan(own), -cnt[j[:, :1]].ravel(), -own); return self
+    def decision_function(self, X): return self.s_

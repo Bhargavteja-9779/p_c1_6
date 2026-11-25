@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "lwk_L0.8_A8", "seed": 0, "protocol": "transd", "n_train": 1600, "n_test": 1600, "anom_test": 100, "auc_roc": 0.8073733333333333, "auc_pr": 0.18770667311346462, "p_at_k": 0.24, "fit_s": 0.03437018394470215, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

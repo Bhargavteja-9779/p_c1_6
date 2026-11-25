@@ -1,0 +1,1 @@
+{"dataset": "ALOI", "method": "ahub_F0.01", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 609, "auc_roc": 0.5736236123964877, "auc_pr": 0.05616901446194454, "p_at_k": 0.07389162561576355, "fit_s": 6.58750057220459, "pred_s": 2.6226043701171875e-06, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "musk", "method": "lwk_F0.05", "seed": 0, "protocol": "transd", "n_train": 3062, "n_test": 3062, "anom_test": 97, "auc_roc": 0.4440187062116444, "auc_pr": 0.05691759708190683, "p_at_k": 0.030927835051546393, "fit_s": 0.13718390464782715, "pred_s": 1.430511474609375e-06, "max_n": 20000}

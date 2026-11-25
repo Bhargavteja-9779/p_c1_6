@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "lwk_F0.05", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 192, "auc_roc": 0.9523204008481422, "auc_pr": 0.11726506461767912, "p_at_k": 0.14583333333333334, "fit_s": 0.1309192180633545, "pred_s": 7.152557373046875e-07, "max_n": 20000}

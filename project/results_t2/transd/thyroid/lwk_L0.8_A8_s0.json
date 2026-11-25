@@ -1,0 +1,1 @@
+{"dataset": "thyroid", "method": "lwk_L0.8_A8", "seed": 0, "protocol": "transd", "n_train": 3772, "n_test": 3772, "anom_test": 93, "auc_roc": 0.9688613373783782, "auc_pr": 0.4056162661597527, "p_at_k": 0.41935483870967744, "fit_s": 0.05264997482299805, "pred_s": 7.152557373046875e-07, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "ahub_F0.1", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 192, "auc_roc": 0.9754622238068794, "auc_pr": 0.17346553187770558, "p_at_k": 0.171875, "fit_s": 33.87097454071045, "pred_s": 2.1457672119140625e-06, "max_n": 20000}

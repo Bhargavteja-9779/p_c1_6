@@ -1,0 +1,1 @@
+{"dataset": "glass", "method": "ahub_F0.05", "seed": 0, "protocol": "transd", "n_train": 214, "n_test": 214, "anom_test": 9, "auc_roc": 0.7097560975609756, "auc_pr": 0.18986003703245083, "p_at_k": 0.1111111111111111, "fit_s": 0.002893209457397461, "pred_s": 4.76837158203125e-07, "max_n": 20000}
