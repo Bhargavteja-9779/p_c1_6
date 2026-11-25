@@ -1,0 +1,1 @@
+{"dataset": "Lymphography", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 148, "n_test": 148, "anom_test": 6, "auc_roc": 0.892018779342723, "auc_pr": 0.4305555555555555, "p_at_k": 0.5, "fit_s": 0.4651939868927002, "pred_s": 4.76837158203125e-07, "max_n": 20000}

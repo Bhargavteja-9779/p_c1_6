@@ -1,0 +1,1 @@
+{"dataset": "Pima", "method": "selk_Ustab_T0.99", "seed": 0, "protocol": "transd", "n_train": 768, "n_test": 768, "anom_test": 268, "auc_roc": 0.7125746268656716, "auc_pr": 0.5278878172621374, "p_at_k": 0.5559701492537313, "fit_s": 0.026296615600585938, "pred_s": 4.76837158203125e-07, "max_n": 20000}

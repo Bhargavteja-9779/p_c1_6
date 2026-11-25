@@ -1,0 +1,1 @@
+{"dataset": "satimage-2", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 5803, "n_test": 5803, "anom_test": 71, "auc_roc": 0.6382355542887472, "auc_pr": 0.02090582741414193, "p_at_k": 0.028169014084507043, "fit_s": 17.11586594581604, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

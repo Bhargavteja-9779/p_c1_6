@@ -1,0 +1,1 @@
+{"dataset": "ALOI", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 609, "auc_roc": 0.5416028071188037, "auc_pr": 0.036980772726583705, "p_at_k": 0.05582922824302135, "fit_s": 54.01474404335022, "pred_s": 1.6689300537109375e-06, "max_n": 20000}

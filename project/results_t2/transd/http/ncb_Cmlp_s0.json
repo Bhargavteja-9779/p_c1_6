@@ -1,0 +1,1 @@
+{"dataset": "http", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 78, "auc_roc": 0.9828806705124343, "auc_pr": 0.1380531929366703, "p_at_k": 0.01282051282051282, "fit_s": 59.62911653518677, "pred_s": 1.430511474609375e-06, "max_n": 20000}

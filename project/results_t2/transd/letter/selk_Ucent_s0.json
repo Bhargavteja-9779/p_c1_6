@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "selk_Ucent", "seed": 0, "protocol": "transd", "n_train": 1600, "n_test": 1600, "anom_test": 100, "auc_roc": 0.8879066666666666, "auc_pr": 0.31697688097321347, "p_at_k": 0.34, "fit_s": 0.10097622871398926, "pred_s": 4.76837158203125e-07, "max_n": 20000}

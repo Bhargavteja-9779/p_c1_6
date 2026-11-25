@@ -1,0 +1,1 @@
+{"dataset": "ALOI", "method": "selk_Ucent", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 609, "auc_roc": 0.5892847722171315, "auc_pr": 0.04406441400350716, "p_at_k": 0.05582922824302135, "fit_s": 20.232712030410767, "pred_s": 1.9073486328125e-06, "max_n": 20000}

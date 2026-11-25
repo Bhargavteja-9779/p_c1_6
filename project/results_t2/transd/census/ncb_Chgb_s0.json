@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1241, "auc_roc": 0.5561261188236952, "auc_pr": 0.06799593514768652, "p_at_k": 0.0362610797743755, "fit_s": 40.127570390701294, "pred_s": 1.430511474609375e-06, "max_n": 20000}

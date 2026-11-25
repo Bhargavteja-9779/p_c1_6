@@ -1,0 +1,1 @@
+{"dataset": "pendigits", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 6870, "n_test": 6870, "anom_test": 156, "auc_roc": 0.6633288268677009, "auc_pr": 0.05276656611957225, "p_at_k": 0.07051282051282051, "fit_s": 19.886840343475342, "pred_s": 1.430511474609375e-06, "max_n": 20000}

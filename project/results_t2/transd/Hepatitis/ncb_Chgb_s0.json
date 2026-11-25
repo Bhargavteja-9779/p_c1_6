@@ -1,0 +1,1 @@
+{"dataset": "Hepatitis", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 80, "n_test": 80, "anom_test": 13, "auc_roc": 0.5602755453501722, "auc_pr": 0.1905430353219133, "p_at_k": 0.07692307692307693, "fit_s": 0.12599897384643555, "pred_s": 0.0, "max_n": 20000}

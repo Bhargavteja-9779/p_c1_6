@@ -1,0 +1,1 @@
+{"dataset": "pendigits", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 6870, "n_test": 6870, "anom_test": 156, "auc_roc": 0.7773557740045676, "auc_pr": 0.16143224603757927, "p_at_k": 0.21153846153846154, "fit_s": 1.3511223793029785, "pred_s": 4.76837158203125e-07, "max_n": 20000}

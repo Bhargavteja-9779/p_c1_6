@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "selk_Ucent", "seed": 0, "protocol": "transd", "n_train": 129, "n_test": 129, "anom_test": 10, "auc_roc": 0.5369747899159664, "auc_pr": 0.0851607479566402, "p_at_k": 0.0, "fit_s": 0.00208282470703125, "pred_s": 2.384185791015625e-07, "max_n": 20000}

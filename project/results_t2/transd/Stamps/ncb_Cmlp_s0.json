@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.6531997076939138, "auc_pr": 0.1744571289329873, "p_at_k": 0.16129032258064516, "fit_s": 1.0260155200958252, "pred_s": 1.1920928955078125e-06, "max_n": 20000}

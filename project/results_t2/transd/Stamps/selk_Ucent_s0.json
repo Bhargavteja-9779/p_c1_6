@@ -1,0 +1,1 @@
+{"dataset": "Stamps", "method": "selk_Ucent", "seed": 0, "protocol": "transd", "n_train": 340, "n_test": 340, "anom_test": 31, "auc_roc": 0.8309844451404113, "auc_pr": 0.25596763049282917, "p_at_k": 0.1935483870967742, "fit_s": 0.00570368766784668, "pred_s": 2.384185791015625e-07, "max_n": 20000}

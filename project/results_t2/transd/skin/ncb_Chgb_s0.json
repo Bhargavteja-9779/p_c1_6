@@ -1,0 +1,1 @@
+{"dataset": "skin", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 4151, "auc_roc": 0.6700052542059374, "auc_pr": 0.2626366321465533, "p_at_k": 0.2336786316550229, "fit_s": 1.3840422630310059, "pred_s": 4.76837158203125e-07, "max_n": 20000}

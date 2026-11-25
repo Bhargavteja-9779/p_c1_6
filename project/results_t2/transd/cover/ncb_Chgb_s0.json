@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 192, "auc_roc": 0.40350962994749595, "auc_pr": 0.01082190657652955, "p_at_k": 0.010416666666666666, "fit_s": 2.2578132152557373, "pred_s": 7.152557373046875e-07, "max_n": 20000}

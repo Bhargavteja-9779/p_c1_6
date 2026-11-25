@@ -1,0 +1,1 @@
+{"dataset": "vertebral", "method": "selk_Ustab", "seed": 0, "protocol": "transd", "n_train": 240, "n_test": 240, "anom_test": 30, "auc_roc": 0.3407142857142857, "auc_pr": 0.09182427727483966, "p_at_k": 0.03333333333333333, "fit_s": 0.0032007694244384766, "pred_s": 4.76837158203125e-07, "max_n": 20000}

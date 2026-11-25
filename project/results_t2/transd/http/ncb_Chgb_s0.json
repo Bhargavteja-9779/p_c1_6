@@ -1,0 +1,1 @@
+{"dataset": "http", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 78, "auc_roc": 0.6907120462109921, "auc_pr": 0.018145960114525517, "p_at_k": 0.01282051282051282, "fit_s": 0.8629908561706543, "pred_s": 2.384185791015625e-07, "max_n": 20000}

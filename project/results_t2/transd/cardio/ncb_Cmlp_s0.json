@@ -1,0 +1,1 @@
+{"dataset": "cardio", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 1831, "n_test": 1831, "anom_test": 176, "auc_roc": 0.6542673716012084, "auc_pr": 0.17829074520102142, "p_at_k": 0.20454545454545456, "fit_s": 5.344984292984009, "pred_s": 4.76837158203125e-07, "max_n": 20000}

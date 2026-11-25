@@ -1,0 +1,1 @@
+{"dataset": "shuttle", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1430, "auc_roc": 0.8146373766244526, "auc_pr": 0.3035093105557621, "p_at_k": 0.34545454545454546, "fit_s": 2.296806812286377, "pred_s": 9.5367431640625e-07, "max_n": 20000}

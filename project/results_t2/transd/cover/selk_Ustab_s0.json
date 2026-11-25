@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "selk_Ustab", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 192, "auc_roc": 0.799200712254308, "auc_pr": 0.04690557730540278, "p_at_k": 0.109375, "fit_s": 20.104763984680176, "pred_s": 7.152557373046875e-07, "max_n": 20000}

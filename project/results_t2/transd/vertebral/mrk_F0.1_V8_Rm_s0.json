@@ -1,0 +1,1 @@
+{"dataset": "vertebral", "method": "mrk_F0.1_V8_Rm", "seed": 0, "protocol": "transd", "n_train": 240, "n_test": 240, "anom_test": 30, "auc_roc": 0.3888888888888889, "auc_pr": 0.09845996747225721, "p_at_k": 0.03333333333333333, "fit_s": 0.01504206657409668, "pred_s": 4.76837158203125e-07, "max_n": 20000}

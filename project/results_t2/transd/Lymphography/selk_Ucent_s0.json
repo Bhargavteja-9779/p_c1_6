@@ -1,0 +1,1 @@
+{"dataset": "Lymphography", "method": "selk_Ucent", "seed": 0, "protocol": "transd", "n_train": 148, "n_test": 148, "anom_test": 6, "auc_roc": 0.9953051643192489, "auc_pr": 0.8734126984126983, "p_at_k": 0.8333333333333334, "fit_s": 0.0017573833465576172, "pred_s": 2.384185791015625e-07, "max_n": 20000}

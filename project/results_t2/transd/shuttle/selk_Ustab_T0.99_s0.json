@@ -1,0 +1,1 @@
+{"dataset": "shuttle", "method": "selk_Ustab_T0.99", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1430, "auc_roc": 0.9937857511363165, "auc_pr": 0.931273396968061, "p_at_k": 0.9587412587412587, "fit_s": 21.559680938720703, "pred_s": 7.152557373046875e-07, "max_n": 20000}

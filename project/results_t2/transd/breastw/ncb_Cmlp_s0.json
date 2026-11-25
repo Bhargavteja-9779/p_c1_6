@@ -1,0 +1,1 @@
+{"dataset": "breastw", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 683, "n_test": 683, "anom_test": 239, "auc_roc": 0.8399675826454068, "auc_pr": 0.6019450435298969, "p_at_k": 0.6610878661087866, "fit_s": 1.7309157848358154, "pred_s": 4.76837158203125e-07, "max_n": 20000}

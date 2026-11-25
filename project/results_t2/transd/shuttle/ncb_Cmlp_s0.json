@@ -1,0 +1,1 @@
+{"dataset": "shuttle", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1430, "auc_roc": 0.810936392632677, "auc_pr": 0.22273787704134418, "p_at_k": 0.2811188811188811, "fit_s": 52.0690860748291, "pred_s": 0.0, "max_n": 20000}

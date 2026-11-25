@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "selk_Ucent", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1241, "auc_roc": 0.6740013356575683, "auc_pr": 0.08996533219919725, "p_at_k": 0.06688154713940371, "fit_s": 24.94294571876526, "pred_s": 1.430511474609375e-06, "max_n": 20000}

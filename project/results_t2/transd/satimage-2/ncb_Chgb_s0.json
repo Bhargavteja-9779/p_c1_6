@@ -1,0 +1,1 @@
+{"dataset": "satimage-2", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 5803, "n_test": 5803, "anom_test": 71, "auc_roc": 0.9592232389451854, "auc_pr": 0.40523417835712466, "p_at_k": 0.43661971830985913, "fit_s": 2.2914066314697266, "pred_s": 4.76837158203125e-07, "max_n": 20000}

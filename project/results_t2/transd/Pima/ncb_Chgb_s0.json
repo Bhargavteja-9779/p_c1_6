@@ -1,0 +1,1 @@
+{"dataset": "Pima", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 768, "n_test": 768, "anom_test": 268, "auc_roc": 0.5441716417910448, "auc_pr": 0.4254187354849937, "p_at_k": 0.417910447761194, "fit_s": 0.4744069576263428, "pred_s": 2.384185791015625e-07, "max_n": 20000}

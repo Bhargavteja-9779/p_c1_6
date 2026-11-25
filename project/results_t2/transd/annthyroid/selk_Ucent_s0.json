@@ -1,0 +1,1 @@
+{"dataset": "annthyroid", "method": "selk_Ucent", "seed": 0, "protocol": "transd", "n_train": 7200, "n_test": 7200, "anom_test": 534, "auc_roc": 0.7820155611066724, "auc_pr": 0.22776990456377727, "p_at_k": 0.30711610486891383, "fit_s": 2.754538059234619, "pred_s": 7.152557373046875e-07, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "WBC", "method": "selk_Ustab_T0.99", "seed": 0, "protocol": "transd", "n_train": 223, "n_test": 223, "anom_test": 10, "auc_roc": 0.9868544600938968, "auc_pr": 0.7952531526444568, "p_at_k": 0.7, "fit_s": 0.0029387474060058594, "pred_s": 2.384185791015625e-07, "max_n": 20000}

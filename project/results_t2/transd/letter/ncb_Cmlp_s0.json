@@ -1,0 +1,1 @@
+{"dataset": "letter", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 1600, "n_test": 1600, "anom_test": 100, "auc_roc": 0.7790866666666668, "auc_pr": 0.3500157406136878, "p_at_k": 0.37, "fit_s": 4.778702735900879, "pred_s": 1.430511474609375e-06, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "campaign", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 2253, "auc_roc": 0.6737633319295214, "auc_pr": 0.21529678866933435, "p_at_k": 0.2671992898357745, "fit_s": 61.60049343109131, "pred_s": 9.5367431640625e-07, "max_n": 20000}

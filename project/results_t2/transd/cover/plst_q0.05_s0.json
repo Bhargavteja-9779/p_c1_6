@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "plst_q0.05", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 192, "auc_roc": 0.7785376331532714, "auc_pr": 0.024954322194840735, "p_at_k": 0.036458333333333336, "fit_s": 15.415019989013672, "pred_s": 2.384185791015625e-07, "max_n": 20000}

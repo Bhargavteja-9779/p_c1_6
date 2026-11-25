@@ -1,0 +1,1 @@
+{"dataset": "mnist", "method": "selk_Ucent", "seed": 0, "protocol": "transd", "n_train": 7603, "n_test": 7603, "anom_test": 700, "auc_roc": 0.8689402123300428, "auc_pr": 0.4101193804176187, "p_at_k": 0.42428571428571427, "fit_s": 3.11240291595459, "pred_s": 2.384185791015625e-07, "max_n": 20000}

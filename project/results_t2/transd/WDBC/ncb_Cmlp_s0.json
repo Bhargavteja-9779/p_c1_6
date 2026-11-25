@@ -1,0 +1,1 @@
+{"dataset": "WDBC", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 367, "n_test": 367, "anom_test": 10, "auc_roc": 0.888795518207283, "auc_pr": 0.2393456197120619, "p_at_k": 0.3, "fit_s": 1.246093988418579, "pred_s": 9.5367431640625e-07, "max_n": 20000}

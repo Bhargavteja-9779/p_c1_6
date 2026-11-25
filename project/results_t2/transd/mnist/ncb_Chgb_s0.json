@@ -1,0 +1,1 @@
+{"dataset": "mnist", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 7603, "n_test": 7603, "anom_test": 700, "auc_roc": 0.536050888847499, "auc_pr": 0.1589798937502095, "p_at_k": 0.15142857142857144, "fit_s": 4.025843143463135, "pred_s": 1.430511474609375e-06, "max_n": 20000}

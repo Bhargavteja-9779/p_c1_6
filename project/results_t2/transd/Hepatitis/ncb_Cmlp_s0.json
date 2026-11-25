@@ -1,0 +1,1 @@
+{"dataset": "Hepatitis", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 80, "n_test": 80, "anom_test": 13, "auc_roc": 0.4144661308840414, "auc_pr": 0.14827756979801082, "p_at_k": 0.15384615384615385, "fit_s": 0.1936948299407959, "pred_s": 0.0, "max_n": 20000}

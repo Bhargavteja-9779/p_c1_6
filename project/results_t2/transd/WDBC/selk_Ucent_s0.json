@@ -1,0 +1,1 @@
+{"dataset": "WDBC", "method": "selk_Ucent", "seed": 0, "protocol": "transd", "n_train": 367, "n_test": 367, "anom_test": 10, "auc_roc": 0.973109243697479, "auc_pr": 0.38298515849027365, "p_at_k": 0.3, "fit_s": 0.0070040225982666016, "pred_s": 2.384185791015625e-07, "max_n": 20000}

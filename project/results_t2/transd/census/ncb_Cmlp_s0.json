@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 1241, "auc_roc": 0.5894940399062385, "auc_pr": 0.078276611277769, "p_at_k": 0.08058017727639001, "fit_s": 132.25427961349487, "pred_s": 1.6689300537109375e-06, "max_n": 20000}

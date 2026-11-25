@@ -1,0 +1,1 @@
+{"dataset": "vertebral", "method": "ncb_Chgb", "seed": 0, "protocol": "transd", "n_train": 240, "n_test": 240, "anom_test": 30, "auc_roc": 0.45825396825396825, "auc_pr": 0.11914119355814287, "p_at_k": 0.1, "fit_s": 0.2868785858154297, "pred_s": 4.76837158203125e-07, "max_n": 20000}

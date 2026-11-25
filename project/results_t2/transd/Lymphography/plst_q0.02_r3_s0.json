@@ -1,0 +1,1 @@
+{"dataset": "Lymphography", "method": "plst_q0.02_r3", "seed": 0, "protocol": "transd", "n_train": 148, "n_test": 148, "anom_test": 6, "auc_roc": 0.710093896713615, "auc_pr": 0.3257437806940164, "p_at_k": 0.3333333333333333, "fit_s": 0.23522567749023438, "pred_s": 0.0, "max_n": 20000}

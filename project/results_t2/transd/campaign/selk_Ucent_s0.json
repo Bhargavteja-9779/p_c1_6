@@ -1,0 +1,1 @@
+{"dataset": "campaign", "method": "selk_Ucent", "seed": 0, "protocol": "transd", "n_train": 20000, "n_test": 20000, "anom_test": 2253, "auc_roc": 0.7606809435306245, "auc_pr": 0.3026558487738683, "p_at_k": 0.3648468708388815, "fit_s": 23.10735297203064, "pred_s": 2.384185791015625e-07, "max_n": 20000}

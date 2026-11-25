@@ -1,0 +1,1 @@
+{"dataset": "vertebral", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 240, "n_test": 240, "anom_test": 30, "auc_roc": 0.5661904761904762, "auc_pr": 0.13878920898409947, "p_at_k": 0.1, "fit_s": 0.7285444736480713, "pred_s": 4.76837158203125e-07, "max_n": 20000}

@@ -1,0 +1,1 @@
+{"dataset": "Ionosphere", "method": "ncb_Cmlp", "seed": 0, "protocol": "transd", "n_train": 351, "n_test": 351, "anom_test": 126, "auc_roc": 0.8653615520282187, "auc_pr": 0.8461813803515926, "p_at_k": 0.746031746031746, "fit_s": 1.1095225811004639, "pred_s": 2.384185791015625e-07, "max_n": 20000}
