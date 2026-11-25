@@ -1,0 +1,1 @@
+{"dataset": "vowels", "method": "scknn_F0.1", "seed": 8, "protocol": "transd", "n_train": 1456, "n_test": 1456, "anom_test": 50, "auc_roc": 0.9351635846372688, "auc_pr": 0.38445216575032354, "p_at_k": 0.38, "fit_s": 0.0867776870727539, "pred_s": 1.6689300537109375e-06, "max_n": 1000000}
