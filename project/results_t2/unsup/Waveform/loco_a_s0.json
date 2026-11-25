@@ -1,0 +1,1 @@
+{"dataset": "Waveform", "method": "loco_a", "seed": 0, "protocol": "unsup", "n_train": 2410, "n_test": 1033, "anom_test": 30, "auc_roc": 0.6994350282485875, "auc_pr": 0.1104284194251546, "p_at_k": 0.1, "fit_s": 0.014327287673950195, "pred_s": 0.0482943058013916, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "backdoor", "method": "loco_b", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 73, "auc_roc": 0.9389481960584263, "auc_pr": 0.4013597383557149, "p_at_k": 0.5342465753424658, "fit_s": 0.16075396537780762, "pred_s": 0.38274312019348145, "max_n": 10000}

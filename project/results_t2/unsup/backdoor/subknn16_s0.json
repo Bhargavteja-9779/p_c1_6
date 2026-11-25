@@ -1,0 +1,1 @@
+{"dataset": "backdoor", "method": "subknn16", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 73, "auc_roc": 0.8818370298262281, "auc_pr": 0.16032151786387483, "p_at_k": 0.0547945205479452, "fit_s": 4.76837158203125e-07, "pred_s": 0.1096963882446289, "max_n": 10000}

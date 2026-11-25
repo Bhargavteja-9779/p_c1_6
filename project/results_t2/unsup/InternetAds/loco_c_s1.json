@@ -1,0 +1,1 @@
+{"dataset": "InternetAds", "method": "loco_c", "seed": 1, "protocol": "unsup", "n_train": 1377, "n_test": 589, "anom_test": 110, "auc_roc": 0.7261434807363827, "auc_pr": 0.5611962003248644, "p_at_k": 0.5, "fit_s": 0.09400582313537598, "pred_s": 0.04878687858581543, "max_n": 10000}
