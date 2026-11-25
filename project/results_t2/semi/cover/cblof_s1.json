@@ -1,0 +1,1 @@
+{"dataset": "cover", "method": "cblof", "seed": 1, "protocol": "semi", "n_train": 4952, "n_test": 5048, "anom_test": 96, "auc_roc": 0.9544607397684437, "auc_pr": 0.21922954776734083, "p_at_k": 0.22916666666666666, "fit_s": 0.24353790283203125, "pred_s": 0.012838125228881836, "max_n": 10000}

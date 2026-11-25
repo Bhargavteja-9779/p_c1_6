@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "glosh", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 186, "auc_roc": 0.5474107954849409, "auc_pr": 0.06271932036698352, "p_at_k": 0.026881720430107527, "fit_s": 26.159799575805664, "pred_s": 4.7390456199646, "max_n": 10000}

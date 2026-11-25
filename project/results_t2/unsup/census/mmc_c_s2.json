@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "mmc_c", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 186, "auc_roc": 0.6929933665008292, "auc_pr": 0.10272500403943469, "p_at_k": 0.06989247311827956, "fit_s": 10.075691223144531, "pred_s": 0.3701298236846924, "max_n": 10000}

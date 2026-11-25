@@ -1,0 +1,1 @@
+{"dataset": "census", "method": "cblof", "seed": 0, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 186, "auc_roc": 0.5932224438483467, "auc_pr": 0.07085492546975948, "p_at_k": 0.053763440860215055, "fit_s": 0.3401050567626953, "pred_s": 0.022662878036499023, "max_n": 10000}

@@ -1,0 +1,1 @@
+{"dataset": "fault", "method": "mmc_a", "seed": 0, "protocol": "semi", "n_train": 634, "n_test": 1307, "anom_test": 673, "auc_roc": 0.6263458500710131, "auc_pr": 0.56671206529986, "p_at_k": 0.586924219910847, "fit_s": 0.065521240234375, "pred_s": 0.01782059669494629, "max_n": 10000}
