@@ -1,0 +1,42 @@
+# plan_v2 — cycle 1 — written 2026-11-25 BEFORE any plan_v1 result was seen (only tuning jobs had started).
+# Reason: full-text prior-art check (literature/prior_art_fulltext.json) shows target-window normalisation (BRN), window
+# novelty scoring and label-free thresholds are already in Gazi et al. 2026 (so PEN/ESF are at most replications), while
+# (i) cross-pair shift decomposition, (ii) feature-group transplant tests and (iii) environment x class confound-breaking
+# reweighting of pooled sources were not found. Hypothesis H2: journal/ENTRIES/2026-11-25_07_HYPOTHESIS_H2_confounding.md
+# Adds E8 (H2 + controls). plan_v1 jobs stay in the queue unchanged. E7 (decomposition + transplant) runs via
+# src/shift_decomposition.py for lgbm, clsbal+lgbm, cb+lgbm (seeds 0-2, val split).
+# Controls: clsbal = global class balance only (isolates the environment-specific part of cb); cb05 = half-strength.
+# Compute: 7 methods x 4 targets x 3 seeds x ~1 min ~= 1.5 CPU-h.
+globals:
+  n_per_source: 100000
+  n_val_per_source: 60000
+  eval_split: val
+blocks:
+  - id: "E8_lodo_{method}_{target}_s{seed}"
+    kind: run
+    exp: E8
+    protocol: lodo
+    priority: 2
+    cfg_from: "tune_lodo_lgbm_{target}"
+    method: ["clsbal+lgbm", "cb05+lgbm", "cb+lgbm"]
+    target: [UNSW, TON, CIC, BOT]
+    seed: [0, 1, 2]
+    save_scores: true
+  - id: "E8_lodo_{method}_{target}_s{seed}"
+    kind: run
+    exp: E8
+    protocol: lodo
+    priority: 2
+    cfg_from: "tune_lodo_xgb_{target}"
+    method: ["clsbal+xgb", "cb+xgb"]
+    target: [UNSW, TON, CIC, BOT]
+    seed: [0, 1, 2]
+  - id: "E8_lodo_{method}_{target}_s{seed}"
+    kind: run
+    exp: E8
+    protocol: lodo
+    priority: 2
+    cfg_from: "tune_lodo_rf_{target}"
+    method: ["clsbal+rf", "cb+rf"]
+    target: [UNSW, TON, CIC, BOT]
+    seed: [0, 1, 2]

@@ -87,6 +87,8 @@ def confound_weights(method, dom, y):
     benign and attack mass and environment identity carries no information about the label in the pooled data.
     Cells with < 20 flows are left at weight 1 (cannot be balanced). Weights renormalised to mean 1."""
     parts = method.split("+")[:-1]
+    if "clsbal" in parts:   # control: class balance only (global), ignoring environment
+        w = np.where(y == 1, 0.5 / max(y.mean(), 1e-9), 0.5 / max(1 - y.mean(), 1e-9)); return w / w.mean()
     a = 1.0 if "cb" in parts else 0.5 if "cb05" in parts else None
     if a is None:
         return None

@@ -39,7 +39,10 @@ def one(target, seed, method="lgbm", tau=None):
     cols = [c for c in nids.feature_cols(tr) if c != "_env"]
     Xtr, Xva, Xte, use, info, order = run_job.treat(spec, cfg, tr, va, te, cols)
     ytr = tr.Label.to_numpy() if order is None else tr.Label.to_numpy()[order]
-    m = nids.make_model(method, cfg, seed).fit(Xtr, ytr)
+    dom = tr._env.to_numpy() if order is None else tr._env.to_numpy()[order]
+    sw = run_job.confound_weights(method, dom, ytr)
+    m = nids.make_model(method, cfg, seed)
+    m.fit(Xtr, ytr, sample_weight=sw) if sw is not None else m.fit(Xtr, ytr)
     pva, pte = m.predict_proba(Xva)[:, 1], m.predict_proba(Xte)[:, 1]
     yva, yte = va.Label.to_numpy(), te.Label.to_numpy()
     thr, _ = nids.best_threshold(yva, pva)
@@ -51,6 +54,29 @@ def one(target, seed, method="lgbm", tau=None):
            "threshold": thr, "n": {"SB": len(SB), "SA": len(SA), "TB": len(TB), "TA": len(TA)},
            # per-source-environment benign FPR (does one source's benign dominate?)
            "FPR_src_by_env": {e: float((pva[(va._env.to_numpy() == e) & (yva == 0)] >= thr).mean()) for e in va._env.unique()}}
+    # ---- transplant tests: replace ONE feature group of target benign (or attack) flows by values drawn jointly
+    # from source-val benign (or attack) flows; the change in AUC/FPR/TPR measures how much that group's
+    # cross-network difference drives the model's errors (interventional, model-level attribution).
+    if "pen" not in method:
+        rng = np.random.default_rng(1000 + seed)
+        Xsb, Xsa = Xva[yva == 0], Xva[yva == 1]; Xtb, Xta = Xte[yte == 0], Xte[yte == 1]
+        tp = {}
+        groups = dict(nids.TRANSPLANT_GROUPS); groups["ALL"] = sum(nids.TRANSPLANT_GROUPS.values(), [])
+        for g, gcols in groups.items():
+            idx = [use.index(c) for c in gcols if c in use]
+            if not idx:
+                continue
+            r = {}
+            if len(Xtb) >= 5 and len(Xsb) >= 5:
+                Z = Xtb.copy(); Z[:, idx] = Xsb[rng.integers(0, len(Xsb), len(Z))][:, idx]
+                pz = m.predict_proba(Z)[:, 1]
+                r["benign_AUC_tgt"] = auc(pz, TA); r["benign_FPR_tgt"] = float((pz >= thr).mean())
+            if len(Xta) >= 5 and len(Xsa) >= 5:
+                Z = Xta.copy(); Z[:, idx] = Xsa[rng.integers(0, len(Xsa), len(Z))][:, idx]
+                pz = m.predict_proba(Z)[:, 1]
+                r["attack_AUC_tgt"] = auc(TB, pz); r["attack_TPR_tgt"] = float((pz >= thr).mean())
+            tp[g] = r
+        res["transplant"] = tp
     os.makedirs(os.path.dirname(out), exist_ok=True)
     json.dump(res, open(out + ".tmp", "w"), indent=1); os.replace(out + ".tmp", out)
     return res

@@ -1,0 +1,79 @@
+[
+ {
+  "work": "P01 Gazi, Prappo, Hossain 2026, 'Cross-Network NetFlow Intrusion Detection: A Controlled Benchmark of Transfer, Adaptation and Target Reference Windows' (Zenodo 10.5281/zenodo.24172400 -> record 24172401, code v1.0.0)",
+  "source_opened": "Zenodo metadata + full code archive (README, docs/PROTOCOL.md, docs/EXPERIMENTS.md, crossnet/methods.py, decision.py, preprocess.py, analysis/failure_decomposition.py, benchmark_tests.py, window_thresholds.py, experiments/feature_groups.py, pairwise_transfer.py header, paper/build_ledger.py). NO paper PDF and NO result files in deposit (README: 'saved scores ... will be deposited'; GitHub repo not reachable from this session).",
+  "a": "PARTLY DONE. E2 'failure decomposition' asks 'Is the failure network-driven or caused by novel attacks?': per run, AUROC of target-benign vs seen-family target attacks and vs novel-family target attacks; at threshold = 99th pct of source-validation benign scores, reports realised target benign FPR ('tgt_benignFPR_at_srcFPR1') and target attack TPR ('tgt_TPR_at_srcFPR1') vs source TPR. Pre-declared H-F1: seen-family AUROC < 0.75 on >=2/4 targets. They do NOT score source-benign vs target-attack or target-benign vs source-attack cross pairs, and do not swap benign/attack across domains. Numbers UNVERIFIED (not in deposit).",
+  "b": "PARTLY DONE. E7: XGBoost (n_estimators=100, depth 6) retrained under LODO without one group: TTL {MIN_TTL,MAX_TTL,DNS_TTL_ANSWER}; TCP window {TCP_WIN_MAX_IN/OUT}; timing {durations + 8 IAT}; 'artifacts' = TTL+TCP window+L4_SRC/DST_PORT,DNS_QUERY_ID,ICMP_TYPE,ICMP_IPV4_TYPE,FTP_COMMAND_RET_CODE. Reports target AUROC and target-benign FPR at source-calibrated 1% FPR threshold; labelled 'association only'. E4 identifier-free features (drop ports, DNS_QUERY_ID, ICMP types, FTP ret code) rerun for 6 methods. E6 pairwise: Spearman of transfer loss vs benign-source-vs-benign-target divergence (mean PSI, normalised Wasserstein, standardised mean diff) - 'audit gate'. NO transplant/counterfactual swaps of a group's benign distribution, no sizes/DNS-only groups. Numbers UNVERIFIED.",
+  "c": "YES, extensively. S1 (unlabelled 1,500-flow target buffer at natural prior): CORAL, DANN, IW-DANN, DANN-R, AdaBN, TENT, DomNorm (per-testbed z-score; target z-scored with buffer). S2 (500-flow target 'reference window' = 475 benign + 25 attack, 5% contamination): BRN = benign-referenced normalisation (each source z-scored by its own benign training flows, target by window stats, after log1p; clip +-5, sd floor 0.1) + MLP or XGBoost; IF-win; KNN-win. Thresholds: 'em' (temperature scaling + Saerens EM prior on buffer, max expected Macro-F1), win_mad (median+3*1.4826*MAD of window scores), win_fpr (99th pct of window scores). Follow-ups: window size {50..2000}, contamination {0..30%}, temporal window before monitored period (E5-T), window poisoning + trimming defence, BRN-vs-DomNorm hypothesis H-B4, HYB (ECDF-normalised BRN+KNN-win average, H-E8). Results UNVERIFIED (no numbers in deposit).",
+  "d": "YES. IF-win (isolation forest fitted on target window only, no source training) and KNN-win (mean distance to k nearest window flows in window-z-scored space) are pure target-benign novelty scorers; quantile (win_fpr) and MAD thresholds on window scores; HYB combines BRN with KNN-win via window ECDF. Conformal framing not used explicitly but win_fpr is a split-quantile rule.",
+  "e": "LODO on NF-v3 (and NF-v2), 4 targets x 10 seeds, 100k-flow target eval stream at natural prior, 100k flows per source (80/20). Primary metric AUROC; secondary Macro-F1, realised FPR/TPR, TPR@1%/0.1% FPR, PR-AUC, per-family recall. Tuning: leave-one-source-out, 12 configs, select by mean AUROC. 49 NF-v3 features (no IPs, no timestamps). Exact numbers: UNVERIFIED (paper and results not public in deposit).",
+  "f": "18: S0 ERM, ERM-CB, XGB, RF, IRM, V-REx, GroupDRO; S1 CORAL, DANN, IW-DANN, DANN-R, AdaBN, TENT, DomNorm; S2 BRN, BRN-XGB, IF-win, KNN-win; S3 (label-budget study) XGB-T, XGB-ST (k in 10..1000). Plus diagnostics BBSE, true-prior em, oracle threshold, HYB.",
+  "notes": "Most threatening work: covers our RQ1 grid, a benign-referenced normalisation remedy (BRN, with DomNorm mixture control), target-benign window novelty detectors and label-free window thresholds, a benign-FPR/attack-TPR split, feature-group ablation of TTL/TCP-window/timing/ports, and a benign-divergence audit. Deposit published 2026-11-12; paper venue TBA."
+ },
+ {
+  "work": "P02 Rayamajhi 2026, 'Is It Transfer? A Target-Only Control Finds No Consistent Source Benefit in Few-Shot Cross-Dataset Intrusion Detection on NetFlow' (preprints.org 10.20944/preprints202610.1041.v1)",
+  "source_opened": "ABSTRACT ONLY (Europe PMC PPR1339685). preprints.org landing/PDF returned HTTP 403 (Akamai 'Access Denied') via curl and WebFetch; no code deposit found on Zenodo/arXiv.",
+  "a": "UNVERIFIED (abstract silent).",
+  "b": "Abstract: domain classifier AUC >= 0.996 on raw features for every pair 'even within the same attack category'; 23-40 of 45 features must be removed before AUC < 0.9; 'Removing the documented TTL artifact does not change the conclusion.' Group-wise attribution of loss: UNVERIFIED.",
+  "c": "Uses labelled target flows (few-shot, 5% budget), pooled/importance-weighted/fine-tuned adaptation. Statement: 'per-domain feature scaling corrupts separability measurements.' Unlabelled-target methods: UNVERIFIED.",
+  "d": "UNVERIFIED (abstract silent).",
+  "e": "Not LODO: 12 directed pairs on NF-v3, RF/GBT/NN, 10 seeds, Wilcoxon. 540 comparisons: source helps 8%, hurts 38% (uncorrected); mean F1 change -0.044 (95% CI -0.066 to -0.022); published zero-shot F1 0.81 not reproduced on v3. Per-target zero-shot numbers and threshold protocol UNVERIFIED.",
+  "f": "RF, gradient-boosted tree, neural network x {pooled, importance-weighted, fine-tuned, target-only}; zero-shot (abstract).",
+  "notes": "Full text needed (try browser or author contact)."
+ },
+ {
+  "work": "P04 Valencia Velez 2026, 'Auditing the NetFlow versions of IoT and enterprise intrusion detection benchmarks: data quality, shortcuts and cross-dataset evaluation' (Zenodo 10.5281/zenodo.23291191 -> record 23291192; submitted to Computer Networks)",
+  "source_opened": "Full code+results archive: README, scripts/44_cross_dataset.py docstring, nfv3_config.py feature sets, data/eval/cross_report.txt, cross_inspection.txt, exploration/{dns_ttl_anomaly,src_port_signal,n5_threshold_check}.txt. Paper PDF not in deposit.",
+  "a": "No explicit benign-vs-attack-shift decomposition. Diagnostics only: CORE confusion matrices into NF-BoT-IoT (e.g. ToN-v3->BoT-v3 xgb: target Benign 94.6% predicted Benign, DoS/DDoS 99.7% predicted Benign - i.e. failure is missed attacks there); n5_threshold_check reports attack recall at thresholds set at target-benign p95/p90 (uses target labels; diagnostic) for ->BoT-IoT pairs.",
+  "b": "Shortcut probes (depth-1..3 trees per class vs benign, within dataset); src_port_signal (single-port RF macro-F1 class vs benign); dns_ttl_anomaly (DNS_TTL_ANSWER values ~4.29e9 in 320 BoT-IoT-v3 Reconnaissance rows); cross-dataset feature-set conditions: G0 (all but L4_SRC_PORT), G-NP (no dst port), G-NI (no ports, TTL, TCP window, DNS), G-NIS0 (also no L7_PROTO/ICMP types); SHAP + RF permutation importance. Result (BIN, 24 direction x model): G-NP worse in 13, G-NI worse in 16 vs G0 -> removal mostly hurts. No transplant tests; no attribution to benign shift.",
+  "c": "None (source-only training; no target normalisation or adaptation).",
+  "d": "None.",
+  "e": "Pairwise (not LODO), 3 datasets (no UNSW), binary macro-F1 at default argmax, XGBoost & RF, 5 seeds, target = all rows. NF-v3 G0 BIN target macro-F1 (xgb/rf): BoT->CIC 0.687/0.613; BoT->ToN 0.397/0.519; CIC->BoT 0.129/0.087; CIC->ToN 0.692/0.444; ToN->BoT 0.492/0.329; ToN->CIC 0.420/0.430. In-domain G0: BoT 0.827/0.861, CIC 0.945/0.832, ToN 0.843/0.862.",
+  "f": "XGBoost, Random Forest; conditions G0, R0 (random split), G-NC (no label conflicts), G-NP, G-NI, G-NIS0; tasks BIN, CORE (Benign/DoS/DDoS), EXT; replication of Layeghy & Portmann 2023; Flood et al. 2024 heuristics.",
+  "notes": ""
+ },
+ {
+  "work": "P03 Vu et al. 2026, 'Shortcut Learning Undermines Cross-Domain Generalization in NetFlow-Based Intrusion Detection: ... 14-Day University Network Deployment' (Zenodo 10.5281/zenodo.23206015 -> latest record 24521436, v2)",
+  "source_opened": "Full deposit: README, results/B6_summary.csv, A1_summary.csv, feature_compat.csv, grep of code/01. Manuscript not in deposit.",
+  "a": "No. A2 confusion matrices at 0.5 only (seed 42).",
+  "b": "Only on an 8-feature NetFlow subset (PROTOCOL, IN/OUT_BYTES, IN/OUT_PKTS, FLOW_DURATION, 2 throughputs): leave-one-feature-out and fsets full/no_duration/no_throughput/no_dur_no_thr. No TTL/window/port groups.",
+  "c": "Yes, simple: 'domain_scaling_only' (source StandardScaler on source, separate StandardScaler fitted on the unlabelled target eval set), OT and CORAL. HAUI target AUROC (5 seeds) e.g. XGB full: raw 0.406, domain scaling 0.484, CORAL 0.478, OT 0.487; MLP full: raw 0.374, scaling 0.441, CORAL 0.468, OT 0.513. Also few-shot fine-tuning vs target-only control.",
+  "d": "No.",
+  "e": "Not NF-v3, not LODO: source NF-CSE-CIC-IDS2018-v2 -> private HAUI network (16.79M flows, Suricata labels) and NF-BoT/ToN-IoT-v2. AUROC/PR-AUC/precision@k.",
+  "f": "XGBoost, MLP; OT, CORAL, per-domain scaling; few-shot fine-tune (K up to 5000), target-only XGB (50/300 trees), random labels, label noise, temporal control.",
+  "notes": ""
+ },
+ {
+  "work": "P05 Priyanga R 2026, 'Cross-Dataset Intrusion Detection under Benchmark Shift: Directed Transfer, Probability Calibration, and Alert Burden' (IJAIMLDS 1(3) e014, 10.66261/vx9swp16)",
+  "source_opened": "FULL TEXT PDF (11 pp) read.",
+  "a": "No benign/attack split. Only overall alert rate: source-negative 99.5th-pct threshold 'alerted on 36.2% of target flows' (not separated into FP vs TP).",
+  "b": "Only one ablation: 'endpoint-reduced' = remove both ports and application protocol. Uncalibrated cross-domain AUROC 0.5881 -> 0.4990 (paired diff -0.0891, 95% bootstrap -0.1670 to -0.0017).",
+  "c": "Explicitly none: 'target data never contributed to scaling, model fitting, feature selection, or calibration.' Prior correction with labelled target prevalence = oracle diagnostic.",
+  "d": "No.",
+  "e": "Pairwise (6 directions), 3 datasets NF-UNSW-NB15/ToN-IoT/BoT-IoT (UQ ids 256-258; version not stated, likely v1/v2 basic 12-feature set: ports, protocol, L7, bytes, packets, TCP flags, duration). Within 0.9773 vs cross 0.5445 AUROC; natural-prevalence: AUROC 0.5880, AUPRC 0.6406, F1 0.4348 (full), endpoint-reduced 0.4996/0.6034/0.3733; alert rate at q995: full 0.3618, reduced 0.3360. F1 at p=0.5 and at q995.",
+  "f": "Logistic regression, Extra Trees, HistGradientBoosting x {full, endpoint-reduced} x {uncalibrated, source-Platt, oracle prior-corrected}.",
+  "notes": "Not NF-v3."
+ },
+ {
+  "work": "P06 Iskandarova, Allanov, Makhkamova, Irmukhamedova et al. 2026, 'Leakage-Controlled Cross-Dataset Evaluation of Self-Supervised Graph-Based Network Intrusion Detection' (Computer and Decision Making 3(3s):139-167, 10.1922/comdem.v3i3s.18688)",
+  "source_opened": "FULL TEXT PDF (29 pp) read (key sections).",
+  "a": "No.",
+  "b": "Port-only probe (within 0.998 BoT-IoT-v2 vs 0.615 on UNSW-NB15-v2); IP removal, ports binned to 3 categories; augmentation ablation. No TTL/window groups.",
+  "c": "Yes: closed-form feature-level CORAL using an unlabelled target sample (X_T' = X_T C_T^-1/2 C_S^1/2), threshold untouched; guarded by 3 proposed (unvalidated) label-free benign-majority indicators. Model normalised with source training-benign mean/sd only.",
+  "d": "Detector itself is benign-only (graph autoencoder trained on source benign); threshold = (1-alpha) quantile of SOURCE training-benign scores. Threshold FPR fidelity reported only in-domain (UNSW test: 0.0098/0.0247/0.0495/0.0987 for alpha .01/.025/.05/.10). No target-benign re-scoring.",
+  "e": "Not NF-v3, not LODO: NF-v2 BoT-IoT<->UNSW-NB15 zero-shot. BoT->UNSW ROC-AUC raw 0.332 -> CORAL 0.926 (PR-AUC 0.033->0.349); UNSW->BoT 0.167 -> 0.011 (guard violated).",
+  "f": "FlowGuard (graph AE), Isolation Forest, PCA reconstruction, others in Table 5; CORAL.",
+  "notes": ""
+ },
+ {
+  "work": "Layeghy & Portmann 2023, 'Explainable Cross-domain Evaluation of ML-based NIDS' (Comput. Electr. Eng., 10.1016/j.compeleceng.2023.108692)",
+  "source_opened": "arXiv 2205.04112v1 'On Generalisability of Machine Learning-based Network Intrusion Detection Systems' (same authors; presumed preprint of the journal paper - journal version not opened, may differ).",
+  "a": "No FPR/TPR split; F1 only. Unsupervised models trained on source benign then tested on target benign+attack.",
+  "b": "SHAP feature-importance comparison across source/target pairs (e.g. FF trained on BoT-IoT: PROTOCOL top on BoT, FLOW_DURATION/DNS_TTL_ANSWER top on UNSW). No ablations or transplants.",
+  "c": "No.",
+  "d": "No (one-class models fit on SOURCE benign only).",
+  "e": "NF-v2 pairwise (4x4), not LODO, F1. Not NF-v3.",
+  "f": "Supervised: Extra Trees, Random Forest, Feed-Forward NN, LSTM (default hyperparameters); unsupervised: Isolation Forest, one-class SVM, SGD one-class SVM.",
+  "notes": "Avg decay: IF 49.73%, oSVM 17.90%, SGD-oSVM 17.36% (arXiv version)."
+ }
+]
