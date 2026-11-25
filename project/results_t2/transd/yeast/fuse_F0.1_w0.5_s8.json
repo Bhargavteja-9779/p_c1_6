@@ -1,0 +1,1 @@
+{"dataset": "yeast", "method": "fuse_F0.1_w0.5", "seed": 8, "protocol": "transd", "n_train": 1484, "n_test": 1484, "anom_test": 507, "auc_roc": 0.38980375056274585, "auc_pr": 0.293552174457699, "p_at_k": 0.27218934911242604, "fit_s": 0.3882017135620117, "pred_s": 7.152557373046875e-07, "max_n": 1000000}
