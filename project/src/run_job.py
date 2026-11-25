@@ -14,9 +14,15 @@ from nids import load, feature_cols, subsample, make_model, metrics, best_thresh
 ROOT = nids.ROOT
 
 
+CUR_SPEC = {}
+
+
 def _ckpt_path(job_id, cfg_i=0):
+    """Checkpoint name includes a hash of the full job spec, so a checkpoint from a different
+    configuration (e.g. a quick-mode run with the same job_id) can never be resumed by mistake."""
     d = os.path.join(ROOT, "checkpoints"); os.makedirs(d, exist_ok=True)
-    return os.path.join(d, f"{job_id}_{cfg_i}.pt")
+    h = hashlib.sha1(json.dumps(CUR_SPEC, sort_keys=True, default=str).encode()).hexdigest()[:10]
+    return os.path.join(d, f"{job_id}_{h}_{cfg_i}.pt")
 
 
 def assemble(spec, seed):
@@ -111,6 +117,7 @@ def fit_eval(spec, cfg, seed, ckpt=None):
 
 
 def main(spec):
+    CUR_SPEC.clear(); CUR_SPEC.update(spec)
     out_dir = os.path.join(ROOT, spec.get("results_dir", "results"))
     os.makedirs(out_dir, exist_ok=True)
     out = os.path.join(out_dir, spec["job_id"] + ".json")

@@ -1,0 +1,2 @@
+# FAILURE (caught before damage) — 2026-11-25 — a stale checkpoint could have been resumed
+When the full run started I found checkpoints/E1_lodo_dann_TON_s1_0.pt left over from the first, aborted quick run (5k flows per source). The full run uses the same job_id, so the resume logic would have continued training from a model fitted on different data. I deleted it before that job started and changed checkpoint names to include a hash of the full job spec (src/run_job.py _ckpt_path), so this cannot recur.
