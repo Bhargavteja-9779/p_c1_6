@@ -1,9 +1,9 @@
 {
  "cycles": {
   "quick": 887.9049596786499,
-  "1": 427.3482277393341
+  "1": 1320.3406901359558
  },
- "global_s": 1315.253187417984,
+ "global_s": 2208.2456498146057,
  "ceil_cycle_h": 15,
  "ceil_global_h": 120,
  "unit": "CPU wall-clock seconds while jobs run (4 cores)"
