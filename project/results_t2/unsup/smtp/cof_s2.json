@@ -1,0 +1,1 @@
+{"dataset": "smtp", "method": "cof", "seed": 2, "protocol": "unsup", "n_train": 7000, "n_test": 3000, "anom_test": 1, "auc_roc": 0.5778592864288097, "auc_pr": 0.0007892659826361484, "p_at_k": 0.0, "fit_s": 6.2225120067596436, "pred_s": 1.2313849925994873, "max_n": 10000}

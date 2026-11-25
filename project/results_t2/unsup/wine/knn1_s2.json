@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "knn1", "seed": 2, "protocol": "unsup", "n_train": 90, "n_test": 39, "anom_test": 3, "auc_roc": 0.3333333333333333, "auc_pr": 0.07375661375661376, "p_at_k": 0.0, "fit_s": 0.0011048316955566406, "pred_s": 0.00048422813415527344, "max_n": 10000}

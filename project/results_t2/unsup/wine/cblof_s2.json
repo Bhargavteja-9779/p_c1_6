@@ -1,0 +1,1 @@
+{"dataset": "wine", "method": "cblof", "seed": 2, "protocol": "unsup", "n_train": 90, "n_test": 39, "anom_test": 3, "auc_roc": 0.324074074074074, "auc_pr": 0.07381981523857954, "p_at_k": 0.0, "fit_s": 0.016743183135986328, "pred_s": 0.0005555152893066406, "max_n": 10000}

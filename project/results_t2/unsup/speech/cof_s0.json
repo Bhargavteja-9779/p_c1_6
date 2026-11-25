@@ -1,0 +1,1 @@
+{"dataset": "speech", "method": "cof", "seed": 0, "protocol": "unsup", "n_train": 2581, "n_test": 1105, "anom_test": 18, "auc_roc": 0.4002862107737913, "auc_pr": 0.01610312677773014, "p_at_k": 0.0, "fit_s": 9.328379154205322, "pred_s": 1.9840898513793945, "max_n": 10000}
