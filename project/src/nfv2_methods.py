@@ -52,7 +52,7 @@ def group_mean(Z, g):
 def context(X, sip, dip, c=1e4, parts="sd"):
     """H8 representation: log-rescaled flow features + mean of log-rescaled features over flows with the same source IP (s) and
     the same destination IP (d), computed within the given partition."""
-    L = np.log1p(c * X) / np.log1p(c); out = [L]
+    L = np.log1p(c * X) / np.log1p(c); out = [] if "o" in parts else [L]  # 'o' = context only (ablation)
     if "s" in parts: out.append(group_mean(L, sip))
     if "d" in parts: out.append(group_mean(L, dip))
     return np.hstack(out)

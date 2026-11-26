@@ -1,0 +1,18 @@
+# plan_v5 — frozen TEST run for topic 3 (written 2026-11-26 BEFORE any TEST result of hc*/ck* methods; D41)
+protocol: GDAE §3.2.2 replica (D39): random 8:1:1 stratified by attack, benign-only train, min-max on train, IPs dropped as features
+datasets: [NF-UNSW-NB15-v2 (full), NF-CSE-CIC-IDS2018-v2 (10 % stratified sample, data seed 0)]
+seeds: [42, 123, 456, 789, 1234]      # GDAE's seeds
+threshold: (1 - 0.003) quantile of scores on BENIGN validation flows (no attack labels anywhere in training/selection)
+method (frozen on VAL, journals 29-31): HC-kNN = hc1_s, ref 200000 unique benign train rows (seeded), k = 1
+  representation: log1p(1e4 x)/log1p(1e4) of each min-max feature  ⊕  mean of that over flows with the same source IP in the partition
+ablations (same seeds): knn1 (raw), ck1_L (log only), hc1_sd (src+dst ctx), hc1_d (dst ctx), hc1_os (src ctx only, no own features)
+baselines reproduced: iforest, hbos, pca, knn1 (raw), knn5 (raw) ; external: GDAE Table 5 (GDAE, GraphIDS, Anomal-E, AE, Deep SVDD, OC-SVM, HBOS, IF)
+primary metrics: PR-AUC and Macro-F1 (GDAE's), plus ACC, ROC-AUC, test FPR, per-attack flag rate, runtime
+statistics: per dataset, 5-seed mean ± std; vs GDAE: one-sample t-test of our 5 seeds against their reported mean (their seeds unavailable)
+            and Welch t-test using their reported std (n=5); vs our reproduced baselines: paired t-test over seeds; Holm over all
+            comparisons in this plan
+predictions (written before running):
+  P1 HC-kNN PR-AUC > GDAE on both datasets (UNSW 0.859, CIC 0.949)
+  P2 HC-kNN Macro-F1 > GDAE on CIC (0.957); on UNSW Macro-F1 < GDAE (0.949) is EXPECTED (val 0.895) — reported as is
+  P3 every ablation step (raw → log → +src ctx) increases mean PR-AUC on both datasets
+decision: P1 must hold for a "beats the journal" claim; if it fails on one dataset the claim is restricted to the other, stated plainly
