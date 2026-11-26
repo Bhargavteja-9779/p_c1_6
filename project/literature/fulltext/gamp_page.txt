@@ -1,0 +1,679 @@
+Your privacy, your choice
+
+We use essential cookies to make sure the site can function. We also use optional cookies for advertising, personalisation of content, usage analysis, and social media, as well as to allow video information to be shared for both marketing, analytics and editorial purposes.
+
+By accepting optional cookies, you consent to the processing of your personal data - including transfers to third parties. Some third parties are outside of the European Economic Area, with varying standards of data protection.
+
+See our privacy policy for more information on the use of your personal data.
+
+Manage preferences for further information and to change your choices.
+
+Accept all cookies
+Reject optional cookies
+Skip to main content
+
+Advertisement
+
+Log in
+Find a journal
+Publish with us
+Track your research
+Search
+ Saved research
+ Cart
+Home  Journal of King Saud University Computer and Information Sciences  Article
+Generative adversarial message passing-based anomaly detection
+Original Paper
+Open access
+Published: 18 March 2025
+Volume 37, article number 5 (2025)
+Cite this article
+
+You have full access to this open access article
+
+Download PDF
+Save article
+Journal of King Saud University Computer and Information Sciences
+Aims and scope
+Submit manuscript
+Leilei Ma, Xiangfeng Zhang, Kedian Wang, Xuejun Hou, Lan Chen, Wenxu Han & Xusheng Du 
+
+2369 Accesses
+
+10 Citations
+
+Explore all metrics
+
+Abstract
+
+Anomaly detection plays a crucial role in ensuring the safety of mechanical equipment operations and the reliability of other critical systems in the real world. Existing generative adversarial nets (GANs)-based anomaly detection methods are limited to learning global distributions, lacking sensitivity to local features and relationships between objects, particularly performing poorly in sparse regions or detecting low-deviation local anomaly objects. To overcome this challenge, we propose a generative adversarial message passing-based (GAMP) method. First, the GANs is constrained to synthesize data that matches the normal objects in the original dataset under unsupervised conditions. Subsequently, an undirected graph is constructed using both the original and synthesized data. Message passing is then conducted among the nodes within this graph. Finally, anomaly objects are effectively identified based on the differences between objects. Experimental results on twelve publicly available datasets with diverse distributions demonstrate that the GAMP method outperforms the second-best competing algorithm, achieving a 10.7% increase in AUC. Moreover, the consistent performance across multiple public datasets highlights GAMP's broad application potential and practical significance in fields such as industrial automation, finance, and healthcare. By providing an effective solution for intelligent equipment monitoring and safety assurance, GAMP has the potential to enhance the reliability of critical systems across various industries.
+
+Similar content being viewed by others
+Generative adversarial synthetic neighbors-based unsupervised anomaly detection
+Article Open access
+02 January 2025
+A Transformer-Based GAN for Anomaly Detection
+Chapter © 2022
+Unsupervised Anomaly Detection with a GAN Augmented Autoencoder
+Chapter © 2020
+Explore related subjects
+Discover the latest articles, books and news in related subjects, suggested using machine learning.
+Bayesian Network
+Security Science and Technology
+Stochastic Networks
+Symbolic AI
+Machine Learning
+Probabilistic data networks
+Unsupervised Anomaly Detection in Visual Systems
+1 Introduction
+
+Anomaly detection plays a crucial role in modern industrial production and maintenance (Panza et al. 2023; Zipfel et al. 2023). By leveraging sensor technology and data analysis, anomaly detection can enhance equipment monitoring efficiency (Wang et al. 2024), reduce downtime caused by failures (Liu et al. 2018), lower maintenance costs, and extend equipment lifespan. Monitoring critical components is also a key strategy for enterprises to maintain competitiveness (Koren et al. 2023). Therefore, developing an effective anomaly detection system is essential for industrial operations (Liu et al. 2024). Automated anomaly detection reduces reliance on manual intervention and enhances real-time monitoring and response capabilities, making it a vital technology in modern industries (van Wyk et al. 2020). Moreover, anomaly detection is not only applied in industrial manufacturing but is also widely utilized in finance (Hilal et al. 2022), healthcare (Bajaj et al. 2023), and cybersecurity (Rajbahadur et al. 2018). By promptly detecting and addressing anomaly objects, it can prevent issues such as equipment failures and financial fraud, thereby improving operational efficiency and data security (Jiang et al. 2023; Zhang et al. 2022, 2023).
+
+Traditional anomaly detection methods are primarily divided into statistical-based (Liu et al. 2004), distance-based (Souto Arias et al. 2023), isolation-based (Xu et al. 2023), and clustering-based approaches (Fuhnwi et al. 2023). Statistical-based methods typically rely on the assumption that data follows a specific distribution, and deviations from this distribution are considered anomaly objects. However, these methods are limited in high-dimensional, noisy, or non-normally distributed data environments. Distance-based methods detect anomaly objects by calculating the distance between data points, but their effectiveness significantly decreases in high-dimensional spaces. Isolation-based methods identify anomaly objects by focusing on the isolation degree of data points but can be affected when dealing with large datasets or complex data distributions. Clustering-based methods detect anomaly objects by identifying clusters that differ from most data points. However, these methods generally depend on predefined cluster numbers and initial conditions, making them less adaptable to dynamically changing data environments (Koko et al. 2023; Ma and Zhang 2017; Song et al. 2021). To address these issues, anomaly detection methods based on generative adversarial networks have gained increasing attention (Li and Li 2023). GANs, through adversarial training, can effectively model the underlying data distribution, leading to more accurate anomaly detection. However, GAN-based methods also have some drawbacks, such as high requirements for model stability and training complexity. Additionally, the quality of samples generated by GANs can directly impact detection performance, necessitating further optimization in specific application scenarios (Dubey and Singh 2023; Han et al. 2023; Creswell et al. 2018; Deng et al. 2023).
+
+Generative adversarial networks rely on adversarial training, where the generator and discriminator engage in a competitive process (Liu et al. 2022; Wang et al. 2024). The generator attempts to produce synthetic samples that closely approximate the distribution of real data, while the discriminator strives to distinguish between real and generated samples. This adversarial dynamic persists until the generator successfully captures the underlying data distribution, making GANs particularly suitable for anomaly detection, as anomalies are identified as deviations from this learned distribution. However, existing GANs-based anomaly detection methods face several significant limitations that hinder their practical application. First, these methods typically depend heavily on high-quality labeled data for training the discriminator. Such labeled data is often challenging to acquire, especially in domains where anomalies are rare, or labeling is labor-intensive and expensive. This reliance limits the scalability of these methods in real-world settings. Second, the accuracy of anomaly detection tasks based on GAN-generated data is frequently suboptimal. The quality of generated data is critical in determining the model’s capacity to identify anomalies. If the generated samples fail to sufficiently represent the distribution of normal and anomalous data points, the model's detection performance deteriorates. For instance, in complex, high-dimensional datasets, GANs often struggle to produce data with sufficient fidelity and diversity, resulting in biased representations that can overlook subtle anomalies. Third, many GAN-based methods primarily focus on capturing global data distributions while neglecting local density variations, which are crucial for identifying anomalies. Anomalies often manifest as subtle, localized deviations rather than global shifts, and the inability to account for these nuances reduces the sensitivity of such methods. Fourth, the adversarial training process itself can be unstable, leading to issues such as mode collapse, where the generator produces a limited subset of the data distribution. This instability not only compromises the quality of the generated data but also diminishes the model's capacity to generalize effectively for anomaly detection tasks. These challenges underscore the need for developing more robust GAN-based anomaly detection algorithms that can overcome the reliance on labeled data, improve data generation quality, incorporate local density variations, and ensure stable adversarial training (Zhang et al. 2020; Zhong et al. 2023).
+
+The proposed GAMP method introduces the following contribution aspects in relation to existing anomaly detection method:
+
+i):
+
+The GAMP method introduces a mechanism that combines the data distribution fitting capabilities of GANs with message passing from graph theory, which not only improves the ability of GANs-based anomaly detection methods to capture relationships between objects but also optimizes feature representation, improving anomaly detection performance.
+
+ii):
+
+The GAMP method proposes an approach that utilizes message passing on a graph constructed based on the latent relationships between the original data and the fake "normal objects" generated by GANs in an unsupervised manner.
+
+iii):
+
+By utilizing the graph structure to update node feature representations through message passing, the GAMP method can adaptively capture complex data relationships and accurately identify anomaly objects based on variations in feature value fluctuations between objects.
+
+2 Related work
+2.1 Intelligent bearing fault diagnosis models
+
+Classic bearing fault detection methods: Classic detection methods primarily rely on vibration analysis techniques, statistical principles, and measures like mean and standard deviation, encompassing time-domain analysis, frequency-domain analysis, and time–frequency domain analysis (Hu et al. 2023; Sharma et al. 2018). Vibration analysis is highly effective when fault characteristics are clear and the operating environment remains stable. However, challenges arise when dealing with complex machinery that may simultaneously exhibit multiple types of faults, or when distinguishing fault-induced signals from background noise in noisy environments becomes difficult. Furthermore, vibration analysis often requires expert knowledge to interpret the results, which limits its scalability in practical applications. Statistical-based anomaly detection methods typically depend on assumptions about the specific distribution of data, which can lead to inaccuracies when these assumptions are not met. Additionally, such methods struggle to adapt to dynamic environments where data distributions evolve over time. Mean and standard deviation-based detection is not sensitive enough to extreme values and is susceptible to shifts in these measures due to outliers, affecting accuracy. Moreover, methods based on predefined rules require manual parameter setting, where inappropriate threshold settings can lead to missed or false alarms. These methods also lack flexibility and often need frequent recalibration to maintain effectiveness. To address these issues, researchers have introduced machine learning and deep learning techniques, which handle complex data more effectively under conditions of noise, data missing, nonlinearity, or non-Gaussian distributions. Machine learning methods, such as the weighted k-nearest neighbors’ classifier and random forest algorithm based on wavelet packet theory, have improved detection performance but also face issues of high computational cost and limited generalizability (Yan et al. 2019). These methods often require extensive feature engineering, which can be time-consuming and heavily reliant on domain expertise. Deep learning methods are regarded as effective for enhancing anomaly detection performance due to their robust data processing capabilities and high fault detection accuracy, particularly excelling with large datasets and complex features. However, their deployment can be hindered by the need for significant computational resources and large labeled datasets for training, which are not always available in industrial settings (Chen et al. 2021; Hakim et al. 2023).
+
+Deep learning-based bearing fault detection methods: With increased computing power and data availability, deep learning methods have offered higher accuracy and adaptability in bearing fault detection compared to classic methods. Deep learning models, particularly Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs), have been widely applied for bearing fault diagnosis. CNNs excel at extracting spatial feature hierarchies from raw sensor data, making them suitable for identifying complex patterns in vibration signals indicative of faults (Jha and Babiceanu 2023; Anguita et al. 2010; Qasim Gandapur and Verdú 2023). However, CNNs often require large, labeled datasets for effective training, which may not always be available in industrial applications. Additionally, their performance can degrade when applied to data distributions different from the training set, limiting their robustness. RNNs, especially those equipped with Long Short-Term Memory (LSTM) units, are adept at capturing temporal dependencies in time-series data, allowing for effective monitoring of sequential patterns that evolve with fault progression. Nevertheless, RNNs can suffer from high computational overhead and training instability when dealing with long sequences or large datasets, making them less efficient for real-time fault detection. Unsupervised learning models such as autoencoders have been used to detect anomalies in bearings by learning to reconstruct normal operational data (Guha et al. 2023; Dabade et al. 2008). This approach is particularly valuable in scenarios where labeled fault data is scarce, as it relies primarily on normal data for training. However, setting an appropriate reconstruction threshold can be challenging, and overly simplistic autoencoder architectures may fail to capture subtle but important fault patterns. Moreover, autoencoders might struggle with generalization when applied to unseen fault types or noisy environments. Deep learning models can also be integrated into condition monitoring systems that continually learn and adapt to new data, thereby improving the fault diagnosis process over time and reducing the chances of misses or false alarms. While these systems leverage techniques like transfer learning to adapt to new machinery or environments with minimal retraining, their effectiveness heavily depends on the quality and quantity of the transferred data. Additionally, the complexity of these systems can increase maintenance costs and require specialized expertise, posing challenges for long-term sustainability.
+
+2.2 Techniques for anomaly detection
+
+Classical anomaly detection algorithms: Classical anomaly detection algorithms primarily rely on statistical methods (Barnett and Lewis 1994), clustering analysis, and distance metrics. Statistical methods typically identify anomaly objects by calculating measures like the mean, standard deviation, or median of the data, flagging points that deviate significantly from these metrics. These methods are computationally simple and effective for structured datasets but rely on the assumption of a specific data distribution, such as a normal distribution, which limits their applicability in more complex scenarios. Clustering-based methods, such as K-means and DBSCAN, detect anomaly objects by partitioning the data into clusters, identifying points at the edges of clusters or in low-density regions as anomaly objects. These methods are flexible and do not require predefined data distributions. However, their performance depends heavily on the appropriate selection of parameters, such as the number of clusters or density thresholds, and they may struggle with scalability in large datasets or high-dimensional spaces. Distance-based methods determine anomaly objects by calculating the average distance between a point and its k nearest neighbors. If this distance exceeds a threshold, the point is flagged as an anomaly. These methods are robust to complex data distributions but are computationally intensive in high-dimensional datasets, where the efficiency and accuracy of distance metrics can degrade. Despite their strengths in certain scenarios, these classical methods face limitations when handling high-dimensional data, noisy environments, or datasets with complex distributions.
+
+Deep learning algorithms for anomaly detection: With the growth of data volumes and computational capabilities, deep learning algorithms have become powerful tools for high-dimensional data and complex pattern recognition. Common deep learning-based anomaly detection methods include autoencoders, Convolutional Neural Networks (CNNs) (Tang et al. 2019), Recurrent Neural Networks (RNNs) (Chander and Upendra Kumar 2023), and Generative Adversarial Networks (GANs). Autoencoders aim to learn compact representations by reconstructing input data, making them suitable for capturing the main features of normal data. However, their reliance on reconstruction loss means they may struggle to distinguish anomaly objects when the features of normal and anomalous data overlap significantly. Furthermore, autoencoders are prone to overfitting normal data during training, which reduces their sensitivity to unseen anomalies and limits their generalization ability. They may also fail when anomalies are subtle and difficult to reconstruct (Cheng et al. 2021). CNNs are effective at extracting local spatial features through their convolutional layers, enabling them to identify intricate patterns in structured data such as images or spectrograms. This makes them powerful for anomaly detection in applications like image and signal processing. However, their success depends on the availability of large, labeled datasets for supervised learning. CNNs are also computationally demanding, particularly when dealing with high-dimensional data, as deep architectures often require significant memory and processing power, making real-time application challenging. RNNs and Long Short-Term Memory networks (LSTMs) are particularly suited for sequential data, as they capture temporal dependencies and long-term relationships. This makes them effective in detecting anomalies in time-series data, such as those found in sensor readings or system logs. However, they are prone to issues like gradient vanishing or exploding during training, which can hinder convergence and limit their ability to learn from long sequences. Additionally, RNNs are computationally intensive and require careful tuning of hyperparameters to balance accuracy and efficiency.
+
+Generative model-based anomaly detection: Generative models in anomaly detection, such as Variational Autoencoders (VAEs), Generative Adversarial Networks (GANs), and Multi-Objective Generative Adversarial Active Learning (MO-GAAL) (Liu et al. 2019), aim to identify anomalies by modeling the underlying data distribution and generating new samples. VAEs map input data to a latent space and compute reconstruction errors to detect anomalies, making them effective in bearing anomaly detection where reconstruction errors in vibration signals can highlight abnormal patterns. However, VAEs often struggle to accurately capture the complex characteristics of high-dimensional data, which limits both their detection performance, and the quality of generated samples compared to GANs. Additionally, they can underperform when handling subtle anomalies or noisy environments. GANs rely on adversarial training to simulate real data distributions, effectively capturing intricate features in high-dimensional datasets. Enhanced models, such as fast AnoGAN, improve training stability and detection accuracy (Sliti et al. 2023). Despite these advancements, GANs remain vulnerable to issues like mode collapse and training instability, which can lead to insufficient exploration of the data distribution. Moreover, they require high-quality training data and substantial computational resources, and their generalization to unseen data types can be limited. MO-GAAL incorporates multiple generators and active learning to address mode collapse and improve detection robustness. This approach enhances the diversity and representativeness of generated samples, making it more effective for complex anomaly detection tasks. However, poor collaboration among generators can degrade sample quality, and the computational burden increases significantly with high-dimensional data. Furthermore, optimizing the balance between generators and the discriminator requires careful tuning, which adds to the implementation complexity.
+
+3 Methodology
+
+In this section, we introduce an anomaly detection method called GAMP, which integrates generative adversarial networks and graph technology. The core structure of the GAMP method is shown in Fig. 1. The GAMP method by allowing the generator to adapt to the distribution of normal objects in an unsupervised manner to generate data and then updates features through message passing in a graph composed of this data and the original data. Finally, anomaly objects are identified by comparing the degree of feature changes during the message-passing process with those of their neighboring objects.
+
+Fig. 1
+Full size image
+
+Generative adversarial message passing-based anomaly detection
+
+3.1 Data distribution fitting and enhancement driven by GANs
+
+In anomaly detection tasks, datasets often exhibit an extreme imbalance, where the amount of normal data far exceeds that of anomaly data. This imbalance significantly affects the training strategies and outcomes of models. Generative adversarial networks due to their unique adversarial training mechanism, possess a robust capability to effectively fit data distributions. Therefore, applying it to anomaly detection is an effective approach.
+
+The GANs includes two key components: the generator (G) and the discriminator (D). The task of the generator is to produce sufficiently realistic data samples to "deceive" the discriminator, while the discriminator tries to distinguish between real data and the data produced by the generator. These two components learn from each other through an adversarial process, continuously optimizing their respective network weights. The value function of the GANs is as follows:
+
+$$\underset{G}{min}\underset{D}{max}V(G,D)={E}_{x}\sim {p}_{X}(x)[log(D(x)]\text{+}{E}_{\text{z}}\sim {p}_{Z}(z)[log(1-D(G(z)))]$$	(1)
+
+In Eq. 1, x represents a sample drawn from the real data distribution PX(x), and z represents noise sampled from a predefined noise distribution Pz(z). Ex∼PX(x)[logD(x)] denotes the expected log probability that the discriminator D correctly identifies the real data x as real. Ez∼Pz(z)[log(1 − D(G(z)))] represents the expected log probability that the discriminator D judges the fake data G(z) produced by the generator G as fake. In this adversarial process, the discriminator aims to maximize its accuracy, while the generator strives to reduce the discriminator's accuracy by generating increasingly indistinguishable fake data to "confuse" the discriminator. Figure 2 illustrates the architecture of the generative adversarial network.
+
+Fig. 2
+Full size image
+
+The architecture of the generative adversarial nets
+
+In a dataset containing significantly more normal objects than anomaly ones, the real data distribution Pdata(x) is dominated by the normal data distribution Pnormal(x), Pdata(x)≈Pnormal(x). In this scenario, generator G aims to generate objects like the real data distribution to deceive the discriminator D. Since Pdata(x) is primarily composed of normal data, the generator tends to produce objects that conform to Pnormal(x), i.e., G(z) ~ Pnormal(x), increasing the likelihood that the discriminator incorrectly classifies generated objects as real data. The probability that the discriminator misclassifies a generated objects G(z) as real data can be expressed as:
+
+$$P[D(G(z))>0.5|G(z)\sim {P}_{normal}(x)]\gg P[D(G(z))>0.5|G(z)\sim {P}_{anomaly}(x)]$$	(2)
+
+Equation (2) shows that when the “fake” data follows the distribution of normal objects in the original data, the likelihood of successfully deceiving the discriminator is higher. Conversely, if the generator tends to synthesize data that follows the distribution of anomaly objects in the original data, the likelihood of deceiving the discriminator is lower due to the anomaly objects minimal contribution to the overall data distribution and their sparse characteristics. Therefore, to minimize the loss, the generator is more likely to simulate data from Pnormal(x), causing the discriminator to make incorrect judgments. Figures 3 and 4 illustrate the generation of new data objects by the GANs, showing two different paths of generation: transforming noise into samples of the normal object distribution or samples of the anomaly object distribution.
+
+Fig. 3
+Full size image
+
+Mapping the noise vectors into normal objects distribution via the generator
+
+Fig. 4
+Full size image
+
+Mapping the noise vectors into anomaly objects distribution via the generator
+
+The normal objects due to its vast quantity, exhibits more stable and representative statistical characteristics, thus becoming the main learning target during the GANs training process. This leads the generator G to continually adjust its parameters so that the data it generates closely aligns with Pnormal(x). Since this type of data objects is more prevalent, the probability that G generates such data naturally increases, thereby enhancing the overall deception success rate. This tendency means that the generator naturally overlooks the less frequent anomaly data during the training process, resulting in generated data that primarily reflects the characteristics of normal data distributions.
+
+Algorithm 1
+Full size image
+
+Training GANs and sampling data closely resembling normal objects in an unsupervised manner
+
+3.2 Graph construct and message passing
+
+In this section we propose a method for converting the real data and "fake" data into graphs. Let the real dataset containing the anomaly objects be X = {X1,X2,X3,…,Xn}, Xi is any object in X. The fake data FD = {FD1, FD2, FD3,…, FDn} produced by the generator of the GANs, the set formed by randomly selecting k objects from FD is Gk = {g1,g2,g3,…,gk}. For any object Xi in X, randomly select k objects from FD to connect. Let the constructed graph be an n*k adjacency matrix A. For each object Xi, and its corresponding Gk, set A[i][k] = 1. Figure 5 graphically shows the process of construct graph.
+
+Fig. 5
+Full size image
+
+Graph construct
+
+The core purpose of constructing graphs is to capture complex relationships that are difficult to model in Euclidean space and to enhance the feature representation of objects with the help of the message passing mechanism of the graph structure. In this approach, each object in the real data is connected by establishing a connection with k objects in the generated data, resulting in a graph structure based on both the real and generated data. The generated data is generated by a GANs generator whose distribution fits the distribution of the normal objects that make up most of the real data. Therefore, when the normal objects in the real data exchange information with the objects in the generated data through message passing, since they come from the same distribution, the passed feature information can effectively help the normal objects aggregate more similar features, thus enhancing the feature representation of these objects. In contrast, the anomaly objects in the real data come from different distributions from the generated data nodes connected in the constructed graph. This distributional difference results in the message passing process where the information received by anomaly objects from their neighbors cannot be effectively aggregated, thus making it difficult for their feature representations to be enhanced. Message passing is the process of taking the features of a node and passing them to its connected nodes. This process is typically used to propagate information between nodes to perform feature aggregation at the node. It is worth noting that message passing is also known as the cavity method in complex networks (Shang 2020). Let \(X=\left[\begin{array}{c}{x}_{11}\\ {x}_{12}\end{array}\right.\left.\begin{array}{c}{x}_{21}\\ {x}_{22}\end{array}\right]\). Each column in X represents an object. \(A=\left[\begin{array}{c}1\\ W({x}_{1},{x}_{2})\end{array}\right.\left.\begin{array}{c}W({x}_{2},{x}_{1})\\ 1\end{array}\right]\), We define message passing as Eq. 3:
+
+$$X*A=\left[\begin{array}{c}{x}_{11}*1+{x}_{21}*W({x}_{1},{x}_{2})\\ {x}_{12}*1+{x}_{22}*W({x}_{1},{x}_{2})\end{array}\right.\left.\begin{array}{c}{x}_{11}*W({x}_{2},{x}_{1})+{x}_{21}*1\\ {x}_{12}*W({x}_{2},{x}_{1})+{x}_{22}*1\end{array}\right]$$	(3)
+
+Transforming structured data into graph structures not only models’ potential associations between data through adjacencies, but also propagates and aggregates neighborhood feature information using the message passing mechanism. Message passing helps to further distinguish normal objects from anomaly objects through multiple rounds of feature exchange.
+
+Algorithm 2
+Full size image
+
+Graph construct with message passing
+
+3.3 Anomaly detection
+
+Let Xi be Xi' after message passing and define fluctuation(xi) as the following Eq. 4:
+
+$$\begin{array}{c}fluctuation({x}_{i})=\sum_{d=1}^{D}\frac{{x}_{id}}{{x}_{id}{\prime}}\text{=}\sum_{d=1}^{D}\frac{{x}_{id}}{{x}_{id}\text{+}\sum_{k=1}^{k}{G}_{k}{({x}_{i})}_{d}}\\ \begin{array}{cc}\text{|}\sum_{k=1}^{k}{G}_{k}{({x}_{i})}_{d}-k*{x}_{id}\text{|}\approx {0}& if {x}_{i}\in normal\end{array}\\ \begin{array}{c}\begin{array}{cc}\text{|}\sum_{k=1}^{k}{G}_{k}{({x}_{i})}_{d}-k*{x}_{id}|>>0& if{x}_{i}\in anomaly\end{array}\\ \begin{array}{cc}fluctuation({x}_{i})\approx \sum_{d=1}^{D}\frac{{x}_{id}}{{x}_{id}+k\times {x}_{id}}\text{=}\frac{1}{1+k}& if {x}_{i}\in normal\end{array}\\ \begin{array}{c}\begin{array}{ccc}fluctuation({x}_{i})=\sum_{d=1}^{D}\frac{{x}_{id}}{{x}_{id}+\sum_{k=1}^{K}{G}_{k}({x}_{i})}\text{<<}\frac{1}{1+k}& if {x}_{i}\in anomaly& \begin{array}{cc}and& \sum_{k=1}^{K}{G}_{k}{({x}_{i})}_{d}>>k\times {x}_{id}\end{array}\end{array}\\ \begin{array}{ccc}fluctuation({x}_{i})=\sum_{d=1}^{D}\frac{{x}_{id}}{{x}_{id}+\sum_{k=1}^{K}{G}_{k}({x}_{i})}\text{>>}\frac{1}{1+k}& if {x}_{i}\in anomaly& \begin{array}{cc}and& \sum_{k=1}^{K}{G}_{k}{({x}_{i})}_{d}<<k\times {x}_{id}\end{array}\end{array}\end{array}\end{array}\end{array}$$	(4)
+
+In Eq. 4, d denotes the number of dimensions of the data, and Gk(xi) denotes the objects xi is connected to. If the feature values of an object xi and its connected nodes are more similar, the fluctuation value of xi is closer to 1/1 + k. If the feature values of xi and its connected nodes are more different, the fluctuation value of xi will significantly deviate from 1/1 + k. Define the anomaly factor as shown in Eq. 5 below:
+
+$$AF({x}_{i})\text{=}\sum_{{x}_{j}\in {G}_{k}({x}_{i})}|fluctuation({x}_{i})-fluctuation({x}_{j})|$$	(5)
+
+AF(xi) is used to measure the similarity of the fluctuations of an object xi with respect to its connected nodes, if the more dissimilar the fluctuations of xi with respect to its connected nodes are, the higher the probability that xi is located within a sparse cluster, then it is more likely to be an anomaly object. Figure 6 visualizes the GAMP method calculates the object anomaly factor.
+
+Fig. 6
+Full size image
+
+Anomaly detection
+
+3.4 Computational complexity analysis
+
+The computational complexity of the GAMP method can be broken down into several components. First, let m, n, and p represent the number of neurons in the input layer, hidden layer, and output layer of both the generator and discriminator, respectively. The complexity of the generator is O(t*(mn + np)), where t represents the number of iterations. The complexity of the discriminator is O(t ∗ k(mn + np)), where k is the factor that determines how many more iterations the discriminator undergoes compared to the generator. Next, during the graph generation process, if the dataset contains n objects and each object randomly selects k neighbors, the complexity is O(k ∗ n). In the message passing stage, each object aggregates feature values from its k neighbors, resulting in a complexity of O(k ∗ n). Fluctuation calculation involves comparing the original feature values of each object with the propagated values, which has a complexity of O(n). Finally, the anomaly factor is computed by comparing the fluctuation values of each object with those of its neighbors, with a complexity of O(k ∗ n). Thus, the total computational complexity of the GAMP method is O(t(mn + np) + t ∗ k(mn + np) + k ∗ n + k ∗ n + n + k ∗ n).
+
+4 Experiments
+4.1 Research environment
+4.1.1 Public datasets
+
+This study used the CWRU (Case Western Reserve University) dataset, and the ODDS (Outlier Detection Datasets) dataset collected by Stony Brook University for anomaly detection. The bearings used in the CWRU dataset were SKF 6250 bearings mounted in the drive end, monitored at a sampling frequency of 12,000 Hz, and the motor was operated at a speed of 1,797 RPM and no load (0 HP).
+
+Details of the normal and faulty bearings are illustrated in Table 1. The length of the normal samples in the CWRU dataset was 240,000 data points, and each of the nine categories of faulty samples was measured to be 120,000 data points in length. Each sample was consecutively divided into subsamples with 300 data points. And according to different fault diameter levels, 20 samples from each fault type were randomly selected and mixed with normal samples to construct three datasets, which are the fault datasets of inner raceway, outer raceway, and ball, and each dataset contains 20 samples each of the fault sizes of 0.1778 mm, 0.3556 mm, and 0.5334 mm, and 800 samples of the normal baseline size of 0 mm.
+
+Table 1 Normal and fault state of bearings
+Full size table
+
+For each dataset, we calculated 10-time domain, frequency domain, and time–frequency domain metrics for the bearing data: Standard deviation, Peak, Skewness, Kurtosis, Root mean square, Crest factor, Square, Shape factor, Impulse factor, WPDenergy, EEMDenergy, constructed into 23-dimensional inner race fault, outer race fault and ball fault datasets, all of which have an anomaly percentage of 6.9%.
+
+To evaluate the comprehensive performance of the proposed method, we have also chosen the OODS dataset, which involves several domains such as chemistry, forensic science, and healthcare. The details of the datasets are shown in Table 2.
+
+Table 2 Detailed description of the dataset
+Full size table
+4.1.2 Performance metrics
+
+We primarily evaluated the overall performance of the proposed method using several key metrics: Accuracy (ACC), Detection Rate (DR), False Alarm Rate (FAR), Area Under the Curve (AUC), and runtime. Table 3 provides a detailed breakdown of the specific calculations for each of these metrics.
+
+Table 3 Performance metrics and descriptions
+Full size table
+4.1.3 Benchmark algorithms
+
+To verify the effectiveness of the GAMP method in anomaly detection, we conducted a comparative experiment between the GAMP method and six state-of-the-art algorithms on the CWRU dataset and the OODS dataset. All benchmark algorithms are implemented via the python language. Among the traditional anomaly detection methods, we selected LOF (Local Outlier Factor), IForest (Isolation Forest), and CutPC, a graph-based cut-point clustering method. LOF identifies anomaly objects by comparing the densities of the objects with their neighbors’ objects, IForest detects anomaly by exploiting the isolation of the objects, and CutPC identifies arbitrarily shaped clusters through natural neighborhood graphs and marks objects that do not belong to any cluster as anomaly objects. Among the deep learning-based anomaly detection methods, AE (Autoencoder)-based anomaly detection method identifies anomaly objects by detecting the reconstruction error of the input data, while MO-GAAL and SO-GAAL use active learning to improve the effectiveness of anomaly detection. Additionally, we included f-AnoGAN and STEP-GAN in the comparison. f-AnoGAN (fast AnoGAN) is a refined version of AnoGAN, using feature representation and inverse mapping to detect anomalies by reconstructing latent space representations. STEP-GAN introduces self-training to enhance the GAN's ability to differentiate between normal and anomaly objects. For the parameters of the proposed GAMP method, we have set them rigorously. The hidden layers of the generator and discriminator in the GAMP method are set to 3, the number of iterations ranges from 10 to 100, and the learning rate is adjusted between 0.0001 and 0.002. The sampled neighborhood size is set between 2 and 100 to maintain consistency with other methods. The specific description and parameter settings of the algorithms are stated in Table 4.
+
+Table 4 Comparison algorithm description and parameter settings
+Full size table
+
+To ensure fair comparisons and reproducibility of the results, all experiments were conducted under the conditions specified in Table 5.
+
+Table 5 Hardware Environment
+Full size table
+4.2 Visualization and analysis of experimental results
+
+In Fig. 7, the original data with GAMP detection results is projected from a high-dimensional space to a two-dimensional plane, where normal objects are shown in blue. The twelve datasets come from various domains and differ in generation mechanisms. Nonetheless, they share a common feature: normal objects, shown in blue, make up the majority of the dataset, with anomaly objects appearing sporadically around them. From Fig. 7, it is evident that the GAMP method delivers robust detection outcomes across datasets with distinct generation mechanisms. Even when certain anomaly objects share similar distribution patterns with normal objects or are embedded within normal object regions—such as Inner race fault, Outer race fault, Ball fault, and other low-deviation anomalies—the GAMP method successfully identifies these anomaly objects.
+
+Fig. 7
+Full size image
+
+Visualization data distribution and GAMP detection results
+
+Tables 6, 7, 8, 9, 10, and 11 demonstrate the experimental results of the GAMP method and the nine state-of-the-art algorithms on six evaluation metrics, and the analyses of the experimental results are summarized as follows:
+
+a):
+
+The GAMP method possesses stronger anomaly detection capability compared to the comparison algorithms. Among the anomaly objects contained in the twelve publicly available datasets with different distributions, the GAMP method achieved the best DR value in ten of the twelve datasets, and it detected the most anomaly objects. From this point of view, the GAMP algorithm is a winner.
+
+b):
+
+In terms of running time, the GAMP method clearly does not have an advantage. This is since the number of hidden layers of traditional deep learning-based AE methods is significantly lower than that of GAMP, whereas LOF does not require forward propagation and updating of parameters during neural network training and has a short execution time. However, compared to the MO-GAAL method, which is also based on a GAN network, the GAMP method shows more performance in terms of both running time and detection capability.
+
+c):
+
+Experimental results demonstrate the stability of the GAMP method. When faced with an unknown dataset to be detected, the GAMP method shows excellent stability and versatility with less volatility in the detection results. This is crucial for real-world anomaly detection tasks, as users rely on the algorithm to produce very stable and reliable results.
+
+d):
+
+The superior performance of the GAMP method is due to its ability to effectively integrate GANs-generated synthetic data into the message-passing process, allowing for enhanced feature aggregation. This provides richer feature representations for normal data while amplifying the discrepancies for anomalies. In contrast, many baseline algorithms, including GAN-based ones, face challenges such as mode collapse or insufficiently capturing complex data distributions, which limit their anomaly detection effectiveness.
+
+Table 6 AUC values for GAMP and benchmark algorithms
+Full size table
+Table 7 ACC values (%) for GAMP and benchmark algorithms
+Full size table
+Table 8 DR values (%) for GAMP and benchmark algorithms
+Full size table
+Table 9 FAR values (%) for GAMP and benchmark algorithms
+Full size table
+Table 10 Running time (/s) of GAMP and benchmark algorithms
+Full size table
+Table 11 F1 score(%) of GAMP and benchmark algorithms
+Full size table
+4.3 Parameter analysis
+
+Parameter analysis plays a crucial role for both researchers and users of the algorithm. By adjusting parameter values, it is possible to observe which parameters significantly influence the algorithm’s performance and to what extent. The GAMP method includes three main hyperparameters: the number of network layers of the generator, the depth of the network layers of the discriminator, and the number of samples to be down sampled. Figures 8, 9, and 10 explore the effects of these three hyperparameters on the detection capability of the GAMP method. Through this analysis, users can better understand how to optimize parameter settings to achieve enhanced detection performance in various scenarios.
+
+Fig. 8
+Full size image
+
+Effect of the number of hidden layers of the generator on the performance of GAMP detection
+
+Fig. 9
+Full size image
+
+Effect of the number of hidden layers of the discriminator on the performance of GAMP detection
+
+Fig. 10
+Full size image
+
+Effect of the number of down samples on GAMP detection performance
+
+Increasing the number of hidden layers in the generator enhances the network's learning capacity. Initially, as this parameter grows, the detection capability of the GAMP method appears to improve. However, as shown in Fig. 8, there is not always a direct positive correlation between network depth and anomaly detection performance. As the network depth increases, the generator may start learning noise in the data, leading to overfitting, which ultimately diminishes the method’s effectiveness. Therefore, a balanced choice of network depth is essential to prevent overfitting while maximizing detection capability.
+
+The role of the discriminator is to identify whether the input data is from real data or not. In Fig. 9, when the network depth of the discriminator is deeper, while the generator's generating ability remains the same, it is easy to increase the training difficulty of GAMP, so that the generator module of GAMP only focuses on generating objects that are easy to "deceive" the discriminator. Although this satisfies the optimization goal of the generator, it will eventually lead to a pattern collapse of the whole algorithm, and the generated objects will become monotonous and lack of diversity. At the same time, the overpowering of the discriminator will make the GAMP method more difficult to train, and the training process will become unstable or even non-convergent. Therefore, the number of hidden layers in the discriminator should be carefully chosen in practical applications.
+
+The experimental results in Fig. 10 show that the number of down samples, k, also has a significant effect on the detection ability of the GAMP method. Smaller values of k tend to make the GAMP method more sensitive to localization, as the algorithm only considers a small number of samples. Larger values of k provide better generalization because the GAMP algorithm can take more sample points into account, thus reducing the reliance on individual objects, but tend to make the algorithm insensitive to local anomaly objects. Therefore, it is important to choose an appropriate k value to improve the performance of the GAMP method based on the distributional characteristics of different datasets.
+
+5 Conclusion
+
+The generative adversarial message passing method proposed in this study effectively solves the problem of existing generative adversarial nets-based anomaly detection methods' dependence on high-quality labelled information and lacking sensitivity to local features and relationships between objects. The GAMP method adopts an unsupervised learning strategy and uses a generator to sample synthetic data that matches the distribution of normal objects, which are used along with the original data to construct the graph. In the graph, the algorithm identifies anomaly objects by analyzing fluctuation differences through the message passing mechanism between nodes. Experimental results show that GAMP not only validates its effectiveness by visual means, but also shows higher anomaly detection ability in comparison experiments with several state-of-the-art methods. However, GAMP also has some limitations. First, the diversity of the synthetic data generated by the GANs may be limited, which could affect the method ability to detect a wider range of anomaly objects. Additionally, GAMP's computational complexity may become a bottleneck when dealing with very large-scale datasets, as the process of graph construction, message passing, and fluctuation calculation can be computationally expensive. These limitations point to potential areas for improvement, such as enhancing the diversity of the synthetic data through more advanced generation techniques and optimizing the algorithm to improve its scalability and efficiency when applied to large datasets. Future work will focus on addressing these limitations, including improving the diversity of synthetic data and exploring more efficient ways to handle large-scale datasets. Further exploration of generalization capabilities across different types of data distributions and anomaly scenarios will also be a key focus of future research. Future work will also investigate integrating other learning paradigms to enhance the robustness of the proposed method. For instance, transfer learning could be employed to adapt pre-trained models to specific scenarios, self-supervised learning could be used to develop more generalized feature representations.
+
+Data availability
+
+Data will be made available on request.
+
+References
+
+Anguita D, Ghio A, Greco N, Oneto L, Ridella S (2010) Model selection for support vector machines: Advantages and disadvantages of the Machine Learning Theory[C]. The 2010 International Joint Conference on Neural Networks (IJCNN), IEEE, Barcelona, Spain, pp 1–8. https://doi.org/10.1109/IJCNN.2010.5596450
+
+Bajaj NS, Patange AD, Jegadeeshwaran R, Pardeshi SS, Kulkarni KA, Ghatpande RS (2023) Application of metaheuristic optimization based support vector machine for milling cutter health monitoring[J]. Intell Syst Appl 18:200196
+
+Google Scholar
+ 
+
+Barnett V, Lewis T (1994) Outliers in statistical data, 3rd edn [M]. Wiley, New York
+
+Chander N, Upendra Kumar M (2023) Metaheuristic feature selection with deep learning enabled cascaded recurrent neural network for anomaly detection in Industrial Internet of Things environment[J]. Cluster Comput 26:1801–1819
+
+Article
+ 
+Google Scholar
+ 
+
+Chen X, Zhang B, Gao D (2021) Bearing fault diagnosis base on multi-scale CNN and LSTM model[J]. J Intell Manuf 32:971–987
+
+Article
+ 
+Google Scholar
+ 
+
+Cheng Z, Wang S, Zhang P, Wang S, Liu X, Zhu E (2021) Improved autoencoder for unsupervised anomaly detection[J]. Int J Intell Sys 36:7103–7125
+
+Article
+ 
+Google Scholar
+ 
+
+Creswell A, White T, Dumoulin V, Arulkumaran K, Sengupta B, Bharath AA (2018) Generative adversarial networks: an overview[J]. IEEE Signal Process Mag 35:53–65
+
+Article
+ 
+Google Scholar
+ 
+
+Dabade TS, Grande JP, Norby SM, Fervenza FC, Cosio FG (2008) Recurrent idiopathic membranous nephropathy after kidney transplantation: a surveillance biopsy study[J]. Am J Transplant 8:1318–1322
+
+Article
+ 
+Google Scholar
+ 
+
+Deng X, Xiao L, Liu X, Zhang X (2023) One-dimensional residual GANomaly network-based deep feature extraction model for complex industrial system fault detection[K]. IEEE Trans Instrum Meas 72:1–13
+
+Google Scholar
+ 
+
+Dubey SR, Singh SK (2023) Transformer-based generative adversarial networks in computer vision: a comprehensive survey. arXiv:2302.08641
+
+Fuhnwi GS, Agbaje JO, Oshinubi K et al (2023) An empirical study on anomaly detection using density-based and representative-based clustering algorithms[J]. J Nig Soc Phys Sci 5(2):1364–1364
+
+Article
+ 
+Google Scholar
+ 
+
+Guha D, Chatterjee R, Sikdar B (2023) Anomaly detection using LSTM-based variational autoencoder in unsupervised data in power grid[J]. IEEE Syst J 17:4313–4323
+
+Article
+ 
+Google Scholar
+ 
+
+Hakim M, Omran AAB, Ahmed AN, Al-Waily M, Abdellatif A (2023) A systematic review of rolling bearing fault diagnoses based on deep learning and transfer learning: Taxonomy, overview, application, open challenges, weaknesses and recommendations[J]. Ain Shams Eng J 14:101945
+
+Article
+ 
+Google Scholar
+ 
+
+Han D, Wang Z, Chen W, Wang K, Yu R, Wang S, Zhang H, Wang Z, Jin M, Yang J, Shi X, Yin X (2023) Anomaly detection in the open world: normality shift detection, explanation, and adaptation[J]. Proceedings 2023 Network and Distributed System Security Symposium, Internet Society, San Diego, CA, USA, pp 24830. https://doi.org/10.14722/ndss.2023.24830
+
+Hilal W, Gadsden SA, Yawney J (2022) Financial fraud: a review of anomaly detection techniques and recent advances[J]. Expert Syst Appl 193:116429
+
+Article
+ 
+Google Scholar
+ 
+
+Hu W, Xin G, Wu J, An G, Li Y, Feng K, Antoni J (2023) Vibration-based bearing fault diagnosis of high-speed trains: a literature review[J]. High-Speed Railway 1:219–223
+
+Article
+ 
+Google Scholar
+ 
+
+Jha SB, Babiceanu RF (2023) Deep CNN-based visual defect detection: Survey of current literature[J]. Comput Ind 148:103911
+
+Article
+ 
+Google Scholar
+ 
+
+Jiang S, Dong R, Wang J, Xia M (2023) Credit card fraud detection based on unsupervised attentional anomaly detection network[J]. Systems 11:305
+
+Article
+ 
+Google Scholar
+ 
+
+Koko RRZ, Yassine IA, Wahed MA, Madete JK, Rushdi MA (2023) Dynamic construction of outlier detector ensembles with bisecting k-means clustering[J]. IEEE 11:24431–24447
+
+Google Scholar
+ 
+
+Koren O, Koren M, Peretz O (2023) A procedure for anomaly detection and analysis[J]. Eng Appl Artif Intell 117:105503
+
+Article
+ 
+Google Scholar
+ 
+
+Li H, Li Y (2023) Anomaly detection methods based on GAN: a survey[J]. Appl Intell 53:8209–8231
+
+Article
+ 
+Google Scholar
+ 
+
+Liu H, Shah S, Jiang W (2004) On-line outlier detection and data cleaning[J]. Comput Chem Eng 28:1635–1647
+
+Article
+ 
+Google Scholar
+ 
+
+Liu R, Yang B, Zio E, Chen X (2018) Artificial intelligence for fault diagnosis of rotating machinery: a review[J]. Mech Syst Signal Process 108:33–47
+
+Article
+ 
+Google Scholar
+ 
+
+Liu J, Zhang C, Jiang X (2022) Imbalanced fault diagnosis of rolling bearing using improved MsR-GAN and feature enhancement-driven CapsNet[J]. Mech Syst Signal Process 168:108664
+
+Article
+ 
+Google Scholar
+ 
+
+Liu R, Xiao D, Lin D, Zhang W (2024) Intelligent bearing anomaly detection for industrial Internet of Things based on auto-encoder Wasserstein generative adversarial network[J]. IEEE Internet Things J 11:22869–22879
+
+Article
+ 
+Google Scholar
+ 
+
+Liu Y, Li Z, Zhou C, Jiang Y, Sun J, Wang M, He X (2019) Generative adversarial active learning for unsupervised outlier detection. detection[J]. IEEE Transactions on Knowledge and Data Engineering 32(8):1517–1528
+
+Ma T, Zhang A (2017) Integrate multi-omic data using affinity network fusion (ANF) for cancer patient clustering. In: 2017 IEEE International Conference on Bioinformatics and Biomedicine (BIBM), Kansas City, pp 398–403
+
+Panza MA, Pota M, Esposito M (2023) Anomaly detection methods for industrial applications: a comparative study[J]. Electronics 12:3971
+
+Article
+ 
+Google Scholar
+ 
+
+QasimGandapur M, Verdú E (2023) ConvGRU-CNN: Spatiotemporal deep learning for real-world anomaly detection in video surveillance system[J]. IJIMAI 8:88
+
+Article
+ 
+Google Scholar
+ 
+
+Rajbahadur GK, Malton AJ, Walenstein A, Hassan AE (2018) A survey of anomaly detection for connected vehicle cybersecurity and safety[C]. 2018 IEEE Intelligent Vehicles Symposium (IV), IEEE, Changshu, pp 421–426. https://doi.org/10.1109/IVS.2018.8500383
+
+Shang Y (2020) Multi-hop generalized core percolation on complex networks[J]. Adv Complex Syst 23(01):2050001
+
+Article
+ 
+MathSciNet
+ 
+Google Scholar
+ 
+
+Sharma A, Jigyasu R, Mathew L, Chatterji S (2018) Bearing fault diagnosis using weighted K-nearest neighbor[C]. 2018 2nd International Conference on Trends in Electronics and Informatics (ICOEI), IEEE, Tirunelveli, pp 1132–1137. https://doi.org/10.1109/ICOEI.2018.8553800
+
+Sliti O, Devanne M, Kohler S, Samet N, Weber J, Cudel C (2023) f-AnoGAN for non-destructive testing in industrial anomaly detection[C]. Sixteenth International Conference on Quality Control by Artificial Vision, SPIE, Albi, France, pp 46. https://doi.org/10.1117/12.3000063
+
+Song H, Li P, Liu H (2021) Deep clustering based fair outlier detection[C]. Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery & Data Mining, ACM, Virtual Event Singapore, pp 1481–1489. https://doi.org/10.1145/3447548.3467225
+
+Souto Arias LA, Oosterlee CW, Cirillo P (2023) AIDA: Analytic isolation and distance-based anomaly detection algorithm[J]. Pattern Recog 141:109607
+
+Article
+ 
+Google Scholar
+ 
+
+Tang Z, Chen Z, Bao Y, Li H (2019) Convolutional neural network-based data anomaly detection method using multiple information for structural health monitoring[J]. Struct Control Health Monit 26:e2296
+
+Article
+ 
+Google Scholar
+ 
+
+van Wyk F, Wang Y, Khojandi A, Masoud N (2020) Real-time sensor anomaly detection and identification in automated vehicles[J]. IEEE Trans Intell Transport Syst 21:1264–1276
+
+Article
+ 
+Google Scholar
+ 
+
+Wang M, Zhou D, Chen M (2024) Hybrid variable monitoring mixture model for anomaly detection in industrial processes[J]. IEEE Trans Cybern 54:319–331
+
+Article
+ 
+Google Scholar
+ 
+
+Wang Y, Bernat S, Vinogradov A (2024) BC-GAN: a threshold-free framework for unsupervised early fault detection in rotating machinery[J]. Expert Syst Appl 258:124832
+
+Xu H, Pang G, Wang Y, Wang Y (2023) Deep isolation forest for anomaly detection[J]. IEEE Trans Knowl Data Eng 35:12591–12604
+
+Article
+ 
+Google Scholar
+ 
+
+Yan H, Mu H, Yi X, Yang Y, Chen G (2019) Fault diagnosis of rolling bearing with small samples based on wavelet packet theory and random forest[C]. 2019 International Conference on Sensing, Diagnostics, Prognostics, and Control (SDPC), IEEE, Beijing, China, pp. 305–310. https://doi.org/10.1109/SDPC.2019.00062
+
+Zhang W, Li X, Jia X-D, Ma H, Luo Z, Li X (2020) Machinery fault diagnosis with imbalanced data using deep generative adversarial networks[J]. Measurement 152:107377
+
+Article
+ 
+Google Scholar
+ 
+
+Zhang J, Li Y, Xiao W et al (2022) Online spatiotemporal modeling for robust and lightweight device-free localization in nonstationary environments[J]. IEEE Trans Industr Inf 19(7):8528–8538
+
+Article
+ 
+Google Scholar
+ 
+
+Zhang J, Li Y, Li Q et al (2023) Variance-constrained local–global modeling for device-free localization under uncertainties[J]. IEEE Trans Ind Inform 20(4):5229–5240
+
+Zhong H, Yu S, Trinh H, Lv Y, Yuan R, Wang Y (2023) Fine-tuning transfer learning based on DCGAN integrated with self-attention and spectral normalization for bearing fault diagnosis[J]. Measurement 210:112421
+
+Article
+ 
+Google Scholar
+ 
+
+Zipfel J, Verworner F, Fischer M, Wieland U, Kraus M, Zschech P (2023) Anomaly detection for industrial quality assurance: a comparative evaluation of unsupervised deep learning models[J]. Comput Ind Eng 177:109045
+
+Article
+ 
+Google Scholar
+ 
+
+Download references
+
+Acknowledgements
+
+This research was supported by the Xinjiang Autonomous Region Major Science and Technology Programs under grants 2022A02010-3 and Tianshan Talent Training Program(2023TSYCLJ0052).
+
+Author information
+Authors and Affiliations
+
+School of Mechanical Engineering, Xinjiang University, Urumqi, 830047, China
+
+Leilei Ma, Xiangfeng Zhang, Kedian Wang, Xuejun Hou, Lan Chen & Wenxu Han
+
+Vanke School of Public Health, Tsinghua University, Beijing, 100084, China
+
+Xusheng Du
+
+Contributions
+
+Conceptualization, Leilei Ma, Xiangfeng Zhang and Kedian Wang; Methodology, Leilei Ma, Lan Chen and Wenxu Han; Software, Xusheng Du; Validation, Xuejun Hou; Formal Analysis, Leilei Ma and Wenxu Han; Investigation, Xusheng Du; Resources, Xiangfegn Zhang; Data Curation, Kedian Wang; Writing – Original Draft Preparation, Leilei Ma; Writing – Review & Editing, Xiangfeng Zhang; Visualization, Leilei Ma; Supervision, Xusheng Du; Project Administration, Leilei Ma; Funding Acquisition, Xiangfeng Zhang.
+
+Corresponding author
+
+Correspondence to Xusheng Du.
+
+Ethics declarations
+Competing interest
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+Additional information
+Publisher’s Note
+
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+Rights and permissions
+
+Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+
+Reprints and permissions
+
+About this article
+Cite this article
+
+Ma, L., Zhang, X., Wang, K. et al. Generative adversarial message passing-based anomaly detection. J. King Saud Univ. Comput. Inf. Sci. 37, 5 (2025). https://doi.org/10.1007/s44443-025-00021-6
+
+Download citation
+
+Received
+07 September 2024
+
+Accepted
+09 December 2024
+
+Published
+18 March 2025
+
+Version of record
+18 March 2025
+
+DOI
+https://doi.org/10.1007/s44443-025-00021-6
+
+Share this article
+
+Anyone you share the following link with will be able to read this content:
+
+Get shareable link
+
+Provided by the Springer Nature SharedIt content-sharing initiative
+
+Keywords
+Message passing
+Generative adversarial nets
+Anomaly detection
+Outlier detection
+Sections
+Figures
+References
+Abstract
+Introduction
+Related work
+Methodology
+Experiments
+Conclusion
+Data availability
+References
+Acknowledgements
+Author information
+Ethics declarations
+Additional information
+Rights and permissions
+About this article
+
+Advertisement
+
+Footer Navigation
+Discover content
+Journals A-Z
+Books A-Z
+Subjects A-Z
+Publish with us
+Journal finder
+Publish your research
+Language editing
+Open access publishing
+Products and services
+Our products
+Librarians
+Societies
+Partners and advertisers
+Our brands
+Springer
+Nature Portfolio
+BMC
+Palgrave Macmillan
+Apress
+Discover
+Corporate Navigation
+Your privacy choices/Manage cookies Your US state privacy rights Accessibility statement Terms and conditions Privacy policy Help and support Legal notice Cancel contracts here
+
+160.79.106.17
+
+Not affiliated
+
+© 2026 Springer Nature

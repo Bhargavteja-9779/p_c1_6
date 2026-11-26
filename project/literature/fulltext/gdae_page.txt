@@ -1,0 +1,951 @@
+Your privacy, your choice
+
+We use essential cookies to make sure the site can function. We also use optional cookies for advertising, personalisation of content, usage analysis, and social media, as well as to allow video information to be shared for both marketing, analytics and editorial purposes.
+
+By accepting optional cookies, you consent to the processing of your personal data - including transfers to third parties. Some third parties are outside of the European Economic Area, with varying standards of data protection.
+
+See our privacy policy for more information on the use of your personal data.
+
+Manage preferences for further information and to change your choices.
+
+Accept all cookies
+Reject optional cookies
+Skip to main content
+
+Advertisement
+
+Log in
+Find a journal
+Publish with us
+Track your research
+Search
+ Saved research
+ Cart
+Home  Journal of King Saud University Computer and Information Sciences  Article
+Dual-autoencoder multi-task self-supervised one-class graph anomaly detection for network traffic
+Research
+Open access
+Published: 25 August 2026
+Volume 38, article number 779 (2026)
+Cite this article
+
+You have full access to this open access article
+
+Download PDF
+Save article
+Journal of King Saud University Computer and Information Sciences
+Aims and scope
+Submit manuscript
+Ji Zhao, Damin Zhang, Tianyi Wang, Mu Lin & YuHan Yang 
+
+1897 Accesses
+
+Explore all metrics
+
+Abstract
+
+To address the limitations of intrusion detection under unknown attacks and label scarcity, this paper proposes GDAE, a multi-task self-supervised one-class anomaly detection framework for network traffic graphs. It constructs an edge-level directed graph from NetFlow, employs E-GraphSAGE for structure-aware edge embeddings, and captures multi-scale normal patterns via local structure and global semantic autoencoders with a structure consistency prediction task. To compensate for the lack of negative samples, a dual-path pseudo-anomaly generation mechanism using feature perturbation and structural discarding is designed, with an anomaly discriminator to learn the normal-abnormal boundary. Training employs Kendall uncertainty for adaptive multi-task loss weighting and extreme value theory for threshold estimation, demonstrating strong performance on two large-scale benchmark datasets. Experiments on NF-UNSW-NB15-v2 and NF-CSE-CIC-IDS2018-v2 demonstrate GDAE’s superior performance over unsupervised and graph-based baselines in PR-AUC and Macro-F1, with strong stability and efficiency, offering a new pathway for lightweight, robust self-supervised one-class intrusion detection.
+
+Similar content being viewed by others
+Enhancing Multi-view Contrastive Learning for Graph Anomaly Detection
+Chapter © 2024
+A Modular Triple Exchange Co-learning Framework for Anomaly Detection in Scarcely Labeled Graph Data
+Chapter © 2025
+Semi-supervised Graph Edge Convolutional Network for Anomaly Detection
+Chapter © 2021
+Explore related subjects
+Discover the latest articles, books and news in related subjects, suggested using machine learning.
+Graphemics
+Automated Pattern Recognition
+Graph Theory
+Gene expression profiling
+Genome-wide analysis of gene expression
+Network Models
+Graph-Based Anomaly Detection in Network Systems
+1 Introduction
+
+With the rapid expansion of connected devices, the frequency and stealthiness of network attacks continue to rise, posing increasing threats to enterprise networks, data centers, and industrial Internet environments (Chao et al. 2024). Traditional network intrusion detection systems (NIDS) largely rely on supervised learning and require a substantial number of accurately labeled attack samples to achieve reliable performance. However, in real-world scenarios, attack types evolve constantly, and annotation is expensive and often delayed. As a result, such methods easily fail when facing unknown or rare attacks (Ige et al. 2024). To reduce dependence on labels, recent studies have explored unsupervised and self-supervised detection paradigms, aiming to learn the distribution of normal traffic and detect anomalies without using attack labels (Tan et al. 2024). Nevertheless, constructing high-quality representations from complex traffic data and accurately defining what constitutes “normal” remains a major challenge.
+
+Recent work has shown that modeling network traffic as graphs and extracting features with graph neural networks (GNNs) can effectively capture interactions between hosts. Nodes may represent IP addresses or hosts, while edges denote flows or sessions, enabling communication patterns to be analyzed in the graph space (Zhong et al. 2024; Zhou et al. 2021; Fu et al. 2025). Unlike many conventional graph-learning tasks, key information for intrusion detection is often concentrated on edges, including both high-dimensional flow attributes and structural behaviors encoded in connection patterns. This makes edge-level representation crucial (Deng and Huang 2025). However, existing graph-based anomaly detection methods typically focus only on feature reconstruction or simple contrastive learning, separating representation learning from anomaly discrimination. The RUIDS proposed by Wang et al. (2023) utilizes a masked context reconstruction module to achieve self-supervised intrusion detection. Ye et al. (2024) utilized an autoencoder to reconstruct data streams for anomaly detection. Self-supervised pretraining has shown strong capability in graph representation learning, but its application to intrusion detection still faces limitations. First, most pretext tasks rely on a single objective, making it difficult to capture complementary information from local topology, global semantics, and anomaly boundaries. Second, current negative-sample construction often relies on simple noise or limited heuristics, producing pseudo anomalies that cannot cover diverse feature-level and structure-level abnormal patterns. Third, existing methods lack maturity in handling large-scale traffic graphs, especially regarding training efficiency, stability of anomaly scores, and adaptive thresholding.
+
+To address these issues, this study proposes a multi-task self-supervised one-class graph anomaly detection framework, Graph Dual-AutoEncoder (GDAE), built on NetFlow traffic data. IP addresses are modeled as nodes, and network flows are modeled as directed edges. GDAE generates low-dimensional edge embeddings using an edge-centric E-GraphSAGE (Lo et al. 2022) encoder. Without any attack labels, it jointly learns four complementary self-supervised tasks: local structure reconstruction, global semantic reconstruction, structural consistency prediction, and pseudo-anomaly discrimination. Together, these tasks construct a multi-view semantic space that describes normal traffic behavior. To further support efficient training on large-scale graphs and unsupervised thresholding, GDAE integrates the GraphBolt data pipeline and an Extreme Value Theory (EVT)-based (Siffer et al. 2017) threshold modeling strategy, facilitating efficient deployment in resource-constrained network environments.
+
+The main contributions of this study are summarized as follows:
+
+Synergistic Multi-Task SSL Architecture: Unlike piecemeal combinations or isolated feature-reconstruction autoencoders, GDAE’s primary contribution lies in a unified end-to-end multi-task self-supervised framework. It harmonizes edge-centric topological encoding (E-GraphSAGE), local structure reconstruction, global semantic projection, degree consistency prediction, and pseudo-anomaly boundary discrimination into a mutually constrained space.
+
+Decoupled Dual-AE with Uncertainty Alignment: To resolve the trade-off between localized topological anomalies and macroscopic traffic semantic shifts, we design a decoupled dual-autoencoder path. These multi-view tasks are dynamically balanced using Kendall uncertainty modeling, eliminating manual loss tuning and preventing gradient dominance.
+
+EVT Decision Boundary and High Scalability: We integrate an Extreme Value Theory (EVT)-based thresholding mechanism that models the score tail distribution of normal validation flows post-training, eliminating empirical quantile heuristics. Integrated with GraphBolt’s disk-mapped pipeline, GDAE guarantees microsecond-level inference latency on graphs with tens of millions of network flows.
+
+The remainder of this paper is organized as follows: Section 2 reviews related work on intrusion detection and graph anomaly detection. Section 3 describes the GDAE framework in detail, including the edge-centric GNN encoder, multi-task objectives, and anomaly scoring with thresholding. Section 4 presents experimental settings and results compared with existing methods. Section 5 discusses potential applications and future research directions.
+
+2 Related work
+2.1 Traditional network intrusion detection methods
+
+In recent years, network intrusion detection methods based on machine learning (ML) and deep learning (DL) have been widely applied (Ahmad et al. 2021). These methods identify malicious behaviors by analyzing traffic features, packet contents, session statistics, and time-series patterns. Turukmane and Devendiran (2024) proposed an M-MultiSVM network intrusion detection system based on machine learning. This system addresses class imbalance through data preprocessing and ASmoT techniques, utilizes M-SvD for feature extraction, optimizes feature selection with ONgO, and employs M-MultiSVM for attack classification. On the CSE-CIC-IDS2018 and UNSW-NB15 datasets, it achieved accuracies of 99.89% and 97.535%, respectively. Mohy-Eddine et al. (2023) proposed a network intrusion detection model for Internet of Things (IoT) environments based on a K-NN classifier and feature selection. This model employs PCA, univariate statistical tests, and genetic algorithms for feature selection, effectively improving detection performance. On the Bot-IoT dataset, the model demonstrated high accuracy and low prediction time. Devendiran and Turukmane (2024) proposed the Dugat-LSTM model, which utilizes chaotic optimization strategies and an improved deep learning architecture to address data imbalance and feature selection issues. Experimental results indicated that it outperformed existing methods across multiple performance metrics. Zhou et al. (2025) proposed a novel network intrusion detection framework, HIDIM, which focuses on the hierarchical dependencies of data and the issue of class imbalance. It enhances detection performance through hierarchical semantic attribute embedding and boundary-enhanced oversampling methods. Ayantayo et al. (2023) presented a NIDS based on deep learning and feature fusion. They designed early fusion, late fusion, and late ensemble learning models to enhance multi-class classification performance through different feature fusion mechanisms. Experiments showed that the late fusion and late ensemble models performed exceptionally well in handling multi-classification tasks and class imbalance problems.
+
+Although these methods have achieved significant results in detecting known attack types, most rely heavily on large amounts of labeled data, supervised training, or anomaly modeling of specific samples. Furthermore, they often lack a deep characterization of potential topological structures and communication relationships within network traffic, making it difficult to cope with structural or unknown attack patterns.
+
+2.2 Graph neural network intrusion detection methods
+
+With the development of graph neural network (GNN) technology, researchers have begun to abstract network traffic as graph structures composed of host nodes and communication flow edges. They utilize GNNs to extract topological information and flow features, thereby enhancing the effectiveness of intrusion detection. Duan et al. (2022) introduced a semi-supervised network intrusion detection method based on dynamic line graph neural networks (DLGNN). This method converts network traffic into spatiotemporal graphs, uses dynamic graph neural networks to extract spatial information, and enhances the message aggregation capability of graph convolutions through line graph structures. This approach effectively improves intrusion detection accuracy, particularly in multi-class classification scenarios. Altaf et al. (2023) proposed a multigraph neural network framework for IoT intrusion detection. This framework constructs multi-edge graph structures to capture complete communications between IoT nodes and combines spectral and spatial graph convolution methods to improve detection capabilities for complex network traffic. Experimental results showed that this method achieved over 99% accuracy while significantly reducing the false alarm rate. Hu et al. (2023) proposed a network intrusion detection method based on graph embedding, named Graph2vec+RF. This method constructs flow graphs from the initial interaction packets of bidirectional network flows, learns vector representations using graph2vec, and performs classification with a random forest classifier, enabling early and accurate intrusion detection. Dugyala et al. (2024) proposed an optimized intrusion detection system (IDS) that utilizes graph neural networks and Leader K-means clustering algorithm to enhance the accuracy and efficiency of intrusion detection in cloud environments. Ma et al. (2025) proposed a heterogeneous graph neural network model named XMF-GNN for intrusion detection. By constructing heterogeneous graph representations based on flow and packet modalities and adopting an attention-driven modality fusion mechanism, the model achieves adaptive cross-modal feature fusion. Experiments on the CIC-IDS2017 and CIC-IoT2023 datasets showed that the model achieved F1 scores of 0.977 and 0.985, respectively, significantly outperforming existing methods.
+
+Although these methods better capture interaction relationships between hosts and expand the feature representation space, most current approaches still focus on node-level or static graph features. Moreover, they remain highly dependent on labeled traffic data, which limits their deployment in real-world large-scale network environments where labels are scarce.
+
+2.3 Graph self-supervised learning methods
+
+To reduce reliance on labeled data, self-supervised learning (SSL) has gained increasing attention in graph representation learning and general graph anomaly detection (GAD). Early foundational GAD frameworks, such as DOMINANT (Ding et al. 2019) and AnomalyDAE (Fan et al. 2020), leveraged graph autoencoders (GAEs) and dual-path architectures to jointly reconstruct node attributes and graph structures. Later, CoLA (Liu et al. 2021) introduced contrastive self-supervised learning to evaluate anomaly scores via local node-subgraph agreement. However, these classical GAD methods primarily target static, node-attributed networks (e.g., citation or social networks) and struggle to scale to millions of high-dimensional flow edges in high-throughput network traffic graphs.
+
+Driven by the need for domain-specific representation, graph self-supervised learning has been tailored for network intrusion detection. Caville et al. (2022) proposed Anomal-E, an edge-centric GNN system combining E-GraphSAGE with Deep Graph Infomax (DGI) to detect anomalies without labeled data. Wu et al. (2025) presented TCG-IDS based on temporal contrastive graph learning, which integrates asymmetric and masked contrastive objectives to capture temporal dependencies. Xu et al. (2024) introduced a graph attention-driven contrastive learning approach to emphasize edge information under label scarcity. Meanwhile, low-resource paradigms have also emerged; for instance, Bilot et al. (2024) developed a few-shot graph learning model (Few Edges Are Enough) to identify rare attacks with minimal edge annotations, and non-contrastive self-supervised frameworks (Zhang 2024) were introduced to eliminate the need for negative pairs in traffic representation.
+
+More recently, Transformer architectures and sequence modeling mechanisms have significantly influenced anomaly detection. In time-series anomaly detection, Anomaly Transformer (Xu et al. 2022) introduced an association discrepancy mechanism to highlight temporal shifts by comparing local and prior associations. In network intrusion detection, Guerra et al. (2026) proposed GraphIDS, integrating E-GraphSAGE with a Transformer-based masked autoencoder to reconstruct local contextual flow structures. However, while Transformer-based models offer rich contextual modeling, their quadratic self-attention complexity imposes severe latency bottlenecks in high-throughput streaming environments. Furthermore, most existing SSL graph frameworks (including Anomal-E and GraphIDS) rely heavily on a single reconstruction or contrastive pretext task, making it difficult to capture complementary deviations across local topology, macroscopic semantics, and anomaly decision boundaries simultaneously.
+
+To address these limitations, the proposed GDAE combines non-contrastive dual-view autoencoding with a dynamic pseudo-anomaly generation mechanism. By lightweight decoupling of instance-level local structure and batch-level global semantic context alongside degree-based neighborhood prediction and adversarial boundary discrimination, GDAE achieves microsecond-level inference efficiency while establishing explicit boundary sharpening for unsupervised anomaly detection.
+
+2.4 Conceptual framework: SSL vs. One-class anomaly detection
+
+To establish conceptual precision, it is essential to clarify the relationship among self-supervised representation learning, one-class classification, novelty detection, and unsupervised anomaly detection. In machine learning taxonomy, these concepts describe distinct dimensions of the methodology rather than mutually exclusive paradigms (Pang et al. 2021). “Self-supervised learning” specifies the optimization target generation mechanism, wherein supervisory signals are implicitly constructed from the input data (e.g., via reconstruction, contrastive agreement, or pseudo-task prediction) without relying on manual annotations. Conversely, “one-class classification” and “novelty detection” characterize the data composition and evaluation protocol (Ruff et al. 2018). In a one-class or novelty detection setup, the model is trained exclusively on samples representing the benign class, and any deviation from this learned normal distribution during inference is identified as a novel or anomalous instance.
+
+Crucially, a methodology can simultaneously employ self-supervised pretext tasks while operating strictly within a benign-only or one-class learning setup. While such a benign-only setup is frequently designated as “unsupervised anomaly detection” in the NIDS literature due to the absence of attack labels during training, benchmark labels are nevertheless utilized at the dataset splitting stage to isolate the benign training subset. Therefore, characterizing the framework as a “self-supervised method for one-class network anomaly detection” accurately captures both dimensions: self-supervision provides the representation learning objectives, whereas the one-class protocol governs the data regime and decision boundary formation without exposing the network to real attack patterns.
+
+2.5 Methodological positioning and multi-view feature alignment
+
+Beyond domain-specific intrusion architectures, GDAE draws upon general methodological advancements in multi-channel deep representation learning and feature alignment. Recent literature emphasizes that capturing complex interactions in high-dimensional data requires multi-level feature fusion and multi-perspective alignment strategies (Li et al. 2024). For instance, multi-channel representations integrating structural syntax and global semantics have demonstrated superior capability in uncovering fine-grained semantic patterns (Qin et al. 2026). Similarly, sentiment-aware captioning frameworks emphasize the importance of cross-modal semantic alignment to constrain representation spaces under noise (Jiang et al. 2026). In network traffic graphs, flows inherently possess both fine-grained local topological syntax (e.g., degree variations and session directionality) and macroscopic statistical semantics. Consequently, effective anomaly detection necessitates multi-view representation mechanisms that dynamically align local topological structures with global traffic contexts.
+
+Table 1 Taxonomy and architectural comparisons among anomaly detection paradigms
+Full size table
+Fig. 1
+Full size image
+
+Overall architecture of the proposed GDAE framework. GDAE constructs an edge-level traffic graph from NetFlow records, learns edge embeddings using E-GraphSAGE, and jointly optimizes multiple self-supervised tasks, including local reconstruction, global semantic reconstruction, structural consistency prediction, and pseudo-anomaly discrimination. Anomaly scores are fused and calibrated using EVT-based thresholding
+
+To systematically establish GDAE’s methodological positioning, Table 1 provides a taxonomy comparing GDAE with representative anomaly detection paradigms. Traditional ML methods (e.g., Isolation Forest) treat traffic records as independent instances, ignoring graph topology. Standard Deep Autoencoders rely solely on attribute reconstruction, making them susceptible to over-generalization where abnormal flows are inadvertently reconstructed with low error. Classical node-centric GNNs (e.g., DOMINANT) aggregate representations onto IP host nodes, collapsing fine-grained session-level details. Furthermore, recent masked graph autoencoders (e.g., GraphIDS) focus on single-view reconstruction, which lacks explicit decision boundary sharpening.
+
+GDAE addresses these limitations through an integrated multi-task architecture. Rather than relying on a single sub-component, GDAE’s core contribution lies in the synergistic coupling of: (1) an edge-centric E-GraphSAGE backbone that preserves flow features; (2) a decoupled dual-autoencoder that balances instance-level local topology and batch-level global semantics; (3) degree-based structural consistency prediction; and (4) a dual-path pseudo-anomaly discriminator that explicitly sharpens the normal-abnormal boundary. These multi-view objectives are dynamically aligned via Kendall uncertainty weighting, while an Extreme Value Theory (EVT) thresholding strategy statistically models score tail distributions post-training, establishing a robust, end-to-end unsupervised detection system.
+
+3 Method
+
+In this section, we present a systematic overview of the overall method design for the proposed multi-task self-supervised one-class graph anomaly detection framework, GDAE. The framework constructs an edge-level directed graph based on NetFlow network traffic. It utilizes E-GraphSAGE to learn embeddings for traffic edges and integrates four complementary self-supervised tasks, including local reconstruction, global semantic reconstruction, structural consistency prediction, and pseudo-anomaly discrimination, to characterize the features and topological patterns of normal traffic edges from multiple perspectives.
+
+At the implementation level, GDAE employs the edge-wise sampling and heterogeneous data pipeline provided by GraphBolt to achieve efficient training on tens of millions of edge samples. Meanwhile, adaptive weighting of multi-task losses is realized through uncertainty modeling based on Kendall et al. (2018), and anomaly score thresholds are estimated using EVT. This design enables stable and transferable anomaly detection performance under a self-supervised one-class setup. We first introduce the overall framework design, followed by the details of dataset processing and graph construction.
+
+Fig. 2
+Full size image
+
+Edge-level graph construction and E-GraphSAGE encoding process
+
+3.1 Proposed framework
+
+The proposed GDAE framework is built upon edge-level network traffic graphs and performs unsupervised detection of unknown attacks through a three-stage process: edge embedding, multi-task self-supervision, and anomaly scoring. The overall architecture of the framework is illustrated in Fig. 1.
+
+First, a homogeneous graph with directed edges is constructed based on NetFlow records, where IP addresses are modeled as nodes and individual network flows are modeled as edges. Each edge is associated with a multi-dimensional feature vector derived from traffic statistics. This graph construction rule is consistent with the method proposed by Caville et al. (2022). To extract discriminative edge representations within the graph structure, GDAE adopts an edge-centric E-GraphSAGE encoder. The encoder aggregates feature information from neighboring edges on sampled subgraphs and generates low-dimensional edge embeddings by concatenating the representations of the source and destination nodes. These embeddings provide a unified representation space for all subsequent self-supervised tasks.
+
+Based on the learned edge embeddings, GDAE designs a dual autoencoder architecture. The local structure autoencoder focuses on reconstructing the local patterns of individual edges and their neighborhoods. It further outputs a continuous structural consistency score in the range of [0, 1] through a neighborhood prediction branch, characterizing topological rationality based on degree differences. In parallel, the global semantic autoencoder models the overall distribution of edge embeddings at the batch level. It compresses and reconstructs high-dimensional semantic information using multilayer perceptrons and batch normalization, capturing global normal patterns across hosts and sessions.
+
+To address the lack of negative samples when relying solely on reconstruction objectives, GDAE introduces a pseudo-anomaly generation and discrimination module. In the feature path, the pseudo-anomaly generator applies Gaussian noise injection, random feature dropping, and feature dimension shuffling to edge embeddings. In the structural path, it constructs connection-mismatch samples by mixing edge embeddings, thereby synthesizing both feature-level and structure-level pseudo-anomalies. An anomaly discriminator then receives latent representations from both local and global encoders and learns the normal-anomaly decision boundary through a binary cross-entropy loss.
+
+During training, the local reconstruction loss, global reconstruction loss, structural consistency prediction loss, and anomaly discrimination loss are adaptively weighted using Kendall uncertainty modeling. In the inference stage, local reconstruction error, global reconstruction error, the predicted structural consistency probability from the neighborhood predictor, and the discriminator output probability are fused to obtain the final edge-level anomaly score. Combined with EVT-based threshold estimation, GDAE determines whether an edge is anomalous, enabling fine-grained detection of complex network attacks under completely label-free conditions.
+
+Rationale Behind Joint Multi-Task Design: The integration of local structure reconstruction, global semantic projection, and pseudo-anomaly discrimination is explicitly designed to provide mutually complementary constraints rather than a simple combination of existing modules. Specifically: (1) Local vs. Global Complementarity: Local Structure AE retains fine-grained topological details and neighborhood port/degree patterns, whereas Global Semantic AE forces embeddings to conform to the macroscopic traffic statistical manifold. Single-view autoencoders frequently fail when an attack conforms locally (e.g., normal port usage) but deviates globally (e.g., volume spikes), or vice versa. (2) Reconstruction vs. Discrimination Synergy: Pure reconstruction models suffer from over-generalization, where complex abnormal patterns are inadvertently reconstructed with low error. The pseudo-anomaly discriminator acts as an auxiliary task that explicitly pushes synthetic feature/structure perturbations away from the benign manifold, sharpening the latent decision boundary. (3) Adaptive Gradient Synergy: As empirically verified in Section 4.3 (Fig. 14), training these multi-view pretext tasks simultaneously under Kendall uncertainty weighting prevents task dominance and continuously aligns task parameter gradients toward a positive cooperative direction, establishing a robust representation space for unseen attack detection.
+
+3.1.1 Edge-level graph construction and E-GraphSAGE encoder
+
+In the edge-level graph construction phase, network flow data are transformed into a directed homogeneous graph \(G=(V,E)\), converting the intrusion detection problem into an anomalous edge detection task, as illustrated in Fig. 2. Each node in \(V\) corresponds to a unique IPv4 address, and each directed edge \(e=(u,v)\in E\) corresponds to an individual NetFlow record, where \(u\) is the source IP and \(v\) is the destination IP. Multiple edges between the same pair of nodes are permitted, as they represent distinct communication sessions occurring at different timestamps or with different port/protocol combinations, while self-loops (i.e., \(u=v\)) are explicitly excluded during preprocessing to avoid trivial structural noise. Edge features are formed by the preprocessed 43-dimensional traffic statistics described in Section 3.2.2, including duration, protocol type, service type, and traffic volume attributes. Node features are initialized as a constant vector of ones, as the primary discriminative information for intrusion detection is carried by the edge features. It is important to note that this graph construction and training protocol follow a self-supervised one-class anomaly detection setting; all edges in the benign-only training set are processed using self-supervised objectives without relying on class labels during optimization, with ground-truth attack labels strictly isolated for evaluation purposes only. To support scalable training on graphs with tens of millions of edges, the constructed graph and its features are serialized in CSR (Compressed Sparse Row) format and stored on disk using memory-mapped NumPy arrays. This enables the GraphBolt pipeline to dynamically load subgraphs via fixed-size neighbor sampling without loading the entire graph into GPU memory, ensuring efficient and scalable training.
+
+Based on the constructed edge-level graph, GDAE employs an edge-enhanced graph sampling and aggregation network, E-GraphSAGE, as the encoder. The encoder maps node and edge features into low-dimensional edge embeddings that capture local graph structural information. E-GraphSAGE consists of multiple stacked graph convolution layers, each containing node update and edge embedding generation steps.
+
+Let the initial node feature matrix be \(\textbf{H}^{(0)} \in \mathbb {R}^{N \times d_n}\) and the initial edge feature matrix be \(\textbf{E}^{(0)} \in \mathbb {R}^{M \times d_e}\), where N and M denote the numbers of nodes and edges, respectively, and \(d_n\) and \(d_e\) are the dimensions of node and edge features. For each layer \(l = 1, 2, \ldots , L\), node update is performed by aggregating features from incident edges. Using mean aggregation, the neighborhood representation of node v is computed as:
+
+$$\begin{aligned} \textbf{h}_{\mathcal {N}(v)}^{(l)} = \frac{1}{|\mathcal {N}(v)|} \sum _{u \in \mathcal {N}(v)} \textbf{e}_{uv}^{(l-1)}, \end{aligned}$$	(1)
+
+where \(\mathcal {N}(v)\) denotes the set of neighboring nodes of v, and \(\textbf{e}_{uv}^{(l-1)}\) represents the edge feature from the previous layer. The aggregated feature is then transformed to update the node representation through a linear transformation followed by a ReLU activation:
+
+$$\begin{aligned} \textbf{h}_{v}^{(l)} = \textrm{ReLU}\left( \textbf{W}_{\text {neigh}}^{(l)} \textbf{h}_{\mathcal {N}(v)}^{(l)} \right) , \end{aligned}$$	(2)
+
+where \(\textbf{W}_{\text {neigh}}^{(l)} \in \mathbb {R}^{d_h \times d_e}\) is a learnable weight matrix and \(d_h\) is the hidden dimension. Subsequently, for each edge \(e=(u,v)\), the edge embedding is generated by concatenating the representations of its endpoint nodes and applying a linear transformation:
+
+$$\begin{aligned} \textbf{h}_{e}^{(l)} = \textbf{W}_{\text {edge}}^{(l)} \left[ \textbf{h}_{u}^{(l)} \, \Vert \, \textbf{h}_{v}^{(l)} \right] , \end{aligned}$$	(3)
+
+where \(\Vert \) denotes the vector concatenation operation, \(\textbf{W}_{\text {edge}}^{(l)} \in \mathbb {R}^{d'_e \times 2d_h}\) is the learnable weight matrix for edge embeddings, and \(d'_e\) is the output edge embedding dimension. By stacking multiple layers, the E-GraphSAGE encoder captures multi-hop topological information and outputs the final edge embedding matrix \(\textbf{E}^{(L)} \in \mathbb {R}^{M \times d'_e}\). These embeddings integrate local structural patterns and serve as the foundational representations for subsequent autoencoder and discriminator modules. The encoder is optimized end-to-end throughout training to ensure effective discrimination between normal and anomalous traffic patterns.
+
+Fig. 3
+Full size image
+
+Architecture of the proposed local structure autoencoder module
+
+3.1.2 Dual autoencoders: modeling local structure and global semantics
+
+To simultaneously characterize local topological patterns and global feature semantics within a unified edge embedding space, we design a dual autoencoder module composed of a Local Structure Autoencoder and a Global Semantic Autoencoder, following the acquisition of edge embeddings via E-GraphSAGE. Although both autoencoder paths share the same input edge embeddings, they adopt different network architectures and learning objectives. The Local Structure AE focuses on modeling fine-grained edge-level and neighborhood-level patterns, while the Global Semantic AE captures batch-level semantic distributions of edge embeddings.
+
+The overall architecture of the Local Structure Autoencoder is illustrated in Fig. 3. For any edge embedding \(\textbf{h}_e\) obtained from the E-GraphSAGE encoder, the Local Structure Autoencoder first extracts a low-dimensional local latent representation through a two-layer fully connected network. Denoting the local encoder as \(f^{\textrm{loc}}_{\textrm{enc}}(\cdot )\), the local latent representation is given by:
+
+$$\begin{aligned} \textbf{z}^{\textrm{loc}}_e \!=\! f^{\textrm{loc}}_{\textrm{enc}}(\textbf{h}_e) \!=\! \sigma \left( \textbf{W}^{\textrm{loc}}_2 \, \sigma \left( \textbf{W}^{\textrm{loc}}_1 \textbf{h}_e \!+\! \textbf{b}^{\textrm{loc}}_1 \right) \!+\! \textbf{b}^{\textrm{loc}}_2 \right) , \end{aligned}$$	(4)
+
+where \(\textbf{W}^{\textrm{loc}}_1\), \(\textbf{W}^{\textrm{loc}}_2\), \(\textbf{b}^{\textrm{loc}}_1\), and \(\textbf{b}^{\textrm{loc}}_2\) are learnable parameters, and \(\sigma (\cdot )\) denotes the ReLU activation function. The dimension of \(\textbf{z}^{\textrm{loc}}_e\) is typically set to half of the edge embedding dimension to obtain a compact local structure representation. The local decoder \(f^{\textrm{loc}}_{\textrm{dec}}(\cdot )\) maps the latent representation back to the edge embedding space:
+
+$$\begin{aligned} \hat{\textbf{h}}^{\textrm{loc}}_e = f^{\textrm{loc}}_{\textrm{dec}} \left( \textbf{z}^{\textrm{loc}}_e \right) , \end{aligned}$$	(5)
+
+The quality of local structure reconstruction is measured using the Mean Squared Error (MSE):
+
+$$\begin{aligned} \mathcal {L}_{\textrm{loc}} = \frac{1}{|E_B|} \sum _{e \in E_B} \left\| \textbf{h}_e - \hat{\textbf{h}}^{\textrm{loc}}_e \right\| _2^2, \end{aligned}$$	(6)
+
+where \(E_B\) denotes the set of edges in the current mini-batch. This reconstruction objective encourages the model to learn local patterns that appear stably in normal traffic, such as specific service port combinations, session directions, and traffic statistical distributions.
+
+On top of the Local Structure AE, we further propose a neighborhood prediction branch to quantify the structural rationality of each edge within the local topology. Let the in-degrees of the source node u and destination node v be \(d_u\) and \(d_v\), respectively. The continuous structural consistency label for edge \(e=(u,v)\) is defined as:
+
+$$\begin{aligned} s_e = 1 - \frac{|d_u - d_v|}{d_u + d_v + 1}, \quad s_e \in [0,1], \end{aligned}$$	(7)
+
+It is worth noting that the proposed degree-based label \(s_e\) serves as a heuristic approximation of structural normality, rather than a ground-truth anomaly indicator. In real-world networks, highly asymmetric degree distributions are not necessarily malicious. For instance, in typical client-server architectures, Content Delivery Network (CDN) services, Domain Name System (DNS) queries, and web API calls, the server-side nodes often exhibit significantly higher degrees than the clients. Relying solely on degree differences in such scenarios could theoretically misclassify these legitimate patterns as structural anomalies.
+
+Nevertheless, we retain this label as a complementary self-supervised signal for the following reasons: (1) When excluding globally high-degree hubs (e.g., public DNS or load balancers) from local neighborhoods, degree asymmetry remains a strong indicator of irregular scanning or misrouting behaviors; (2) Crucially, this signal is not the sole basis for anomaly scoring. The final anomaly score (15) integrates local reconstruction, global reconstruction, and discriminator outputs. Even if a legitimate CDN edge triggers a high neighborhood prediction loss (\(1-\hat{s}_e\)), its low local/global reconstruction errors will dominate the fused score, effectively suppressing false positives. This multi-view fusion mechanism mitigates the potential bias introduced by the simplistic degree assumption.
+
+Fig. 4
+Full size image
+
+Architecture of the Global Semantic Autoencoder. During training, batch-wise normalization acts as a regularizer to shape the global benign manifold; during inference, frozen affine parameters project samples onto this manifold for reconstruction error evaluation
+
+The denominator is incremented by 1 to avoid division by zero. This label approaches 1 for edges connecting nodes with similar degrees and approaches 0 for edges connecting nodes with highly disparate degrees, thereby reflecting whether the edge conforms to local degree distribution regularities via self-supervised target construction.
+
+Based on the local latent representation \(\textbf{z}^{\textrm{loc}}_e\), the neighborhood predictor outputs the predicted structural consistency probability via a fully connected layer and a sigmoid function:
+
+$$\begin{aligned} \hat{s}_e = \sigma \left( \textbf{W}_p \textbf{z}^{\textrm{loc}}_e + \textbf{b}_p \right) , \end{aligned}$$	(8)
+
+The neighborhood prediction loss is defined using binary cross-entropy:
+
+$$\begin{aligned} \mathcal {L}_{\textrm{nei}} = - \frac{1}{|E_B|} \sum _{e \in E_B} \left( s_e \log \hat{s}_e + (1 - s_e) \log (1 - \hat{s}_e) \right) , \end{aligned}$$	(9)
+
+By jointly minimizing \(\mathcal {L}_{\textrm{loc}}\) and \(\mathcal {L}_{\textrm{nei}}\), the Local Structure AE is encouraged to capture both edge-level patterns and local connectivity regularities, making the model more sensitive to structural attacks.
+
+Unlike the local path, which focuses on individual edges and their immediate topological neighborhoods, the Global Semantic Autoencoder models the macroscopic semantic distribution of edge embeddings. Its architecture is illustrated in Fig. 4.
+
+Let the global encoder be denoted as \(f^{\textrm{glob}}_{\textrm{enc}}(\cdot )\), which consists of multiple fully connected layers interleaved with Batch Normalization (BN) and non-linear activations. During training, the BN layers regulate the mini-batch feature distribution, serving as an implicit batch-wise regularizer that forces the network to learn a compact, global semantic manifold of normal traffic across hosts and sessions. The encoder compresses the edge embedding \(\textbf{h}_e\) into a global latent representation:
+
+$$\begin{aligned} \textbf{z}^{\textrm{glob}}_e = f^{\textrm{glob}}_{\textrm{enc}}(\textbf{h}_e), \end{aligned}$$	(10)
+
+The global decoder \(f^{\textrm{glob}}_{\textrm{dec}}(\cdot )\) maps the latent representation back to the edge embedding space:
+
+$$\begin{aligned} \hat{\textbf{h}}^{\textrm{glob}}_e = f^{\textrm{glob}}_{\textrm{dec}} \left( \textbf{z}^{\textrm{glob}}_e \right) , \end{aligned}$$	(11)
+
+The global semantic reconstruction loss is defined using Mean Squared Error (MSE):
+
+$$\begin{aligned} \mathcal {L}_{\textrm{glob}} = \frac{1}{|E_B|} \sum _{e \in E_B} \left\| \textbf{h}_e - \hat{\textbf{h}}^{\textrm{glob}}_e \right\| _2^2, \end{aligned}$$	(12)
+
+During inference, the BN statistics (running mean and variance) are frozen, folding the encoder layers into a static transformation network. This network acts as a deterministic projection onto the learned normal semantic manifold. Since anomalous traffic edges deviate from the global statistical distribution established during training, their reconstructed embeddings exhibit substantially higher reconstruction residuals, enabling robust anomaly scoring.
+
+Unlike general autoencoders (Pinaya et al. 2020) that focus solely on feature-level reconstruction, the dual-view architecture of GDAE decouples representation learning into local structural fidelity and global semantic consistency. While a standard AE typically overlooks topological context, our Local Structure AE is specifically designed with a structural consistency task to preserve degree-based structural patterns. Consequently, the learned embeddings are sensitive not only to attribute deviations but also to neighborhood-level structural anomalies.
+
+The proposed local and global autoencoders operate at different granularities and serve distinct purposes, while sharing a similar reconstruction formulation. The local structure autoencoder reconstructs the embedding of each edge from its own latent representation, aiming to preserve fine-grained, instance-level patterns that reflect neighborhood topologies and local feature regularities. In contrast, the global semantic autoencoder captures the broader distributional semantics of edge embeddings at the batch level. It leverages batch normalization and deeper transformations to model the statistical manifold of normal traffic, thereby enabling the detection of anomalies that deviate from global semantic contexts. Thus, while both modules use MSE loss, they target complementary views, balancing local fidelity with global consistency to improve the model’s sensitivity to diverse anomaly types.
+
+In summary, the dual autoencoder jointly models normal edge patterns from three complementary perspectives: local topology reconstruction, structural consistency prediction, and global semantic distribution modeling, through the objectives \(\mathcal {L}_{\textrm{loc}}\), \(\mathcal {L}_{\textrm{nei}}\), and \(\mathcal {L}_{\textrm{glob}}\). The resulting local latent representation \(\textbf{z}^{\textrm{loc}}_e\) and global latent representation \(\textbf{z}^{\textrm{glob}}_e\) are not only used for reconstruction but also serve as inputs to the subsequent pseudo-anomaly discriminator, providing a structure-aware and semantically rich edge-level representation foundation for multi-task self-supervised one-class anomaly detection.
+
+3.1.3 Multi-task self-supervision and pseudo-anomaly discrimination mechanism
+
+Based on the local latent representation \(\textbf{z}_e^{\textrm{loc}}\) and the global latent representation \(\textbf{z}_e^{\textrm{glob}}\) obtained from the dual autoencoder, we further construct a jointly optimized multi-task self-supervised one-class learning framework. The objective is to simultaneously capture stable structural patterns, global semantic manifolds, and discriminative boundaries between normal edges and perturbation-induced pseudo anomalies under completely label-free conditions.
+
+The core idea is to constrain the edge embedding space using multiple complementary self-supervised signals, including local reconstruction, neighborhood structural consistency prediction, global semantic reconstruction, and pseudo-anomaly discrimination. As training proceeds, these tasks collaboratively shape a latent space in which normal edges form a compact distribution while abnormal deviations are amplified across multiple feature and structural dimensions, thereby providing a robust basis for anomaly detection.
+
+To enable unsupervised identification of anomalous edges, we introduce a pseudo-anomaly generation and discrimination mechanism. Specifically, a subset of edge embeddings in the latent space are perturbed to simulate anomalous behaviors commonly observed in real network traffic. Feature-level perturbations are applied by injecting Gaussian noise or stretching specific embedding dimensions, forcing the perturbed samples to deviate from the normal semantic manifold and thereby generating pseudo-anomaly samples.
+
+Two types of feature-level perturbations simulate different anomalous patterns observed in real-world traffic. The first injects Gaussian noise into the latent representations of a randomly selected subset of edges. Given an original latent vector \(\textbf{z}_e\), the perturbed version is generated as \(\tilde{\textbf{z}}_e = \textbf{z}_e + \epsilon \), where \(\epsilon \sim \mathcal {N}(0, \sigma _{\text {noise}}^2 \textbf{I})\). This operation mimics feature measurement errors or subtle inconsistencies caused by abnormal behaviors without drastically altering the overall semantics.
+
+The second perturbation applies random feature dropping, where a randomly selected subset of dimensions in \(\textbf{z}_e\) is set to zero with probability \(p_{\text {drop}}\). This simulates scenarios in which certain traffic attributes are missing or corrupted, a common phenomenon in network flows due to packet loss or incomplete session records. In addition to these stochastic perturbations, a structure-level pseudo-anomaly generation mechanism is introduced via random edge mixing. Specifically, the latent representations of two edges are randomly swapped to create connection-mismatch samples that simulate topological anomalies, such as unexpected communication patterns between rarely interacting hosts. These perturbations are applied on the fly during training, and the perturbed samples are assigned pseudo-labels as anomalies to train the discriminator. By exposing the model to diverse and controlled deviations, the pseudo-anomaly mechanism enhances its ability to better separate normal edges from truly anomalous ones in the latent space.
+
+The adopted perturbations, including Gaussian noise injection and random feature dropping, primarily generate feature-level aberrations with isotropic characteristics in the latent space. In contrast, real-world adversarial behaviors, such as low-rate infiltration, long-term persistent backdoors, periodic scanning, or evasion tactics, often produce subtle, directionally biased deviations in the feature or structural space rather than outright magnitude spikes. This divergence between the isotropic synthetic outliers and the structured nature of advanced threats implies that the current perturbations approximate a subset of the anomaly space. However, within the multi-task framework, this approximation is not intended to exhaustively enumerate all attack patterns. Instead, the pseudo-anomaly discriminator serves as a boundary-sharpening auxiliary task; it forces the latent representations of normal traffic to contract against deliberately distorted counterexamples. The complementary local and global autoencoders are simultaneously responsible for capturing structural and semantic regularities. Even if a specific stealthy attack is not explicitly simulated, its deviation from the learned benign manifold—whether in feature correlations, local neighborhood structures, or global semantic consistencies—results in an elevated reconstruction error in one or both autoencoding paths. Consequently, the proposed pseudo-anomaly strategy provides a robust foundation for outlier sensitivity, while the inherent incompleteness of synthetic generation is mitigated by the multi-view reconstruction signals.
+
+Subsequently, a lightweight anomaly discriminator is employed to distinguish between real latent representations \(\textbf{z}_e\) and pseudo-anomalous representations \(\tilde{\textbf{z}}_e\). Let \(y_e=0\) denote a real (normal) sample and \(y_e=1\) denote a pseudo-anomalous sample. The discriminator outputs the anomaly probability \(p_e\), and the pseudo-anomaly discrimination loss is defined as:
+
+$$\begin{aligned} \mathcal {L}_{\textrm{adv}} = -\frac{1}{|E_B|}\sum _{e\in E_B} \big ( y_e \log p_e + (1-y_e)\log (1-p_e) \big ), \end{aligned}$$	(13)
+
+where \(E_B\) denotes the set of edges in the current mini-batch. This adversarial self-supervised signal explicitly enlarges the separation between normal and abnormal regions in the latent space, improving the model’s sensitivity to unknown attack patterns.
+
+The overall training objective integrates four components: local structure reconstruction loss \(\mathcal {L}_{\textrm{loc}}\), neighborhood consistency loss \(\mathcal {L}_{\textrm{nei}}\), global semantic reconstruction loss \(\mathcal {L}_{\textrm{glob}}\), and pseudo-anomaly discrimination loss \(\mathcal {L}_{\textrm{adv}}\). Instead of manually tuning fixed weights, we adopt an uncertainty-aware adaptive weighting strategy based on learnable log-variance parameters, following the approach proposed by Kendall et al. (2018). The joint loss is defined as:
+
+$$\begin{aligned} \mathcal {L}_{\textrm{total}} = \sum _{i\in \{\mathrm {loc,\,nei,\,glob,\,adv}\}} \left( e^{-s_i}\mathcal {L}_i + s_i \right) , \end{aligned}$$	(14)
+
+where \(s_i\) denotes the learnable log-variance associated with task i. This formulation follows the multi-task loss weighting framework introduced in Kendall et al. (2018), where task uncertainties are modeled as learnable parameters to automatically balance the contributions of different objectives.
+
+After training, the final edge-level anomaly score is obtained by fusing multiple signals, including local reconstruction error, global reconstruction error, neighborhood consistency deviation, and discriminator anomaly probability. The fused anomaly score is computed as:
+
+$$\begin{aligned} \textrm{Score}(e) = \alpha \Vert \textbf{h}_e - \hat{\textbf{h}}_e^{\textrm{loc}} \Vert _2^2 + \beta \Vert \textbf{h}_e - \hat{\textbf{h}}_e^{\textrm{glob}} \Vert _2^2 + \gamma (1-\hat{s}_e) + \eta p_e, \end{aligned}$$	(15)
+
+where \(\alpha \), \(\beta \), \(\gamma \), and \(\eta \) are fusion coefficients, \(\hat{s}_e\) is the predicted neighborhood consistency probability, and \(p_e\) is the discriminator output.
+
+Here, the fusion coefficients \( \alpha , \beta , \gamma , \eta \) are not manually tuned; instead, they are automatically derived from the learned task weights \( e^{-s_i} \) obtained via the uncertainty-aware multi-task objective in (14). During training, these coefficients adaptively balance the contributions of local reconstruction, global reconstruction, neighborhood consistency, and pseudo-anomaly discrimination, and after training they are fixed for consistent anomaly scoring.
+
+To determine detection thresholds in a statistically principled manner, EVT is employed. During validation, only anomaly scores from normal edges are used to fit a Generalized Pareto Distribution (GPD) on the tail of the score distribution. Given a target false positive rate, the corresponding extreme quantile is selected as the detection threshold. An edge is classified as anomalous if its final score exceeds this threshold. Compared with empirical quantiles, EVT-based thresholding provides greater robustness and transferability across datasets and traffic conditions, making it particularly suitable for highly imbalanced intrusion detection scenarios.
+
+The end-to-end training and inference procedure of GDAE is summarized in Algorithm 1. The algorithm takes raw NetFlow records as input, constructs an edge-level directed graph, and jointly optimizes the multi-task self-supervised objectives described in Sections 3.1.1–3.1.3. After training, we apply EVT on the validation scores to determine the detection threshold, which is then used during inference. All steps are implemented using the GraphBolt data pipeline to efficiently handle large-scale traffic graphs.
+
+Algorithm 1
+Full size image
+
+Training Procedure of GDAE.
+
+Table 2 Attack distribution of the NF-UNSW-NB15-v2 dataset
+Full size table
+Table 3 Attack distribution of the NF-CSE-CIC-IDS2018-v2 dataset
+Full size table
+3.2 Dataset
+
+To comprehensively evaluate the effectiveness and robustness of the proposed GDAE framework, we conduct experiments on two widely used modern network intrusion detection benchmark datasets: NF-UNSW-NB15-v2 and NF-CSE-CIC-IDS2018-v2 (Sarhan et al. 2022). Both datasets are standardized NetFlow-format versions generated from raw PCAP traffic by the University of Queensland. Each dataset contains 43 unified flow-level features, which eliminates feature heterogeneity and enables fair cross-dataset comparison.
+
+3.2.1 Dataset description and statistics
+
+The NF-UNSW-NB15-v2 dataset is derived from the original UNSW-NB15 traffic and simulates complex behaviors in contemporary network environments. It includes normal traffic and nine attack categories, such as fuzzers, analysis, backdoors, DoS, exploits, generic, reconnaissance, shellcode, and worms. The dataset contains a total of 2,390,275 flow records, among which 95,053 (3.98%) correspond to attack traffic and 2,295,222 (96.02%) correspond to benign traffic. All traffic data from the NF-UNSW-NB15-v2 dataset was utilized in the experiment.
+
+The NF-CSE-CIC-IDS2018-v2 dataset is constructed on a large-scale Amazon Web Services (AWS) network topology and covers a broader range of attack scenarios, including multiple DoS/DDoS attacks, brute force, botnet, and web-based attacks. This dataset contains 18,893,708 flow records, including 2,258,141 (11.95%) attack samples and 16,635,567 (88.05%) benign samples, resulting in significantly higher traffic volume and throughput. Due to the massive scale of the full NF-CSE-CIC-IDS2018-v2 dataset (over 18.8 million flows), processing the entire graph is computationally prohibitive for a thorough ablation study and hyperparameter search under our hardware configuration (NVIDIA RTX 3060 with 12GB VRAM). Therefore, to keep the experiments feasible without altering the underlying class distribution, we employ a 10% stratified random sample (approximately 1.89 million flows) stratified by attack type. This sampling ratio preserves the class proportions of the full dataset, as shown in Table 3 (the relative distribution remains identical after stratification). All reproduced baselines are evaluated on the same sampled subset, ensuring fair comparison. We acknowledge that rare attack types have reduced absolute counts, but each remains present in the test set with sufficient samples for meaningful evaluation, though full-scale validation remains an important direction for future work.
+
+The detailed attack types and their distributions are summarized in Tables 2 and 3. In our experiments, all attack categories are collectively treated as “Anomaly” to evaluate the model’s ability to detect previously unseen attacks.
+
+3.2.2 Data preprocessing and splitting strategy
+
+To construct high-quality inputs suitable for graph neural networks, data preprocessing consists of four main steps: feature cleaning, categorical encoding, missing value imputation, normalization, and dataset splitting.
+
+Feature cleaning and encoding
+
+Identification-related fields that may induce shortcut learning are removed, including source IP, destination IP, and flow timestamps. For the NF-CSE-CIC-IDS2018-v2 dataset, flow start/end timestamps are also excluded. The remaining features consist of both numerical and categorical types. Categorical features (e.g., protocol type, service type) are encoded using one-hot encoding, while numerical features (e.g., duration, packet count, byte count, and flow rate statistics) are retained as continuous values. No explicit feature selection is applied; all available 43 flow-level features after encoding are used as inputs to the E-GraphSAGE encoder, allowing the GNN’s aggregation mechanism to automatically learn feature importance during training.
+
+Missing value and infinite value handling
+
+Missing values (NaN) and infinite values (Inf) are replaced with zeros to ensure numerical stability during training and inference.
+
+Normalization
+
+Min-max normalization is applied to map all continuous features into the range \([0,1]\). To avoid data leakage, the scaler is fitted exclusively on the training set and then applied to the validation and test sets. During inference, value clipping is employed to improve numerical stability when encountering out-of-distribution samples.
+
+Dataset splitting and randomization control
+
+Following the unsupervised anomaly detection setting, a benign-only training strategy is adopted. The dataset is randomly split into training, validation, and test sets with a ratio of 8:1:1 using stratified sampling by attack type to preserve the class distribution across all subsets. All attack samples are completely excluded from the training set, while validation and test sets remain mixed. To ensure strict reproducibility and to account for stochasticity in graph sampling and model initialization, all experiments are conducted with five different fixed random seeds: \(\{42, 123, 456, 789, 1234\}\). The dataset splitting, neighbor sampling, and model parameter initialization are all controlled by these seeds. All reported results are presented as Mean ± Standard Deviation computed over these five independent runs.
+
+In accordance with standard network intrusion detection benchmarking protocols (e.g., Anomal-E (Caville et al. 2022)), all models in this study are trained under a benign-only, one-class anomaly detection setting using exclusively normal traffic records. While no attack labels or external annotations are used during model optimization via self-supervised objectives, the benchmark ground-truth labels are utilized at the dataset split level to isolate the benign subset for training. In the broader machine learning context, this protocol represents a self-supervised one-class detection paradigm, where self-supervision defines how optimization targets are generated, and the benign-only restriction defines the training data composition. Although this setup is frequently referred to as unsupervised anomaly detection in the NIDS literature, we explicitly acknowledge its one-class formulation throughout the manuscript to ensure conceptual precision and clarity regarding our experimental assumptions.
+
+3.2.3 On-disk graph data storage and graph sampling workflow
+
+Given the massive scale of network traffic graphs, which may contain millions to tens of millions of edges, loading the entire graph into GPU memory is infeasible. Therefore, we adopt an on-disk graph storage and sampling pipeline based on GraphBolt.
+
+The preprocessed traffic data are modeled as a directed homogeneous graph \(G=(V,E)\), where nodes correspond to unique IPv4 addresses and edges correspond to individual NetFlow records. Multiple edges between the same pair of nodes are permitted. Edge features are directly formed by the 43-dimensional traffic statistics, while node features are initialized as constant vectors.
+
+The graph structure, node features, and edge features are serialized in CSR format and stored on disk using memory-mapped NumPy arrays. During training, mini-batches of target edges are first sampled from disk. Subsequently, fixed-size neighbor sampling is performed around the source and destination nodes of each target edge to construct local computation subgraphs. These subgraphs are dynamically transferred to GPU memory for forward propagation.
+
+This on-disk sampling workflow significantly reduces memory overhead while preserving local topological dependencies, enabling efficient and scalable GDAE training on traffic graphs with tens of millions of edges.
+
+Table 4 Key architectural dimensions of GDAE on different datasets
+Full size table
+4 Experimental results analysis
+
+This section systematically evaluates the effectiveness and robustness of the proposed GDAE framework in network traffic anomaly detection tasks through extensive experiments on two large-scale benchmark datasets, namely NF-UNSW-NB15-v2 and NF-CSE-CIC-IDS2018-v2. We first describe the experimental setup, including the software and hardware environment, hyperparameter configurations, and training protocols. Then, the evaluation metrics and comparative baselines are introduced to ensure a comprehensive and fair assessment under highly imbalanced scenarios.
+
+4.1 Experimental setup
+
+The proposed GDAE framework and all comparative experiments were implemented using PyTorch and the Deep Graph Library (DGL) under Python 3.10. All experiments were conducted on a Windows workstation equipped with 32 GB RAM and an NVIDIA GeForce RTX 3060 GPU with 12 GB of VRAM. To handle large-scale network traffic graphs efficiently under GPU memory constraints, the GraphBolt data loader was employed to support disk-based data loading and edge-centric subgraph sampling.
+
+Model training was performed using the AdamW optimizer, with the weight decay parameter set to 0.0001 to mitigate overfitting. An early stopping strategy was adopted during training: if the PR-AUC on the validation set did not improve for 20 consecutive epochs, training was terminated and the best-performing model parameters were retained. To reduce the influence of random initialization and sampling stochasticity, all experiments were independently repeated under multiple random seeds, and the final results are reported in the form of Mean ± Std.
+
+Considering the differences in traffic background characteristics and data scale between the NF-UNSW-NB15-v2 and NF-CSE-CIC-IDS2018-v2 datasets, dataset-specific hyperparameter configurations were adopted to achieve optimal performance. All models were trained under a unified benign-only setting, where only normal traffic was used for training.
+
+Specifically, the maximum number of training epochs was fixed to 100 for all experiments. For the NF-UNSW-NB15-v2 dataset, the batch size was set to 32,768, the initial learning rate was set to \(1\times 10^{-5}\), the weight decay was set to 0.0001, and the dropout rate was set to 0.1. For the larger and more complex NF-CSE-CIC-IDS2018-v2 dataset, the batch size was reduced to 16,384, the initial learning rate was increased to \(1\times 10^{-4}\), the weight decay was set to 0.001, and the dropout rate was increased to 0.5 to enhance robustness against overfitting.
+
+For the E-GraphSAGE encoder, single-hop neighbor aggregation (\(K=1\)) was adopted, and the maximum neighbor sampling fanout was fixed to 32,768. In the pseudo-anomaly generation module, the standard deviation of Gaussian noise was set to \(\sigma _{\text {noise}}=0.3\), and the feature drop probability was set to \(p_{\text {drop}}=0.2\). During EVT-based threshold calibration, the target false positive rate (Target FPR) was set to 0.003, and the tail threshold quantile was set to \(u_{\text {pct}}=0.95\).
+
+The key architectural dimension settings of the GDAE model on different datasets are summarized in Table 4.
+
+Table 5 Performance comparison (mean ± std.) of unsupervised methods on two large-scale benchmark datasets
+Full size table
+4.2 Evaluation metrics and comparative baselines
+
+Given the extremely imbalanced distribution between normal traffic and attack traffic in network intrusion detection datasets, a single evaluation metric is insufficient to comprehensively assess model performance. Therefore, we adopt a multi-dimensional evaluation protocol consisting of Accuracy, PR-AUC, and Macro-F1 Score.
+
+Accuracy
+
+Measures the proportion of correctly classified samples, including both normal and anomalous traffic, among all samples. Although accuracy may not fully reflect detection performance on minority attack classes under severe imbalance, it remains an important indicator of overall classification capability.
+
+PR-AUC (Area Under the Precision–Recall Curve)
+
+Evaluates the area under the precision–recall curve and is independent of a specific decision threshold. For anomaly detection tasks, PR-AUC is particularly informative because it emphasizes performance under low false positive rate conditions and better reflects the ranking quality of anomaly scores in imbalanced datasets.
+
+Macro-F1 score
+
+is the harmonic mean of precision and recall computed using macro-averaging. Since all attack types are merged into a single “Anomaly” class and the number of attack samples is significantly smaller than that of normal samples, macro-averaging assigns equal weight to both classes. This avoids dominance by the majority normal class and provides a more objective assessment of attack detection capability.
+
+To systematically verify the advantages of GDAE across different methodological paradigms, we selected five representative baseline models for comparison. All baseline models were evaluated under the same Benign-only training setting.
+
+Isolation forest (iForest) (Liu et al. 2008)
+
+iForest is a widely used unsupervised anomaly detection algorithm that constructs random trees to recursively partition the data space. Since anomalies are more likely to be isolated with shorter path lengths, the average path length is used as the anomaly score.
+
+Histogram-based outlier score (HBOS) (Goldstein and Dengel 2012)
+
+HBOS is an efficient statistics-based anomaly detection method that assumes feature independence and computes anomaly scores using feature-wise histograms. Due to its linear time complexity, HBOS is commonly used as a fast baseline in large-scale scenarios.
+
+One-Class SVM (OC-SVM) (Schölkopf et al. 2001)
+
+OC-SVM is a classical non-parametric single-class boundary learning method that maps input features into a high-dimensional feature space to construct a hyper-plane separating benign instances from origin/anomalies with maximal margin.
+
+Deep SVDD (Ruff et al. 2018)
+
+Deep SVDD combines deep neural feature representation with a Support Vector Data Description objective. It maps benign input data into a minimal volume hyper-sphere in latent space, taking the squared Euclidean distance to the sphere center as the anomaly score.
+
+Autoencoder (AE) (Pinaya et al. 2020)
+
+The autoencoder baseline employs a standard encoder–decoder architecture to reconstruct the edge embeddings generated by E-GraphSAGE. The model is trained to minimize reconstruction error on normal traffic, and anomalous samples are expected to produce larger reconstruction errors measured by mean squared error (MSE).
+
+Anomal-E (Caville et al. 2022)
+
+Anomal-E is a state-of-the-art graph-based network intrusion detection method. It also leverages edge features and an E-GraphSAGE backbone but relies on the DGI principle to maximize mutual information between local and global representations during training.
+
+GraphIDS (Guerra et al. 2026)
+
+GraphIDS is a self-supervised framework that jointly trains an E-GraphSAGE encoder and a Transformer-based masked autoencoder to reconstruct local graph representations of benign traffic. Without relying on negative samples or labeled attack data, it learns normal communication patterns by reconstructing flow embeddings with a masked autoencoding objective, and detects intrusions based on reconstruction errors. This end-to-end design directly optimizes the embeddings for anomaly detection.
+
+Fig. 5
+Full size image
+
+Comparison with recently reported deep intrusion detection models on two datasets (ACC and Macro-F1)
+
+4.3 Analysis of experimental results
+
+As shown in Table 5, the comparative results on two large-scale benchmark datasets demonstrate that GDAE consistently outperforms all baseline methods under a benign-only (one-class) setting, validating its effectiveness in modeling normal traffic from multiple structural perspectives. On the NF-UNSW-NB15-v2 dataset, GDAE achieves the best performance across all metrics, with a PR-AUC of 0.8591, outperforming the strongest baseline GraphIDS (0.8175) by approximately 5.1%, and Anomal-E (0.7135) by 20.4%. In terms of Macro-F1, GDAE reaches 0.9491, surpassing GraphIDS (0.9410) and AE (0.9256), demonstrating its ability to balance precision and recall effectively.
+
+Furthermore, positioning GDAE against classic one-class learning baselines (OC-SVM and Deep SVDD) demonstrates the essential benefit of graph-structured feature alignment. While classical one-class paradigms constrain benign samples within a static geometric boundary (e.g., hyper-plane or hyper-sphere), they treat traffic records as independent vector instances, ignoring topological interaction context. Consequently, Deep SVDD and OC-SVM achieve limited PR-AUC (e.g., 0.6283 and 0.5844 on NF-UNSW-NB15-v2; 0.5375 and 0.4007 on NF-CSE-CIC-IDS2018-v2) due to severe feature overlap between benign and malicious traffic in raw feature space. In contrast, GDAE’s graph-centric multi-task architecture dynamically incorporates structural topology and multi-view autoencoding, yielding significantly superior anomaly separation.
+
+On the more challenging NF-CSE-CIC-IDS2018-v2 dataset, GDAE maintains a leading position with a Macro-F1 of 0.9571, slightly higher than Anomal-E (0.9519) and GraphIDS (0.9432). Although Anomal-E achieves a marginally higher PR-AUC (0.9555) than GDAE (0.9486) on this dataset, GDAE exhibits more balanced performance across both metrics, with significantly better precision-recall trade-offs in the high-recall region. This slight discrepancy is not contradictory: PR-AUC evaluates ranking quality across all recall levels, whereas Macro-F1 measures the balanced precision-recall trade-off at a specific threshold. GDAE’s higher Macro-F1 indicates superior performance in the high-recall region, which is critical for practical intrusion detection. Overall, these results confirm the effectiveness of the proposed multi-task self-supervised one-class framework for unsupervised network anomaly detection.
+
+We additionally compare GDAE with several state-of-the-art intrusion detection models recently reported on NF-UNSW-NB15-v2 and NF-CSE-CIC-IDS2018-v2, including DGNN (Wang et al. 2024) (semi-supervised), WKG (Liu et al. 2025) (semi-supervised), SSTD (Chen et al. 2025) (supervised), and STEG (Zoubir and Missaoui 2025) (supervised). We emphasize that this comparison is intended as an informative reference rather than a direct head-to-head evaluation, as these results are cited from their original publications and may involve different data preprocessing, training/test splits, sampling ratios, and experimental protocols. Crucially, all these state-of-the-art methods are either semi-supervised or fully supervised, requiring substantial labeled attack samples for training. In stark contrast, GDAE is a self-supervised one-class method that relies exclusively on benign traffic for training without using attack labels during optimization. Reproducing their exact setups under our hardware constraints and 10% sampled subset is impractical. With this caveat in mind, as shown in Fig. 5, GDAE achieves competitive results on both datasets despite using no attack labels during training. This is precisely the rationale for our approach: GDAE offers a practical and label-efficient solution for intrusion detection in real-world scenarios where labeled attack data is scarce or unavailable, while attaining performance comparable to—and in some metrics surpassing—label-dependent methods. On NF-UNSW-NB15-v2, GDAE attains an ACC of 0.9923 and a Macro-F1 of 0.9540, which are comparable to or slightly higher than the reported figures of SSTD (0.9870 ACC, 0.9264 Macro-F1) and STEG (0.9867 ACC, 0.9222 Macro-F1). On NF-CSE-CIC-IDS2018-v2, GDAE achieves an ACC of 0.9844 and a Macro-F1 of 0.9612, performing on par with the best reported supervised models (SSTD: 0.9612 Macro-F1; STEG: 0.9571 Macro-F1). These results suggest that the proposed self-supervised framework, which relies solely on benign traffic for training, can attain detection performance comparable to that of label-dependent approaches, highlighting its potential for practical deployment in scenarios where labeled attack data is scarce or unavailable.
+
+Fig. 6
+Full size image
+
+Precision–Recall (PR) curves on two benchmark datasets
+
+Fig. 7
+Full size image
+
+Confusion matrices (percentage) on two benchmark datasets
+
+As illustrated in Fig. 6, the precision–recall curves on both the NF-UNSW-NB15-V2 and NF-CSE-CIC-IDS2018-V2 datasets demonstrate that GDAE consistently maintains high precision across various recall intervals. The overall curves are consistently positioned above those of other baseline methods (AE, Anomal-E, IForest, and HBOS), demonstrating superior ranking capability while maintaining more stable precision performance across different recall ranges. Specifically, on the NF-UNSW-NB15-V2 dataset, GDAE achieves a precision approaching 0.9 in the low-recall region and retains a significant advantage in the high-recall range, highlighting its strong sensitivity to sparse anomalous samples and its capability for the stable characterization of normal traffic patterns. In contrast, the curves of traditional statistical methods (HBOS and IForest) are generally lower and show a sharp decline in precision as recall increases, indicative of high false positive rates; meanwhile, the reconstruction-based AE performs relatively well in the medium-recall range but lacks robustness in extreme regions. A similar trend is observed on the NF-CSE-CIC-IDS2018-V2 dataset. Here, GDAE’s PR curve is distinctively superior to other methods across almost the entire recall interval, particularly maintaining higher precision in the high-recall region. This confirms that the proposed multi-task self-supervised one-class mechanism effectively sustains a significant separation between anomalous and normal edges, even under complex traffic distributions.
+
+Fig. 8
+Full size image
+
+Reconstruction residual heatmaps of the local and global autoencoders
+
+As revealed by Fig. 7, the proposed method demonstrates exceptional discriminative capability on both benchmark datasets, while exhibiting distinct generalization characteristics under different data distributions. On the NF-UNSW-NB15-V2 dataset, the model achieves nearly perfect class separation: the identification accuracy for normal traffic reaches 99.2%, with only 0.8% misclassified as anomalies; notably, all anomalous traffic is correctly detected with a recall of 100%, resulting in zero false negatives. This outcome suggests that the model establishes a highly compact “normal–anomaly” latent space through structural consistency modeling, pseudo-anomaly boundary learning, and multi-task self-supervised representation, thereby achieving significant separation between anomalous samples and normal patterns in both feature and topological dimensions. Conversely, on the NF-CSE-CIC-IDS2018-V2 dataset, characterized by more complex background traffic and diverse attack types, the model maintains stable recognition of normal traffic, with 99.8% of samples correctly classified. However, the separability of the anomaly class shows a relative decline: approximately 88.5% of anomalous traffic is successfully detected, while 11.5% is misclassified as normal. This phenomenon is mainly attributed to the misclassification of infiltration attack samples in the NF-CSE-CIC-IDS2018-V2 dataset. Such attacks typically begin with the delivery of malicious payloads via email, followed by network scanning and attempts to exploit internal vulnerabilities. As a result, their behaviors are highly similar to normal traffic in terms of edge-level semantics and local structural characteristics. Consequently, in the absence of explicit attack-pattern constraints or prior knowledge, accurately identifying such anomalies remains a significant challenge. Overall, the two confusion matrices collectively demonstrate that the proposed GDAE framework maintains extremely high precision for the normal class and robust recall for anomalies under diverse data conditions.
+
+To further investigate how the dual autoencoder captures structural and semantic deviations at the feature level, we visualize the reconstruction residuals of both autoencoding paths. As shown in Fig. 8a, on the NF-UNSW-NB15-V2 dataset, the reconstruction residual heatmaps of the local autoencoder indicate that the average residuals for normal edges remain at a low level across all dimensions. In contrast, anomalous edges exhibit distinctively elevated bands across multiple dimensions, with the residual disparity being most prominent in the low-dimensional and mid-to-high-dimensional segments of the embedding. This suggests that the Local AE has learned relatively stable local structural patterns: once the local neighborhood pattern of an edge deviates from the statistical regularities of normal traffic, the reconstruction residual in the corresponding dimensions is significantly amplified. In comparison, the residual differences of the global autoencoder on this dataset are slightly less pronounced, focusing more on smoothing the overall semantic distribution. Nevertheless, it maintains a high response to anomalies in certain dimensions, indicating that the two autoencoding paths form a complementary relationship at the levels of local structure and global semantics.
+
+As shown in Fig. 8b, the reconstruction-residual heatmaps on NF-CSE-CIC-IDS2018-V2 exhibit a clear difference in residual magnitude between normal and anomalous edges for both autoencoding paths. For the Local AE, the normal-edge row stays predominantly in darker colors across most embedding dimensions, whereas the anomalous-edge row contains many dimensions with visibly higher residual intensities, including several pronounced peaks. This indicates that, in the learned local representation, anomalies tend to incur larger reconstruction deviations than normal traffic on a substantial subset of dimensions. For the Global AE, a similar separation pattern is observed: normal edges generally present low residual levels, while anomalies show elevated residuals across multiple dimensions, though the high-residual regions appear less concentrated and more evenly distributed along the dimension axis compared with the local path. Overall, these heatmaps suggest that local and global reconstruction errors provide complementary information: the local pathway highlights dimensions where neighborhood-related deviations lead to sharper residual increases, while the global pathway captures broader, more distributed deviations in the embedding space, supporting the subsequent fusion of anomaly scores.
+
+Fig. 9
+Full size image
+
+Precision–Recall curves of local reconstruction, global reconstruction, and fused anomaly scores
+
+As illustrated in Fig. 9, the precision–recall curves derived from the NF-UNSW-NB15-V2 dataset exhibit distinct performance disparities among the three scoring signals across different recall levels. Relying solely on local reconstruction error yields a curve that generally surpasses that of the global reconstruction error, achieving an Average Precision (AP) of 0.795 compared to 0.742 for the global path. This suggests that the local structural autoencoder possesses superior discriminative power for anomalous edges within this dataset, aligning with the earlier observation in the residual heatmaps that “anomalous samples induce larger reconstruction deviations in local dimensions.” Furthermore, the final anomaly score—obtained by fusing local reconstruction, global reconstruction, and discriminator outputs—significantly elevates the overall curve envelope, raising the AP to 0.861. Notably, high precision is sustained even in the medium-to-high recall phases, indicating that the pseudo-anomaly discriminator effectively expands the margin between normal and anomalous edges in the latent space. This renders the joint representation acquired through multi-task self-supervision more consistent with the true decision boundary, thereby alleviating the rapid decline in precision as recall increases.
+
+On the NF-CSE-CIC-IDS2018-V2 dataset, the three precision–recall curves remain close to the upper boundary over a large portion of the recall range. At very low recall, the fused-score curve nearly overlaps with the local-reconstruction curve, while the global-reconstruction curve rises to high precision slightly later. Over the mid-recall interval, local and global reconstructions show similar precision levels, with local reconstruction being marginally higher in several segments. When recall increases further, the global-reconstruction curve exhibits an earlier and more noticeable precision drop, whereas the local-reconstruction curve stays higher for longer. Across the full range, the fused-score curve forms the outer envelope and achieves the best overall ranking performance, with AP values of 0.914 for local reconstruction, 0.902 for global reconstruction, and 0.951 for the fused score.
+
+Fig. 10
+Full size image
+
+Score distribution histograms of Local Recon, Global Recon, and Fused Score on two datasets (top: NF-UNSW-NB15-V2; bottom: NF-CSE-CIC-IDS2018-V2)
+
+Figure 10 elucidates the discriminative characteristics of the local and global autoencoders, along with their fused scores, on the two datasets from the perspective of score distributions.
+
+For the NF-UNSW-NB15-V2 dataset (a–c), the histogram of local reconstruction errors shows that the scores for normal edges are highly concentrated within a remarkably narrow interval, whereas anomalous edges exhibit a distinct rightward shift (spanning 0.04–0.07), resulting in almost no overlap between the two. The global reconstruction errors display a similar trend; however, the anomaly distribution is positioned slightly closer to the normal range. This indicates that while the Global AE is sensitive to overall semantic shifts, it is slightly less effective than the Local AE in amplifying fine-grained structural perturbations. The distribution of the fused score becomes even more polarized: normal samples cluster in a narrow peak around 0.09, while anomalous samples are stably located above 0.15, achieving complete class separation. This result aligns with the near-ideal classification performance observed in the confusion matrices and the high AUC/AP values in the ROC/PR curves, confirming that the multi-source scoring mechanism effectively establishes a clear “hard threshold” decision boundary in less complex scenarios.
+
+Regarding the NF-CSE-CIC-IDS2018-V2 dataset (d–f), all three scoring metrics exhibit a clear right shift for anomalous edges. For both local and global reconstruction errors, the score distributions of anomalous edges are generally located to the right of those of normal edges. At the same time, a certain degree of overlap remains in the low-score region, which is consistent with the previous analysis that infiltration attacks in this dataset share high similarity with normal traffic. As a result, some anomalous samples receive scores comparable to those of normal edges. In contrast, the fused score further enlarges the separation by concentrating normal samples within the low-score interval while spreading anomalous samples across higher score regions. This reduction of the overlap region provides an intuitive probabilistic explanation for the improved PR-AUC and the stable low false-alarm performance observed earlier.
+
+Fig. 11
+Full size image
+
+Boxplots of the average distance from normal samples to their \(k{=}10\) nearest neighbors, grouped by whether the neighbors are normal (NN-Normal) or anomalous (NN-Anomaly)
+
+Fig. 12
+Full size image
+
+Distributions of fused anomaly scores with EVT-based decision thresholds. The dashed line denotes the threshold learned by EVT from the tail of normal samples
+
+To validate the separation capability of the fused embedding space regarding normal and anomalous edges from a geometric structural perspective, Fig. 11 presents boxplots depicting the average distance of normal samples to their \(k{=}10\) nearest neighbors on both datasets, where distances are grouped by whether the neighbors are normal (NN-Normal) or anomalous (NN-Anomaly). For the NF-UNSW-NB15-V2 dataset (Fig. 11a), the average distances from normal samples to normal neighbors are almost entirely compressed within an extremely narrow interval approaching zero, with only a few outliers. This indicates that under the joint constraints of GNN encoding and the local–global autoencoders, normal edges form a highly compact manifold within the fused latent space. In contrast, the average distances to anomalous neighbors are significantly larger, with the box and whiskers positioned well above the levels of NN-Normal, demonstrating that anomalous edges are effectively pushed away from the normal manifold and that normal samples remain largely isolated from anomalies within their local neighborhoods. For the more complex NF-CSE-CIC-IDS2018-V2 dataset (Fig. 11b), the Normal–Normal distances are similarly concentrated in the low-value region but exhibit a slightly elongated tail, reflecting the greater diversity of normal traffic patterns. The Normal–Anomaly distances show an overall rightward shift, with a median markedly higher than that of Normal–Normal. Although some overlap occurs in the lower-value range, the distance from the vast majority of normal samples to anomalous neighbors remains substantially greater than that to their normal counterparts. This neighborhood-structure contrast is consistent with the residual heatmaps and score-distribution analyses, further confirming that the fused representations learned by GDAE can compress normal edges into high-density clusters while maintaining stable geometric isolation from anomalous edges across both datasets, thereby providing a reliable embedding foundation for anomaly scoring based on reconstruction errors and pseudo-anomaly discrimination.
+
+Figure 12 further illustrates the distributions of fused anomaly scores across both datasets, alongside the decision thresholds automatically determined via EVT. For the NF-UNSW-NB15-V2 dataset (Fig. 12a), the final anomaly scores for normal edges are densely concentrated within a narrow interval around 0.09. In contrast, anomalous edges exhibit a collective rightward shift to the range of 0.15–0.16, creating a distinct “gap” between the two distributions. By fitting solely the tail distribution of normal samples, the threshold derived by EVT is precisely positioned in the center of this gap. Consequently, nearly all normal samples are situated to the left of the threshold, while all anomalous samples fall to the right, achieving near-perfect unsupervised segmentation.
+
+In contrast, the score distribution for the NF-CSE-CIC-IDS2018-V2 dataset (Fig. 12b) exhibits greater complexity. Normal edges are primarily concentrated in the low-score region of 0.03–0.06; however, a subset of anomalous edges forms a minor peak within this range, while the remainder are distributed across the high-score interval above 0.18. The EVT threshold is automatically located at approximately 0.07, effectively truncating the majority of normal samples while encompassing the bulk of the anomalous tail beyond the main peak, leaving only a minimal overlap between normal and anomalous samples in the low-score segment.
+
+Fig. 13
+Full size image
+
+Sensitivity analysis of pseudo-anomaly generation hyperparameters. Two-dimensional grid search over \(\sigma _{noise}\) and \(p_{drop}\) on NF-UNSW-NB15-v2 and NF-CSE-CIC-IDS2018-v2, visualized as 3D surfaces for Macro F1 and PR-AUC
+
+To examine the sensitivity of GDAE to the pseudo-anomaly generation hyperparameters, we conduct a two-dimensional grid search over the Gaussian noise intensity \(\sigma _{\text {noise}}\) and the feature drop rate \(p_{\text {drop}}\). Specifically, \(\sigma _{\text {noise}}\) and \(p_{\text {drop}}\) are independently varied within the range [0.1, 1.0], while all other model configurations and training protocols are kept unchanged. Experiments are performed on both NF-UNSW-NB15-v2 and NF-CSE-CIC-IDS2018-v2 under a self-supervised one-class setting, where only benign traffic is used for training. For each parameter combination, the model is evaluated on the test set, and Macro-F1 and PR-AUC are recorded. The resulting performance variations are visualized as three-dimensional surfaces to facilitate an overall inspection of stability trends rather than isolated optimal points.
+
+As illustrated in Fig. 13, the performance surfaces on both datasets exhibit a relatively smooth structure across a broad region of the parameter space. On NF-UNSW-NB15-v2, Macro-F1 and PR-AUC remain at consistently high levels when \(\sigma _{\text {noise}}\) and \(p_{\text {drop}}\) are within low to moderate ranges, forming a wide plateau with limited fluctuations. A noticeable degradation is observed only when both parameters simultaneously approach higher values, where excessive perturbations increasingly distort the underlying edge representations. A similar pattern is observed on NF-CSE-CIC-IDS2018-v2, although the corresponding surfaces appear smoother overall. In this case, PR-AUC maintains a narrow range of variation across most parameter combinations, while Macro-F1 shows moderate undulations in regions with stronger perturbations. These observations indicate that the model performance is primarily stable with respect to moderate pseudo-anomaly strength and that significant performance drops are confined to extreme settings where the injected noise and feature removal jointly alter the representation distribution. Overall, the results suggest that the default configuration lies within a stable region of the parameter space and that GDAE does not rely on finely tuned hyperparameters to achieve competitive detection performance.
+
+It is worth noting that the observed stability across a wide range of \(\sigma _{\text {noise}}\) and \(p_{\text {drop}}\) does not imply invariance to arbitrary perturbations but rather indicates a degree of robustness to moderate noise levels commonly encountered in practice. In particular, the smooth performance surfaces suggest that the model does not exhibit abrupt sensitivity to small changes in pseudo-anomaly strength, which is desirable when the underlying data distribution contains inherent noise or uncertainty. From this perspective, the dual-path design and multi-task self-supervision appear to provide a regularizing effect on the learned representations, helping to mitigate the influence of moderate feature corruption and stochastic perturbations. This behavior is consistent with the intended role of pseudo-anomaly generation as a controlled perturbation mechanism, rather than an aggressive transformation, and helps explain the stable detection performance observed across different datasets.
+
+Table 6 Ablation study of GDAE on NF-UNSW-NB15-v2 and NF-CSE-CIC-IDS2018-v2
+Full size table
+4.4 Ablation study
+
+To comprehensively evaluate the contributions of the constituent modules within the dual autoencoder framework, a systematic ablation analysis was conducted on the local structural autoencoder, the global semantic autoencoder, the neighbor prediction task, and the pseudo-anomaly discriminator (Table 6). The results indicate that these modules play crucial roles on both datasets, although the magnitude of their impact varies depending on the structural patterns of the data and the characteristics of the anomalies. Overall, the complete GDAE model achieves optimal performance across all metrics, validating the synergistic enhancement effect of the multi-task self-supervised structure in one-class traffic anomaly modeling.
+
+On the NF-UNSW-NB15-v2 dataset, removing the global semantic autoencoder leads to a significant performance decline, with Macro-F1 dropping from 0.9491 to 0.6445 and PR-AUC decreasing to 0.5210. This underscores the critical importance of global semantics in capturing the macroscopic distribution of normal behavior within this dataset. In comparison, removing the local structural autoencoder or the neighbor prediction module also causes performance degradation, but the overall impact is relatively milder. Furthermore, removing the discriminator substantially lowers F1 and PR-AUC, verifying its importance in sharpening the latent-space boundary via pseudo-anomaly adversarial learning.
+
+On the NF-CSE-CIC-IDS2018-v2 dataset, the ablation results exhibit different characteristics. Given the dataset’s richer communication modes, more diverse attack types, and higher distributional noise, the influence of the global and local autoencoders becomes more balanced. Removing the global semantic autoencoder reduces Macro-F1 to 0.8824 and PR-AUC to 0.8824, indicating that global semantics remain important but no longer dominate as decisively as on NF-UNSW-NB15-v2. Similarly, removing the local autoencoder (or the neighbor prediction task) weakens detection performance, reflecting that in complex scenarios, local structural cues provide valuable signals for identifying fine-grained anomalous behaviors. Notably, the discriminator remains consistently beneficial; its removal causes Macro-F1 to decrease from 0.9571 to 0.9398, demonstrating that pseudo-anomaly discrimination effectively shapes the decision boundary even under complex traffic distributions.
+
+A noteworthy observation from Table 6 is the dominant role of the Global Semantic Autoencoder (Global AE), whose removal causes a drastic performance collapse on NF-UNSW-NB15-v2 (Macro-F1 drops from 0.9491 to 0.6445, with variance increasing substantially). We attribute this to the intrinsic nature of the dataset: many of its attack types (e.g., Fuzzers, Exploits, Generic) primarily manifest as global statistical deviations in flow-level features, such as packet sizes, protocol mixtures, and port distributions. The Global AE, which models batch-level semantic distributions, is inherently more sensitive to such global shifts than the Local AE, which focuses on fine-grained neighborhood structures. This also explains the significantly larger standard deviation when the Global AE is absent: without its global regularization, the model relies solely on local patterns, making it more susceptible to different local optima across random seeds. In contrast, on NF-CSE-CIC-IDS2018-v2, where DDoS and Botnet attacks produce prominent structural irregularities, the Local AE’s contribution becomes more comparable, confirming the complementary nature of the two autoencoders in capturing different anomaly aspects.
+
+To further verify the dynamic convergence and synergy within the multi-task optimization process, we report the per-task loss convergence and the task gradient cosine similarities in Fig. 14. As depicted, all four self-supervised losses decline smoothly and reach stability within 20 epochs under Kendall uncertainty weighting. Although subtle gradient competition exists in the initial phase (where average gradient cosine similarity is slightly negative at Epoch 5), the adaptive loss weighting continuously aligns the optimization directions, driving the inter-task gradient cosine similarity to a positive regime (\(\approx +0.09\)) during later epochs. This confirms that the joint objectives achieve healthy synergy without destructive task interference.
+
+Fig. 14
+Full size image
+
+Multi-task training dynamics of GDAE: loss convergence curves for individual self-supervised tasks (top) and average gradient cosine similarity between task gradients across training epochs (bottom)
+
+Table 7 Run efficiency of GDAE on two benchmark datasets
+Full size table
+
+In summary, the ablation experiments demonstrate that the dual autoencoders, neighbor prediction, and anomaly discrimination complement each other: the global autoencoder provides semantic-level anchors, the local autoencoder captures fine-grained topological dependencies, neighbor prediction enhances local consistency modeling, and the discriminator reinforces class boundaries through the pseudo-anomaly mechanism. While the dominant contribution of each module varies across datasets, their joint optimization consistently improves anomaly separation, confirming the effectiveness of the GDAE multi-task self-supervised one-class framework in achieving substantial and reliable anomaly detection performance.
+
+4.5 Run efficiency analysis
+
+The runtime efficiency evaluation in Table 7 demonstrates that the proposed GDAE framework achieves exceptional computational efficiency alongside high detection performance, rendering it suitable for large-scale network traffic analysis. Specifically, on the NF-UNSW-NB15-v2 dataset, the model contains only about 47k trainable parameters. The entire training process consumes an average of 0.026 hours (\(\approx \)1.56 minutes), and the average inference latency is 0.744 \(\mu \)s per sample, thereby meeting the real-time detection demands of high-throughput networks. This result indicates that integrating the dual autoencoder structure with a lightweight E-GraphSAGE encoder effectively constrains model complexity, enabling efficient operation even in resource-limited edge environments.
+
+On the NF-CSE-CIC-IDS2018-v2 dataset, the parameter count slightly increases to 54k, and the training duration extends to 0.052 hours (\(\approx \)3.12 minutes); nevertheless, the overall computational cost remains low. Although the inference latency rises to 1.776 \(\mu \)s per sample, it remains at the microsecond level, satisfying the response requirements of high-traffic network scenarios. Compared with approaches relying on complex generative models or stacked multi-layer GNNs, GDAE significantly reduces computational overhead while preserving representational capacity.
+
+Table 8 Theoretical time complexity and scalability comparison across different anomaly detection paradigms (N: nodes, M: edges, B: batch size, S: sampling fanout, T: trees/iterations)
+Full size table
+
+In summary, these results validate GDAE’s design trade-off between a lightweight architecture and high efficiency. Beyond the compact model structure, the use of EVT for threshold estimation further contributes to the reduced training cost. Unlike supervised or conventional unsupervised thresholding strategies that require repeated retraining, cross-validation, or extensive score calibration, EVT models the tail distribution of normal samples in a post-training manner. As a result, the overall training pipeline is substantially simplified, leading to a notable reduction in training time. Empirically, this design yields a training efficiency improvement on the order of one to two magnitudes compared with threshold-dependent supervised and unsupervised alternatives. Combined with the microsecond-level inference latency, these characteristics make GDAE practical for efficient anomaly detection in large-scale network traffic analysis. While the current evaluation demonstrates promising efficiency on sampled large-scale traffic, full-scale deployment validation remains as future work. Overall, it provides an engineering-friendly and computationally efficient solution for fast anomaly detection in high-dimensional traffic data.
+
+4.6 Theoretical computational complexity and scalability analysis
+
+To theoretically evaluate the computational efficiency and scalability of GDAE, we analyze the time complexity of each core module during both training and inference phases. Let M denote the total number of flow edges, B denote the mini-batch size, K denote the GNN aggregation hop count (\(K=1\)), S denote the neighbor sampling fanout, and d denote the unified feature/hidden dimension.
+
+E-GraphSAGE encoder
+
+For a mini-batch of B target edges, the encoder samples K-hop local subgraphs. The node aggregation and edge representation mapping require \(O(B \cdot S \cdot d + B \cdot d^2)\) operations. Since K, S,  and d are bounded constants, the mini-batch complexity simplifies to O(B).
+
+Dual autoencoders and discriminator
+
+The Local Structure AE, Global Semantic AE, neighborhood consistency predictor, and pseudo-anomaly discriminator consist of lightweight multi-layer perceptrons (MLPs). Their joint forward and backward propagation for a mini-batch requires \(O(B \cdot d^2) = O(B)\) time.
+
+EVT Thresholding
+
+The Generalized Pareto Distribution (GPD) fitting is performed post-training exclusively on the top \(k_{tail}\) scores of normal validation samples. The fitting process takes \(O(N_{val} \log k_{tail})\) time, which is a one-off offline step with negligible overhead.
+
+Overall, the total training time complexity of GDAE per epoch scales linearly with the number of traffic flows, i.e., \(O(M \cdot S) = O(M)\). During inference, graph sampling and pseudo-anomaly branches are omitted, reducing the per-sample prediction complexity to O(1) (microsecond-level latency).
+
+Table 8 provides a systematic theoretical comparison between GDAE and representative baseline methods. Unlike conventional GNNs that suffer from \(O(N^2)\) global graph convolution overhead or generative baselines requiring iterative sampling, GDAE maintains linear time complexity O(M) with respect to traffic volume. Combined with GraphBolt’s disk-mapped CSR pipeline, GDAE avoids GPU memory bottlenecks, enabling scalable training on ultra-large graphs containing tens of millions of network flows.
+
+4.7 EVT threshold stability analysis
+
+To empirically verify the robustness of the EVT-based thresholding strategy under varying data conditions, we conduct two sets of stability experiments on the NF-UNSW-NB15-v2 dataset. The first set fixes the sampling ratio at 20% and trains GDAE with 10 different random seeds, recording the final EVT thresholds. The second set fixes the random seed (seed=42) and varies the sampling ratio across 10%, 20%, and 30% of the full training data. All other hyperparameters remain identical to those in Section 4.1.
+
+As summarized in Table 9, the EVT thresholds exhibit strong stability with respect to data scale: the standard deviation across different sampling ratios is only 0.0048, with a relative variation of approximately \(3.2\%\). This confirms that the tail distribution of normal scores, as captured by EVT, is largely insensitive to the amount of training data, which is desirable for deployment under fluctuating traffic loads.
+
+Table 9 EVT threshold stability under different sampling ratios and random seeds
+Full size table
+Table 10 GPD Parameter Estimates and Diagnostic Metrics on NF-UNSW-NB15-v2 Validation Tail (\(u_{\textrm{pct}}=0.95\), \(\textrm{FPR}_{\textrm{target}}=0.003\), Seed 42)
+Full size table
+
+For the random-seed experiment, the threshold mean and standard deviation are 0.1544 and 0.0381, respectively, with all thresholds remaining within the same order of magnitude. The observed variation primarily stems from the stochasticity of the training process rather than from the EVT method itself. In practice, this variability can be effectively mitigated by fixing the random seed or averaging thresholds across multiple runs. Overall, these results demonstrate that the EVT thresholding strategy provides a reliable and practically usable decision boundary for unsupervised intrusion detection.
+
+4.8 Implementation details and empirical validation of EVT thresholding
+
+To address the precision and statistical reliability of the Extreme Value Theory (EVT)-based thresholding mechanism, we formally present its implementation parameter estimation, fitting diagnostics, and controlled comparative evaluations against empirical quantile baselines.
+
+Following the Peaks-Over-Threshold (POT) principle, we select the \(u_{\textrm{pct}} = 0.95\) empirical quantile of normal validation anomaly scores as the initial extreme threshold u. Exceedances \(y = \textrm{Score}(e) - u > 0\) are fitted to the Generalized Pareto Distribution (GPD):
+
+$$\begin{aligned} G_{\xi , \sigma }(y) = 1 - \left( 1 + \frac{\xi y}{\sigma } \right) ^{-1/\xi }, \end{aligned}$$	(16)
+
+where \(\xi \) and \(\sigma \) denote the shape and scale parameters, respectively. We employ Maximum Likelihood Estimation (MLE) / Method-of-Moments to obtain the fitted parameters \((\hat{\xi }, \hat{\sigma })\). Given a target False Positive Rate \(\textrm{FPR}_{\textrm{target}} = 0.003\), the extreme threshold \(\tau \) is calculated as:
+
+$$\begin{aligned} \tau = u + \frac{\hat{\sigma }}{\hat{\xi }} \left( \left( \frac{N_{\textrm{val}} \cdot \textrm{FPR}_{\textrm{target}}}{N_u} \right) ^{-\hat{\xi }} - 1 \right) , \end{aligned}$$	(17)
+
+where \(N_{\textrm{val}}\) is the validation sample count and \(N_u\) is the number of exceedances above u.
+
+As detailed in Table 10, on the NF-UNSW-NB15-v2 dataset (under random seed 42), the fitted shape parameter \(\hat{\xi } = 0.2443\) lies within the range (0, 0.5), confirming a heavy-tailed distribution characteristics typical of network anomaly scores, with a narrow 95% confidence interval of [0.2207, 0.2679]. The scale parameter \(\hat{\sigma } = 0.01538\) yields an extrapolated threshold of \(\tau = 0.14941\). While Kolmogorov-Smirnov (K-S) test p-values on large-scale validation sets (\(N > 100,000\)) reflect asymptotic sensitivity to minor local deviations, the narrow confidence bounds confirm high parameter stability.
+
+To demonstrate the necessity of EVT over heuristic thresholding, we conduct controlled experiments comparing EVT thresholding against fixed empirical quantile baselines (90th, 95th, and 99th percentiles) derived from validation score distributions. As reported in Table 11, lower percentiles (90th and 95th) incur high false alarm rates, yielding poor Macro-F1 (0.6825). Increasing the percentile to the 99th quantile improves performance (Accuracy: 0.9889, Macro-F1: 0.9361). EVT thresholding further refines the decision boundary (\(\tau = 0.14941\)), achieving the highest classification accuracy (0.9899) and Macro-F1 (0.9370). These results confirm that EVT effectively extrapolates tail risk to yield optimal unsupervised decision boundaries.
+
+4.9 Discussion on practical deployment and adversarial robustness
+
+While the offline experimental results confirm the effectiveness of GDAE, several practical challenges must be considered for real-world deployment, including adversarial evasion, concept drift, threshold management, and online adaptation. Regarding adversarial evasion, attackers may craft low-intensity or slow-moving attacks that deliberately mimic benign traffic patterns to reduce anomaly scores. GDAE is not inherently immune to such fine-grained manipulation. However, its multi-task design, which jointly enforces local structural consistency and global semantic regularity, provides a degree of inherent resistance. Even if flow-level features are subtly perturbed, the structural consistency branch can still detect topological irregularities in degree distributions, while the global autoencoder captures deviations from the learned semantic manifold. Nevertheless, a systematic evaluation under gradient-based or reinforcement learning-based evasion strategies remains an important direction for future work. Regarding concept drift, network traffic distributions evolve continuously due to changes in user behavior, application updates, and network reconfigurations. Such drift may gradually degrade detection performance. A practical mitigation strategy is to periodically retrain or fine-tune the model using newly collected benign traffic, guided by monitoring reconstruction errors or precision-recall metrics on a held-out validation window.
+
+For threshold management in dynamic environments, the EVT-based threshold can be updated online by maintaining a sliding window of normal traffic scores and periodically refitting the Generalized Pareto Distribution to the tail of that window. This refitting process incurs negligible computational overhead compared with full model retraining, making it suitable for continuous operation. Regarding online detection, although GDAE does not natively support streaming graph updates, two practical strategies can be adopted. The first is micro-batch processing, where incoming flows are buffered over short time windows and processed iteratively, which leverages GDAE’s microsecond-level inference latency. The second involves incremental GNN update mechanisms, which represent a more advanced direction for future exploration. These considerations collectively suggest that GDAE provides a flexible and extendable foundation for deployment, with modular components that can be adapted to address evolving operational requirements.
+
+Table 11 Controlled Performance Comparison between EVT Thresholding and Fixed Empirical Quantile Baselines on NF-UNSW-NB15-v2 (Seed 42)
+Full size table
+5 Conclusion
+
+This paper presents GDAE, a multi-task self-supervised one-class network anomaly detection framework designed for edge-centric traffic graphs. By combining an E-GraphSAGE encoder with a dual-view autoencoding scheme, GDAE models normal traffic using both local neighborhood structure and global semantic context. The proposed pseudo-anomaly mechanism further provides a label-free way to introduce controlled feature–structure perturbations and improve score separability, while EVT-based thresholding offers an adaptive decision rule without relying on manually tuned thresholds or labeled validation data. Experimental results on NF-UNSW-NB15-v2 and NF-CSE-CIC-IDS2018-v2 show that GDAE delivers competitive performance under self-supervised one-class settings, and complementary diagnostic analyses support the contribution of each module. In addition, the compact parameterization and microsecond-level inference latency indicate that the framework is computationally efficient for large-scale traffic analysis.
+
+The current evaluation is limited to intra-dataset testing on two benchmark datasets. Although GDAE exhibits strong performance within these specific domains, its robustness under cross-dataset domain shift has not been systematically analyzed. Furthermore, the present framework operates on static traffic graphs and does not explicitly model temporal dynamics or support streaming updates, which are essential for capturing evolving attack behaviors and adapting to concept drift in real-world deployments. While the current structural consistency measurement is primarily degree-based and may oversimplify complex topological correlations, future work will incorporate temporal modeling mechanisms and online update capabilities, and explore richer structural consistency measures, such as common-neighbor ratios, local clustering coefficients, community membership consistency, and random-walk-based or subgraph-based similarity metrics. In addition, the current pseudo-anomaly generation strategy, based on Gaussian noise and feature dropping, inherently focuses on feature-level deviations. The applicability of this strategy to stealthy, low-intensity, or long-term persistent attacks requires further investigation. Future work will explore attack-aware perturbation mechanisms, including generative adversarial perturbation models and reinforcement learning-based policy synthesis, to bridge the gap between synthetic anomalies and real-world offensive patterns, thereby enhancing the framework’s resilience against covert and adaptive threats. Furthermore, domain adaptation techniques—such as adversarial feature alignment and domain-invariant representation learning—represent a promising direction to improve the framework’s robustness under cross-domain deployment scenarios. In addition, extending the binary unsupervised anomaly detection framework to fine-grained attack category identification via self-supervised representation fine-tuning or semi-supervised multi-class classification represents an important direction for future exploration.
+
+Data Availability
+
+No datasets were generated or analysed during the current study.
+
+References
+
+Ahmad Z, Shahid Khan A, Wai Shiang C, Abdullah J, Ahmad F (2021) Network intrusion detection system: a systematic study of machine learning and deep learning approaches. Trans Emerging Telecommun Technol 32:e4150
+
+Article
+ 
+Google Scholar
+ 
+
+Altaf T, Wang X, Ni W, Yu G, Liu RP, Braun R (2023) A new concatenated multigraph neural network for iot intrusion detection. Internet of Things 22:100818
+
+Article
+ 
+Google Scholar
+ 
+
+Ayantayo A, Kaur A, Kour A, Schmoor X, Shah F, Vickers I, Kearney P, Abdelsamea MM (2023) Network intrusion detection using feature fusion with deep learning. J Big Data 10:167
+
+Article
+ 
+Google Scholar
+ 
+
+Bilot T, El Madhoun N, Al Agha K, Zouaoui A (2024) Few edges are enough: Few-shot network attack detection with graph neural networks, in: International workshop on security, Springer. pp 257–276
+
+Caville E, Lo WW, Layeghy S, Portmann M (2022) Anomal-e: a self-supervised network intrusion detection system based on graph neural networks. Knowl-Based Syst 258:110030
+
+Article
+ 
+Google Scholar
+ 
+
+Chao D, Xu D, Gao F, Zhang C, Zhang W, Zhu L (2024) A systematic survey on security in anonymity networks: vulnerabilities, attacks, defenses, and formalization. IEEE Commun Surv Tutor 26:1775–1829
+
+Article
+ 
+Google Scholar
+ 
+
+Chen Z, Zou H, Hu T, Fang X, Zheng J, Li J, Pan Y (2025) A network intrusion detection system based on self-supervised learning of traffic differentiation in internet of things. Eng Appl Artif Intell 160:111973
+
+Article
+ 
+Google Scholar
+ 
+
+Deng P, Huang Y (2025) Edge-featured multi-hop attention graph neural network for intrusion detection system. Comput Secur 148:104132
+
+Article
+ 
+Google Scholar
+ 
+
+Devendiran R, Turukmane AV (2024) Dugat-lstm: deep learning based network intrusion detection system using chaotic optimization strategy. Expert Syst Appl 245:123027
+
+Article
+ 
+Google Scholar
+ 
+
+Ding K, Li J, Bhanushali R, Liu H (2019) Deep anomaly detection on attributed networks. In: Proceedings of the 2019 SIAM international conference on data mining (SDM), SIAM. pp 594–602
+
+Duan G, Lv H, Wang H, Feng G (2022) Application of a dynamic line graph neural network for intrusion detection with semisupervised learning. IEEE Trans Inf Forensics Secur 18:699–714
+
+Article
+ 
+Google Scholar
+ 
+
+Dugyala R, Chithaluru P, Ramchander M, Kumar S, Yadav A, Yadav NS, Elminaam DSA, Alsekait DM (2024) Secure cloud computing: leveraging gnn and leader k-means for intrusion detection optimization. Sci Rep 14:30906
+
+Article
+ 
+Google Scholar
+ 
+
+Fan H, Zhang F, Li Z (2020) Anomalydae: dual autoencoder for anomaly detection on attributed networks. IEEE international conference on acoustics. Speech and Signal Processing (ICASSP), IEEE, pp 3292–3296
+
+Google Scholar
+ 
+
+Fu M, Wang P, Liu S, Chen X, Zhou X (2025) Fir-gnn: a graph neural network using flow interaction relationships for intrusion detection of consumer electronics in smart home network. IEEE Transactions on Consumer Electronics
+
+Goldstein M, Dengel A (2012) Histogram-based outlier score (hbos): a fast unsupervised anomaly detection algorithm. KI-2012: poster and demo track, vol 1, pp 59–63
+
+Guerra L, Chapuis T, Duc G, Mozharovskyi P, Nguyen VT (2026) Self-supervised learning of graph representations for network intrusion detection. Adv Neural Inf Process Syst 38:109471–109501
+
+Google Scholar
+ 
+
+Hu X, Gao W, Cheng G, Li R, Zhou Y, Wu H (2023) Toward early and accurate network intrusion detection using graph embedding. IEEE Trans Inf Forensics Secur 18:5817–5831
+
+Article
+ 
+Google Scholar
+ 
+
+Ige T, Kiekintveld C, Piplai A (2024) An investigation into the performances of the state-of-the-art machine learning approaches for various cyber-attack detection: a survey. In: 2024 IEEE international conference on electro information technology (eIT), IEEE. pp 135–144
+
+Jiang K, Xiao X, Lu X et al (2026) Semcap: sentiment-aware semantic captioning for multimodal aspect-based sentiment analysis. J King Saud Univ Comput Inf Sci 38:81. https://doi.org/10.1007/s44443-026-00472-5
+
+Article
+ 
+Google Scholar
+ 
+
+Kendall A, Gal Y, Cipolla R (2018) Multi-task learning using uncertainty to weigh losses for scene geometry and semantics. In: Proceedings of the IEEE conference on computer vision and pattern recognition, pp 7482–7491
+
+Li Y, Ding H, Lin Y et al (2024) Multi-level textual-visual alignment and fusion network for multimodal aspect-based sentiment analysis. Artif Intell Rev 57:78. https://doi.org/10.1007/s10462-023-10685-z
+
+Article
+ 
+Google Scholar
+ 
+
+Liu FT, Ting KM, Zhou ZH (2008) Isolation forest. In: 2008 Eighth IEEE international conference on data mining, IEEE. pp 413–422
+
+Liu Y, Li Z, Pan S, Gong C, Zhou C, Karypis G (2021) Anomaly detection on attributed networks via contrastive self-supervised learning. IEEE Trans Neural Netw Learn Syst 33:2378–2392
+
+Article
+ 
+MathSciNet
+ 
+Google Scholar
+ 
+
+Liu W, Li S, Gao C, Sang Y, Ge H (2025) An adaptive graph neural network-based intrusion detection system for airborne network. Eng Appl Artif Intell 152:110851
+
+Article
+ 
+Google Scholar
+ 
+
+Lo WW, Layeghy S, Sarhan M, Gallagher M, Portmann M (2022) E-graphsage: a graph neural network based intrusion detection system for iot. In: NOMS 2022-2022 IEEE/IFIP network operations and management symposium, pp 1–9
+
+Ma Z, Liu Y, Chen Y, Liu Z, Li Y (2025) Xmf-gnn: a cross-modality dynamic fusion heterogeneous graph neural network for network intrusion detection. Neurocomputing 131285
+
+Mohy-Eddine M, Guezzaz A, Benkirane S, Azrour M (2023) An efficient network intrusion detection model for iot security using k-nn classifier and feature selection. Multimed Tools Appl 82:23615–23633
+
+Article
+ 
+Google Scholar
+ 
+
+Pang G, Shen C, Cao L, Hengel AVD (2021) Deep learning for anomaly detection: a review. ACM Comput Surv (CSUR) 54:1–38
+
+Article
+ 
+Google Scholar
+ 
+
+Pinaya WHL, Vieira S, Garcia-Dias R, Mechelli A (2020) Autoencoders. In: Machine learning. Elsevier, pp 193–208
+
+Qin Y, Xiao X, Jiang K (2026) A multi-channel sarcasm detection model integrating syntax and semantics. Int J Data Sci Anal 21:81. https://doi.org/10.1007/s41060-025-00997-4
+
+Article
+ 
+Google Scholar
+ 
+
+Ruff L, Vandermeulen R, Goernitz N, Deecke L, Siddiqui SA, Binder A, Müller E, Kloft M (2018) Deep one-class classification. In: International conference on machine learning, PMLR. pp 4393–4402
+
+Sarhan M, Layeghy S, Portmann M (2022) Towards a standard feature set for network intrusion detection system datasets. Mobile Networks and Applications 1–14
+
+Schölkopf B, Platt JC, Shawe-Taylor J, Smola AJ, Williamson RC (2001) Estimating the support of a high-dimensional distribution. Neural Comput 13:1443–1471
+
+Article
+ 
+Google Scholar
+ 
+
+Siffer A, Fouque PA, Termier A, Largouët C (2017) Anomaly detection in streams with extreme value theory. In: Proceedings of the 23rd ACM SIGKDD international conference on knowledge discovery and data mining, pp 1067–1075
+
+Tan X, Cheng J, Li H, Yang Y (2024) Contrastive learning for network intrusion detection: a comprehensive survey. In: Proceedings of the 2024 2nd international conference on computer, internet of things and smart city, pp 160–166
+
+Turukmane AV, Devendiran R (2024) M-multisvm: an efficient feature selection assisted network intrusion detection system using machine learning. Comput Secur 137:103587
+
+Article
+ 
+Google Scholar
+ 
+
+Wang W, Jian S, Tan Y, Wu Q, Huang C (2023) Robust unsupervised network intrusion detection with self-supervised masked context reconstruction. Comput Secur 128:103131
+
+Article
+ 
+Google Scholar
+ 
+
+Wang J, Guo J, Sun Y, Gao J, Wang S, Yang Y, Yin B (2024) Dgnn: decoupled graph neural networks with structural consistency between attribute and graph embedding representations. IEEE Transactions on Big Data
+
+Wu C, Sun J, Chen J, Alazab M, Liu Y, Xiang Y (2025) Tcg-ids: robust network intrusion detection via temporal contrastive graph learning. IEEE Transactions on Information Forensics and Security
+
+Xu J, Wu H, Wang J, Long M (2022) Anomaly transformer: time series anomaly detection with association discrepancy. In: International conference on learning representations (ICLR)
+
+Xu R, Wu G, Wang W, Gao X, He A, Zhang Z (2024) Applying self-supervised learning to network intrusion detection for network flows with graph neural network. Comput Netw 248:110495
+
+Ye M, Zhang Q, Xue X, Wang Y, Jiang Q, Qiu H (2024) A novel self-supervised learning-based anomalous node detection method based on an autoencoder for wireless sensor networks. IEEE Syst J 18:256–267
+
+Article
+ 
+Google Scholar
+ 
+
+Zhang Y (2024) Non-contrastive self-supervised learning for network intrusion detection. Knowledge-Based Systems
+
+Zhong M, Lin M, Zhang C, Xu Z (2024) A survey on graph neural networks for intrusion detection systems: methods, trends and challenges. Comput Secur 141:103821
+
+Article
+ 
+Google Scholar
+ 
+
+Zhou X, Liang W, Li W, Yan K, Shimizu S, Wang KIK (2021) Hierarchical adversarial attacks against graph-neural-network-based iot network intrusion detection system. IEEE Internet Things J 9:9310–9319
+
+Article
+ 
+Google Scholar
+ 
+
+Zhou W, Xia C, Wang T, Liang X, Lin W, Li X, Zhang S (2025) Hidim: a novel framework of network intrusion detection for hierarchical dependency and class imbalance. Comput Secur 148:104155
+
+Article
+ 
+Google Scholar
+ 
+
+Zoubir A, Missaoui B (2025) Graph neural networks with scattering transform for network anomaly detection. Eng Appl Artif Intell 150:110546
+
+Article
+ 
+Google Scholar
+ 
+
+Download references
+
+Funding
+
+This work is sponsored by the National Natural Science Foundation of China (Grant No. 52578067).
+
+Author information
+Authors and Affiliations
+
+Guizhou University, Guiyang, China
+
+Ji Zhao, Damin Zhang, Tianyi Wang, Mu Lin & YuHan Yang
+
+Contributions
+
+J.Z.: Conceptualization, Methodology, Software, Validation, Formal analysis, Writing-original draft preparation. D.Z.: Validation, Resources. T.W.: Writing - review and editing, Formal analysis. M.L.: Writing - review and editing. Y. Y.: Writing - review and editing.
+
+Corresponding author
+
+Correspondence to Damin Zhang.
+
+Ethics declarations
+Competing interests
+
+The authors declare no competing interests.
+
+Additional information
+Publisher's Note
+
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+Rights and permissions
+
+Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+
+Reprints and permissions
+
+About this article
+Cite this article
+
+Zhao, J., Zhang, D., Wang, T. et al. Dual-autoencoder multi-task self-supervised one-class graph anomaly detection for network traffic. J. King Saud Univ. Comput. Inf. Sci. 38, 779 (2026). https://doi.org/10.1007/s44443-026-01241-0
+
+Download citation
+
+Received
+20 June 2026
+
+Accepted
+10 August 2026
+
+Published
+25 August 2026
+
+Version of record
+25 August 2026
+
+DOI
+https://doi.org/10.1007/s44443-026-01241-0
+
+Share this article
+
+Anyone you share the following link with will be able to read this content:
+
+Get shareable link
+
+Provided by the Springer Nature SharedIt content-sharing initiative
+
+Keywords
+Network intrusion detection
+Graph neural network
+Autoencoder
+Self-supervised learning
+One-class
+Associated Content
+
+Part of a collection:
+
+Leveraging Data Mining Techniques for Enhancing Cybersecurity Threat Detection
+Sections
+Figures
+References
+Abstract
+Introduction
+Related work
+Method
+Experimental results analysis
+Conclusion
+Data Availability
+References
+Funding
+Author information
+Ethics declarations
+Additional information
+Rights and permissions
+About this article
+
+Advertisement
+
+Footer Navigation
+Discover content
+Journals A-Z
+Books A-Z
+Subjects A-Z
+Publish with us
+Journal finder
+Publish your research
+Language editing
+Open access publishing
+Products and services
+Our products
+Librarians
+Societies
+Partners and advertisers
+Our brands
+Springer
+Nature Portfolio
+BMC
+Palgrave Macmillan
+Apress
+Discover
+Corporate Navigation
+Your privacy choices/Manage cookies Your US state privacy rights Accessibility statement Terms and conditions Privacy policy Help and support Legal notice Cancel contracts here
+
+160.79.106.139
+
+Not affiliated
+
+© 2026 Springer Nature

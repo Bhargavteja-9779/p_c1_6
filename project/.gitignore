@@ -8,3 +8,4 @@ state/heartbeat
 state/*.lock
 logs/*.log
 data/adbench/repo/
+data/nfv2/
