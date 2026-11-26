@@ -1,0 +1,392 @@
+{
+ "NF-CSE-CIC-IDS2018-v2": {
+  "pr_auc vs IF (reported)": {
+   "ours": 0.9809,
+   "ours_sd": 0.0008,
+   "theirs": 0.629,
+   "diff": 0.3519,
+   "p_1samp": 6.7334345480024155e-12,
+   "p_welch": 4.8483725103348956e-05,
+   "p_holm": 0.0009696745020669792
+  },
+  "pr_auc vs HBOS (reported)": {
+   "ours": 0.9809,
+   "ours_sd": 0.0008,
+   "theirs": 0.6909,
+   "diff": 0.29,
+   "p_1samp": 1.4599966611824414e-11,
+   "p_welch": 1.301604583718249e-18,
+   "p_holm": 5.987381085103946e-17
+  },
+  "pr_auc vs OC-SVM (reported)": {
+   "ours": 0.9809,
+   "ours_sd": 0.0008,
+   "theirs": 0.4007,
+   "diff": 0.5802,
+   "p_1samp": 9.110590191770092e-13,
+   "p_welch": 2.502647953629803e-09,
+   "p_holm": 9.760327019156232e-08
+  },
+  "pr_auc vs Deep SVDD (reported)": {
+   "ours": 0.9809,
+   "ours_sd": 0.0008,
+   "theirs": 0.5375,
+   "diff": 0.4434,
+   "p_1samp": 2.6711701139617488e-12,
+   "p_welch": 0.0008272417332416156,
+   "p_holm": 0.008009138505028214
+  },
+  "pr_auc vs AE (reported)": {
+   "ours": 0.9809,
+   "ours_sd": 0.0008,
+   "theirs": 0.9419,
+   "diff": 0.039,
+   "p_1samp": 4.472972728273825e-08,
+   "p_welch": 0.0007432480965457792,
+   "p_holm": 0.008009138505028214
+  },
+  "pr_auc vs Anomal-E (reported)": {
+   "ours": 0.9809,
+   "ours_sd": 0.0008,
+   "theirs": 0.9555,
+   "diff": 0.0254,
+   "p_1samp": 2.488260054096057e-07,
+   "p_welch": 0.00022629356116660892,
+   "p_holm": 0.0032525196643389724
+  },
+  "pr_auc vs GraphIDS (reported)": {
+   "ours": 0.9809,
+   "ours_sd": 0.0008,
+   "theirs": 0.8984,
+   "diff": 0.0825,
+   "p_1samp": 2.2311488423441553e-09,
+   "p_welch": 0.0003083572812757134,
+   "p_holm": 0.0040086446565842735
+  },
+  "pr_auc vs GDAE (reported)": {
+   "ours": 0.9809,
+   "ours_sd": 0.0008,
+   "theirs": 0.9486,
+   "diff": 0.0323,
+   "p_1samp": 9.510585637120765e-08,
+   "p_welch": 8.691730291001937e-07,
+   "p_holm": 2.2598498756605036e-05
+  },
+  "pr_auc vs hbos (ours)": {
+   "ours": 0.9809,
+   "theirs": 0.5675,
+   "diff": 0.4134,
+   "p_paired": 1.9685593728224097e-09,
+   "p_holm": 7.874237491289639e-08
+  },
+  "pr_auc vs hc1_sd_r200000 (ours)": {
+   "ours": 0.9809,
+   "theirs": 0.9801,
+   "diff": 0.0007,
+   "p_paired": 0.055666956867997185,
+   "p_holm": 0.11133391373599437
+  },
+  "pr_auc vs iforest (ours)": {
+   "ours": 0.9809,
+   "theirs": 0.5183,
+   "diff": 0.4625,
+   "p_paired": 6.478296785184826e-06,
+   "p_holm": 0.00014252252927406616
+  },
+  "pr_auc vs pca (ours)": {
+   "ours": 0.9809,
+   "theirs": 0.1127,
+   "diff": 0.8682,
+   "p_paired": 6.416806253549798e-11,
+   "p_holm": 2.759226689026413e-09
+  },
+  "macro_f1 vs IF (reported)": {
+   "ours": 0.9718,
+   "ours_sd": 0.006,
+   "theirs": 0.8355,
+   "diff": 0.1363,
+   "p_1samp": 8.953181065825979e-07,
+   "p_welch": 4.98178669385864e-09,
+   "p_holm": 1.7934432097891104e-07
+  },
+  "macro_f1 vs HBOS (reported)": {
+   "ours": 0.9718,
+   "ours_sd": 0.006,
+   "theirs": 0.857,
+   "diff": 0.1148,
+   "p_1samp": 1.7768004691219388e-06,
+   "p_welch": 3.3276267081783527e-07,
+   "p_holm": 9.650117453717222e-06
+  },
+  "macro_f1 vs OC-SVM (reported)": {
+   "ours": 0.9718,
+   "ours_sd": 0.006,
+   "theirs": 0.7766,
+   "diff": 0.1952,
+   "p_1samp": 2.1319189438412582e-07,
+   "p_welch": 4.147498315398181e-08,
+   "p_holm": 1.327199460927418e-06
+  },
+  "macro_f1 vs Deep SVDD (reported)": {
+   "ours": 0.9718,
+   "ours_sd": 0.006,
+   "theirs": 0.4692,
+   "diff": 0.5026,
+   "p_1samp": 4.858300473114385e-09,
+   "p_welch": 4.816317873131325e-09,
+   "p_holm": 1.7820376130585902e-07
+  },
+  "macro_f1 vs AE (reported)": {
+   "ours": 0.9718,
+   "ours_sd": 0.006,
+   "theirs": 0.9438,
+   "diff": 0.028,
+   "p_1samp": 0.00047252721246163166,
+   "p_welch": 5.88520343752534e-05,
+   "p_holm": 0.0011181886531298145
+  },
+  "macro_f1 vs Anomal-E (reported)": {
+   "ours": 0.9718,
+   "ours_sd": 0.006,
+   "theirs": 0.9519,
+   "diff": 0.0199,
+   "p_1samp": 0.0017459261459076302,
+   "p_welch": 0.0006315057134192712,
+   "p_holm": 0.007578068561031255
+  },
+  "macro_f1 vs GraphIDS (reported)": {
+   "ours": 0.9718,
+   "ours_sd": 0.006,
+   "theirs": 0.9432,
+   "diff": 0.0286,
+   "p_1samp": 0.0004352199765795591,
+   "p_welch": 8.549502525540617e-05,
+   "p_holm": 0.001538910454597311
+  },
+  "macro_f1 vs GDAE (reported)": {
+   "ours": 0.9718,
+   "ours_sd": 0.006,
+   "theirs": 0.9571,
+   "diff": 0.0147,
+   "p_1samp": 0.005337412978405632,
+   "p_welch": 0.0026422853141462223,
+   "p_holm": 0.01661674841729777
+  },
+  "macro_f1 vs hbos (ours)": {
+   "ours": 0.9718,
+   "theirs": 0.6063,
+   "diff": 0.3655,
+   "p_paired": 1.6999030172882017e-08,
+   "p_holm": 5.949660560508706e-07
+  },
+  "macro_f1 vs hc1_sd_r200000 (ours)": {
+   "ours": 0.9718,
+   "theirs": 0.9793,
+   "diff": -0.0075,
+   "p_paired": 0.18819948954361246,
+   "p_holm": 0.18819948954361246
+  },
+  "macro_f1 vs iforest (ours)": {
+   "ours": 0.9718,
+   "theirs": 0.4981,
+   "diff": 0.4738,
+   "p_paired": 2.4192688794484453e-08,
+   "p_holm": 7.98358730217987e-07
+  },
+  "macro_f1 vs pca (ours)": {
+   "ours": 0.9718,
+   "theirs": 0.4689,
+   "diff": 0.5029,
+   "p_paired": 4.631125985075238e-09,
+   "p_holm": 1.7598278743285905e-07
+  }
+ },
+ "NF-UNSW-NB15-v2": {
+  "pr_auc vs IF (reported)": {
+   "ours": 0.9299,
+   "ours_sd": 0.0036,
+   "theirs": 0.1888,
+   "diff": 0.7411,
+   "p_1samp": 1.279775398364741e-10,
+   "p_welch": 3.8170332602469054e-15,
+   "p_holm": 1.7176649671111073e-13
+  },
+  "pr_auc vs HBOS (reported)": {
+   "ours": 0.9299,
+   "ours_sd": 0.0036,
+   "theirs": 0.3214,
+   "diff": 0.6085,
+   "p_1samp": 2.8157182237607396e-10,
+   "p_welch": 2.3411093118672065e-11,
+   "p_holm": 1.030088097221571e-09
+  },
+  "pr_auc vs OC-SVM (reported)": {
+   "ours": 0.9299,
+   "ours_sd": 0.0036,
+   "theirs": 0.5844,
+   "diff": 0.3455,
+   "p_1samp": 2.7088487404728197e-09,
+   "p_welch": 5.417575698953652e-06,
+   "p_holm": 0.00012460424107593398
+  },
+  "pr_auc vs Deep SVDD (reported)": {
+   "ours": 0.9299,
+   "ours_sd": 0.0036,
+   "theirs": 0.6283,
+   "diff": 0.3016,
+   "p_1samp": 4.664746700565346e-09,
+   "p_welch": 0.021239789284869255,
+   "p_holm": 0.06371936785460777
+  },
+  "pr_auc vs AE (reported)": {
+   "ours": 0.9299,
+   "ours_sd": 0.0036,
+   "theirs": 0.7614,
+   "diff": 0.1685,
+   "p_1samp": 4.7857384976704056e-08,
+   "p_welch": 0.011807633064970359,
+   "p_holm": 0.047230532259881434
+  },
+  "pr_auc vs Anomal-E (reported)": {
+   "ours": 0.9299,
+   "ours_sd": 0.0036,
+   "theirs": 0.7135,
+   "diff": 0.2164,
+   "p_1samp": 1.7596847903424308e-08,
+   "p_welch": 8.037811314034532e-11,
+   "p_holm": 3.3758807518945033e-09
+  },
+  "pr_auc vs GraphIDS (reported)": {
+   "ours": 0.9299,
+   "ours_sd": 0.0036,
+   "theirs": 0.8175,
+   "diff": 0.1124,
+   "p_1samp": 2.4150739313359135e-07,
+   "p_welch": 0.006913128059147283,
+   "p_holm": 0.034565640295736416
+  },
+  "pr_auc vs GDAE (reported)": {
+   "ours": 0.9299,
+   "ours_sd": 0.0036,
+   "theirs": 0.8591,
+   "diff": 0.0708,
+   "p_1samp": 1.5308279988049254e-06,
+   "p_welch": 0.00021683464428926482,
+   "p_holm": 0.0032525196643389724
+  },
+  "pr_auc vs hbos (ours)": {
+   "ours": 0.9299,
+   "theirs": 0.5327,
+   "diff": 0.3972,
+   "p_paired": 9.326003340352991e-08,
+   "p_holm": 2.891061035509427e-06
+  },
+  "pr_auc vs iforest (ours)": {
+   "ours": 0.9299,
+   "theirs": 0.2374,
+   "diff": 0.6925,
+   "p_paired": 1.3242558789297552e-07,
+   "p_holm": 3.9727676367892655e-06
+  },
+  "pr_auc vs pca (ours)": {
+   "ours": 0.9299,
+   "theirs": 0.2639,
+   "diff": 0.666,
+   "p_paired": 1.7804991363532356e-10,
+   "p_holm": 7.300046459048266e-09
+  },
+  "macro_f1 vs IF (reported)": {
+   "ours": 0.8783,
+   "ours_sd": 0.0153,
+   "theirs": 0.6712,
+   "diff": 0.2071,
+   "p_1samp": 7.179693969527905e-06,
+   "p_welch": 1.9637518206637905e-08,
+   "p_holm": 6.676756190256888e-07
+  },
+  "macro_f1 vs HBOS (reported)": {
+   "ours": 0.8783,
+   "ours_sd": 0.0153,
+   "theirs": 0.7044,
+   "diff": 0.1739,
+   "p_1samp": 1.4395661417544915e-05,
+   "p_welch": 4.585489157991562e-06,
+   "p_holm": 0.00011005173979179749
+  },
+  "macro_f1 vs OC-SVM (reported)": {
+   "ours": 0.8783,
+   "ours_sd": 0.0153,
+   "theirs": 0.7938,
+   "diff": 0.0845,
+   "p_1samp": 0.0002495543443149474,
+   "p_welch": 1.7510269078421488e-05,
+   "p_holm": 0.00036771565064685124
+  },
+  "macro_f1 vs Deep SVDD (reported)": {
+   "ours": 0.8783,
+   "ours_sd": 0.0153,
+   "theirs": 0.6998,
+   "diff": 0.1785,
+   "p_1samp": 1.2975285215763036e-05,
+   "p_welch": 0.00237382120247111,
+   "p_holm": 0.01661674841729777
+  },
+  "macro_f1 vs AE (reported)": {
+   "ours": 0.8783,
+   "ours_sd": 0.0153,
+   "theirs": 0.9256,
+   "diff": -0.0473,
+   "p_1samp": 0.0023328855181033404,
+   "p_welch": 0.0007281035004571103,
+   "p_holm": 0.008009138505028214
+  },
+  "macro_f1 vs Anomal-E (reported)": {
+   "ours": 0.8783,
+   "ours_sd": 0.0153,
+   "theirs": 0.9214,
+   "diff": -0.0431,
+   "p_1samp": 0.0032969768963281984,
+   "p_welch": 0.0012754359862904325,
+   "p_holm": 0.01020348789032346
+  },
+  "macro_f1 vs GraphIDS (reported)": {
+   "ours": 0.8783,
+   "ours_sd": 0.0153,
+   "theirs": 0.941,
+   "diff": -0.0627,
+   "p_1samp": 0.0007991397616778528,
+   "p_welch": 0.00016565500838940493,
+   "p_holm": 0.002650480134230479
+  },
+  "macro_f1 vs GDAE (reported)": {
+   "ours": 0.8783,
+   "ours_sd": 0.0153,
+   "theirs": 0.9491,
+   "diff": -0.0708,
+   "p_1samp": 0.0004995954397865325,
+   "p_welch": 9.177575068119245e-05,
+   "p_holm": 0.0015601877615802717
+  },
+  "macro_f1 vs hbos (ours)": {
+   "ours": 0.8783,
+   "theirs": 0.5614,
+   "diff": 0.3169,
+   "p_paired": 3.1569964634569387e-06,
+   "p_holm": 7.892491158642347e-05
+  },
+  "macro_f1 vs iforest (ours)": {
+   "ours": 0.8783,
+   "theirs": 0.4919,
+   "diff": 0.3864,
+   "p_paired": 5.48846595636612e-07,
+   "p_holm": 1.5367704677825136e-05
+  },
+  "macro_f1 vs pca (ours)": {
+   "ours": 0.8783,
+   "theirs": 0.5907,
+   "diff": 0.2877,
+   "p_paired": 8.172182429167793e-07,
+   "p_holm": 2.206489255875304e-05
+  }
+ }
+}
