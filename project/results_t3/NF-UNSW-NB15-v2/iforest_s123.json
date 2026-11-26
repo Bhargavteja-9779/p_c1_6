@@ -1,0 +1,28 @@
+{
+ "data": "NF-UNSW-NB15-v2",
+ "method": "iforest",
+ "seed": 123,
+ "ref": 200000,
+ "pr_auc": 0.22729728313469238,
+ "roc_auc": 0.9301876828746866,
+ "macro_f1": 0.49277461295389763,
+ "acc": 0.9578290318666929,
+ "fpr_test": 0.0026620541821699008,
+ "eval": "test",
+ "recall_attack": 0.003787480273540242,
+ "per_class_flag_rate": {
+  "Analysis": 0.0,
+  "Backdoor": 0.0,
+  "Benign": 0.0026620541821699008,
+  "DoS": 0.013816925734024179,
+  "Exploits": 0.007290015847860539,
+  "Fuzzers": 0.0,
+  "Generic": 0.0030193236714975845,
+  "Reconnaissance": 0.0,
+  "Shellcode": 0.0,
+  "Worms": 0.0
+ },
+ "fit_s": 2.1265852451324463,
+ "score_s": 3.745337724685669,
+ "n_test": 239027
+}
