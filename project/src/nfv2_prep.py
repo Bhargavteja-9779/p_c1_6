@@ -25,6 +25,7 @@ def make(name, seed):
     if os.path.exists(out): return out
     df = load(name); y = df["Label"].astype(int).values; att = np.asarray(df["Attack"].astype(str).values, dtype=str)
     X = df.drop(columns=DROP + ["Label", "Attack"]).apply(pd.to_numeric, errors="coerce").astype(np.float64)
+    sip = pd.factorize(df["IPV4_SRC_ADDR"])[0].astype(np.int64); dip = pd.factorize(df["IPV4_DST_ADDR"])[0].astype(np.int64)
     feats = list(X.columns); X = np.nan_to_num(X.values, nan=0.0, posinf=0.0, neginf=0.0)
     rng = np.random.default_rng(seed); part = np.empty(len(y), int)
     for a in np.unique(att):  # stratified 8:1:1 by attack type
@@ -34,7 +35,8 @@ def make(name, seed):
     lo, hi = X[tr].min(0), X[tr].max(0); rg = np.where(hi > lo, hi - lo, 1.0)
     Z = np.clip((X - lo) / rg, 0, 1).astype(np.float32)
     np.savez_compressed(out, Xtr=Z[tr], Xva=Z[part == 1], yva=y[part == 1], ava=att[part == 1], Xte=Z[part == 2], yte=y[part == 2],
-                        ate=att[part == 2], feats=np.array(feats))
+                        ate=att[part == 2], feats=np.array(feats),
+                        str_=sip[tr], sva=sip[part == 1], ste=sip[part == 2], dtr=dip[tr], dva=dip[part == 1], dte=dip[part == 2])
     return out
 
 

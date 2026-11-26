@@ -1,0 +1,32 @@
+{
+ "data": "NF-CSE-CIC-IDS2018-v2",
+ "method": "knn1_r50000",
+ "seed": 42,
+ "ref": 50000,
+ "pr_auc": 0.8066648503269145,
+ "roc_auc": 0.9669596480598405,
+ "macro_f1": 0.6670659796002899,
+ "acc": 0.9082433550412592,
+ "fpr_test": 0.0029572994806693594,
+ "eval": "val",
+ "recall_attack": 0.24265633447468013,
+ "per_class_flag_rate": {
+  "Benign": 0.0029572994806693594,
+  "Bot": 0.035182679296346414,
+  "Brute Force -Web": 0.09090909090909091,
+  "Brute Force -XSS": 0.0,
+  "DDOS attack-HOIC": 0.0015203344735841885,
+  "DDOS attack-LOIC-UDP": 0.9230769230769231,
+  "DDoS attacks-LOIC-HTTP": 0.008597883597883597,
+  "DoS attacks-GoldenEye": 1.0,
+  "DoS attacks-Hulk": 1.0,
+  "DoS attacks-SlowHTTPTest": 1.0,
+  "DoS attacks-Slowloris": 0.8367346938775511,
+  "FTP-BruteForce": 1.0,
+  "Infilteration": 0.03130434782608696,
+  "SSH-Bruteforce": 0.2876984126984127
+ },
+ "fit_s": 3.7653303146362305,
+ "score_s": 32.94340252876282,
+ "n_test": 94282
+}

@@ -48,12 +48,20 @@ def detector(method, Xtr, seed, ref):
 
 
 def run(data, method, seed, ref, ev="test"):
-    tag = f"{method}_r{ref}" if method.startswith("knn") or method.startswith("ck") else method
+    tag = f"{method}_r{ref}" if method[:2] in ("kn", "ck", "hc") else method
     f = os.path.join(OUT + ("_val" if ev == "val" else ""), data, f"{tag}_s{seed}.json")
     if os.path.exists(f): return None
     d = np.load(nfv2_prep.make(data, seed)); Xtr = d["Xtr"].astype(np.float64)
     import nfv2_methods; nfv2_methods.FEATS = [str(x) for x in d["feats"]]
-    t0 = time.time(); score = detector(method, Xtr, seed, ref); t1 = time.time()
+    if method.startswith("hc"):  # H8: host context computed per partition BEFORE any subsetting; then plain kNN on it
+        parts = method.split("_")[1] if "_" in method else "sd"; k = int(method.split("_")[0][2:] or 1)
+        C = lambda X, a, b: nfv2_methods.context(X.astype(np.float64), a, b, parts=parts)
+        d = dict(d); d["Xtr"] = C(d["Xtr"], d["str_"], d["dtr"]); d["Xva"] = C(d["Xva"], d["sva"], d["dva"]); d["Xte"] = C(d["Xte"], d["ste"], d["dte"])
+        Xtr = d["Xtr"]; R = ref_subsample(Xtr, ref, seed); score = lambda Q: knn_scores(R, Q, k)
+        method = "knn_on_ctx"
+    t0 = time.time()
+    if method != "knn_on_ctx": score = detector(method, Xtr, seed, ref)
+    t1 = time.time()
     if ev == "val":  # DESIGN mode (D40): split validation in two halves; threshold from benign half A, metrics on half B
         h = np.random.default_rng(seed + 7).random(len(d["yva"])) < 0.5
         va_b = d["Xva"][h & (d["yva"] == 0)].astype(np.float64); XE, y, att = d["Xva"][~h], d["yva"][~h], d["ava"][~h]

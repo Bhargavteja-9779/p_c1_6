@@ -39,3 +39,20 @@ def make(method, Xtr, seed, ref):
         rep = Rep(flags, Xtr, w=w); R = nfv2_bench.ref_subsample(rep(Xtr), ref, seed)
         return lambda Q: nfv2_bench.knn_scores(R, rep(Q), k)
     raise ValueError(method)
+
+
+def group_mean(Z, g):
+    """Mean of rows of Z within each group id g (closed-form one-hop mean aggregation)."""
+    n_g = g.max() + 1; cnt = np.bincount(g, minlength=n_g).astype(np.float64)
+    S = np.zeros((n_g, Z.shape[1]))
+    np.add.at(S, g, Z)
+    return S[g] / cnt[g][:, None]
+
+
+def context(X, sip, dip, c=1e4, parts="sd"):
+    """H8 representation: log-rescaled flow features + mean of log-rescaled features over flows with the same source IP (s) and
+    the same destination IP (d), computed within the given partition."""
+    L = np.log1p(c * X) / np.log1p(c); out = [L]
+    if "s" in parts: out.append(group_mean(L, sip))
+    if "d" in parts: out.append(group_mean(L, dip))
+    return np.hstack(out)
