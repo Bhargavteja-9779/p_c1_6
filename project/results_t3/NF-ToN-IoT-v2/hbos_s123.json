@@ -1,0 +1,28 @@
+{
+ "data": "NF-ToN-IoT-v2",
+ "method": "hbos",
+ "seed": 123,
+ "ref": 200000,
+ "pr_auc": 0.8005581243551709,
+ "roc_auc": 0.7929322520047468,
+ "macro_f1": 0.26424295578081514,
+ "acc": 0.35911784845694317,
+ "fpr_test": 0.002639560619722928,
+ "eval": "test",
+ "recall_attack": 1.844865278713022e-05,
+ "per_class_flag_rate": {
+  "Benign": 0.002639560619722928,
+  "backdoor": 0.0,
+  "ddos": 0.0,
+  "dos": 0.0,
+  "injection": 0.0,
+  "mitm": 0.0,
+  "password": 0.0,
+  "ransomware": 0.058823529411764705,
+  "scanning": 0.0,
+  "xss": 0.0
+ },
+ "fit_s": 1.4030787944793701,
+ "score_s": 0.4730522632598877,
+ "n_test": 169404
+}
