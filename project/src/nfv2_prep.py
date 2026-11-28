@@ -10,7 +10,7 @@ def load(name):
     pq = os.path.join(ROOT, "data", "nfv2", f"{name}.parquet")
     if not os.path.exists(pq):
         f = glob.glob(os.path.join(ROOT, "data", "nfv2", name, "**", f"{name}.csv"), recursive=True)[0]
-        if "CIC" in name:  # 10 % stratified sample by attack type, data seed 0 (GDAE §3.2.1); chunked (18.9 M rows do not fit in RAM)
+        if "CIC" in name or "ToN" in name:  # 10 % stratified sample by attack type, data seed 0 (GDAE §3.2.1); chunked (18.9 M rows do not fit in RAM)
             parts = [c.groupby("Attack", group_keys=False).sample(frac=0.10, random_state=0)
                      for c in pd.read_csv(f, chunksize=1_000_000, low_memory=False)]
             df = pd.concat(parts, ignore_index=True)

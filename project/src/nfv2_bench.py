@@ -55,7 +55,8 @@ def run(data, method, seed, ref, ev="test"):
     import nfv2_methods; nfv2_methods.FEATS = [str(x) for x in d["feats"]]
     if method.startswith("hc"):  # H8: host context computed per partition BEFORE any subsetting; then plain kNN on it
         parts = method.split("_")[1] if "_" in method else "sd"; k = int(method.split("_")[0][2:] or 1)
-        C = lambda X, a, b: nfv2_methods.context(X.astype(np.float64), a, b, parts=parts)
+        toks = method.split("_"); cexp = next((float(t[1:]) for t in toks[2:] if t.startswith("c")), 4.0)  # e.g. hc1_s_c2 -> c = 1e2
+        C = lambda X, a, b: nfv2_methods.context(X.astype(np.float64), a, b, c=10 ** cexp, parts=parts)
         d = dict(d); d["Xtr"] = C(d["Xtr"], d["str_"], d["dtr"]); d["Xva"] = C(d["Xva"], d["sva"], d["dva"]); d["Xte"] = C(d["Xte"], d["ste"], d["dte"])
         Xtr = d["Xtr"]; R = ref_subsample(Xtr, ref, seed); score = lambda Q: knn_scores(R, Q, k)
         method = "knn_on_ctx"

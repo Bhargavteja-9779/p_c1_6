@@ -1,0 +1,12 @@
+python3 scripts/t3_scores.py NF-UNSW-NB15-v2
+python3 src/nfv2_bench.py --data NF-ToN-IoT-v2 --methods hc1_s --seeds 42,123,456,789,1234 --ref 200000
+python3 src/nfv2_bench.py --data NF-ToN-IoT-v2 --methods ck1_L,knn1 --seeds 42,123,456,789,1234 --ref 200000
+python3 src/nfv2_bench.py --data NF-ToN-IoT-v2 --methods iforest,hbos,pca,ae --seeds 42,123,456,789,1234
+python3 src/nfv2_bench.py --data NF-UNSW-NB15-v2 --methods ae --seeds 42,123,456,789,1234
+python3 src/nfv2_bench.py --data NF-CSE-CIC-IDS2018-v2 --methods ae --seeds 42,123,456,789,1234
+python3 src/nfv2_bench.py --data NF-UNSW-NB15-v2 --methods hc1_s_c2,hc1_s_c3,hc1_s_c5,hc1_s_c6,hc5_s,hc10_s --seeds 42 --ref 200000 --eval val
+python3 src/nfv2_bench.py --data NF-CSE-CIC-IDS2018-v2 --methods hc1_s_c2,hc1_s_c3,hc1_s_c5,hc1_s_c6,hc5_s,hc10_s --seeds 42 --ref 200000 --eval val
+python3 src/nfv2_bench.py --data NF-UNSW-NB15-v2 --methods hc1_s --seeds 42 --ref 25000 --eval val
+python3 src/nfv2_bench.py --data NF-UNSW-NB15-v2 --methods hc1_s --seeds 42 --ref 100000 --eval val
+python3 src/nfv2_bench.py --data NF-CSE-CIC-IDS2018-v2 --methods hc1_s --seeds 42 --ref 25000 --eval val
+python3 src/nfv2_bench.py --data NF-CSE-CIC-IDS2018-v2 --methods hc1_s --seeds 42 --ref 100000 --eval val
